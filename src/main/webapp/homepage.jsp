@@ -2,7 +2,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <link rel="icon" href="./SB-L2-xxl.svg" type="image/x-icon">
+    <link rel="icon" href="image/SB-L2-xxl.svg" type="image/x-icon">
     <title>ShopBae</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -25,7 +25,7 @@
                 <ul class="header__navbar-list">
                     <li class="header__navbar-item header__navbar-item--has-qr separate"> Vào cửa hàng trên ứng dụng
                     <div class="header__qr">
-                        <img src="./1661505938.png" alt="QR code" class="header__qr-img">
+                        <img src="image/1661505938.png" alt="QR code" class="header__qr-img">
                     </div>
                     </li>
                     <li class="header__navbar-item">
@@ -52,7 +52,7 @@
                             <ul class="header__notify-list">
                                 <li class="header__notify-item header__notify-item--viewed">
                                     <a href="" class="header__notify-link">
-                                        <img src="app-store.png" alt="" class="header__notify-img">
+                                        <img src="image/app-store.png" alt="" class="header__notify-img">
                                         <div class="header__notify-info">
                                             <span class="header__notify-name">Trình đọc của màn hình sẽ gặp vấn đề với form của bạn</span>
                                             <span class="header__notify-discrip"> Trình đọc của màn hình sẽ gặp vấn đề với form của bạn</span>
@@ -63,7 +63,7 @@
 
                                 <li class="header__notify-item">
                                     <a href="" class="header__notify-link">
-                                        <img src="app-store.png" alt="" class="header__notify-img">
+                                        <img src="image/app-store.png" alt="" class="header__notify-img">
                                         <div class="header__notify-info">
                                             <span class="header__notify-name">Trình đọc của màn hình sẽ gặp vấn đề với form của bạn</span>
                                             <span class="header__notify-discrip">Trình đọc của màn hình sẽ gặp vấn đề với form của bạn</span>
@@ -74,7 +74,7 @@
 
                                 <li class="header__notify-item">
                                     <a href="" class="header__notify-link">
-                                        <img src="app-store.png" alt="" class="header__notify-img">
+                                        <img src="image/app-store.png" alt="" class="header__notify-img">
                                         <div class="header__notify-info">
                                             <span class="header__notify-name">Trình đọc của màn hình sẽ gặp vấn đề với form của bạn</span>
                                             <span class="header__notify-discrip">Trình đọc của màn hình sẽ gặp vấn đề với form của bạn</span>
@@ -105,24 +105,77 @@
         </div>
 
     </header>
-    <div class="container">
-        <nav class="category">
-            <h3 class="category__heading"><i class="fa-solid fa-list"></i> Danh mục</h3>
-            <ul class="category-list">
-                <li class="category-item">
-                    <a href="#" class="category-item__link category-item__link--active ">Thiết Bị Điện Tử</a>
-                </li>
-                <li class="category-item">
-                    <a href="#" class="category-item__link">Thiết bị đeo thông minh</a>
-                </li>
-                <li class="category-item">
-                    <a href="#" class="category-item__link">Phụ kiện ti vi</a>
-                </li>
-                <li class="category-item">
-                    <a href="#" class="category-item__link">Thiết bị nhà thông minh</a>
-                </li>
-            </ul>
-        </nav>
+    <div class="app__container">
+        <div class="grid">
+            <div class="grid__row app__content">
+                <div class="grid__column-2">
+                    <nav class="category">
+                        <h3 class="category__heading"><i class="category__heading-icon fa-solid fa-list"></i> Danh mục</h3>
+                        <ul class="category-list">
+                            <li class="category-item">
+                                <a href="#" class="category-item__link category-item__link--active ">Thiết Bị Điện Tử</a>
+                            </li>
+                            <li class="category-item">
+                                <a href="#" class="category-item__link">Thiết bị đeo thông minh</a>
+                            </li>
+                            <li class="category-item">
+                                <a href="#" class="category-item__link">Phụ kiện ti vi</a>
+                            </li>
+                            <li class="category-item">
+                                <a href="#" class="category-item__link">Thiết bị nhà thông minh</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="grid__column-10">
+                    <div class="home-filter">
+                        <span class="home-filter__label">Sắp xếp theo</span>
+                        <button class="home-filter__btn btn btn-primary">Phổ biến</button>
+                        <button class="home-filter__btn btn">Mới nhất</button>
+                        <button class="home-filter__btn btn">Bán chạy</button>
+                        <div class="select-input">
+                            <span class="select-input__label">Giá</span>
+                            <i class="select-input__icon fas fa-angle-down"></i>
+
+<%--                            List options--%>
+                            <ul class="select-input__list">
+                                <li class="select-input__item">
+                                    <a href="#" class="select-input__link">Giá: Thấp đến cao</a>
+                                </li>
+                                <li class="select-input__item">
+                                    <a href="#" class="select-input__link">Giá: Cao đến thấp</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="home-filter__page">
+                            <span class="home-filter__page-num">
+                                <span class="home-filter__page-current">1</span>/14
+                            </span>
+                            <div class="home-filter__page-control">
+                                <a href="#" class="home-filter__page-btn home-filter__page-btn--disabled">
+                                    <i class="home-filter__page-icon fas fa-angle-left"></i>
+                                </a>
+                                <a href="#" class="home-filter__page-btn">
+                                    <i class="home-filter__page-icon fas fa-angle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+<%--                    List product--%>
+                    <div class="home-product">
+                        <div class="grid__rơ">
+                            <div class="grid__column-2">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
     </div>
     <div class="footer">
     </div>

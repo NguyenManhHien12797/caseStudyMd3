@@ -27,10 +27,20 @@ html{
 .grid__row{
     display: flex;
     flex-wrap: wrap;
+    margin-left: -12px;
+    margin-right: -12px;
 }
 
-.grid__col{
+.grid__column-2{
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 16.6667%;
+}
 
+.grid__column-10{
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 83.3334%;
 }
 
 @keyframes fadeIn {
@@ -42,3 +52,67 @@ html{
     }
 }
 
+.btn{
+    min-width: 90px;
+    height: 34px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    padding: 0 12px;
+    outline: none;
+    cursor: pointer;
+    color: var(--text-color);
+    align-items: center;
+    justify-content: center;
+    line-height: 1.6rem;
+    display: inline-flex;
+    transition: opacity 0.2s;
+}
+.btn:hover{
+    opacity: 0.8;
+    background-color: var(--primary-color);
+}
+
+.btn-primary{
+    background-color: var(--primary-color);
+}
+
+/*Selection*/
+.select-input{
+    position: relative;
+    min-width: 200px;
+    height: 34px;
+    padding: 0 12px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.select-input__list{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 25px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    padding: 10px 16px;
+    list-style: none;
+    display: none;
+}
+.select-input:hover .select-input__list{
+    display: block;
+}
+.select-input__link{
+    font-size: 1.4rem;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 5px 0;
+    display: block;
+}
+.select-input__link:hover{
+    text-decoration: none;
+    color: var(--primary-color);
+}
