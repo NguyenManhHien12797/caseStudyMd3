@@ -2,7 +2,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <link rel="icon" href="image/SB-L2-xxl.svg" type="image/x-icon">
+    <link rel="icon" href="../image/SB-L2-xxl.svg" type="image/x-icon">
     <title>ShopBae</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,8 +13,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="./base.css">
-    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="main.css">
 
 </head>
 <body>
@@ -28,7 +28,7 @@
                     </li>
                     <li class="header__navbar-item header__navbar-item--has-qr separate"> Vào cửa hàng trên ứng dụng
                     <div class="header__qr">
-                        <img src="image/1661505938.png" alt="QR code" class="header__qr-img">
+                        <img src="../image/1661505938.png" alt="QR code" class="header__qr-img">
                     </div>
                     </li>
                     <li class="header__navbar-item">
@@ -54,7 +54,7 @@
                             <ul class="header__notify-list">
                                 <li class="header__notify-item header__notify-item--viewed">
                                     <a href="" class="header__notify-link">
-                                        <img src="image/app-store.png" alt="" class="header__notify-img">
+                                        <img src="../image/app-store.png" alt="" class="header__notify-img">
                                         <div class="header__notify-info">
                                             <span class="header__notify-name">Trình đọc của màn hình sẽ gặp vấn đề với form của bạn</span>
                                             <span class="header__notify-discrip"> Trình đọc của màn hình sẽ gặp vấn đề với form của bạn</span>
@@ -65,7 +65,7 @@
 
                                 <li class="header__notify-item">
                                     <a href="" class="header__notify-link">
-                                        <img src="image/app-store.png" alt="" class="header__notify-img">
+                                        <img src="../image/app-store.png" alt="" class="header__notify-img">
                                         <div class="header__notify-info">
                                             <span class="header__notify-name">Trình đọc của màn hình sẽ gặp vấn đề với form của bạn</span>
                                             <span class="header__notify-discrip">Trình đọc của màn hình sẽ gặp vấn đề với form của bạn</span>
@@ -76,7 +76,7 @@
 
                                 <li class="header__notify-item">
                                     <a href="" class="header__notify-link">
-                                        <img src="image/app-store.png" alt="" class="header__notify-img">
+                                        <img src="../image/app-store.png" alt="" class="header__notify-img">
                                         <div class="header__notify-info">
                                             <span class="header__notify-name">Trình đọc của màn hình sẽ gặp vấn đề với form của bạn</span>
                                             <span class="header__notify-discrip">Trình đọc của màn hình sẽ gặp vấn đề với form của bạn</span>
@@ -108,7 +108,7 @@
             <div class="header-with-search">
                 <div class="header__logo">
                     <a href="homepage.jsp">
-                        <img src="./image/SB-L2-white-backgroud.svg" alt="">
+                        <img src="../image/SB-L2-white-backgroud.svg" alt="">
                     </a>
 
                 </div>
@@ -134,7 +134,7 @@
                     </div>
 
                     <div class="header__cart-list header__cart-list-no-cart">
-                        <img src="./image/no-cart.gif" alt="" class="header__cart-list-no-cart-img">
+                        <img src="../image/no-cart.gif" alt="" class="header__cart-list-no-cart-img">
                         <span class="header__cart-list-no-cart-msg">Chưa có sản phẩm</span>
                     </div>
                 </div>
@@ -160,19 +160,19 @@
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="./image/slider_1.jpg" class="d-block w-100" alt="...">
+                            <img src="../image/slider_1.jpg" class="d-block w-100" alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="./image/slider_2.jpg" class="d-block w-100" alt="...">
+                            <img src="../image/slider_2.jpg" class="d-block w-100" alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="./image/slider_2.jpg" class="d-block w-100" alt="...">
+                            <img src="../image/slider_2.jpg" class="d-block w-100" alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="./image/slider_2.jpg" class="d-block w-100" alt="...">
+                            <img src="../image/slider_2.jpg" class="d-block w-100" alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="./image/slider_3.png" class="d-block w-100" alt="...">
+                            <img src="../image/slider_3.png" class="d-block w-100" alt="...">
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

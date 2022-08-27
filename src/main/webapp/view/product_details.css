@@ -1,0 +1,144 @@
+.item__details{
+    width: 100%;
+}
+
+.app__content{
+
+    width: 100%;
+    height: 710px;
+    background-color: var(--white-color);
+}
+.product__title{
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--text-color);
+}
+.slider{
+    width: 100%;
+    height: 540px;
+}
+.carousel-inner-slider{
+    height: 450px;
+}
+.carousel-item-img{
+    height: 450px;
+    display: block;
+
+    padding-top: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.item__details__favourite{
+    width: 62px;
+    height: 20px;
+    font-size: 1.5rem;
+    padding: 0 3px;
+    border-radius: 2px;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+
+.item__details__title{
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.item__details__rating{
+    display: flex;
+    margin-top: 11px;
+}
+
+.item__details__rate-num,
+.item__details__icon__rating{
+    font-size: 1.6rem;
+    color: var(--primary-color);
+}
+
+.item__details__rate-num{
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.item__details__icon__rating{
+    margin: 0 18px 0 3px;
+}
+.item__details__amount-rate{
+    height: 24px;
+    border-left:1px solid #cecccc;
+    border-right:1px solid #cecccc;
+}
+.item__details__amount-rate__num{
+    margin-left:18px ;
+    font-size: 1.6rem;
+    font-weight: 500;
+    border-bottom: 1px solid var(--text-color);
+}
+
+.item__details__amount-rate__title,
+.item__details__amount-sell__title,
+.item__details__amount-sell__icon{
+    font-size:1.4rem;
+    font-weight: 300;
+}
+
+.item__details__amount-sell__num{
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-left: 18px;
+}
+
+.item__details__amount-rate__title{
+    margin: 0 18px 0 3px;
+}
+.item__details__amount-sell__title{
+    margin: 0 3px;
+}
+
+.item__details__discount{
+    margin-top: 34px;
+}
+
+.item__details__discount-title{
+    display: inline-flex;
+    align-items: center;
+    margin-top: 22px;
+}
+
+.item__details__discount-price__old{
+    text-decoration:line-through;
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: var(--text-color);
+}
+
+.item__details__discount-price__current{
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin: 0 8px;
+}
+
+.item__details__discount-price__percent{
+    font-size: 1.5rem;
+    line-height: 1.7rem;
+}
+.item__details__discount-title-container{
+
+}
+.item__details__discount-title__img{
+    margin-right: 12px;
+}
+
+.item__details__discount-title-title{
+    display: block;
+    font-size: 1.6rem;
+    color: var(--primary-color);
+}
+
+.item__details__discount-title-title-title{
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: var(--text-color);
+}
