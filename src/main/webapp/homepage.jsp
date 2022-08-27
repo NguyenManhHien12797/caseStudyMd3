@@ -23,6 +23,9 @@
         <div class="grid">
             <nav class="header__navbar">
                 <ul class="header__navbar-list">
+                    <li class="header__navbar-item ">
+                        <a href="#" class="header__navbar-item-seller">Kênh người bán</a>
+                    </li>
                     <li class="header__navbar-item header__navbar-item--has-qr separate"> Vào cửa hàng trên ứng dụng
                     <div class="header__qr">
                         <img src="image/1661505938.png" alt="QR code" class="header__qr-img">
@@ -43,8 +46,7 @@
                 <ul class="header__navbar-list">
                     <li class="header__navbar-item  notifi">
                         <a href="#" class="header__navbar-item-link">
-                            <i class=" header__navbar-icon fa-solid fa-bell"></i> Thông báo
-                        </a>
+                            <i class=" header__navbar-icon fa-solid fa-bell"></i> Thông báo</a>
                         <div class="header__notify ">
                             <header class="header__notify-header">
                                 <h3>Thông báo mới nhận</h3>
@@ -102,10 +104,93 @@
                     </li>
                 </ul>
             </nav>
+
+            <div class="header-with-search">
+                <div class="header__logo">
+                    <a href="homepage.jsp">
+                        <img src="./image/SB-L2-white-backgroud.svg" alt="">
+                    </a>
+
+                </div>
+                <a href="homepage.jsp" class="header__logo-name">
+                    ShopBae
+                </a>
+
+                <div class="header__search">
+                    <form action="#" class="header__search-form" method="post">
+                        <input type="text" class="header__search-input" name="search" placeholder="Nhập để tìm kiếm sản phẩm">
+                        <button class="header__search-btn" type="submit">
+                            <i class=" header__search-icon fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <div class="header__cart">
+                    <div class="header__cart-wrap">
+                        <a href="#">
+                            <i class="header__cart-icon  fa-solid fa-cart-shopping"></i>
+                            <span class="header__cart-notice header__cart-icon ">234</span>
+                        </a>
+                    </div>
+
+                    <div class="header__cart-list header__cart-list-no-cart">
+                        <img src="./image/no-cart.gif" alt="" class="header__cart-list-no-cart-img">
+                        <span class="header__cart-list-no-cart-msg">Chưa có sản phẩm</span>
+                    </div>
+                </div>
+
+            </div>
         </div>
 
     </header>
     <div class="app__container">
+
+<%--        Slider--%>
+
+    <div class="grid">
+        <div class="grid__row">
+            <div class="grid__column-12 ">
+                <div id="carouselExampleIndicators" class="carousel slide slider" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./image/slider_1.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./image/slider_2.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./image/slider_2.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./image/slider_2.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./image/slider_3.png" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+<%--        Slider--%>
+
         <div class="grid">
             <div class="grid__row app__content">
                 <div class="grid__column-2">
