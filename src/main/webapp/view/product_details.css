@@ -3,10 +3,16 @@
 }
 
 .app__content{
-
     width: 100%;
     height: 710px;
     background-color: var(--white-color);
+}
+
+.app__container-wrap{
+    padding: 15px 15px 0 15px;
+}
+.item__details__wrap{
+    padding: 15px 25px 0 25px;
 }
 .product__title{
     font-size: 20px;
@@ -48,7 +54,7 @@
 
 .item__details__rating{
     display: flex;
-    margin-top: 11px;
+    margin: 11px 0;
 }
 
 .item__details__rate-num,
@@ -97,13 +103,17 @@
 }
 
 .item__details__discount{
-    margin-top: 34px;
+    margin-top:0;
+    padding: 18px 18px;
+    border-radius: 2px;
+    background-color: #fafafa;
+
 }
 
 .item__details__discount-title{
     display: inline-flex;
     align-items: center;
-    margin-top: 22px;
+    margin-top: 8px;
 }
 
 .item__details__discount-price__old{
@@ -123,7 +133,8 @@
     font-size: 1.5rem;
     line-height: 1.7rem;
 }
-.item__details__discount-title-container{
+.item__details__discount-title-container i{
+    color: #666666;
 
 }
 .item__details__discount-title__img{
@@ -142,3 +153,71 @@
     font-weight: 300;
     color: var(--text-color);
 }
+.item__details__code,
+.item__details__deal{
+    display: flex;
+    margin: 30px 0 0 20px;
+}
+.item__details__code-title,
+.item__details__deal-title,
+.item__details__ship-title{
+    font-size: 1.6rem;
+    margin-right: 30px;
+    width: 90px;
+    color: var(--text-color);
+    font-weight: 300;
+}
+
+.item__details__code-percent,
+.item__details__deal-dicription{
+    height: 30%;
+    font-size: 1.4rem;
+    margin: 0 5px;
+    padding: 0 3px;
+    border-radius: 2px;
+    transform: translateY(20px);
+    color:var(--primary-color);
+    background-color:#fbebed;
+}
+.item__details__deal-dicription{
+    transform:none;
+    background-color: #ffeee8;
+}
+
+/*Ship*/
+
+.item__details__ship{
+    display: flex;
+    margin: 30px 0 0 20px;
+}
+
+.item__details__ship-wrap{
+
+}
+.item__details__ship-icon{
+    display: block;
+}
+
+.item__details__ship-icon i{
+    color:#00bfa5;
+}
+.item__details__ship-icon{
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+.item__details__ship-icon_1{
+    font-size: 1.4rem;
+    color: var(--text-color);
+    margin: 10px 20px 0 0;
+    font-weight: 300;
+}
+
+.item__details__ship-address{
+    font-size: 1.4rem;
+    color: var(--text-color);
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+/*Ship*/

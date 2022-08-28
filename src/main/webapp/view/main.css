@@ -22,6 +22,28 @@
     min-height: 26px;
 }
 
+.header__navbar-user{
+    display: flex;
+    justify-items: center;
+    position: relative;
+}
+
+.header__navbar-user-name{
+    margin-left: 3px;
+}
+.header__navbar-user-menu{
+    position: absolute;
+    padding-left: 0;
+    top: 100%;
+    right: 0;
+    width: 160px;
+    list-style: none;
+    border-radius: 2px;
+    background-color: var(--white-color);
+
+}
+
+
 .header__navbar-item-seller {
     text-decoration: none;
     color: var(--white-color);
@@ -320,16 +342,14 @@
     margin-top: 4px;
 }
 
+/*List cart----------------------------------------------*/
+/*Chưa fix được---------------------------------------*/
+
 .header__cart-wrap {
     position: relative;
     display: inline-block;
     padding: 0 12px;
 }
-
-.header__cart-wrap:hover .header__cart-list {
-   display:block;
-}
-
 
 .header__cart-list {
     position: absolute;
@@ -357,9 +377,14 @@
     display: block;
 }
 .header__cart-list-no-cart-img {
+    position: absolute;
     width: 35%;
-    display: none;
 }
+.header__cart-wrap:hover .header__cart-list{
+    display:block;
+}
+
+/*List cart*/
 
 .header__cart-notice{
     position: absolute;
@@ -386,6 +411,11 @@
 }
 
 /*App container*/
+@media only screen and (min-width: 1000px){
+    .app__container-wrap{
+        margin-top: -164px;
+    }
+}
 
 .app__container {
     background-color: #F5F5F5;
@@ -393,12 +423,16 @@
 
 .app__content {
     padding-top: 36px;
+
 }
 
 .category {
     background-color: var(--white-color);
     border-radius: 2px;
+    padding-left: 8px;
+    height:calc(100% - 118px) ;
 }
+
 
 .category__heading {
     color: var(--text-color);
@@ -450,6 +484,10 @@
     right: -4px;
     text-decoration: none;
     color: var(--primary-color);
+}
+
+.banner__video{
+    margin-bottom: 20px;
 }
 
 .home-filter {
@@ -721,3 +759,64 @@ i.home-product-item__like-icon-fill {
     top: -5px;
 
 }
+
+/*Phân trang*/
+
+.home-product__pagination{
+    margin: 50px 0 32px 0;
+}
+
+
+/*Phân trang*/
+
+/*Footer*/
+
+.footer{
+    margin: 0 20px 50px 20px;
+
+}
+
+.footer-wrap:first-child{
+    margin-left: 10px;
+}
+
+.footer__heading{
+    font-size: 1.6rem;
+}
+
+.footer-item{
+    list-style: none;
+}
+.footer-item__link{
+    text-decoration: none;
+    color: var(--text-color);
+    display: block;
+    font-weight: 300;
+}
+.footer-item__link:hover{
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.footer-item-ship-img{
+    width:60px;
+    height: 30px;
+    border-radius: 2px;
+}
+
+.footer-item__img{
+    width: 170px;
+    height: 170px;
+}
+
+
+.footer__heading-end{
+    text-align: right;
+}
+
+.footer-item__img__download{
+    display: block;
+    width: 80%;
+    margin-left: 45px;
+}
+/*Footer*/
