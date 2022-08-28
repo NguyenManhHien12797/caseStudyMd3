@@ -25,25 +25,6 @@ html{
     margin: 0 auto;
 }
 
-@media only screen and (max-width: 1000px){
-    .banner__video{
-        display: none;
-    }
-}
-
-@media only screen and (max-width: 1000px){
-    .slider{
-        width: calc(100% + 354px);
-        margin-left: -174px;
-    }
-}
-
-@media only screen and (max-width: 1000px){
-    .app__container-wrap{
-        margin-top: -28px;
-    }
-}
-
 
 .gri__full-width{
     width: 100%;
@@ -168,21 +149,7 @@ html{
     color: var(--primary-color);
 }
 
-.app__container-banner{
-    display: flex;
-}
 
-/*Banner*/
-.banner{
-    width: 340px;
-    height: 100%;
-}
-
-.banner__video{
-    width: 100%;
-}
-
-/*Banner*/
 
 /*Phân trang*/
 

@@ -1,3 +1,50 @@
+
+
+@media only screen and (max-width: 1920px){
+
+    .app__container-banner{
+        display: flex;
+    }
+
+    .app__container-wrap{
+        margin-top: -150px;
+    }
+
+    .banner__video{
+
+        margin-bottom: 20px;
+    }
+    /*Banner*/
+    .banner{
+        width: 17.72%;
+        height: 100%;
+    }
+
+    .banner__video{
+        width: 100%;
+    }
+
+    /*Banner*/
+
+}
+
+@media only screen and (max-width: 1919px){
+    .app__container-wrap{
+        margin-top: 25px;
+    }
+
+    .banner__video{
+        display: none;
+    }
+    .app__container-banner{
+        display: block;
+    }
+
+}
+
+
+
+
 .header {
     top: 100%;
     height: var(--header-height);
@@ -411,11 +458,7 @@
 }
 
 /*App container*/
-@media only screen and (min-width: 1000px){
-    .app__container-wrap{
-        margin-top: -164px;
-    }
-}
+
 
 .app__container {
     background-color: #F5F5F5;
@@ -486,9 +529,6 @@
     color: var(--primary-color);
 }
 
-.banner__video{
-    margin-bottom: 20px;
-}
 
 .home-filter {
     display: flex;
