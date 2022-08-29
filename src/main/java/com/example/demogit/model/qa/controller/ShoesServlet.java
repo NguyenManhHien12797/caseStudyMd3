@@ -16,7 +16,7 @@ import java.util.List;
     public class ShoesServlet extends HttpServlet {
         @Override
         protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-            listFood(request,response);
+            listNike(request,response);
         }
 
 
@@ -25,11 +25,11 @@ import java.util.List;
         protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         }
-        protected void listFood(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        protected void listNike(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
             Crawls crawls=new Crawls();
-            List<model.Shoes> shoesList=crawls.getFoodlist();
+            List<model.Shoes> shoesList=crawls.getNike();
             request.setAttribute("listShoes",shoesList);
-            RequestDispatcher dispatcher=request.getRequestDispatcher("view/display.jsp");
+            RequestDispatcher dispatcher=request.getRequestDispatcher("qa/listNike.jsp");
             dispatcher.forward(request,response);
         }
     }
