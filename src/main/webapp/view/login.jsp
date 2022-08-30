@@ -51,6 +51,7 @@
         .header__logo-name_login:hover{
             color: #f48c81;
         }
+        g
 
     </style>
 
