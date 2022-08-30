@@ -43,20 +43,13 @@
 
 }
 
-.slider__controls-btn-wrap{
+.slider__controls-btn-icon-pre{
     position: absolute;
-    width: 100%;
-    height: 100%;
+    left: 0;
 }
-.slider__controls-btn{
-    display: block;
-    justify-content: center;
-
-}
-.slider__controls-btn-pre{
-}
-.slider__controls-btn-next{
-
+.slider__controls-btn-icon-next{
+    position: absolute;
+    right: 0;
 }
 
 .slider__controls img{
@@ -67,7 +60,9 @@
 .btn__control{
 
 }
-
+.carousel-item-img{
+    height: 375px;
+}
 .btn__control img{
     width: 50px;
     height: 50px;
