@@ -12,7 +12,10 @@ public class ConnectionDB {
     public static final String USER = "root";
     public static final String PASSWORD = "88888888";
 
-    protected Connection getConnect(){
+    public ConnectionDB() {
+    }
+
+    public static Connection getConnect(){
         if (connect==null){
             try {
                 Class.forName("com.mysql.jdbc.Driver");
@@ -27,8 +30,4 @@ public class ConnectionDB {
     }
 
 
-    public static void main(String[] args) {
-        ConnectionDB connectionDB = new ConnectionDB();
-        connectionDB.getConnect();
-    }
 }
