@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="product_details.css">
 
+
 </head>
 <body>
 <div class="app">
@@ -112,6 +113,16 @@
             </nav>
 
             <div class="header-with-search">
+                <%--                <div class="header__logo">--%>
+                <%--                    <a href="homepage.jsp">--%>
+                <%--                        <img src="../image/SB-L2-white-backgroud.svg" alt="">--%>
+                <%--                    </a>--%>
+
+                <%--                </div>--%>
+                <%--                <a href="homepage.jsp" class="header__logo-name">--%>
+                <%--                    ShopBae--%>
+                <%--                </a>--%>
+
                 <div class="header__logo">
                     <a href="homepage.jsp">
                         <img src="../image/SB-L2-white-backgroud.svg" alt="">
@@ -121,6 +132,7 @@
                 <a href="homepage.jsp" class="header__logo-name">
                     ShopBae
                 </a>
+
 
                 <div class="header__search">
                     <form action="#" class="header__search-form" method="post">
@@ -154,47 +166,44 @@
 
         <div class="item__details">
             <div class="grid">
-                <div class="grid__row app__content">
-                    <div class="grid__column-4 app__container-wrap">
+                <div class="grid__row app__content app__content-details">
+                    <div class="grid__column-4 app__container-wrap ">
                         <div class="item__details-slider">
                             <div class="slider">
                                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                                     <div class="carousel-indicators">
-                                        <button type="button" data-bs-target="#carouselExampleIndicators"
-                                                data-bs-slide-to="0" class="active" aria-current="true"
-                                                aria-label="Slide 1"></button>
-                                        <button type="button" data-bs-target="#carouselExampleIndicators"
-                                                data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                        <button type="button" data-bs-target="#carouselExampleIndicators"
-                                                data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                                     </div>
-                                    <div class="carousel-inner carousel-inner-slider">
+                                    <div class="carousel-inner">
                                         <div class="carousel-item active">
-                                            <div class="d-block w-100 carousel-item-img"
-                                                 style="background-image: url(../image/details-slider_1.jpg)">
-                                            </div>
-                                            <div class="carousel-item carousel-inner-slider">
-                                                <div class="d-block w-100 carousel-item-img"
-                                                     style="background-image: url(../image/details-slider_1.jpg) ">
-                                                </div>
-                                            </div>
-                                            <div class="carousel-item carousel-inner-slider">
-                                                <div class="d-block w-100 carousel-item-img"
-                                                     style="background-image: url(../image/details-slider_1.jpg)">
-                                                </div>
-                                            </div>
+                                            <img src="../image/details-slider_1.jpg" class="d-block w-100" alt="...">
                                         </div>
-                                        <button class="carousel-control-prev" type="button"
-                                                data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                            <span class="visually-hidden">Previous</span>
-                                        </button>
-                                        <button class="carousel-control-next" type="button"
-                                                data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                            <span class="visually-hidden">Next</span>
-                                        </button>
+                                        <div class="carousel-item">
+                                            <img src="../image/details-slider_2.jpg" class="d-block w-100" alt="...">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="../image/details-slider_3.jpg" class="d-block w-100" alt="...">
+                                        </div>
+
                                     </div>
+
+                                </div>
+                                <div class="slider__controls">
+                                    <img src="../image/details-slider_1.jpg" alt="" class="actives slider__controls-img" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1">
+                                    <img src="../image/details-slider_2.jpg" alt="" class="slider__controls-img" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-current="true" aria-label="Slide 2">
+                                    <img src="../image/details-slider_3.jpg" alt="" class="slider__controls-img" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-current="true" aria-label="Slide 3">
+                                   <div class="slider__controls-btn-wrap">
+                                       <button class="carousel-control-prev slider__controls-btn slider__controls-btn-pre" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                           <span class="carousel-control-prev-icon slider__controls-btn-icon" aria-hidden="true"></span>
+                                           <span class="visually-hidden">Previous</span>
+                                       </button>
+                                       <button class="carousel-control-next slider__controls-btn slider__controls-btn-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                           <span class="carousel-control-next-icon slider__controls-btn-icon" aria-hidden="true"></span>
+                                           <span class="visually-hidden">Next</span>
+                                       </button>
+                                   </div>
                                 </div>
                             </div>
                         </div>
@@ -795,8 +804,117 @@
 
 
     </div>
+
+<%--    Footer--%>
     <div class="footer">
+        <div class="grid">
+            <div class="grid__row footer-wrap">
+                <div class="grid__column-2-4">
+                    <h3 class="footer__heading">Chăm sóc khách hàng</h3>
+                    <li class="footer-item">
+                        <a href="#" class="footer-item__link">Trung tâm trợ giúp</a>
+                        <a href="#" class="footer-item__link">ShopBae Blog</a>
+                        <a href="#" class="footer-item__link">ShopBae Mall</a>
+                        <a href="#" class="footer-item__link">Hướng dẫn mua hàng</a>
+                        <a href="#" class="footer-item__link">Hướng dẫn bán hàng</a>
+                        <a href="#" class="footer-item__link">Thanh toán</a>
+                        <a href="#" class="footer-item__link">ShopBae xu</a>
+                        <a href="#" class="footer-item__link">Vận chuyển</a>
+                        <a href="#" class="footer-item__link">Trả hàng & hoàn tiền</a>
+                        <a href="#" class="footer-item__link">Chăm sóc khách hàng</a>
+                        <a href="#" class="footer-item__link">Chính sách bảo hành</a>
+                    </li>
+                </div>
+
+                <div class="grid__column-2-4">
+                    <h3 class="footer__heading">Về ShopBae</h3>
+                    <li class="footer-item">
+                        <a href="#" class="footer-item__link">Giới thiệu về ShopBae Việt Nam</a>
+                        <a href="#" class="footer-item__link">Tuyển dụng</a>
+                        <a href="#" class="footer-item__link">Điều khoản ShopBae</a>
+                        <a href="#" class="footer-item__link">Chính sách bảo mật</a>
+                        <a href="#" class="footer-item__link">Chính hãng</a>
+                        <a href="#" class="footer-item__link">Kênh người bán</a>
+                        <a href="#" class="footer-item__link">Flash sales</a>
+                        <a href="#" class="footer-item__link">Chương trình tiếp thị liên kết ShopBae</a>
+                        <a href="#" class="footer-item__link">Linh hệ với truyền thông</a>
+                    </li>
+                </div>
+
+                <div class="grid__column-2-4 ">
+                    <h3 class="footer__heading">Thanh toán</h3>
+                    <li class="footer-item footer-item-pay">
+                        <a href="#" class="footer-item__link footer-item__link-pay"> <i class="fa-brands fa-cc-visa"></i></a>
+                        <a href="#" class="footer-item__link footer-item__link-pay"> <i class="fa-brands fa-cc-paypal"></i></a>
+                        <a href="#" class="footer-item__link footer-item__link-pay"> <i class="fa-brands fa-cc-jcb"></i></a>
+                        <a href="#" class="footer-item__link footer-item__link-pay"> <i class="fa-brands fa-cc-amazon-pay"></i></a>
+                        <a href="#" class="footer-item__link footer-item__link-pay"> <i class="fa-solid fa-credit-card"></i></a>
+                        <a href="#" class="footer-item__link footer-item__link-pay"> <i class="fa-brands fa-cc-mastercard"></i></a>
+                    </li>
+                    <h3 class="footer__heading footer__heading-ship">Đơn vị vận chuyển</h3>
+                    <li class="footer-item footer-item-ship">
+                        <img src="../image/footer-item-ship-img_1.png" alt="" class="footer-item-ship-img">
+                        <img src="../image/footer-item-ship-img_2.png" alt="" class="footer-item-ship-img">
+                        <img src="../image/footer-item-ship-img_3.webp" alt="" class="footer-item-ship-img">
+                    </li>
+                </div>
+
+                <div class="grid__column-2-4">
+                    <h3 class="footer__heading">Theo dõi chúng tôi</h3>
+                    <li class="footer-item">
+                        <a href="https://www.facebook.com/" class="footer-item__link footer-item__link-icon footer-item__link-fb"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                        <a href="https://www.instagram.com/" class="footer-item__link footer-item__link-icon">
+                            <i class="fa-brands fa-instagram footer-item__link-ins"></i>
+
+                            <span class="footer-item__link-name">Instagram</span>
+                        </a>
+                        <a href="https://www.linkedin.com/" class="footer-item__link footer-item__link-icon footer-item__link-linked"><i class="fa-brands fa-linkedin"></i> Linkedkin</a>
+                    </li>
+                </div>
+
+                <div class="grid__column-2-4 ">
+                    <h3 class="footer__heading footer__heading-end ">Tải ứng dụng ShopBae</h3>
+                    <img src="../image/qr-code.png" alt="" class="footer-item__img footer-item__img__download">
+                </div>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="grid__row grid__row-coppyright ">
+                <div class="grid__column-3">
+                    <span class="coppyright">© 2022 ShopBae. Tất cả các quyên được bảo lưu.</span>
+                </div>
+
+                <div class="grid__column-9 grid__column-9__address ">
+                    <span class="address">Quốc gia & khu vực Singapore | Indonesia | Đài Loan | Thái Lan | Malaysia | Việt Nam | Philipines | Bzazil | México | Colombia | Chile | Poland | Argentina</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid footer__policy-wrap">
+            <div class="grid__column-12 footer__policy">
+                <span class="footer__policy-title">Chính sách bảo mật</span>
+                <span class="footer__policy-title">Quy chế hoạt động</span>
+                <span class="footer__policy-title">Chính sách vận chuyển</span>
+                <span class="footer__policy-title">Chính sách trả hàng và hoàn tiền</span>
+            </div>
+            <div class="grid__column-12 footer__footer-logo">
+                <a class="footer__logo" href="homepage.jsp">
+                    <img src="../image/SB-L2-white-backgroud.svg" alt="" class="footer__logo-img">
+                    <span class="footer__logo-name">ShopBae</span>
+                </a>
+
+            </div>
+            <div class="grid__column-12 footer__address">
+                <span class="footer__address-name">Địa chỉ: Tầng 4-5-6, Tòa nhà HD City, số 1 đường Mỹ Đình, Phường Mỹ Đình, Quận Từ Liêm, Thành phố Hà Nội, Việt Nam. Tổng đài hỗ trợ: 1903412312 - Email: cskh@hotro.shopBae.vn</span>
+                <span class="footer__address-name">Chịu Trách Nhiệm Quản Lý Nội Dung: Nguyễn Văn A - Điện thoại liên hệ: 0987654321</span>
+                <span class="footer__address-name">© 2015 - Bản quyền thuộc về Công ty TNHH ShopBae</span>
+            </div>
+        </div>
+
     </div>
+
+    <%--    Footer--%>
 </div>
 
 </body>
