@@ -1,4 +1,4 @@
-package com.example.demogit.config;
+package com.example.caseStudyMd3.config;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

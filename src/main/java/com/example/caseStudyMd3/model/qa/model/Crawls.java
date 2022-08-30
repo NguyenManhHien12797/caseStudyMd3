@@ -1,4 +1,4 @@
-package com.example.demogit.model.qa.model;
+package com.example.caseStudyMd3.model.qa.model;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;

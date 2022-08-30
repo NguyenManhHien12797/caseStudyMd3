@@ -1,6 +1,6 @@
-package com.example.demogit.model.qa.controller;
+package com.example.caseStudyMd3.model.qa.controller;
 
-import com.example.demogit.model.qa.model.Crawls;
+import com.example.caseStudyMd3.model.qa.model.Crawls;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
