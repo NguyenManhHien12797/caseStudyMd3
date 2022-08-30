@@ -23,7 +23,7 @@ public class UserDao implements IUserDAO{
     private static final String QUERY_UPDATE_BY_USER = "UPDATE USERS SET PASSWORD = ?,NAME = ?,GENDER = ?,AGE = ?,BIRTHDATE= ?,MAIL =?,PHONE= ? " +
             "WHERE ACCOUNT = ?";
     private static final String QUERY_UPDATE_BY_ADMIN = "UPDATE USERS SET STATUS = ? WHERE ID = ?";
-    private static final String QUERY_FIND_BY_ID = "SELECT * FROM USERS WHERE ID = ?";
+    private static final String QUERY_FIND_BY_ID = "SELECT * FROM ACCOUNT_ADMIN WHERE ID = ?";
     private static final String QUERY_FIND_PASS_BY_ACCOUNT = "SELECT PASSWORD FROM USERS WHERE ACCOUNT = ? AND MAIL = ?";
     private static final String QUERY_FIND_BY_USER = "SELECT ID FROM USERS WHERE ACCOUNT = ? AND PASSWORD = ?";
 
@@ -34,7 +34,24 @@ public class UserDao implements IUserDAO{
 
     @Override
     public boolean add(Users users) {
-        return false;
+        boolean rowAdded = false;
+        try {
+            PreparedStatement statement = connection.prepareStatement(QUERY_INSERT_ACCOUNT_BY_ADMIN);
+            statement.setString(1, users.getAccount());
+            statement.setString(2, users.getPassword());
+            statement.setString(3, users.getName());
+            statement.setString(4, users.getGender());
+            statement.setString(5, users.getAge());
+            statement.setDate(6, (java.sql.Date) users.getBirthDate());
+            statement.setString(7, users.getMail());
+            statement.setString(8, users.getPhone());
+            statement.setString(9, String.valueOf(users.getRole()));
+            statement.setString(10, String.valueOf(users.getStatus()));
+            rowAdded = statement.executeUpdate() > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return rowAdded;
     }
 
     @Override

@@ -2,8 +2,12 @@ package com.example.caseStudyMd3.model.qa;
 
 import com.example.caseStudyMd3.service.RS.Role;
 import com.example.caseStudyMd3.service.RS.Status;
+import com.example.caseStudyMd3.service.UserService;
 
 import java.util.Date;
+
+import static com.example.caseStudyMd3.service.RS.Role.ADMIN;
+import static com.example.caseStudyMd3.service.RS.Status.ACTIVE;
 
 public class Users {
     private int id;
@@ -11,14 +15,14 @@ public class Users {
     private String password;
     private String name;
     private String gender;
-    private int age;
+    private String age;
     private Date birthDate;
     private String mail;
     private String phone;
     private Role role;
     private Status status;
 
-    public Users(String account, String password, String name, String gender, int age, Date birthDate, String mail, String phone, Role role, Status status) {
+    public Users(String account, String password, String name, String gender, String age, Date birthDate, String mail, String phone, Role role, Status status) {
         this.account = account;
         this.password = password;
         this.name = name;
@@ -31,7 +35,7 @@ public class Users {
         this.status = status;
     }
 
-    public Users(int id, String account, String password, String name, String gender, int age, Date birthDate, String mail, String phone, Role role, Status status) {
+    public Users(int id, String account, String password, String name, String gender, String age, Date birthDate, String mail, String phone, Role role, Status status) {
         this.id = id;
         this.account = account;
         this.password = password;
@@ -45,9 +49,13 @@ public class Users {
         this.status = status;
     }
 
-    public Users(int id, String username, String password, String name, String gender, String age, Date birthday, String email, String phone, Role role, Status status) {
+    public Users(int id, String account, String password, Role role, Status status) {
+        this.id = id;
+        this.account = account;
+        this.password = password;
+        this.role = role;
+        this.status = status;
     }
-
 
     public int getId() {
         return id;
@@ -89,11 +97,11 @@ public class Users {
         this.gender = gender;
     }
 
-    public int getAge() {
+    public String getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(String age) {
         this.age = age;
     }
 
@@ -140,5 +148,11 @@ public class Users {
     public Users(String account, String password) {
         this.account = account;
         this.password = password;
+    }
+
+    public static void main(String[] args) {
+        Users users = new Users(3, "admin", "admin", ADMIN, ACTIVE);
+        UserService service = new UserService();
+        service.add(users);
     }
 }
