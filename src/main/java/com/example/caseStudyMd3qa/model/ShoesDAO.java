@@ -1,6 +1,4 @@
-package model;
-
-import com.example.demogit.model.qa.model.IShoes;
+package com.example.caseStudyMd3qa.model;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -8,7 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class ShoesDAO implements IShoes {
-    private String jdbcURL ="jdbc:mysql://localhost:3306/Case_Study";
+    private String jdbcURL ="jdbc:mysql://localhost:3306/case_study";
     private String jdbcUsername ="root";
     private String jdbcPassword= "123456";
     private static final String INSERT_Shoes_SQL = "INSERT INTO  (categoryId, brandId, name,oldPrice,newPrice,image) VALUES (?, ?, ?,?,?,?);";
@@ -26,7 +24,7 @@ public class ShoesDAO implements IShoes {
         }
         return connection;
     }
-    public void insertShoes(model.Shoes shoes){
+    public void insertShoes(Shoes shoes){
         Connection connection=getConnection();
 
         try {

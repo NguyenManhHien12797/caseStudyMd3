@@ -1,4 +1,4 @@
-package com.example.demogit.model.qa.model;
+package com.example.caseStudyMd3qa.model;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -9,8 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Crawls {
-    public List<model.Shoes> getNike() {
-        List<model.Shoes> shoes1 = new ArrayList<>();
+    public List<Shoes> getNike() {
+        List<Shoes> shoes1 = new ArrayList<>();
         try {
             final String url = "https://kingshoes.vn/nike";
             Document doc = Jsoup.connect(url).get();
@@ -25,7 +25,7 @@ public class Crawls {
                 String [] str2 = str1[1].split("\" alt");
                 String image=str2[0];
                 System.out.println(image);
-                model.Shoes shoes=new model.Shoes(name,price,image);
+                Shoes shoes=new Shoes(name,price,image);
                 shoes1.add(shoes);
             }
         } catch (IOException e) {
@@ -33,8 +33,8 @@ public class Crawls {
         }
         return shoes1;
     }
-    public List<model.Shoes> getAdidas() {
-        List<model.Shoes> shoes1 = new ArrayList<>();
+    public List<Shoes> getAdidas() {
+        List<Shoes> shoes1 = new ArrayList<>();
         try {
             final String url = "https://kingshoes.vn/adidas";
             Document doc = Jsoup.connect(url).get();
@@ -49,7 +49,7 @@ public class Crawls {
                 String [] str2 = str1[1].split("\" alt");
                 String image=str2[0];
                 System.out.println(image);
-                model.Shoes shoes=new model.Shoes(name,price,image);
+                Shoes shoes=new Shoes(name,price,image);
                 shoes1.add(shoes);
             }
         } catch (IOException e) {
@@ -58,8 +58,8 @@ public class Crawls {
         return shoes1;
     }
 
-    public List<model.Shoes> getJordan() {
-        List<model.Shoes> shoes1 = new ArrayList<>();
+    public List<Shoes> getJordan() {
+        List<Shoes> shoes1 = new ArrayList<>();
         try {
             final String url = "https://kingshoes.vn/jordan";
             Document doc = Jsoup.connect(url).get();
@@ -74,7 +74,7 @@ public class Crawls {
                 String [] str2 = str1[1].split("\" alt");
                 String image=str2[0];
                 System.out.println(image);
-                model.Shoes shoes=new model.Shoes(name,price,image);
+                Shoes shoes=new Shoes(name,price,image);
                 shoes1.add(shoes);
             }
         } catch (IOException e) {
@@ -82,8 +82,8 @@ public class Crawls {
         }
         return shoes1;
     }
-    public List<model.Shoes> getYeezy() {
-        List<model.Shoes> shoes1 = new ArrayList<>();
+    public List<Shoes> getYeezy() {
+        List<Shoes> shoes1 = new ArrayList<>();
         try {
             final String url = "https://kingshoes.vn/yeezy";
             Document doc = Jsoup.connect(url).get();
@@ -98,7 +98,7 @@ public class Crawls {
                 String [] str2 = str1[1].split("\" alt");
                 String image=str2[0];
                 System.out.println(image);
-                model.Shoes shoes=new model.Shoes(name,price,image);
+                Shoes shoes=new Shoes(name,price,image);
                 shoes1.add(shoes);
             }
         } catch (IOException e) {
