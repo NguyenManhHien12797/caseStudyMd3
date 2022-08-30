@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: quang
-  Date: 8/29/2022
-  Time: 4:09 PM
+  Date: 8/30/2022
+  Time: 8:30 AM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -15,7 +15,7 @@
 </head>
 <body>
 <center>
-    <h1>Nike</h1>
+    <h1>Jordan</h1>
 
 </center>
 <div align="center">
@@ -27,7 +27,7 @@
             <th>Price</th>
             <th>Image</th>
         </tr>
-        <c:forEach var="shoes" items="${listShoesN}">
+        <c:forEach var="shoes" items="${listShoesJ}">
             <tr>
                 <td>${shoes.name}</td>
                 <td>${shoes.price}</td>
@@ -38,4 +38,5 @@
 </div>
 </body>
 </html>
+
 

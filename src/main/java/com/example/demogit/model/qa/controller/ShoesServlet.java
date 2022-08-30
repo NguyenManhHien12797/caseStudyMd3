@@ -17,6 +17,9 @@ import java.util.List;
         @Override
         protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
             listNike(request,response);
+            listAdidas(request,response);
+            listJordan(request,response);
+            listYeezy(request,response);
         }
 
 
@@ -28,8 +31,29 @@ import java.util.List;
         protected void listNike(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
             Crawls crawls=new Crawls();
             List<model.Shoes> shoesList=crawls.getNike();
-            request.setAttribute("listShoes",shoesList);
+            request.setAttribute("listShoesN",shoesList);
             RequestDispatcher dispatcher=request.getRequestDispatcher("qa/listNike.jsp");
+            dispatcher.forward(request,response);
+        }
+        protected void listAdidas(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+            Crawls crawls=new Crawls();
+            List<model.Shoes> shoesList=crawls.getAdidas();
+            request.setAttribute("listShoesA",shoesList);
+            RequestDispatcher dispatcher=request.getRequestDispatcher("qa/listAdidas.jsp");
+            dispatcher.forward(request,response);
+        }
+        protected void listJordan(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+            Crawls crawls=new Crawls();
+            List<model.Shoes> shoesList=crawls.getJordan();
+            request.setAttribute("listShoesJ",shoesList);
+            RequestDispatcher dispatcher=request.getRequestDispatcher("qa/listJordan.jsp");
+            dispatcher.forward(request,response);
+        }
+        protected void listYeezy(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+            Crawls crawls=new Crawls();
+            List<model.Shoes> shoesList=crawls.getYeezy();
+            request.setAttribute("listShoesY",shoesList);
+            RequestDispatcher dispatcher=request.getRequestDispatcher("qa/listYeezy.jsp");
             dispatcher.forward(request,response);
         }
     }
