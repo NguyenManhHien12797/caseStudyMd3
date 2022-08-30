@@ -54,6 +54,7 @@
             right: 35px;
             border-width: 15px 20px;
             border-style: solid;
+            z-index: -1;
             border-color: transparent transparent var(--white-color) transparent;
         }
 
@@ -68,10 +69,11 @@
             font-weight: 300;
         }
 
-        .header__navbar-user-item a:hover {
+        .header__navbar-user-item a:hover{
             color: var(--primary-color);
             background-color: #eeeeee;
         }
+
 
         .header__navbar-user-img {
             width: 20px;
@@ -241,7 +243,9 @@
         <div class="app__container-banner">
             <%--    Banner--%>
             <div class="banner">
-                <video controls autoplay src="../image/banner_video_1.mp4" class="banner__video"></video>
+                <video controls autoplay muted loop class="banner__video">
+                    <source  src="../image/banner_video_1.mp4" type="video/mp4">
+                </video>
 <%--                <video controls autoplay src="../image/banner_video_2.mp4" class="banner__video"></video>--%>
 
             </div>
@@ -249,7 +253,7 @@
 
             <%--        Slider--%>
 
-            <div class="grid">
+            <div class="grid app__banner">
                 <div class="grid__row">
                     <div class="grid__column-12 ">
                         <div id="carouselExampleIndicators" class="carousel slide slider" data-bs-ride="carousel">
@@ -296,6 +300,1696 @@
                             </button>
                         </div>
 
+                        <div class="grid app__container-wrap">
+                            <div class="grid__row app__content">
+                                <div class="grid__column-2 category-wrap">
+                                    <nav class="category">
+                                        <h3 class="category__heading"><i class="category__heading-icon fa-solid fa-list"></i> Danh
+                                            mục
+                                        </h3>
+                                        <ul class="category-list">
+                                            <li class="category-item">
+                                                <a href="#" class="category-item__link category-item__link--active ">Thiết Bị Điện
+                                                    Tử</a>
+                                            </li>
+                                            <li class="category-item">
+                                                <a href="#" class="category-item__link">Thiết bị đeo thông minh</a>
+                                            </li>
+                                            <li class="category-item">
+                                                <a href="#" class="category-item__link">Phụ kiện ti vi</a>
+                                            </li>
+                                            <li class="category-item">
+                                                <a href="#" class="category-item__link">Thiết bị nhà thông minh</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="grid__column-10">
+                                    <div class="home-filter">
+                                        <span class="home-filter__label">Sắp xếp theo</span>
+                                        <button class="home-filter__btn btn btn-primary">Phổ biến</button>
+                                        <button class="home-filter__btn btn">Mới nhất</button>
+                                        <button class="home-filter__btn btn">Bán chạy</button>
+                                        <div class="select-input">
+                                            <span class="select-input__label">Giá</span>
+                                            <i class="select-input__icon fas fa-angle-down"></i>
+
+                                            <%--                            List options--%>
+                                            <ul class="select-input__list">
+                                                <li class="select-input__item">
+                                                    <a href="#" class="select-input__link">Giá: Thấp đến cao</a>
+                                                </li>
+                                                <li class="select-input__item">
+                                                    <a href="#" class="select-input__link">Giá: Cao đến thấp</a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                        <div class="home-filter__page">
+                            <span class="home-filter__page-num">
+                                <span class="home-filter__page-current">1</span>/14
+                            </span>
+                                            <div class="home-filter__page-control">
+                                                <a href="#" class="home-filter__page-btn home-filter__page-btn--disabled">
+                                                    <i class="home-filter__page-icon fas fa-angle-left"></i>
+                                                </a>
+                                                <a href="#" class="home-filter__page-btn">
+                                                    <i class="home-filter__page-icon fas fa-angle-right"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <%--                    List product--%>
+                                    <div class="home-product">
+                                        <div class="grid__row">
+                                            <div class="grid__column-2-4">
+
+                                                <a href="product_details.jsp" class="home-product-item">
+                                                    <div class="home-product-item__img"
+                                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
+                                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
+                                                        Samsung Galaxy Watch III 45mm LTE</h4>
+                                                    <div class="home-product-item__price">
+                                                        <span class="home-product-item__price-old">1.200.000đ</span>
+                                                        <span class="home-product-item__price-current">900.000đ</span>
+                                                    </div>
+                                                    <div class="home-product-item__action">
+                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
+                                            <i class="home-product-item__like-icon far fa-heart"></i>
+                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                                        <div class="home-product-item__rating">
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class=" fas fa-star"></i>
+                                                        </div>
+                                                        <span class="home-product-item__sold">88 đã bán</span>
+                                                    </div>
+                                                    <div class="home-product-item__origin">
+                                                        <span class="home-product-item__brand">Whoo</span>
+                                                        <span class="home-product-item__origin-name">Nhật Bản</span>
+                                                    </div>
+                                                    <div class="home-product-item__favourite">
+                                                        <i class="fa-solid fa-check"></i> Yêu thích
+                                                    </div>
+                                                    <div class="home-product-item__sale-off">
+                                                        <span class="home-product-item__sale-off-percent">10%</span>
+                                                        <span class="home-product-item__sale-off-label">GIẢM</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="grid__column-2-4">
+
+                                                <a href="product_details.jsp" class="home-product-item">
+                                                    <div class="home-product-item__img"
+                                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
+                                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
+                                                        Samsung Galaxy Watch III 45mm LTE</h4>
+                                                    <div class="home-product-item__price">
+                                                        <span class="home-product-item__price-old">1.200.000đ</span>
+                                                        <span class="home-product-item__price-current">900.000đ</span>
+                                                    </div>
+                                                    <div class="home-product-item__action">
+                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
+                                            <i class="home-product-item__like-icon far fa-heart"></i>
+                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                                        <div class="home-product-item__rating">
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class=" fas fa-star"></i>
+                                                        </div>
+                                                        <span class="home-product-item__sold">88 đã bán</span>
+                                                    </div>
+                                                    <div class="home-product-item__origin">
+                                                        <span class="home-product-item__brand">Whoo</span>
+                                                        <span class="home-product-item__origin-name">Nhật Bản</span>
+                                                    </div>
+                                                    <div class="home-product-item__favourite">
+                                                        <i class="fa-solid fa-check"></i> Yêu thích
+                                                    </div>
+                                                    <div class="home-product-item__sale-off">
+                                                        <span class="home-product-item__sale-off-percent">10%</span>
+                                                        <span class="home-product-item__sale-off-label">GIẢM</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="grid__column-2-4">
+
+                                                <a href="product_details.jsp" class="home-product-item">
+                                                    <div class="home-product-item__img"
+                                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
+                                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
+                                                        Samsung Galaxy Watch III 45mm LTE</h4>
+                                                    <div class="home-product-item__price">
+                                                        <span class="home-product-item__price-old">1.200.000đ</span>
+                                                        <span class="home-product-item__price-current">900.000đ</span>
+                                                    </div>
+                                                    <div class="home-product-item__action">
+                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
+                                            <i class="home-product-item__like-icon far fa-heart"></i>
+                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                                        <div class="home-product-item__rating">
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class=" fas fa-star"></i>
+                                                        </div>
+                                                        <span class="home-product-item__sold">88 đã bán</span>
+                                                    </div>
+                                                    <div class="home-product-item__origin">
+                                                        <span class="home-product-item__brand">Whoo</span>
+                                                        <span class="home-product-item__origin-name">Nhật Bản</span>
+                                                    </div>
+                                                    <div class="home-product-item__favourite">
+                                                        <i class="fa-solid fa-check"></i> Yêu thích
+                                                    </div>
+                                                    <div class="home-product-item__sale-off">
+                                                        <span class="home-product-item__sale-off-percent">10%</span>
+                                                        <span class="home-product-item__sale-off-label">GIẢM</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="grid__column-2-4">
+
+                                                <a href="product_details.jsp" class="home-product-item">
+                                                    <div class="home-product-item__img"
+                                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
+                                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
+                                                        Samsung Galaxy Watch III 45mm LTE</h4>
+                                                    <div class="home-product-item__price">
+                                                        <span class="home-product-item__price-old">1.200.000đ</span>
+                                                        <span class="home-product-item__price-current">900.000đ</span>
+                                                    </div>
+                                                    <div class="home-product-item__action">
+                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
+                                            <i class="home-product-item__like-icon far fa-heart"></i>
+                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                                        <div class="home-product-item__rating">
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class=" fas fa-star"></i>
+                                                        </div>
+                                                        <span class="home-product-item__sold">88 đã bán</span>
+                                                    </div>
+                                                    <div class="home-product-item__origin">
+                                                        <span class="home-product-item__brand">Whoo</span>
+                                                        <span class="home-product-item__origin-name">Nhật Bản</span>
+                                                    </div>
+                                                    <div class="home-product-item__favourite">
+                                                        <i class="fa-solid fa-check"></i> Yêu thích
+                                                    </div>
+                                                    <div class="home-product-item__sale-off">
+                                                        <span class="home-product-item__sale-off-percent">10%</span>
+                                                        <span class="home-product-item__sale-off-label">GIẢM</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="grid__column-2-4">
+
+                                                <a href="product_details.jsp" class="home-product-item">
+                                                    <div class="home-product-item__img"
+                                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
+                                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
+                                                        Samsung Galaxy Watch III 45mm LTE</h4>
+                                                    <div class="home-product-item__price">
+                                                        <span class="home-product-item__price-old">1.200.000đ</span>
+                                                        <span class="home-product-item__price-current">900.000đ</span>
+                                                    </div>
+                                                    <div class="home-product-item__action">
+                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
+                                            <i class="home-product-item__like-icon far fa-heart"></i>
+                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                                        <div class="home-product-item__rating">
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class=" fas fa-star"></i>
+                                                        </div>
+                                                        <span class="home-product-item__sold">88 đã bán</span>
+                                                    </div>
+                                                    <div class="home-product-item__origin">
+                                                        <span class="home-product-item__brand">Whoo</span>
+                                                        <span class="home-product-item__origin-name">Nhật Bản</span>
+                                                    </div>
+                                                    <div class="home-product-item__favourite">
+                                                        <i class="fa-solid fa-check"></i> Yêu thích
+                                                    </div>
+                                                    <div class="home-product-item__sale-off">
+                                                        <span class="home-product-item__sale-off-percent">10%</span>
+                                                        <span class="home-product-item__sale-off-label">GIẢM</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="grid__column-2-4">
+
+                                                <a href="product_details.jsp" class="home-product-item">
+                                                    <div class="home-product-item__img"
+                                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
+                                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
+                                                        Samsung Galaxy Watch III 45mm LTE</h4>
+                                                    <div class="home-product-item__price">
+                                                        <span class="home-product-item__price-old">1.200.000đ</span>
+                                                        <span class="home-product-item__price-current">900.000đ</span>
+                                                    </div>
+                                                    <div class="home-product-item__action">
+                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
+                                            <i class="home-product-item__like-icon far fa-heart"></i>
+                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                                        <div class="home-product-item__rating">
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class=" fas fa-star"></i>
+                                                        </div>
+                                                        <span class="home-product-item__sold">88 đã bán</span>
+                                                    </div>
+                                                    <div class="home-product-item__origin">
+                                                        <span class="home-product-item__brand">Whoo</span>
+                                                        <span class="home-product-item__origin-name">Nhật Bản</span>
+                                                    </div>
+                                                    <div class="home-product-item__favourite">
+                                                        <i class="fa-solid fa-check"></i> Yêu thích
+                                                    </div>
+                                                    <div class="home-product-item__sale-off">
+                                                        <span class="home-product-item__sale-off-percent">10%</span>
+                                                        <span class="home-product-item__sale-off-label">GIẢM</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="grid__column-2-4">
+
+                                                <a href="product_details.jsp" class="home-product-item">
+                                                    <div class="home-product-item__img"
+                                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
+                                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
+                                                        Samsung Galaxy Watch III 45mm LTE</h4>
+                                                    <div class="home-product-item__price">
+                                                        <span class="home-product-item__price-old">1.200.000đ</span>
+                                                        <span class="home-product-item__price-current">900.000đ</span>
+                                                    </div>
+                                                    <div class="home-product-item__action">
+                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
+                                            <i class="home-product-item__like-icon far fa-heart"></i>
+                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                                        <div class="home-product-item__rating">
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class=" fas fa-star"></i>
+                                                        </div>
+                                                        <span class="home-product-item__sold">88 đã bán</span>
+                                                    </div>
+                                                    <div class="home-product-item__origin">
+                                                        <span class="home-product-item__brand">Whoo</span>
+                                                        <span class="home-product-item__origin-name">Nhật Bản</span>
+                                                    </div>
+                                                    <div class="home-product-item__favourite">
+                                                        <i class="fa-solid fa-check"></i> Yêu thích
+                                                    </div>
+                                                    <div class="home-product-item__sale-off">
+                                                        <span class="home-product-item__sale-off-percent">10%</span>
+                                                        <span class="home-product-item__sale-off-label">GIẢM</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="grid__column-2-4">
+
+                                                <a href="product_details.jsp" class="home-product-item">
+                                                    <div class="home-product-item__img"
+                                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
+                                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
+                                                        Samsung Galaxy Watch III 45mm LTE</h4>
+                                                    <div class="home-product-item__price">
+                                                        <span class="home-product-item__price-old">1.200.000đ</span>
+                                                        <span class="home-product-item__price-current">900.000đ</span>
+                                                    </div>
+                                                    <div class="home-product-item__action">
+                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
+                                            <i class="home-product-item__like-icon far fa-heart"></i>
+                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                                        <div class="home-product-item__rating">
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class=" fas fa-star"></i>
+                                                        </div>
+                                                        <span class="home-product-item__sold">88 đã bán</span>
+                                                    </div>
+                                                    <div class="home-product-item__origin">
+                                                        <span class="home-product-item__brand">Whoo</span>
+                                                        <span class="home-product-item__origin-name">Nhật Bản</span>
+                                                    </div>
+                                                    <div class="home-product-item__favourite">
+                                                        <i class="fa-solid fa-check"></i> Yêu thích
+                                                    </div>
+                                                    <div class="home-product-item__sale-off">
+                                                        <span class="home-product-item__sale-off-percent">10%</span>
+                                                        <span class="home-product-item__sale-off-label">GIẢM</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="grid__column-2-4">
+
+                                                <a href="product_details.jsp" class="home-product-item">
+                                                    <div class="home-product-item__img"
+                                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
+                                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
+                                                        Samsung Galaxy Watch III 45mm LTE</h4>
+                                                    <div class="home-product-item__price">
+                                                        <span class="home-product-item__price-old">1.200.000đ</span>
+                                                        <span class="home-product-item__price-current">900.000đ</span>
+                                                    </div>
+                                                    <div class="home-product-item__action">
+                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
+                                            <i class="home-product-item__like-icon far fa-heart"></i>
+                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                                        <div class="home-product-item__rating">
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class=" fas fa-star"></i>
+                                                        </div>
+                                                        <span class="home-product-item__sold">88 đã bán</span>
+                                                    </div>
+                                                    <div class="home-product-item__origin">
+                                                        <span class="home-product-item__brand">Whoo</span>
+                                                        <span class="home-product-item__origin-name">Nhật Bản</span>
+                                                    </div>
+                                                    <div class="home-product-item__favourite">
+                                                        <i class="fa-solid fa-check"></i> Yêu thích
+                                                    </div>
+                                                    <div class="home-product-item__sale-off">
+                                                        <span class="home-product-item__sale-off-percent">10%</span>
+                                                        <span class="home-product-item__sale-off-label">GIẢM</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="grid__column-2-4">
+
+                                                <a href="product_details.jsp" class="home-product-item">
+                                                    <div class="home-product-item__img"
+                                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
+                                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
+                                                        Samsung Galaxy Watch III 45mm LTE</h4>
+                                                    <div class="home-product-item__price">
+                                                        <span class="home-product-item__price-old">1.200.000đ</span>
+                                                        <span class="home-product-item__price-current">900.000đ</span>
+                                                    </div>
+                                                    <div class="home-product-item__action">
+                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
+                                            <i class="home-product-item__like-icon far fa-heart"></i>
+                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                                        <div class="home-product-item__rating">
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class=" fas fa-star"></i>
+                                                        </div>
+                                                        <span class="home-product-item__sold">88 đã bán</span>
+                                                    </div>
+                                                    <div class="home-product-item__origin">
+                                                        <span class="home-product-item__brand">Whoo</span>
+                                                        <span class="home-product-item__origin-name">Nhật Bản</span>
+                                                    </div>
+                                                    <div class="home-product-item__favourite">
+                                                        <i class="fa-solid fa-check"></i> Yêu thích
+                                                    </div>
+                                                    <div class="home-product-item__sale-off">
+                                                        <span class="home-product-item__sale-off-percent">10%</span>
+                                                        <span class="home-product-item__sale-off-label">GIẢM</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+
+                                    <div class="home-product">
+                                        <div class="grid__row">
+                                            <div class="grid__column-2-4">
+
+                                                <a href="product_details.jsp" class="home-product-item">
+                                                    <div class="home-product-item__img"
+                                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
+                                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
+                                                        Samsung Galaxy Watch III 45mm LTE</h4>
+                                                    <div class="home-product-item__price">
+                                                        <span class="home-product-item__price-old">1.200.000đ</span>
+                                                        <span class="home-product-item__price-current">900.000đ</span>
+                                                    </div>
+                                                    <div class="home-product-item__action">
+                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
+                                            <i class="home-product-item__like-icon far fa-heart"></i>
+                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                                        <div class="home-product-item__rating">
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class=" fas fa-star"></i>
+                                                        </div>
+                                                        <span class="home-product-item__sold">88 đã bán</span>
+                                                    </div>
+                                                    <div class="home-product-item__origin">
+                                                        <span class="home-product-item__brand">Whoo</span>
+                                                        <span class="home-product-item__origin-name">Nhật Bản</span>
+                                                    </div>
+                                                    <div class="home-product-item__favourite">
+                                                        <i class="fa-solid fa-check"></i> Yêu thích
+                                                    </div>
+                                                    <div class="home-product-item__sale-off">
+                                                        <span class="home-product-item__sale-off-percent">10%</span>
+                                                        <span class="home-product-item__sale-off-label">GIẢM</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="grid__column-2-4">
+
+                                                <a href="product_details.jsp" class="home-product-item">
+                                                    <div class="home-product-item__img"
+                                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
+                                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
+                                                        Samsung Galaxy Watch III 45mm LTE</h4>
+                                                    <div class="home-product-item__price">
+                                                        <span class="home-product-item__price-old">1.200.000đ</span>
+                                                        <span class="home-product-item__price-current">900.000đ</span>
+                                                    </div>
+                                                    <div class="home-product-item__action">
+                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
+                                            <i class="home-product-item__like-icon far fa-heart"></i>
+                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                                        <div class="home-product-item__rating">
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class=" fas fa-star"></i>
+                                                        </div>
+                                                        <span class="home-product-item__sold">88 đã bán</span>
+                                                    </div>
+                                                    <div class="home-product-item__origin">
+                                                        <span class="home-product-item__brand">Whoo</span>
+                                                        <span class="home-product-item__origin-name">Nhật Bản</span>
+                                                    </div>
+                                                    <div class="home-product-item__favourite">
+                                                        <i class="fa-solid fa-check"></i> Yêu thích
+                                                    </div>
+                                                    <div class="home-product-item__sale-off">
+                                                        <span class="home-product-item__sale-off-percent">10%</span>
+                                                        <span class="home-product-item__sale-off-label">GIẢM</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="grid__column-2-4">
+
+                                                <a href="product_details.jsp" class="home-product-item">
+                                                    <div class="home-product-item__img"
+                                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
+                                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
+                                                        Samsung Galaxy Watch III 45mm LTE</h4>
+                                                    <div class="home-product-item__price">
+                                                        <span class="home-product-item__price-old">1.200.000đ</span>
+                                                        <span class="home-product-item__price-current">900.000đ</span>
+                                                    </div>
+                                                    <div class="home-product-item__action">
+                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
+                                            <i class="home-product-item__like-icon far fa-heart"></i>
+                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                                        <div class="home-product-item__rating">
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class=" fas fa-star"></i>
+                                                        </div>
+                                                        <span class="home-product-item__sold">88 đã bán</span>
+                                                    </div>
+                                                    <div class="home-product-item__origin">
+                                                        <span class="home-product-item__brand">Whoo</span>
+                                                        <span class="home-product-item__origin-name">Nhật Bản</span>
+                                                    </div>
+                                                    <div class="home-product-item__favourite">
+                                                        <i class="fa-solid fa-check"></i> Yêu thích
+                                                    </div>
+                                                    <div class="home-product-item__sale-off">
+                                                        <span class="home-product-item__sale-off-percent">10%</span>
+                                                        <span class="home-product-item__sale-off-label">GIẢM</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="grid__column-2-4">
+
+                                                <a href="product_details.jsp" class="home-product-item">
+                                                    <div class="home-product-item__img"
+                                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
+                                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
+                                                        Samsung Galaxy Watch III 45mm LTE</h4>
+                                                    <div class="home-product-item__price">
+                                                        <span class="home-product-item__price-old">1.200.000đ</span>
+                                                        <span class="home-product-item__price-current">900.000đ</span>
+                                                    </div>
+                                                    <div class="home-product-item__action">
+                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
+                                            <i class="home-product-item__like-icon far fa-heart"></i>
+                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                                        <div class="home-product-item__rating">
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class=" fas fa-star"></i>
+                                                        </div>
+                                                        <span class="home-product-item__sold">88 đã bán</span>
+                                                    </div>
+                                                    <div class="home-product-item__origin">
+                                                        <span class="home-product-item__brand">Whoo</span>
+                                                        <span class="home-product-item__origin-name">Nhật Bản</span>
+                                                    </div>
+                                                    <div class="home-product-item__favourite">
+                                                        <i class="fa-solid fa-check"></i> Yêu thích
+                                                    </div>
+                                                    <div class="home-product-item__sale-off">
+                                                        <span class="home-product-item__sale-off-percent">10%</span>
+                                                        <span class="home-product-item__sale-off-label">GIẢM</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="grid__column-2-4">
+
+                                                <a href="product_details.jsp" class="home-product-item">
+                                                    <div class="home-product-item__img"
+                                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
+                                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
+                                                        Samsung Galaxy Watch III 45mm LTE</h4>
+                                                    <div class="home-product-item__price">
+                                                        <span class="home-product-item__price-old">1.200.000đ</span>
+                                                        <span class="home-product-item__price-current">900.000đ</span>
+                                                    </div>
+                                                    <div class="home-product-item__action">
+                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
+                                            <i class="home-product-item__like-icon far fa-heart"></i>
+                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                                        <div class="home-product-item__rating">
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class=" fas fa-star"></i>
+                                                        </div>
+                                                        <span class="home-product-item__sold">88 đã bán</span>
+                                                    </div>
+                                                    <div class="home-product-item__origin">
+                                                        <span class="home-product-item__brand">Whoo</span>
+                                                        <span class="home-product-item__origin-name">Nhật Bản</span>
+                                                    </div>
+                                                    <div class="home-product-item__favourite">
+                                                        <i class="fa-solid fa-check"></i> Yêu thích
+                                                    </div>
+                                                    <div class="home-product-item__sale-off">
+                                                        <span class="home-product-item__sale-off-percent">10%</span>
+                                                        <span class="home-product-item__sale-off-label">GIẢM</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="grid__column-2-4">
+
+                                                <a href="product_details.jsp" class="home-product-item">
+                                                    <div class="home-product-item__img"
+                                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
+                                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
+                                                        Samsung Galaxy Watch III 45mm LTE</h4>
+                                                    <div class="home-product-item__price">
+                                                        <span class="home-product-item__price-old">1.200.000đ</span>
+                                                        <span class="home-product-item__price-current">900.000đ</span>
+                                                    </div>
+                                                    <div class="home-product-item__action">
+                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
+                                            <i class="home-product-item__like-icon far fa-heart"></i>
+                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                                        <div class="home-product-item__rating">
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class=" fas fa-star"></i>
+                                                        </div>
+                                                        <span class="home-product-item__sold">88 đã bán</span>
+                                                    </div>
+                                                    <div class="home-product-item__origin">
+                                                        <span class="home-product-item__brand">Whoo</span>
+                                                        <span class="home-product-item__origin-name">Nhật Bản</span>
+                                                    </div>
+                                                    <div class="home-product-item__favourite">
+                                                        <i class="fa-solid fa-check"></i> Yêu thích
+                                                    </div>
+                                                    <div class="home-product-item__sale-off">
+                                                        <span class="home-product-item__sale-off-percent">10%</span>
+                                                        <span class="home-product-item__sale-off-label">GIẢM</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="grid__column-2-4">
+
+                                                <a href="product_details.jsp" class="home-product-item">
+                                                    <div class="home-product-item__img"
+                                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
+                                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
+                                                        Samsung Galaxy Watch III 45mm LTE</h4>
+                                                    <div class="home-product-item__price">
+                                                        <span class="home-product-item__price-old">1.200.000đ</span>
+                                                        <span class="home-product-item__price-current">900.000đ</span>
+                                                    </div>
+                                                    <div class="home-product-item__action">
+                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
+                                            <i class="home-product-item__like-icon far fa-heart"></i>
+                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                                        <div class="home-product-item__rating">
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class=" fas fa-star"></i>
+                                                        </div>
+                                                        <span class="home-product-item__sold">88 đã bán</span>
+                                                    </div>
+                                                    <div class="home-product-item__origin">
+                                                        <span class="home-product-item__brand">Whoo</span>
+                                                        <span class="home-product-item__origin-name">Nhật Bản</span>
+                                                    </div>
+                                                    <div class="home-product-item__favourite">
+                                                        <i class="fa-solid fa-check"></i> Yêu thích
+                                                    </div>
+                                                    <div class="home-product-item__sale-off">
+                                                        <span class="home-product-item__sale-off-percent">10%</span>
+                                                        <span class="home-product-item__sale-off-label">GIẢM</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="grid__column-2-4">
+
+                                                <a href="product_details.jsp" class="home-product-item">
+                                                    <div class="home-product-item__img"
+                                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
+                                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
+                                                        Samsung Galaxy Watch III 45mm LTE</h4>
+                                                    <div class="home-product-item__price">
+                                                        <span class="home-product-item__price-old">1.200.000đ</span>
+                                                        <span class="home-product-item__price-current">900.000đ</span>
+                                                    </div>
+                                                    <div class="home-product-item__action">
+                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
+                                            <i class="home-product-item__like-icon far fa-heart"></i>
+                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                                        <div class="home-product-item__rating">
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class=" fas fa-star"></i>
+                                                        </div>
+                                                        <span class="home-product-item__sold">88 đã bán</span>
+                                                    </div>
+                                                    <div class="home-product-item__origin">
+                                                        <span class="home-product-item__brand">Whoo</span>
+                                                        <span class="home-product-item__origin-name">Nhật Bản</span>
+                                                    </div>
+                                                    <div class="home-product-item__favourite">
+                                                        <i class="fa-solid fa-check"></i> Yêu thích
+                                                    </div>
+                                                    <div class="home-product-item__sale-off">
+                                                        <span class="home-product-item__sale-off-percent">10%</span>
+                                                        <span class="home-product-item__sale-off-label">GIẢM</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="grid__column-2-4">
+
+                                                <a href="product_details.jsp" class="home-product-item">
+                                                    <div class="home-product-item__img"
+                                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
+                                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
+                                                        Samsung Galaxy Watch III 45mm LTE</h4>
+                                                    <div class="home-product-item__price">
+                                                        <span class="home-product-item__price-old">1.200.000đ</span>
+                                                        <span class="home-product-item__price-current">900.000đ</span>
+                                                    </div>
+                                                    <div class="home-product-item__action">
+                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
+                                            <i class="home-product-item__like-icon far fa-heart"></i>
+                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                                        <div class="home-product-item__rating">
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class=" fas fa-star"></i>
+                                                        </div>
+                                                        <span class="home-product-item__sold">88 đã bán</span>
+                                                    </div>
+                                                    <div class="home-product-item__origin">
+                                                        <span class="home-product-item__brand">Whoo</span>
+                                                        <span class="home-product-item__origin-name">Nhật Bản</span>
+                                                    </div>
+                                                    <div class="home-product-item__favourite">
+                                                        <i class="fa-solid fa-check"></i> Yêu thích
+                                                    </div>
+                                                    <div class="home-product-item__sale-off">
+                                                        <span class="home-product-item__sale-off-percent">10%</span>
+                                                        <span class="home-product-item__sale-off-label">GIẢM</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="grid__column-2-4">
+
+                                                <a href="product_details.jsp" class="home-product-item">
+                                                    <div class="home-product-item__img"
+                                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
+                                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
+                                                        Samsung Galaxy Watch III 45mm LTE</h4>
+                                                    <div class="home-product-item__price">
+                                                        <span class="home-product-item__price-old">1.200.000đ</span>
+                                                        <span class="home-product-item__price-current">900.000đ</span>
+                                                    </div>
+                                                    <div class="home-product-item__action">
+                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
+                                            <i class="home-product-item__like-icon far fa-heart"></i>
+                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                                        <div class="home-product-item__rating">
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class=" fas fa-star"></i>
+                                                        </div>
+                                                        <span class="home-product-item__sold">88 đã bán</span>
+                                                    </div>
+                                                    <div class="home-product-item__origin">
+                                                        <span class="home-product-item__brand">Whoo</span>
+                                                        <span class="home-product-item__origin-name">Nhật Bản</span>
+                                                    </div>
+                                                    <div class="home-product-item__favourite">
+                                                        <i class="fa-solid fa-check"></i> Yêu thích
+                                                    </div>
+                                                    <div class="home-product-item__sale-off">
+                                                        <span class="home-product-item__sale-off-percent">10%</span>
+                                                        <span class="home-product-item__sale-off-label">GIẢM</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+
+                                    <div class="home-product">
+                                        <div class="grid__row">
+                                            <div class="grid__column-2-4">
+
+                                                <a href="product_details.jsp" class="home-product-item">
+                                                    <div class="home-product-item__img"
+                                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
+                                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
+                                                        Samsung Galaxy Watch III 45mm LTE</h4>
+                                                    <div class="home-product-item__price">
+                                                        <span class="home-product-item__price-old">1.200.000đ</span>
+                                                        <span class="home-product-item__price-current">900.000đ</span>
+                                                    </div>
+                                                    <div class="home-product-item__action">
+                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
+                                            <i class="home-product-item__like-icon far fa-heart"></i>
+                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                                        <div class="home-product-item__rating">
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class=" fas fa-star"></i>
+                                                        </div>
+                                                        <span class="home-product-item__sold">88 đã bán</span>
+                                                    </div>
+                                                    <div class="home-product-item__origin">
+                                                        <span class="home-product-item__brand">Whoo</span>
+                                                        <span class="home-product-item__origin-name">Nhật Bản</span>
+                                                    </div>
+                                                    <div class="home-product-item__favourite">
+                                                        <i class="fa-solid fa-check"></i> Yêu thích
+                                                    </div>
+                                                    <div class="home-product-item__sale-off">
+                                                        <span class="home-product-item__sale-off-percent">10%</span>
+                                                        <span class="home-product-item__sale-off-label">GIẢM</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="grid__column-2-4">
+
+                                                <a href="product_details.jsp" class="home-product-item">
+                                                    <div class="home-product-item__img"
+                                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
+                                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
+                                                        Samsung Galaxy Watch III 45mm LTE</h4>
+                                                    <div class="home-product-item__price">
+                                                        <span class="home-product-item__price-old">1.200.000đ</span>
+                                                        <span class="home-product-item__price-current">900.000đ</span>
+                                                    </div>
+                                                    <div class="home-product-item__action">
+                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
+                                            <i class="home-product-item__like-icon far fa-heart"></i>
+                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                                        <div class="home-product-item__rating">
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class=" fas fa-star"></i>
+                                                        </div>
+                                                        <span class="home-product-item__sold">88 đã bán</span>
+                                                    </div>
+                                                    <div class="home-product-item__origin">
+                                                        <span class="home-product-item__brand">Whoo</span>
+                                                        <span class="home-product-item__origin-name">Nhật Bản</span>
+                                                    </div>
+                                                    <div class="home-product-item__favourite">
+                                                        <i class="fa-solid fa-check"></i> Yêu thích
+                                                    </div>
+                                                    <div class="home-product-item__sale-off">
+                                                        <span class="home-product-item__sale-off-percent">10%</span>
+                                                        <span class="home-product-item__sale-off-label">GIẢM</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="grid__column-2-4">
+
+                                                <a href="product_details.jsp" class="home-product-item">
+                                                    <div class="home-product-item__img"
+                                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
+                                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
+                                                        Samsung Galaxy Watch III 45mm LTE</h4>
+                                                    <div class="home-product-item__price">
+                                                        <span class="home-product-item__price-old">1.200.000đ</span>
+                                                        <span class="home-product-item__price-current">900.000đ</span>
+                                                    </div>
+                                                    <div class="home-product-item__action">
+                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
+                                            <i class="home-product-item__like-icon far fa-heart"></i>
+                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                                        <div class="home-product-item__rating">
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class=" fas fa-star"></i>
+                                                        </div>
+                                                        <span class="home-product-item__sold">88 đã bán</span>
+                                                    </div>
+                                                    <div class="home-product-item__origin">
+                                                        <span class="home-product-item__brand">Whoo</span>
+                                                        <span class="home-product-item__origin-name">Nhật Bản</span>
+                                                    </div>
+                                                    <div class="home-product-item__favourite">
+                                                        <i class="fa-solid fa-check"></i> Yêu thích
+                                                    </div>
+                                                    <div class="home-product-item__sale-off">
+                                                        <span class="home-product-item__sale-off-percent">10%</span>
+                                                        <span class="home-product-item__sale-off-label">GIẢM</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="grid__column-2-4">
+
+                                                <a href="product_details.jsp" class="home-product-item">
+                                                    <div class="home-product-item__img"
+                                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
+                                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
+                                                        Samsung Galaxy Watch III 45mm LTE</h4>
+                                                    <div class="home-product-item__price">
+                                                        <span class="home-product-item__price-old">1.200.000đ</span>
+                                                        <span class="home-product-item__price-current">900.000đ</span>
+                                                    </div>
+                                                    <div class="home-product-item__action">
+                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
+                                            <i class="home-product-item__like-icon far fa-heart"></i>
+                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                                        <div class="home-product-item__rating">
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class=" fas fa-star"></i>
+                                                        </div>
+                                                        <span class="home-product-item__sold">88 đã bán</span>
+                                                    </div>
+                                                    <div class="home-product-item__origin">
+                                                        <span class="home-product-item__brand">Whoo</span>
+                                                        <span class="home-product-item__origin-name">Nhật Bản</span>
+                                                    </div>
+                                                    <div class="home-product-item__favourite">
+                                                        <i class="fa-solid fa-check"></i> Yêu thích
+                                                    </div>
+                                                    <div class="home-product-item__sale-off">
+                                                        <span class="home-product-item__sale-off-percent">10%</span>
+                                                        <span class="home-product-item__sale-off-label">GIẢM</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="grid__column-2-4">
+
+                                                <a href="product_details.jsp" class="home-product-item">
+                                                    <div class="home-product-item__img"
+                                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
+                                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
+                                                        Samsung Galaxy Watch III 45mm LTE</h4>
+                                                    <div class="home-product-item__price">
+                                                        <span class="home-product-item__price-old">1.200.000đ</span>
+                                                        <span class="home-product-item__price-current">900.000đ</span>
+                                                    </div>
+                                                    <div class="home-product-item__action">
+                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
+                                            <i class="home-product-item__like-icon far fa-heart"></i>
+                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                                        <div class="home-product-item__rating">
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class=" fas fa-star"></i>
+                                                        </div>
+                                                        <span class="home-product-item__sold">88 đã bán</span>
+                                                    </div>
+                                                    <div class="home-product-item__origin">
+                                                        <span class="home-product-item__brand">Whoo</span>
+                                                        <span class="home-product-item__origin-name">Nhật Bản</span>
+                                                    </div>
+                                                    <div class="home-product-item__favourite">
+                                                        <i class="fa-solid fa-check"></i> Yêu thích
+                                                    </div>
+                                                    <div class="home-product-item__sale-off">
+                                                        <span class="home-product-item__sale-off-percent">10%</span>
+                                                        <span class="home-product-item__sale-off-label">GIẢM</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="grid__column-2-4">
+
+                                                <a href="product_details.jsp" class="home-product-item">
+                                                    <div class="home-product-item__img"
+                                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
+                                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
+                                                        Samsung Galaxy Watch III 45mm LTE</h4>
+                                                    <div class="home-product-item__price">
+                                                        <span class="home-product-item__price-old">1.200.000đ</span>
+                                                        <span class="home-product-item__price-current">900.000đ</span>
+                                                    </div>
+                                                    <div class="home-product-item__action">
+                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
+                                            <i class="home-product-item__like-icon far fa-heart"></i>
+                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                                        <div class="home-product-item__rating">
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class=" fas fa-star"></i>
+                                                        </div>
+                                                        <span class="home-product-item__sold">88 đã bán</span>
+                                                    </div>
+                                                    <div class="home-product-item__origin">
+                                                        <span class="home-product-item__brand">Whoo</span>
+                                                        <span class="home-product-item__origin-name">Nhật Bản</span>
+                                                    </div>
+                                                    <div class="home-product-item__favourite">
+                                                        <i class="fa-solid fa-check"></i> Yêu thích
+                                                    </div>
+                                                    <div class="home-product-item__sale-off">
+                                                        <span class="home-product-item__sale-off-percent">10%</span>
+                                                        <span class="home-product-item__sale-off-label">GIẢM</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="grid__column-2-4">
+
+                                                <a href="product_details.jsp" class="home-product-item">
+                                                    <div class="home-product-item__img"
+                                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
+                                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
+                                                        Samsung Galaxy Watch III 45mm LTE</h4>
+                                                    <div class="home-product-item__price">
+                                                        <span class="home-product-item__price-old">1.200.000đ</span>
+                                                        <span class="home-product-item__price-current">900.000đ</span>
+                                                    </div>
+                                                    <div class="home-product-item__action">
+                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
+                                            <i class="home-product-item__like-icon far fa-heart"></i>
+                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                                        <div class="home-product-item__rating">
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class=" fas fa-star"></i>
+                                                        </div>
+                                                        <span class="home-product-item__sold">88 đã bán</span>
+                                                    </div>
+                                                    <div class="home-product-item__origin">
+                                                        <span class="home-product-item__brand">Whoo</span>
+                                                        <span class="home-product-item__origin-name">Nhật Bản</span>
+                                                    </div>
+                                                    <div class="home-product-item__favourite">
+                                                        <i class="fa-solid fa-check"></i> Yêu thích
+                                                    </div>
+                                                    <div class="home-product-item__sale-off">
+                                                        <span class="home-product-item__sale-off-percent">10%</span>
+                                                        <span class="home-product-item__sale-off-label">GIẢM</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="grid__column-2-4">
+
+                                                <a href="product_details.jsp" class="home-product-item">
+                                                    <div class="home-product-item__img"
+                                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
+                                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
+                                                        Samsung Galaxy Watch III 45mm LTE</h4>
+                                                    <div class="home-product-item__price">
+                                                        <span class="home-product-item__price-old">1.200.000đ</span>
+                                                        <span class="home-product-item__price-current">900.000đ</span>
+                                                    </div>
+                                                    <div class="home-product-item__action">
+                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
+                                            <i class="home-product-item__like-icon far fa-heart"></i>
+                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                                        <div class="home-product-item__rating">
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class=" fas fa-star"></i>
+                                                        </div>
+                                                        <span class="home-product-item__sold">88 đã bán</span>
+                                                    </div>
+                                                    <div class="home-product-item__origin">
+                                                        <span class="home-product-item__brand">Whoo</span>
+                                                        <span class="home-product-item__origin-name">Nhật Bản</span>
+                                                    </div>
+                                                    <div class="home-product-item__favourite">
+                                                        <i class="fa-solid fa-check"></i> Yêu thích
+                                                    </div>
+                                                    <div class="home-product-item__sale-off">
+                                                        <span class="home-product-item__sale-off-percent">10%</span>
+                                                        <span class="home-product-item__sale-off-label">GIẢM</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="grid__column-2-4">
+
+                                                <a href="product_details.jsp" class="home-product-item">
+                                                    <div class="home-product-item__img"
+                                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
+                                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
+                                                        Samsung Galaxy Watch III 45mm LTE</h4>
+                                                    <div class="home-product-item__price">
+                                                        <span class="home-product-item__price-old">1.200.000đ</span>
+                                                        <span class="home-product-item__price-current">900.000đ</span>
+                                                    </div>
+                                                    <div class="home-product-item__action">
+                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
+                                            <i class="home-product-item__like-icon far fa-heart"></i>
+                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                                        <div class="home-product-item__rating">
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class=" fas fa-star"></i>
+                                                        </div>
+                                                        <span class="home-product-item__sold">88 đã bán</span>
+                                                    </div>
+                                                    <div class="home-product-item__origin">
+                                                        <span class="home-product-item__brand">Whoo</span>
+                                                        <span class="home-product-item__origin-name">Nhật Bản</span>
+                                                    </div>
+                                                    <div class="home-product-item__favourite">
+                                                        <i class="fa-solid fa-check"></i> Yêu thích
+                                                    </div>
+                                                    <div class="home-product-item__sale-off">
+                                                        <span class="home-product-item__sale-off-percent">10%</span>
+                                                        <span class="home-product-item__sale-off-label">GIẢM</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="grid__column-2-4">
+
+                                                <a href="product_details.jsp" class="home-product-item">
+                                                    <div class="home-product-item__img"
+                                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
+                                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
+                                                        Samsung Galaxy Watch III 45mm LTE</h4>
+                                                    <div class="home-product-item__price">
+                                                        <span class="home-product-item__price-old">1.200.000đ</span>
+                                                        <span class="home-product-item__price-current">900.000đ</span>
+                                                    </div>
+                                                    <div class="home-product-item__action">
+                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
+                                            <i class="home-product-item__like-icon far fa-heart"></i>
+                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                                        <div class="home-product-item__rating">
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class=" fas fa-star"></i>
+                                                        </div>
+                                                        <span class="home-product-item__sold">88 đã bán</span>
+                                                    </div>
+                                                    <div class="home-product-item__origin">
+                                                        <span class="home-product-item__brand">Whoo</span>
+                                                        <span class="home-product-item__origin-name">Nhật Bản</span>
+                                                    </div>
+                                                    <div class="home-product-item__favourite">
+                                                        <i class="fa-solid fa-check"></i> Yêu thích
+                                                    </div>
+                                                    <div class="home-product-item__sale-off">
+                                                        <span class="home-product-item__sale-off-percent">10%</span>
+                                                        <span class="home-product-item__sale-off-label">GIẢM</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+
+                                    <div class="home-product">
+                                        <div class="grid__row">
+                                            <div class="grid__column-2-4">
+
+                                                <a href="product_details.jsp" class="home-product-item">
+                                                    <div class="home-product-item__img"
+                                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
+                                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
+                                                        Samsung Galaxy Watch III 45mm LTE</h4>
+                                                    <div class="home-product-item__price">
+                                                        <span class="home-product-item__price-old">1.200.000đ</span>
+                                                        <span class="home-product-item__price-current">900.000đ</span>
+                                                    </div>
+                                                    <div class="home-product-item__action">
+                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
+                                            <i class="home-product-item__like-icon far fa-heart"></i>
+                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                                        <div class="home-product-item__rating">
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class=" fas fa-star"></i>
+                                                        </div>
+                                                        <span class="home-product-item__sold">88 đã bán</span>
+                                                    </div>
+                                                    <div class="home-product-item__origin">
+                                                        <span class="home-product-item__brand">Whoo</span>
+                                                        <span class="home-product-item__origin-name">Nhật Bản</span>
+                                                    </div>
+                                                    <div class="home-product-item__favourite">
+                                                        <i class="fa-solid fa-check"></i> Yêu thích
+                                                    </div>
+                                                    <div class="home-product-item__sale-off">
+                                                        <span class="home-product-item__sale-off-percent">10%</span>
+                                                        <span class="home-product-item__sale-off-label">GIẢM</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="grid__column-2-4">
+
+                                                <a href="product_details.jsp" class="home-product-item">
+                                                    <div class="home-product-item__img"
+                                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
+                                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
+                                                        Samsung Galaxy Watch III 45mm LTE</h4>
+                                                    <div class="home-product-item__price">
+                                                        <span class="home-product-item__price-old">1.200.000đ</span>
+                                                        <span class="home-product-item__price-current">900.000đ</span>
+                                                    </div>
+                                                    <div class="home-product-item__action">
+                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
+                                            <i class="home-product-item__like-icon far fa-heart"></i>
+                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                                        <div class="home-product-item__rating">
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class=" fas fa-star"></i>
+                                                        </div>
+                                                        <span class="home-product-item__sold">88 đã bán</span>
+                                                    </div>
+                                                    <div class="home-product-item__origin">
+                                                        <span class="home-product-item__brand">Whoo</span>
+                                                        <span class="home-product-item__origin-name">Nhật Bản</span>
+                                                    </div>
+                                                    <div class="home-product-item__favourite">
+                                                        <i class="fa-solid fa-check"></i> Yêu thích
+                                                    </div>
+                                                    <div class="home-product-item__sale-off">
+                                                        <span class="home-product-item__sale-off-percent">10%</span>
+                                                        <span class="home-product-item__sale-off-label">GIẢM</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="grid__column-2-4">
+
+                                                <a href="product_details.jsp" class="home-product-item">
+                                                    <div class="home-product-item__img"
+                                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
+                                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
+                                                        Samsung Galaxy Watch III 45mm LTE</h4>
+                                                    <div class="home-product-item__price">
+                                                        <span class="home-product-item__price-old">1.200.000đ</span>
+                                                        <span class="home-product-item__price-current">900.000đ</span>
+                                                    </div>
+                                                    <div class="home-product-item__action">
+                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
+                                            <i class="home-product-item__like-icon far fa-heart"></i>
+                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                                        <div class="home-product-item__rating">
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class=" fas fa-star"></i>
+                                                        </div>
+                                                        <span class="home-product-item__sold">88 đã bán</span>
+                                                    </div>
+                                                    <div class="home-product-item__origin">
+                                                        <span class="home-product-item__brand">Whoo</span>
+                                                        <span class="home-product-item__origin-name">Nhật Bản</span>
+                                                    </div>
+                                                    <div class="home-product-item__favourite">
+                                                        <i class="fa-solid fa-check"></i> Yêu thích
+                                                    </div>
+                                                    <div class="home-product-item__sale-off">
+                                                        <span class="home-product-item__sale-off-percent">10%</span>
+                                                        <span class="home-product-item__sale-off-label">GIẢM</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="grid__column-2-4">
+
+                                                <a href="product_details.jsp" class="home-product-item">
+                                                    <div class="home-product-item__img"
+                                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
+                                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
+                                                        Samsung Galaxy Watch III 45mm LTE</h4>
+                                                    <div class="home-product-item__price">
+                                                        <span class="home-product-item__price-old">1.200.000đ</span>
+                                                        <span class="home-product-item__price-current">900.000đ</span>
+                                                    </div>
+                                                    <div class="home-product-item__action">
+                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
+                                            <i class="home-product-item__like-icon far fa-heart"></i>
+                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                                        <div class="home-product-item__rating">
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class=" fas fa-star"></i>
+                                                        </div>
+                                                        <span class="home-product-item__sold">88 đã bán</span>
+                                                    </div>
+                                                    <div class="home-product-item__origin">
+                                                        <span class="home-product-item__brand">Whoo</span>
+                                                        <span class="home-product-item__origin-name">Nhật Bản</span>
+                                                    </div>
+                                                    <div class="home-product-item__favourite">
+                                                        <i class="fa-solid fa-check"></i> Yêu thích
+                                                    </div>
+                                                    <div class="home-product-item__sale-off">
+                                                        <span class="home-product-item__sale-off-percent">10%</span>
+                                                        <span class="home-product-item__sale-off-label">GIẢM</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="grid__column-2-4">
+
+                                                <a href="product_details.jsp" class="home-product-item">
+                                                    <div class="home-product-item__img"
+                                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
+                                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
+                                                        Samsung Galaxy Watch III 45mm LTE</h4>
+                                                    <div class="home-product-item__price">
+                                                        <span class="home-product-item__price-old">1.200.000đ</span>
+                                                        <span class="home-product-item__price-current">900.000đ</span>
+                                                    </div>
+                                                    <div class="home-product-item__action">
+                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
+                                            <i class="home-product-item__like-icon far fa-heart"></i>
+                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                                        <div class="home-product-item__rating">
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class=" fas fa-star"></i>
+                                                        </div>
+                                                        <span class="home-product-item__sold">88 đã bán</span>
+                                                    </div>
+                                                    <div class="home-product-item__origin">
+                                                        <span class="home-product-item__brand">Whoo</span>
+                                                        <span class="home-product-item__origin-name">Nhật Bản</span>
+                                                    </div>
+                                                    <div class="home-product-item__favourite">
+                                                        <i class="fa-solid fa-check"></i> Yêu thích
+                                                    </div>
+                                                    <div class="home-product-item__sale-off">
+                                                        <span class="home-product-item__sale-off-percent">10%</span>
+                                                        <span class="home-product-item__sale-off-label">GIẢM</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="grid__column-2-4">
+
+                                                <a href="product_details.jsp" class="home-product-item">
+                                                    <div class="home-product-item__img"
+                                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
+                                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
+                                                        Samsung Galaxy Watch III 45mm LTE</h4>
+                                                    <div class="home-product-item__price">
+                                                        <span class="home-product-item__price-old">1.200.000đ</span>
+                                                        <span class="home-product-item__price-current">900.000đ</span>
+                                                    </div>
+                                                    <div class="home-product-item__action">
+                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
+                                            <i class="home-product-item__like-icon far fa-heart"></i>
+                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                                        <div class="home-product-item__rating">
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class=" fas fa-star"></i>
+                                                        </div>
+                                                        <span class="home-product-item__sold">88 đã bán</span>
+                                                    </div>
+                                                    <div class="home-product-item__origin">
+                                                        <span class="home-product-item__brand">Whoo</span>
+                                                        <span class="home-product-item__origin-name">Nhật Bản</span>
+                                                    </div>
+                                                    <div class="home-product-item__favourite">
+                                                        <i class="fa-solid fa-check"></i> Yêu thích
+                                                    </div>
+                                                    <div class="home-product-item__sale-off">
+                                                        <span class="home-product-item__sale-off-percent">10%</span>
+                                                        <span class="home-product-item__sale-off-label">GIẢM</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="grid__column-2-4">
+
+                                                <a href="product_details.jsp" class="home-product-item">
+                                                    <div class="home-product-item__img"
+                                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
+                                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
+                                                        Samsung Galaxy Watch III 45mm LTE</h4>
+                                                    <div class="home-product-item__price">
+                                                        <span class="home-product-item__price-old">1.200.000đ</span>
+                                                        <span class="home-product-item__price-current">900.000đ</span>
+                                                    </div>
+                                                    <div class="home-product-item__action">
+                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
+                                            <i class="home-product-item__like-icon far fa-heart"></i>
+                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                                        <div class="home-product-item__rating">
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class=" fas fa-star"></i>
+                                                        </div>
+                                                        <span class="home-product-item__sold">88 đã bán</span>
+                                                    </div>
+                                                    <div class="home-product-item__origin">
+                                                        <span class="home-product-item__brand">Whoo</span>
+                                                        <span class="home-product-item__origin-name">Nhật Bản</span>
+                                                    </div>
+                                                    <div class="home-product-item__favourite">
+                                                        <i class="fa-solid fa-check"></i> Yêu thích
+                                                    </div>
+                                                    <div class="home-product-item__sale-off">
+                                                        <span class="home-product-item__sale-off-percent">10%</span>
+                                                        <span class="home-product-item__sale-off-label">GIẢM</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="grid__column-2-4">
+
+                                                <a href="product_details.jsp" class="home-product-item">
+                                                    <div class="home-product-item__img"
+                                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
+                                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
+                                                        Samsung Galaxy Watch III 45mm LTE</h4>
+                                                    <div class="home-product-item__price">
+                                                        <span class="home-product-item__price-old">1.200.000đ</span>
+                                                        <span class="home-product-item__price-current">900.000đ</span>
+                                                    </div>
+                                                    <div class="home-product-item__action">
+                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
+                                            <i class="home-product-item__like-icon far fa-heart"></i>
+                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                                        <div class="home-product-item__rating">
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class=" fas fa-star"></i>
+                                                        </div>
+                                                        <span class="home-product-item__sold">88 đã bán</span>
+                                                    </div>
+                                                    <div class="home-product-item__origin">
+                                                        <span class="home-product-item__brand">Whoo</span>
+                                                        <span class="home-product-item__origin-name">Nhật Bản</span>
+                                                    </div>
+                                                    <div class="home-product-item__favourite">
+                                                        <i class="fa-solid fa-check"></i> Yêu thích
+                                                    </div>
+                                                    <div class="home-product-item__sale-off">
+                                                        <span class="home-product-item__sale-off-percent">10%</span>
+                                                        <span class="home-product-item__sale-off-label">GIẢM</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="grid__column-2-4">
+
+                                                <a href="product_details.jsp" class="home-product-item">
+                                                    <div class="home-product-item__img"
+                                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
+                                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
+                                                        Samsung Galaxy Watch III 45mm LTE</h4>
+                                                    <div class="home-product-item__price">
+                                                        <span class="home-product-item__price-old">1.200.000đ</span>
+                                                        <span class="home-product-item__price-current">900.000đ</span>
+                                                    </div>
+                                                    <div class="home-product-item__action">
+                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
+                                            <i class="home-product-item__like-icon far fa-heart"></i>
+                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                                        <div class="home-product-item__rating">
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class=" fas fa-star"></i>
+                                                        </div>
+                                                        <span class="home-product-item__sold">88 đã bán</span>
+                                                    </div>
+                                                    <div class="home-product-item__origin">
+                                                        <span class="home-product-item__brand">Whoo</span>
+                                                        <span class="home-product-item__origin-name">Nhật Bản</span>
+                                                    </div>
+                                                    <div class="home-product-item__favourite">
+                                                        <i class="fa-solid fa-check"></i> Yêu thích
+                                                    </div>
+                                                    <div class="home-product-item__sale-off">
+                                                        <span class="home-product-item__sale-off-percent">10%</span>
+                                                        <span class="home-product-item__sale-off-label">GIẢM</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                            <div class="grid__column-2-4">
+
+                                                <a href="product_details.jsp" class="home-product-item">
+                                                    <div class="home-product-item__img"
+                                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
+                                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
+                                                        Samsung Galaxy Watch III 45mm LTE</h4>
+                                                    <div class="home-product-item__price">
+                                                        <span class="home-product-item__price-old">1.200.000đ</span>
+                                                        <span class="home-product-item__price-current">900.000đ</span>
+                                                    </div>
+                                                    <div class="home-product-item__action">
+                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
+                                            <i class="home-product-item__like-icon far fa-heart"></i>
+                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                                        <div class="home-product-item__rating">
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class="home-product-item__star-gold fas fa-star"></i>
+                                                            <i class=" fas fa-star"></i>
+                                                        </div>
+                                                        <span class="home-product-item__sold">88 đã bán</span>
+                                                    </div>
+                                                    <div class="home-product-item__origin">
+                                                        <span class="home-product-item__brand">Whoo</span>
+                                                        <span class="home-product-item__origin-name">Nhật Bản</span>
+                                                    </div>
+                                                    <div class="home-product-item__favourite">
+                                                        <i class="fa-solid fa-check"></i> Yêu thích
+                                                    </div>
+                                                    <div class="home-product-item__sale-off">
+                                                        <span class="home-product-item__sale-off-percent">10%</span>
+                                                        <span class="home-product-item__sale-off-label">GIẢM</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+
+                                    <%--                    List product--%>
+
+                                    <%--                    Phân trang--%>
+
+                                    <ul class="pagination home-product__pagination">
+                                        <li class="pagination-item">
+                                            <a href="#" class="pagination-item__link">
+                                                <i class="pagination-item__icon fas fa-angle-left"></i>
+                                            </a>
+                                        </li>
+                                        <li class="pagination-item">
+                                            <a href="#" class="pagination-item__link pagination-item__link--active">1</a>
+                                        </li>
+
+                                        <li class="pagination-item">
+                                            <a href="#" class="pagination-item__link">2</a>
+                                        </li>
+
+                                        <li class="pagination-item">
+                                            <a href="#" class="pagination-item__link">3</a>
+                                        </li>
+
+                                        <li class="pagination-item">
+                                            <a href="#" class="pagination-item__link">4</a>
+                                        </li>
+
+                                        <li class="pagination-item">
+                                            <a href="#" class="pagination-item__link">...</a>
+                                        </li>
+                                        <li class="pagination-item">
+                                            <a href="#" class="pagination-item__link">14</a>
+                                        </li>
+
+                                        <li class="pagination-item">
+                                            <a href="#" class="pagination-item__link">
+                                                <i class="pagination-item__icon fas fa-angle-right"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <%--                    Phân trang--%>
+
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -304,1702 +1998,24 @@
 
             <%--    Banner--%>
             <div class="banner">
-                <video controls autoplay src="../image/banner_video_1.mp4" class="banner__video"></video>
+                <video controls autoplay muted loop class="banner__video">
+                    <source src="../image/banner_video_1.mp4" type="video/mp4">
+                </video>
+                <video controls autoplay muted loop class="banner__video">
+                    <source src="../image/banner_video_3.mp4" type="video/mp4">
+                </video>
+                <video controls autoplay muted loop class="banner__video">
+                    <source src="../image/banner_video_3.mp4" type="video/mp4">
+                </video>
+                <video controls autoplay muted loop class="banner__video">
+                    <source src="../image/banner_video_3.mp4" type="video/mp4">
+                </video>
             </div>
             <%--    Banner--%>
 
         </div>
 
-        <div class="grid app__container-wrap">
-            <div class="grid__row app__content">
-                <div class="grid__column-2 category-wrap">
-                    <nav class="category">
-                        <h3 class="category__heading"><i class="category__heading-icon fa-solid fa-list"></i> Danh
-                            mục
-                        </h3>
-                        <ul class="category-list">
-                            <li class="category-item">
-                                <a href="#" class="category-item__link category-item__link--active ">Thiết Bị Điện
-                                    Tử</a>
-                            </li>
-                            <li class="category-item">
-                                <a href="#" class="category-item__link">Thiết bị đeo thông minh</a>
-                            </li>
-                            <li class="category-item">
-                                <a href="#" class="category-item__link">Phụ kiện ti vi</a>
-                            </li>
-                            <li class="category-item">
-                                <a href="#" class="category-item__link">Thiết bị nhà thông minh</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="grid__column-10">
-                    <div class="home-filter">
-                        <span class="home-filter__label">Sắp xếp theo</span>
-                        <button class="home-filter__btn btn btn-primary">Phổ biến</button>
-                        <button class="home-filter__btn btn">Mới nhất</button>
-                        <button class="home-filter__btn btn">Bán chạy</button>
-                        <div class="select-input">
-                            <span class="select-input__label">Giá</span>
-                            <i class="select-input__icon fas fa-angle-down"></i>
 
-                            <%--                            List options--%>
-                            <ul class="select-input__list">
-                                <li class="select-input__item">
-                                    <a href="#" class="select-input__link">Giá: Thấp đến cao</a>
-                                </li>
-                                <li class="select-input__item">
-                                    <a href="#" class="select-input__link">Giá: Cao đến thấp</a>
-                                </li>
-
-                            </ul>
-                        </div>
-                        <div class="home-filter__page">
-                            <span class="home-filter__page-num">
-                                <span class="home-filter__page-current">1</span>/14
-                            </span>
-                            <div class="home-filter__page-control">
-                                <a href="#" class="home-filter__page-btn home-filter__page-btn--disabled">
-                                    <i class="home-filter__page-icon fas fa-angle-left"></i>
-                                </a>
-                                <a href="#" class="home-filter__page-btn">
-                                    <i class="home-filter__page-icon fas fa-angle-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <%--                    List product--%>
-                    <div class="home-product">
-                        <div class="grid__row">
-                            <div class="grid__column-2-4">
-
-                                <a href="product_details.jsp" class="home-product-item">
-                                    <div class="home-product-item__img"
-                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
-                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
-                                        Samsung Galaxy Watch III 45mm LTE</h4>
-                                    <div class="home-product-item__price">
-                                        <span class="home-product-item__price-old">1.200.000đ</span>
-                                        <span class="home-product-item__price-current">900.000đ</span>
-                                    </div>
-                                    <div class="home-product-item__action">
-                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
-                                            <i class="home-product-item__like-icon far fa-heart"></i>
-                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
-                                        </span>
-                                        <div class="home-product-item__rating">
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class=" fas fa-star"></i>
-                                        </div>
-                                        <span class="home-product-item__sold">88 đã bán</span>
-                                    </div>
-                                    <div class="home-product-item__origin">
-                                        <span class="home-product-item__brand">Whoo</span>
-                                        <span class="home-product-item__origin-name">Nhật Bản</span>
-                                    </div>
-                                    <div class="home-product-item__favourite">
-                                        <i class="fa-solid fa-check"></i> Yêu thích
-                                    </div>
-                                    <div class="home-product-item__sale-off">
-                                        <span class="home-product-item__sale-off-percent">10%</span>
-                                        <span class="home-product-item__sale-off-label">GIẢM</span>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="grid__column-2-4">
-
-                                <a href="product_details.jsp" class="home-product-item">
-                                    <div class="home-product-item__img"
-                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
-                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
-                                        Samsung Galaxy Watch III 45mm LTE</h4>
-                                    <div class="home-product-item__price">
-                                        <span class="home-product-item__price-old">1.200.000đ</span>
-                                        <span class="home-product-item__price-current">900.000đ</span>
-                                    </div>
-                                    <div class="home-product-item__action">
-                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
-                                            <i class="home-product-item__like-icon far fa-heart"></i>
-                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
-                                        </span>
-                                        <div class="home-product-item__rating">
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class=" fas fa-star"></i>
-                                        </div>
-                                        <span class="home-product-item__sold">88 đã bán</span>
-                                    </div>
-                                    <div class="home-product-item__origin">
-                                        <span class="home-product-item__brand">Whoo</span>
-                                        <span class="home-product-item__origin-name">Nhật Bản</span>
-                                    </div>
-                                    <div class="home-product-item__favourite">
-                                        <i class="fa-solid fa-check"></i> Yêu thích
-                                    </div>
-                                    <div class="home-product-item__sale-off">
-                                        <span class="home-product-item__sale-off-percent">10%</span>
-                                        <span class="home-product-item__sale-off-label">GIẢM</span>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="grid__column-2-4">
-
-                                <a href="product_details.jsp" class="home-product-item">
-                                    <div class="home-product-item__img"
-                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
-                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
-                                        Samsung Galaxy Watch III 45mm LTE</h4>
-                                    <div class="home-product-item__price">
-                                        <span class="home-product-item__price-old">1.200.000đ</span>
-                                        <span class="home-product-item__price-current">900.000đ</span>
-                                    </div>
-                                    <div class="home-product-item__action">
-                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
-                                            <i class="home-product-item__like-icon far fa-heart"></i>
-                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
-                                        </span>
-                                        <div class="home-product-item__rating">
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class=" fas fa-star"></i>
-                                        </div>
-                                        <span class="home-product-item__sold">88 đã bán</span>
-                                    </div>
-                                    <div class="home-product-item__origin">
-                                        <span class="home-product-item__brand">Whoo</span>
-                                        <span class="home-product-item__origin-name">Nhật Bản</span>
-                                    </div>
-                                    <div class="home-product-item__favourite">
-                                        <i class="fa-solid fa-check"></i> Yêu thích
-                                    </div>
-                                    <div class="home-product-item__sale-off">
-                                        <span class="home-product-item__sale-off-percent">10%</span>
-                                        <span class="home-product-item__sale-off-label">GIẢM</span>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="grid__column-2-4">
-
-                                <a href="product_details.jsp" class="home-product-item">
-                                    <div class="home-product-item__img"
-                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
-                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
-                                        Samsung Galaxy Watch III 45mm LTE</h4>
-                                    <div class="home-product-item__price">
-                                        <span class="home-product-item__price-old">1.200.000đ</span>
-                                        <span class="home-product-item__price-current">900.000đ</span>
-                                    </div>
-                                    <div class="home-product-item__action">
-                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
-                                            <i class="home-product-item__like-icon far fa-heart"></i>
-                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
-                                        </span>
-                                        <div class="home-product-item__rating">
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class=" fas fa-star"></i>
-                                        </div>
-                                        <span class="home-product-item__sold">88 đã bán</span>
-                                    </div>
-                                    <div class="home-product-item__origin">
-                                        <span class="home-product-item__brand">Whoo</span>
-                                        <span class="home-product-item__origin-name">Nhật Bản</span>
-                                    </div>
-                                    <div class="home-product-item__favourite">
-                                        <i class="fa-solid fa-check"></i> Yêu thích
-                                    </div>
-                                    <div class="home-product-item__sale-off">
-                                        <span class="home-product-item__sale-off-percent">10%</span>
-                                        <span class="home-product-item__sale-off-label">GIẢM</span>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="grid__column-2-4">
-
-                                <a href="product_details.jsp" class="home-product-item">
-                                    <div class="home-product-item__img"
-                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
-                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
-                                        Samsung Galaxy Watch III 45mm LTE</h4>
-                                    <div class="home-product-item__price">
-                                        <span class="home-product-item__price-old">1.200.000đ</span>
-                                        <span class="home-product-item__price-current">900.000đ</span>
-                                    </div>
-                                    <div class="home-product-item__action">
-                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
-                                            <i class="home-product-item__like-icon far fa-heart"></i>
-                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
-                                        </span>
-                                        <div class="home-product-item__rating">
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class=" fas fa-star"></i>
-                                        </div>
-                                        <span class="home-product-item__sold">88 đã bán</span>
-                                    </div>
-                                    <div class="home-product-item__origin">
-                                        <span class="home-product-item__brand">Whoo</span>
-                                        <span class="home-product-item__origin-name">Nhật Bản</span>
-                                    </div>
-                                    <div class="home-product-item__favourite">
-                                        <i class="fa-solid fa-check"></i> Yêu thích
-                                    </div>
-                                    <div class="home-product-item__sale-off">
-                                        <span class="home-product-item__sale-off-percent">10%</span>
-                                        <span class="home-product-item__sale-off-label">GIẢM</span>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="grid__column-2-4">
-
-                                <a href="product_details.jsp" class="home-product-item">
-                                    <div class="home-product-item__img"
-                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
-                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
-                                        Samsung Galaxy Watch III 45mm LTE</h4>
-                                    <div class="home-product-item__price">
-                                        <span class="home-product-item__price-old">1.200.000đ</span>
-                                        <span class="home-product-item__price-current">900.000đ</span>
-                                    </div>
-                                    <div class="home-product-item__action">
-                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
-                                            <i class="home-product-item__like-icon far fa-heart"></i>
-                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
-                                        </span>
-                                        <div class="home-product-item__rating">
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class=" fas fa-star"></i>
-                                        </div>
-                                        <span class="home-product-item__sold">88 đã bán</span>
-                                    </div>
-                                    <div class="home-product-item__origin">
-                                        <span class="home-product-item__brand">Whoo</span>
-                                        <span class="home-product-item__origin-name">Nhật Bản</span>
-                                    </div>
-                                    <div class="home-product-item__favourite">
-                                        <i class="fa-solid fa-check"></i> Yêu thích
-                                    </div>
-                                    <div class="home-product-item__sale-off">
-                                        <span class="home-product-item__sale-off-percent">10%</span>
-                                        <span class="home-product-item__sale-off-label">GIẢM</span>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="grid__column-2-4">
-
-                                <a href="product_details.jsp" class="home-product-item">
-                                    <div class="home-product-item__img"
-                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
-                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
-                                        Samsung Galaxy Watch III 45mm LTE</h4>
-                                    <div class="home-product-item__price">
-                                        <span class="home-product-item__price-old">1.200.000đ</span>
-                                        <span class="home-product-item__price-current">900.000đ</span>
-                                    </div>
-                                    <div class="home-product-item__action">
-                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
-                                            <i class="home-product-item__like-icon far fa-heart"></i>
-                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
-                                        </span>
-                                        <div class="home-product-item__rating">
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class=" fas fa-star"></i>
-                                        </div>
-                                        <span class="home-product-item__sold">88 đã bán</span>
-                                    </div>
-                                    <div class="home-product-item__origin">
-                                        <span class="home-product-item__brand">Whoo</span>
-                                        <span class="home-product-item__origin-name">Nhật Bản</span>
-                                    </div>
-                                    <div class="home-product-item__favourite">
-                                        <i class="fa-solid fa-check"></i> Yêu thích
-                                    </div>
-                                    <div class="home-product-item__sale-off">
-                                        <span class="home-product-item__sale-off-percent">10%</span>
-                                        <span class="home-product-item__sale-off-label">GIẢM</span>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="grid__column-2-4">
-
-                                <a href="product_details.jsp" class="home-product-item">
-                                    <div class="home-product-item__img"
-                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
-                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
-                                        Samsung Galaxy Watch III 45mm LTE</h4>
-                                    <div class="home-product-item__price">
-                                        <span class="home-product-item__price-old">1.200.000đ</span>
-                                        <span class="home-product-item__price-current">900.000đ</span>
-                                    </div>
-                                    <div class="home-product-item__action">
-                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
-                                            <i class="home-product-item__like-icon far fa-heart"></i>
-                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
-                                        </span>
-                                        <div class="home-product-item__rating">
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class=" fas fa-star"></i>
-                                        </div>
-                                        <span class="home-product-item__sold">88 đã bán</span>
-                                    </div>
-                                    <div class="home-product-item__origin">
-                                        <span class="home-product-item__brand">Whoo</span>
-                                        <span class="home-product-item__origin-name">Nhật Bản</span>
-                                    </div>
-                                    <div class="home-product-item__favourite">
-                                        <i class="fa-solid fa-check"></i> Yêu thích
-                                    </div>
-                                    <div class="home-product-item__sale-off">
-                                        <span class="home-product-item__sale-off-percent">10%</span>
-                                        <span class="home-product-item__sale-off-label">GIẢM</span>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="grid__column-2-4">
-
-                                <a href="product_details.jsp" class="home-product-item">
-                                    <div class="home-product-item__img"
-                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
-                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
-                                        Samsung Galaxy Watch III 45mm LTE</h4>
-                                    <div class="home-product-item__price">
-                                        <span class="home-product-item__price-old">1.200.000đ</span>
-                                        <span class="home-product-item__price-current">900.000đ</span>
-                                    </div>
-                                    <div class="home-product-item__action">
-                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
-                                            <i class="home-product-item__like-icon far fa-heart"></i>
-                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
-                                        </span>
-                                        <div class="home-product-item__rating">
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class=" fas fa-star"></i>
-                                        </div>
-                                        <span class="home-product-item__sold">88 đã bán</span>
-                                    </div>
-                                    <div class="home-product-item__origin">
-                                        <span class="home-product-item__brand">Whoo</span>
-                                        <span class="home-product-item__origin-name">Nhật Bản</span>
-                                    </div>
-                                    <div class="home-product-item__favourite">
-                                        <i class="fa-solid fa-check"></i> Yêu thích
-                                    </div>
-                                    <div class="home-product-item__sale-off">
-                                        <span class="home-product-item__sale-off-percent">10%</span>
-                                        <span class="home-product-item__sale-off-label">GIẢM</span>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="grid__column-2-4">
-
-                                <a href="product_details.jsp" class="home-product-item">
-                                    <div class="home-product-item__img"
-                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
-                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
-                                        Samsung Galaxy Watch III 45mm LTE</h4>
-                                    <div class="home-product-item__price">
-                                        <span class="home-product-item__price-old">1.200.000đ</span>
-                                        <span class="home-product-item__price-current">900.000đ</span>
-                                    </div>
-                                    <div class="home-product-item__action">
-                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
-                                            <i class="home-product-item__like-icon far fa-heart"></i>
-                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
-                                        </span>
-                                        <div class="home-product-item__rating">
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class=" fas fa-star"></i>
-                                        </div>
-                                        <span class="home-product-item__sold">88 đã bán</span>
-                                    </div>
-                                    <div class="home-product-item__origin">
-                                        <span class="home-product-item__brand">Whoo</span>
-                                        <span class="home-product-item__origin-name">Nhật Bản</span>
-                                    </div>
-                                    <div class="home-product-item__favourite">
-                                        <i class="fa-solid fa-check"></i> Yêu thích
-                                    </div>
-                                    <div class="home-product-item__sale-off">
-                                        <span class="home-product-item__sale-off-percent">10%</span>
-                                        <span class="home-product-item__sale-off-label">GIẢM</span>
-                                    </div>
-                                </a>
-                            </div>
-
-
-                        </div>
-                    </div>
-
-                    <div class="home-product">
-                        <div class="grid__row">
-                            <div class="grid__column-2-4">
-
-                                <a href="product_details.jsp" class="home-product-item">
-                                    <div class="home-product-item__img"
-                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
-                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
-                                        Samsung Galaxy Watch III 45mm LTE</h4>
-                                    <div class="home-product-item__price">
-                                        <span class="home-product-item__price-old">1.200.000đ</span>
-                                        <span class="home-product-item__price-current">900.000đ</span>
-                                    </div>
-                                    <div class="home-product-item__action">
-                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
-                                            <i class="home-product-item__like-icon far fa-heart"></i>
-                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
-                                        </span>
-                                        <div class="home-product-item__rating">
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class=" fas fa-star"></i>
-                                        </div>
-                                        <span class="home-product-item__sold">88 đã bán</span>
-                                    </div>
-                                    <div class="home-product-item__origin">
-                                        <span class="home-product-item__brand">Whoo</span>
-                                        <span class="home-product-item__origin-name">Nhật Bản</span>
-                                    </div>
-                                    <div class="home-product-item__favourite">
-                                        <i class="fa-solid fa-check"></i> Yêu thích
-                                    </div>
-                                    <div class="home-product-item__sale-off">
-                                        <span class="home-product-item__sale-off-percent">10%</span>
-                                        <span class="home-product-item__sale-off-label">GIẢM</span>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="grid__column-2-4">
-
-                                <a href="product_details.jsp" class="home-product-item">
-                                    <div class="home-product-item__img"
-                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
-                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
-                                        Samsung Galaxy Watch III 45mm LTE</h4>
-                                    <div class="home-product-item__price">
-                                        <span class="home-product-item__price-old">1.200.000đ</span>
-                                        <span class="home-product-item__price-current">900.000đ</span>
-                                    </div>
-                                    <div class="home-product-item__action">
-                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
-                                            <i class="home-product-item__like-icon far fa-heart"></i>
-                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
-                                        </span>
-                                        <div class="home-product-item__rating">
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class=" fas fa-star"></i>
-                                        </div>
-                                        <span class="home-product-item__sold">88 đã bán</span>
-                                    </div>
-                                    <div class="home-product-item__origin">
-                                        <span class="home-product-item__brand">Whoo</span>
-                                        <span class="home-product-item__origin-name">Nhật Bản</span>
-                                    </div>
-                                    <div class="home-product-item__favourite">
-                                        <i class="fa-solid fa-check"></i> Yêu thích
-                                    </div>
-                                    <div class="home-product-item__sale-off">
-                                        <span class="home-product-item__sale-off-percent">10%</span>
-                                        <span class="home-product-item__sale-off-label">GIẢM</span>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="grid__column-2-4">
-
-                                <a href="product_details.jsp" class="home-product-item">
-                                    <div class="home-product-item__img"
-                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
-                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
-                                        Samsung Galaxy Watch III 45mm LTE</h4>
-                                    <div class="home-product-item__price">
-                                        <span class="home-product-item__price-old">1.200.000đ</span>
-                                        <span class="home-product-item__price-current">900.000đ</span>
-                                    </div>
-                                    <div class="home-product-item__action">
-                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
-                                            <i class="home-product-item__like-icon far fa-heart"></i>
-                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
-                                        </span>
-                                        <div class="home-product-item__rating">
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class=" fas fa-star"></i>
-                                        </div>
-                                        <span class="home-product-item__sold">88 đã bán</span>
-                                    </div>
-                                    <div class="home-product-item__origin">
-                                        <span class="home-product-item__brand">Whoo</span>
-                                        <span class="home-product-item__origin-name">Nhật Bản</span>
-                                    </div>
-                                    <div class="home-product-item__favourite">
-                                        <i class="fa-solid fa-check"></i> Yêu thích
-                                    </div>
-                                    <div class="home-product-item__sale-off">
-                                        <span class="home-product-item__sale-off-percent">10%</span>
-                                        <span class="home-product-item__sale-off-label">GIẢM</span>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="grid__column-2-4">
-
-                                <a href="product_details.jsp" class="home-product-item">
-                                    <div class="home-product-item__img"
-                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
-                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
-                                        Samsung Galaxy Watch III 45mm LTE</h4>
-                                    <div class="home-product-item__price">
-                                        <span class="home-product-item__price-old">1.200.000đ</span>
-                                        <span class="home-product-item__price-current">900.000đ</span>
-                                    </div>
-                                    <div class="home-product-item__action">
-                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
-                                            <i class="home-product-item__like-icon far fa-heart"></i>
-                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
-                                        </span>
-                                        <div class="home-product-item__rating">
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class=" fas fa-star"></i>
-                                        </div>
-                                        <span class="home-product-item__sold">88 đã bán</span>
-                                    </div>
-                                    <div class="home-product-item__origin">
-                                        <span class="home-product-item__brand">Whoo</span>
-                                        <span class="home-product-item__origin-name">Nhật Bản</span>
-                                    </div>
-                                    <div class="home-product-item__favourite">
-                                        <i class="fa-solid fa-check"></i> Yêu thích
-                                    </div>
-                                    <div class="home-product-item__sale-off">
-                                        <span class="home-product-item__sale-off-percent">10%</span>
-                                        <span class="home-product-item__sale-off-label">GIẢM</span>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="grid__column-2-4">
-
-                                <a href="product_details.jsp" class="home-product-item">
-                                    <div class="home-product-item__img"
-                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
-                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
-                                        Samsung Galaxy Watch III 45mm LTE</h4>
-                                    <div class="home-product-item__price">
-                                        <span class="home-product-item__price-old">1.200.000đ</span>
-                                        <span class="home-product-item__price-current">900.000đ</span>
-                                    </div>
-                                    <div class="home-product-item__action">
-                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
-                                            <i class="home-product-item__like-icon far fa-heart"></i>
-                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
-                                        </span>
-                                        <div class="home-product-item__rating">
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class=" fas fa-star"></i>
-                                        </div>
-                                        <span class="home-product-item__sold">88 đã bán</span>
-                                    </div>
-                                    <div class="home-product-item__origin">
-                                        <span class="home-product-item__brand">Whoo</span>
-                                        <span class="home-product-item__origin-name">Nhật Bản</span>
-                                    </div>
-                                    <div class="home-product-item__favourite">
-                                        <i class="fa-solid fa-check"></i> Yêu thích
-                                    </div>
-                                    <div class="home-product-item__sale-off">
-                                        <span class="home-product-item__sale-off-percent">10%</span>
-                                        <span class="home-product-item__sale-off-label">GIẢM</span>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="grid__column-2-4">
-
-                                <a href="product_details.jsp" class="home-product-item">
-                                    <div class="home-product-item__img"
-                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
-                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
-                                        Samsung Galaxy Watch III 45mm LTE</h4>
-                                    <div class="home-product-item__price">
-                                        <span class="home-product-item__price-old">1.200.000đ</span>
-                                        <span class="home-product-item__price-current">900.000đ</span>
-                                    </div>
-                                    <div class="home-product-item__action">
-                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
-                                            <i class="home-product-item__like-icon far fa-heart"></i>
-                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
-                                        </span>
-                                        <div class="home-product-item__rating">
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class=" fas fa-star"></i>
-                                        </div>
-                                        <span class="home-product-item__sold">88 đã bán</span>
-                                    </div>
-                                    <div class="home-product-item__origin">
-                                        <span class="home-product-item__brand">Whoo</span>
-                                        <span class="home-product-item__origin-name">Nhật Bản</span>
-                                    </div>
-                                    <div class="home-product-item__favourite">
-                                        <i class="fa-solid fa-check"></i> Yêu thích
-                                    </div>
-                                    <div class="home-product-item__sale-off">
-                                        <span class="home-product-item__sale-off-percent">10%</span>
-                                        <span class="home-product-item__sale-off-label">GIẢM</span>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="grid__column-2-4">
-
-                                <a href="product_details.jsp" class="home-product-item">
-                                    <div class="home-product-item__img"
-                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
-                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
-                                        Samsung Galaxy Watch III 45mm LTE</h4>
-                                    <div class="home-product-item__price">
-                                        <span class="home-product-item__price-old">1.200.000đ</span>
-                                        <span class="home-product-item__price-current">900.000đ</span>
-                                    </div>
-                                    <div class="home-product-item__action">
-                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
-                                            <i class="home-product-item__like-icon far fa-heart"></i>
-                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
-                                        </span>
-                                        <div class="home-product-item__rating">
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class=" fas fa-star"></i>
-                                        </div>
-                                        <span class="home-product-item__sold">88 đã bán</span>
-                                    </div>
-                                    <div class="home-product-item__origin">
-                                        <span class="home-product-item__brand">Whoo</span>
-                                        <span class="home-product-item__origin-name">Nhật Bản</span>
-                                    </div>
-                                    <div class="home-product-item__favourite">
-                                        <i class="fa-solid fa-check"></i> Yêu thích
-                                    </div>
-                                    <div class="home-product-item__sale-off">
-                                        <span class="home-product-item__sale-off-percent">10%</span>
-                                        <span class="home-product-item__sale-off-label">GIẢM</span>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="grid__column-2-4">
-
-                                <a href="product_details.jsp" class="home-product-item">
-                                    <div class="home-product-item__img"
-                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
-                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
-                                        Samsung Galaxy Watch III 45mm LTE</h4>
-                                    <div class="home-product-item__price">
-                                        <span class="home-product-item__price-old">1.200.000đ</span>
-                                        <span class="home-product-item__price-current">900.000đ</span>
-                                    </div>
-                                    <div class="home-product-item__action">
-                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
-                                            <i class="home-product-item__like-icon far fa-heart"></i>
-                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
-                                        </span>
-                                        <div class="home-product-item__rating">
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class=" fas fa-star"></i>
-                                        </div>
-                                        <span class="home-product-item__sold">88 đã bán</span>
-                                    </div>
-                                    <div class="home-product-item__origin">
-                                        <span class="home-product-item__brand">Whoo</span>
-                                        <span class="home-product-item__origin-name">Nhật Bản</span>
-                                    </div>
-                                    <div class="home-product-item__favourite">
-                                        <i class="fa-solid fa-check"></i> Yêu thích
-                                    </div>
-                                    <div class="home-product-item__sale-off">
-                                        <span class="home-product-item__sale-off-percent">10%</span>
-                                        <span class="home-product-item__sale-off-label">GIẢM</span>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="grid__column-2-4">
-
-                                <a href="product_details.jsp" class="home-product-item">
-                                    <div class="home-product-item__img"
-                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
-                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
-                                        Samsung Galaxy Watch III 45mm LTE</h4>
-                                    <div class="home-product-item__price">
-                                        <span class="home-product-item__price-old">1.200.000đ</span>
-                                        <span class="home-product-item__price-current">900.000đ</span>
-                                    </div>
-                                    <div class="home-product-item__action">
-                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
-                                            <i class="home-product-item__like-icon far fa-heart"></i>
-                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
-                                        </span>
-                                        <div class="home-product-item__rating">
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class=" fas fa-star"></i>
-                                        </div>
-                                        <span class="home-product-item__sold">88 đã bán</span>
-                                    </div>
-                                    <div class="home-product-item__origin">
-                                        <span class="home-product-item__brand">Whoo</span>
-                                        <span class="home-product-item__origin-name">Nhật Bản</span>
-                                    </div>
-                                    <div class="home-product-item__favourite">
-                                        <i class="fa-solid fa-check"></i> Yêu thích
-                                    </div>
-                                    <div class="home-product-item__sale-off">
-                                        <span class="home-product-item__sale-off-percent">10%</span>
-                                        <span class="home-product-item__sale-off-label">GIẢM</span>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="grid__column-2-4">
-
-                                <a href="product_details.jsp" class="home-product-item">
-                                    <div class="home-product-item__img"
-                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
-                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
-                                        Samsung Galaxy Watch III 45mm LTE</h4>
-                                    <div class="home-product-item__price">
-                                        <span class="home-product-item__price-old">1.200.000đ</span>
-                                        <span class="home-product-item__price-current">900.000đ</span>
-                                    </div>
-                                    <div class="home-product-item__action">
-                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
-                                            <i class="home-product-item__like-icon far fa-heart"></i>
-                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
-                                        </span>
-                                        <div class="home-product-item__rating">
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class=" fas fa-star"></i>
-                                        </div>
-                                        <span class="home-product-item__sold">88 đã bán</span>
-                                    </div>
-                                    <div class="home-product-item__origin">
-                                        <span class="home-product-item__brand">Whoo</span>
-                                        <span class="home-product-item__origin-name">Nhật Bản</span>
-                                    </div>
-                                    <div class="home-product-item__favourite">
-                                        <i class="fa-solid fa-check"></i> Yêu thích
-                                    </div>
-                                    <div class="home-product-item__sale-off">
-                                        <span class="home-product-item__sale-off-percent">10%</span>
-                                        <span class="home-product-item__sale-off-label">GIẢM</span>
-                                    </div>
-                                </a>
-                            </div>
-
-
-                        </div>
-                    </div>
-
-                    <div class="home-product">
-                        <div class="grid__row">
-                            <div class="grid__column-2-4">
-
-                                <a href="product_details.jsp" class="home-product-item">
-                                    <div class="home-product-item__img"
-                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
-                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
-                                        Samsung Galaxy Watch III 45mm LTE</h4>
-                                    <div class="home-product-item__price">
-                                        <span class="home-product-item__price-old">1.200.000đ</span>
-                                        <span class="home-product-item__price-current">900.000đ</span>
-                                    </div>
-                                    <div class="home-product-item__action">
-                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
-                                            <i class="home-product-item__like-icon far fa-heart"></i>
-                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
-                                        </span>
-                                        <div class="home-product-item__rating">
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class=" fas fa-star"></i>
-                                        </div>
-                                        <span class="home-product-item__sold">88 đã bán</span>
-                                    </div>
-                                    <div class="home-product-item__origin">
-                                        <span class="home-product-item__brand">Whoo</span>
-                                        <span class="home-product-item__origin-name">Nhật Bản</span>
-                                    </div>
-                                    <div class="home-product-item__favourite">
-                                        <i class="fa-solid fa-check"></i> Yêu thích
-                                    </div>
-                                    <div class="home-product-item__sale-off">
-                                        <span class="home-product-item__sale-off-percent">10%</span>
-                                        <span class="home-product-item__sale-off-label">GIẢM</span>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="grid__column-2-4">
-
-                                <a href="product_details.jsp" class="home-product-item">
-                                    <div class="home-product-item__img"
-                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
-                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
-                                        Samsung Galaxy Watch III 45mm LTE</h4>
-                                    <div class="home-product-item__price">
-                                        <span class="home-product-item__price-old">1.200.000đ</span>
-                                        <span class="home-product-item__price-current">900.000đ</span>
-                                    </div>
-                                    <div class="home-product-item__action">
-                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
-                                            <i class="home-product-item__like-icon far fa-heart"></i>
-                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
-                                        </span>
-                                        <div class="home-product-item__rating">
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class=" fas fa-star"></i>
-                                        </div>
-                                        <span class="home-product-item__sold">88 đã bán</span>
-                                    </div>
-                                    <div class="home-product-item__origin">
-                                        <span class="home-product-item__brand">Whoo</span>
-                                        <span class="home-product-item__origin-name">Nhật Bản</span>
-                                    </div>
-                                    <div class="home-product-item__favourite">
-                                        <i class="fa-solid fa-check"></i> Yêu thích
-                                    </div>
-                                    <div class="home-product-item__sale-off">
-                                        <span class="home-product-item__sale-off-percent">10%</span>
-                                        <span class="home-product-item__sale-off-label">GIẢM</span>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="grid__column-2-4">
-
-                                <a href="product_details.jsp" class="home-product-item">
-                                    <div class="home-product-item__img"
-                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
-                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
-                                        Samsung Galaxy Watch III 45mm LTE</h4>
-                                    <div class="home-product-item__price">
-                                        <span class="home-product-item__price-old">1.200.000đ</span>
-                                        <span class="home-product-item__price-current">900.000đ</span>
-                                    </div>
-                                    <div class="home-product-item__action">
-                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
-                                            <i class="home-product-item__like-icon far fa-heart"></i>
-                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
-                                        </span>
-                                        <div class="home-product-item__rating">
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class=" fas fa-star"></i>
-                                        </div>
-                                        <span class="home-product-item__sold">88 đã bán</span>
-                                    </div>
-                                    <div class="home-product-item__origin">
-                                        <span class="home-product-item__brand">Whoo</span>
-                                        <span class="home-product-item__origin-name">Nhật Bản</span>
-                                    </div>
-                                    <div class="home-product-item__favourite">
-                                        <i class="fa-solid fa-check"></i> Yêu thích
-                                    </div>
-                                    <div class="home-product-item__sale-off">
-                                        <span class="home-product-item__sale-off-percent">10%</span>
-                                        <span class="home-product-item__sale-off-label">GIẢM</span>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="grid__column-2-4">
-
-                                <a href="product_details.jsp" class="home-product-item">
-                                    <div class="home-product-item__img"
-                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
-                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
-                                        Samsung Galaxy Watch III 45mm LTE</h4>
-                                    <div class="home-product-item__price">
-                                        <span class="home-product-item__price-old">1.200.000đ</span>
-                                        <span class="home-product-item__price-current">900.000đ</span>
-                                    </div>
-                                    <div class="home-product-item__action">
-                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
-                                            <i class="home-product-item__like-icon far fa-heart"></i>
-                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
-                                        </span>
-                                        <div class="home-product-item__rating">
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class=" fas fa-star"></i>
-                                        </div>
-                                        <span class="home-product-item__sold">88 đã bán</span>
-                                    </div>
-                                    <div class="home-product-item__origin">
-                                        <span class="home-product-item__brand">Whoo</span>
-                                        <span class="home-product-item__origin-name">Nhật Bản</span>
-                                    </div>
-                                    <div class="home-product-item__favourite">
-                                        <i class="fa-solid fa-check"></i> Yêu thích
-                                    </div>
-                                    <div class="home-product-item__sale-off">
-                                        <span class="home-product-item__sale-off-percent">10%</span>
-                                        <span class="home-product-item__sale-off-label">GIẢM</span>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="grid__column-2-4">
-
-                                <a href="product_details.jsp" class="home-product-item">
-                                    <div class="home-product-item__img"
-                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
-                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
-                                        Samsung Galaxy Watch III 45mm LTE</h4>
-                                    <div class="home-product-item__price">
-                                        <span class="home-product-item__price-old">1.200.000đ</span>
-                                        <span class="home-product-item__price-current">900.000đ</span>
-                                    </div>
-                                    <div class="home-product-item__action">
-                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
-                                            <i class="home-product-item__like-icon far fa-heart"></i>
-                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
-                                        </span>
-                                        <div class="home-product-item__rating">
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class=" fas fa-star"></i>
-                                        </div>
-                                        <span class="home-product-item__sold">88 đã bán</span>
-                                    </div>
-                                    <div class="home-product-item__origin">
-                                        <span class="home-product-item__brand">Whoo</span>
-                                        <span class="home-product-item__origin-name">Nhật Bản</span>
-                                    </div>
-                                    <div class="home-product-item__favourite">
-                                        <i class="fa-solid fa-check"></i> Yêu thích
-                                    </div>
-                                    <div class="home-product-item__sale-off">
-                                        <span class="home-product-item__sale-off-percent">10%</span>
-                                        <span class="home-product-item__sale-off-label">GIẢM</span>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="grid__column-2-4">
-
-                                <a href="product_details.jsp" class="home-product-item">
-                                    <div class="home-product-item__img"
-                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
-                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
-                                        Samsung Galaxy Watch III 45mm LTE</h4>
-                                    <div class="home-product-item__price">
-                                        <span class="home-product-item__price-old">1.200.000đ</span>
-                                        <span class="home-product-item__price-current">900.000đ</span>
-                                    </div>
-                                    <div class="home-product-item__action">
-                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
-                                            <i class="home-product-item__like-icon far fa-heart"></i>
-                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
-                                        </span>
-                                        <div class="home-product-item__rating">
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class=" fas fa-star"></i>
-                                        </div>
-                                        <span class="home-product-item__sold">88 đã bán</span>
-                                    </div>
-                                    <div class="home-product-item__origin">
-                                        <span class="home-product-item__brand">Whoo</span>
-                                        <span class="home-product-item__origin-name">Nhật Bản</span>
-                                    </div>
-                                    <div class="home-product-item__favourite">
-                                        <i class="fa-solid fa-check"></i> Yêu thích
-                                    </div>
-                                    <div class="home-product-item__sale-off">
-                                        <span class="home-product-item__sale-off-percent">10%</span>
-                                        <span class="home-product-item__sale-off-label">GIẢM</span>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="grid__column-2-4">
-
-                                <a href="product_details.jsp" class="home-product-item">
-                                    <div class="home-product-item__img"
-                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
-                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
-                                        Samsung Galaxy Watch III 45mm LTE</h4>
-                                    <div class="home-product-item__price">
-                                        <span class="home-product-item__price-old">1.200.000đ</span>
-                                        <span class="home-product-item__price-current">900.000đ</span>
-                                    </div>
-                                    <div class="home-product-item__action">
-                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
-                                            <i class="home-product-item__like-icon far fa-heart"></i>
-                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
-                                        </span>
-                                        <div class="home-product-item__rating">
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class=" fas fa-star"></i>
-                                        </div>
-                                        <span class="home-product-item__sold">88 đã bán</span>
-                                    </div>
-                                    <div class="home-product-item__origin">
-                                        <span class="home-product-item__brand">Whoo</span>
-                                        <span class="home-product-item__origin-name">Nhật Bản</span>
-                                    </div>
-                                    <div class="home-product-item__favourite">
-                                        <i class="fa-solid fa-check"></i> Yêu thích
-                                    </div>
-                                    <div class="home-product-item__sale-off">
-                                        <span class="home-product-item__sale-off-percent">10%</span>
-                                        <span class="home-product-item__sale-off-label">GIẢM</span>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="grid__column-2-4">
-
-                                <a href="product_details.jsp" class="home-product-item">
-                                    <div class="home-product-item__img"
-                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
-                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
-                                        Samsung Galaxy Watch III 45mm LTE</h4>
-                                    <div class="home-product-item__price">
-                                        <span class="home-product-item__price-old">1.200.000đ</span>
-                                        <span class="home-product-item__price-current">900.000đ</span>
-                                    </div>
-                                    <div class="home-product-item__action">
-                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
-                                            <i class="home-product-item__like-icon far fa-heart"></i>
-                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
-                                        </span>
-                                        <div class="home-product-item__rating">
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class=" fas fa-star"></i>
-                                        </div>
-                                        <span class="home-product-item__sold">88 đã bán</span>
-                                    </div>
-                                    <div class="home-product-item__origin">
-                                        <span class="home-product-item__brand">Whoo</span>
-                                        <span class="home-product-item__origin-name">Nhật Bản</span>
-                                    </div>
-                                    <div class="home-product-item__favourite">
-                                        <i class="fa-solid fa-check"></i> Yêu thích
-                                    </div>
-                                    <div class="home-product-item__sale-off">
-                                        <span class="home-product-item__sale-off-percent">10%</span>
-                                        <span class="home-product-item__sale-off-label">GIẢM</span>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="grid__column-2-4">
-
-                                <a href="product_details.jsp" class="home-product-item">
-                                    <div class="home-product-item__img"
-                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
-                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
-                                        Samsung Galaxy Watch III 45mm LTE</h4>
-                                    <div class="home-product-item__price">
-                                        <span class="home-product-item__price-old">1.200.000đ</span>
-                                        <span class="home-product-item__price-current">900.000đ</span>
-                                    </div>
-                                    <div class="home-product-item__action">
-                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
-                                            <i class="home-product-item__like-icon far fa-heart"></i>
-                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
-                                        </span>
-                                        <div class="home-product-item__rating">
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class=" fas fa-star"></i>
-                                        </div>
-                                        <span class="home-product-item__sold">88 đã bán</span>
-                                    </div>
-                                    <div class="home-product-item__origin">
-                                        <span class="home-product-item__brand">Whoo</span>
-                                        <span class="home-product-item__origin-name">Nhật Bản</span>
-                                    </div>
-                                    <div class="home-product-item__favourite">
-                                        <i class="fa-solid fa-check"></i> Yêu thích
-                                    </div>
-                                    <div class="home-product-item__sale-off">
-                                        <span class="home-product-item__sale-off-percent">10%</span>
-                                        <span class="home-product-item__sale-off-label">GIẢM</span>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="grid__column-2-4">
-
-                                <a href="product_details.jsp" class="home-product-item">
-                                    <div class="home-product-item__img"
-                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
-                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
-                                        Samsung Galaxy Watch III 45mm LTE</h4>
-                                    <div class="home-product-item__price">
-                                        <span class="home-product-item__price-old">1.200.000đ</span>
-                                        <span class="home-product-item__price-current">900.000đ</span>
-                                    </div>
-                                    <div class="home-product-item__action">
-                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
-                                            <i class="home-product-item__like-icon far fa-heart"></i>
-                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
-                                        </span>
-                                        <div class="home-product-item__rating">
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class=" fas fa-star"></i>
-                                        </div>
-                                        <span class="home-product-item__sold">88 đã bán</span>
-                                    </div>
-                                    <div class="home-product-item__origin">
-                                        <span class="home-product-item__brand">Whoo</span>
-                                        <span class="home-product-item__origin-name">Nhật Bản</span>
-                                    </div>
-                                    <div class="home-product-item__favourite">
-                                        <i class="fa-solid fa-check"></i> Yêu thích
-                                    </div>
-                                    <div class="home-product-item__sale-off">
-                                        <span class="home-product-item__sale-off-percent">10%</span>
-                                        <span class="home-product-item__sale-off-label">GIẢM</span>
-                                    </div>
-                                </a>
-                            </div>
-
-
-                        </div>
-                    </div>
-
-                    <div class="home-product">
-                        <div class="grid__row">
-                            <div class="grid__column-2-4">
-
-                                <a href="product_details.jsp" class="home-product-item">
-                                    <div class="home-product-item__img"
-                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
-                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
-                                        Samsung Galaxy Watch III 45mm LTE</h4>
-                                    <div class="home-product-item__price">
-                                        <span class="home-product-item__price-old">1.200.000đ</span>
-                                        <span class="home-product-item__price-current">900.000đ</span>
-                                    </div>
-                                    <div class="home-product-item__action">
-                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
-                                            <i class="home-product-item__like-icon far fa-heart"></i>
-                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
-                                        </span>
-                                        <div class="home-product-item__rating">
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class=" fas fa-star"></i>
-                                        </div>
-                                        <span class="home-product-item__sold">88 đã bán</span>
-                                    </div>
-                                    <div class="home-product-item__origin">
-                                        <span class="home-product-item__brand">Whoo</span>
-                                        <span class="home-product-item__origin-name">Nhật Bản</span>
-                                    </div>
-                                    <div class="home-product-item__favourite">
-                                        <i class="fa-solid fa-check"></i> Yêu thích
-                                    </div>
-                                    <div class="home-product-item__sale-off">
-                                        <span class="home-product-item__sale-off-percent">10%</span>
-                                        <span class="home-product-item__sale-off-label">GIẢM</span>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="grid__column-2-4">
-
-                                <a href="product_details.jsp" class="home-product-item">
-                                    <div class="home-product-item__img"
-                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
-                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
-                                        Samsung Galaxy Watch III 45mm LTE</h4>
-                                    <div class="home-product-item__price">
-                                        <span class="home-product-item__price-old">1.200.000đ</span>
-                                        <span class="home-product-item__price-current">900.000đ</span>
-                                    </div>
-                                    <div class="home-product-item__action">
-                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
-                                            <i class="home-product-item__like-icon far fa-heart"></i>
-                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
-                                        </span>
-                                        <div class="home-product-item__rating">
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class=" fas fa-star"></i>
-                                        </div>
-                                        <span class="home-product-item__sold">88 đã bán</span>
-                                    </div>
-                                    <div class="home-product-item__origin">
-                                        <span class="home-product-item__brand">Whoo</span>
-                                        <span class="home-product-item__origin-name">Nhật Bản</span>
-                                    </div>
-                                    <div class="home-product-item__favourite">
-                                        <i class="fa-solid fa-check"></i> Yêu thích
-                                    </div>
-                                    <div class="home-product-item__sale-off">
-                                        <span class="home-product-item__sale-off-percent">10%</span>
-                                        <span class="home-product-item__sale-off-label">GIẢM</span>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="grid__column-2-4">
-
-                                <a href="product_details.jsp" class="home-product-item">
-                                    <div class="home-product-item__img"
-                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
-                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
-                                        Samsung Galaxy Watch III 45mm LTE</h4>
-                                    <div class="home-product-item__price">
-                                        <span class="home-product-item__price-old">1.200.000đ</span>
-                                        <span class="home-product-item__price-current">900.000đ</span>
-                                    </div>
-                                    <div class="home-product-item__action">
-                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
-                                            <i class="home-product-item__like-icon far fa-heart"></i>
-                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
-                                        </span>
-                                        <div class="home-product-item__rating">
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class=" fas fa-star"></i>
-                                        </div>
-                                        <span class="home-product-item__sold">88 đã bán</span>
-                                    </div>
-                                    <div class="home-product-item__origin">
-                                        <span class="home-product-item__brand">Whoo</span>
-                                        <span class="home-product-item__origin-name">Nhật Bản</span>
-                                    </div>
-                                    <div class="home-product-item__favourite">
-                                        <i class="fa-solid fa-check"></i> Yêu thích
-                                    </div>
-                                    <div class="home-product-item__sale-off">
-                                        <span class="home-product-item__sale-off-percent">10%</span>
-                                        <span class="home-product-item__sale-off-label">GIẢM</span>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="grid__column-2-4">
-
-                                <a href="product_details.jsp" class="home-product-item">
-                                    <div class="home-product-item__img"
-                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
-                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
-                                        Samsung Galaxy Watch III 45mm LTE</h4>
-                                    <div class="home-product-item__price">
-                                        <span class="home-product-item__price-old">1.200.000đ</span>
-                                        <span class="home-product-item__price-current">900.000đ</span>
-                                    </div>
-                                    <div class="home-product-item__action">
-                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
-                                            <i class="home-product-item__like-icon far fa-heart"></i>
-                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
-                                        </span>
-                                        <div class="home-product-item__rating">
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class=" fas fa-star"></i>
-                                        </div>
-                                        <span class="home-product-item__sold">88 đã bán</span>
-                                    </div>
-                                    <div class="home-product-item__origin">
-                                        <span class="home-product-item__brand">Whoo</span>
-                                        <span class="home-product-item__origin-name">Nhật Bản</span>
-                                    </div>
-                                    <div class="home-product-item__favourite">
-                                        <i class="fa-solid fa-check"></i> Yêu thích
-                                    </div>
-                                    <div class="home-product-item__sale-off">
-                                        <span class="home-product-item__sale-off-percent">10%</span>
-                                        <span class="home-product-item__sale-off-label">GIẢM</span>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="grid__column-2-4">
-
-                                <a href="product_details.jsp" class="home-product-item">
-                                    <div class="home-product-item__img"
-                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
-                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
-                                        Samsung Galaxy Watch III 45mm LTE</h4>
-                                    <div class="home-product-item__price">
-                                        <span class="home-product-item__price-old">1.200.000đ</span>
-                                        <span class="home-product-item__price-current">900.000đ</span>
-                                    </div>
-                                    <div class="home-product-item__action">
-                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
-                                            <i class="home-product-item__like-icon far fa-heart"></i>
-                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
-                                        </span>
-                                        <div class="home-product-item__rating">
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class=" fas fa-star"></i>
-                                        </div>
-                                        <span class="home-product-item__sold">88 đã bán</span>
-                                    </div>
-                                    <div class="home-product-item__origin">
-                                        <span class="home-product-item__brand">Whoo</span>
-                                        <span class="home-product-item__origin-name">Nhật Bản</span>
-                                    </div>
-                                    <div class="home-product-item__favourite">
-                                        <i class="fa-solid fa-check"></i> Yêu thích
-                                    </div>
-                                    <div class="home-product-item__sale-off">
-                                        <span class="home-product-item__sale-off-percent">10%</span>
-                                        <span class="home-product-item__sale-off-label">GIẢM</span>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="grid__column-2-4">
-
-                                <a href="product_details.jsp" class="home-product-item">
-                                    <div class="home-product-item__img"
-                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
-                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
-                                        Samsung Galaxy Watch III 45mm LTE</h4>
-                                    <div class="home-product-item__price">
-                                        <span class="home-product-item__price-old">1.200.000đ</span>
-                                        <span class="home-product-item__price-current">900.000đ</span>
-                                    </div>
-                                    <div class="home-product-item__action">
-                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
-                                            <i class="home-product-item__like-icon far fa-heart"></i>
-                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
-                                        </span>
-                                        <div class="home-product-item__rating">
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class=" fas fa-star"></i>
-                                        </div>
-                                        <span class="home-product-item__sold">88 đã bán</span>
-                                    </div>
-                                    <div class="home-product-item__origin">
-                                        <span class="home-product-item__brand">Whoo</span>
-                                        <span class="home-product-item__origin-name">Nhật Bản</span>
-                                    </div>
-                                    <div class="home-product-item__favourite">
-                                        <i class="fa-solid fa-check"></i> Yêu thích
-                                    </div>
-                                    <div class="home-product-item__sale-off">
-                                        <span class="home-product-item__sale-off-percent">10%</span>
-                                        <span class="home-product-item__sale-off-label">GIẢM</span>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="grid__column-2-4">
-
-                                <a href="product_details.jsp" class="home-product-item">
-                                    <div class="home-product-item__img"
-                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
-                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
-                                        Samsung Galaxy Watch III 45mm LTE</h4>
-                                    <div class="home-product-item__price">
-                                        <span class="home-product-item__price-old">1.200.000đ</span>
-                                        <span class="home-product-item__price-current">900.000đ</span>
-                                    </div>
-                                    <div class="home-product-item__action">
-                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
-                                            <i class="home-product-item__like-icon far fa-heart"></i>
-                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
-                                        </span>
-                                        <div class="home-product-item__rating">
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class=" fas fa-star"></i>
-                                        </div>
-                                        <span class="home-product-item__sold">88 đã bán</span>
-                                    </div>
-                                    <div class="home-product-item__origin">
-                                        <span class="home-product-item__brand">Whoo</span>
-                                        <span class="home-product-item__origin-name">Nhật Bản</span>
-                                    </div>
-                                    <div class="home-product-item__favourite">
-                                        <i class="fa-solid fa-check"></i> Yêu thích
-                                    </div>
-                                    <div class="home-product-item__sale-off">
-                                        <span class="home-product-item__sale-off-percent">10%</span>
-                                        <span class="home-product-item__sale-off-label">GIẢM</span>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="grid__column-2-4">
-
-                                <a href="product_details.jsp" class="home-product-item">
-                                    <div class="home-product-item__img"
-                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
-                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
-                                        Samsung Galaxy Watch III 45mm LTE</h4>
-                                    <div class="home-product-item__price">
-                                        <span class="home-product-item__price-old">1.200.000đ</span>
-                                        <span class="home-product-item__price-current">900.000đ</span>
-                                    </div>
-                                    <div class="home-product-item__action">
-                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
-                                            <i class="home-product-item__like-icon far fa-heart"></i>
-                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
-                                        </span>
-                                        <div class="home-product-item__rating">
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class=" fas fa-star"></i>
-                                        </div>
-                                        <span class="home-product-item__sold">88 đã bán</span>
-                                    </div>
-                                    <div class="home-product-item__origin">
-                                        <span class="home-product-item__brand">Whoo</span>
-                                        <span class="home-product-item__origin-name">Nhật Bản</span>
-                                    </div>
-                                    <div class="home-product-item__favourite">
-                                        <i class="fa-solid fa-check"></i> Yêu thích
-                                    </div>
-                                    <div class="home-product-item__sale-off">
-                                        <span class="home-product-item__sale-off-percent">10%</span>
-                                        <span class="home-product-item__sale-off-label">GIẢM</span>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="grid__column-2-4">
-
-                                <a href="product_details.jsp" class="home-product-item">
-                                    <div class="home-product-item__img"
-                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
-                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
-                                        Samsung Galaxy Watch III 45mm LTE</h4>
-                                    <div class="home-product-item__price">
-                                        <span class="home-product-item__price-old">1.200.000đ</span>
-                                        <span class="home-product-item__price-current">900.000đ</span>
-                                    </div>
-                                    <div class="home-product-item__action">
-                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
-                                            <i class="home-product-item__like-icon far fa-heart"></i>
-                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
-                                        </span>
-                                        <div class="home-product-item__rating">
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class=" fas fa-star"></i>
-                                        </div>
-                                        <span class="home-product-item__sold">88 đã bán</span>
-                                    </div>
-                                    <div class="home-product-item__origin">
-                                        <span class="home-product-item__brand">Whoo</span>
-                                        <span class="home-product-item__origin-name">Nhật Bản</span>
-                                    </div>
-                                    <div class="home-product-item__favourite">
-                                        <i class="fa-solid fa-check"></i> Yêu thích
-                                    </div>
-                                    <div class="home-product-item__sale-off">
-                                        <span class="home-product-item__sale-off-percent">10%</span>
-                                        <span class="home-product-item__sale-off-label">GIẢM</span>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="grid__column-2-4">
-
-                                <a href="product_details.jsp" class="home-product-item">
-                                    <div class="home-product-item__img"
-                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
-                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
-                                        Samsung Galaxy Watch III 45mm LTE</h4>
-                                    <div class="home-product-item__price">
-                                        <span class="home-product-item__price-old">1.200.000đ</span>
-                                        <span class="home-product-item__price-current">900.000đ</span>
-                                    </div>
-                                    <div class="home-product-item__action">
-                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
-                                            <i class="home-product-item__like-icon far fa-heart"></i>
-                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
-                                        </span>
-                                        <div class="home-product-item__rating">
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                            <i class=" fas fa-star"></i>
-                                        </div>
-                                        <span class="home-product-item__sold">88 đã bán</span>
-                                    </div>
-                                    <div class="home-product-item__origin">
-                                        <span class="home-product-item__brand">Whoo</span>
-                                        <span class="home-product-item__origin-name">Nhật Bản</span>
-                                    </div>
-                                    <div class="home-product-item__favourite">
-                                        <i class="fa-solid fa-check"></i> Yêu thích
-                                    </div>
-                                    <div class="home-product-item__sale-off">
-                                        <span class="home-product-item__sale-off-percent">10%</span>
-                                        <span class="home-product-item__sale-off-label">GIẢM</span>
-                                    </div>
-                                </a>
-                            </div>
-
-
-                        </div>
-                    </div>
-
-                    <%--                    List product--%>
-
-                    <%--                    Phân trang--%>
-
-                    <ul class="pagination home-product__pagination">
-                        <li class="pagination-item">
-                            <a href="#" class="pagination-item__link">
-                                <i class="pagination-item__icon fas fa-angle-left"></i>
-                            </a>
-                        </li>
-                        <li class="pagination-item">
-                            <a href="#" class="pagination-item__link pagination-item__link--active">1</a>
-                        </li>
-
-                        <li class="pagination-item">
-                            <a href="#" class="pagination-item__link">2</a>
-                        </li>
-
-                        <li class="pagination-item">
-                            <a href="#" class="pagination-item__link">3</a>
-                        </li>
-
-                        <li class="pagination-item">
-                            <a href="#" class="pagination-item__link">4</a>
-                        </li>
-
-                        <li class="pagination-item">
-                            <a href="#" class="pagination-item__link">...</a>
-                        </li>
-                        <li class="pagination-item">
-                            <a href="#" class="pagination-item__link">14</a>
-                        </li>
-
-                        <li class="pagination-item">
-                            <a href="#" class="pagination-item__link">
-                                <i class="pagination-item__icon fas fa-angle-right"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <%--                    Phân trang--%>
-
-
-                </div>
-            </div>
-        </div>
 
     </div>
     <div class="footer">
@@ -2037,15 +2053,15 @@
                     </li>
                 </div>
 
-                <div class="grid__column-2-4">
+                <div class="grid__column-2-4 ">
                     <h3 class="footer__heading">Thanh toán</h3>
-                    <li class="footer-item">
-                        <a href="#" class="footer-item__link"> <i class="fa-brands fa-cc-visa"></i></a>
-                        <a href="#" class="footer-item__link"> <i class="fa-brands fa-cc-paypal"></i></a>
-                        <a href="#" class="footer-item__link"> <i class="fa-brands fa-cc-jcb"></i></a>
-                        <a href="#" class="footer-item__link"> <i class="fa-brands fa-cc-amazon-pay"></i></a>
-                        <a href="#" class="footer-item__link"> <i class="fa-solid fa-credit-card"></i></a>
-                        <a href="#" class="footer-item__link"> <i class="fa-brands fa-cc-mastercard"></i></a>
+                    <li class="footer-item footer-item-pay">
+                        <a href="#" class="footer-item__link footer-item__link-pay"> <i class="fa-brands fa-cc-visa"></i></a>
+                        <a href="#" class="footer-item__link footer-item__link-pay"> <i class="fa-brands fa-cc-paypal"></i></a>
+                        <a href="#" class="footer-item__link footer-item__link-pay"> <i class="fa-brands fa-cc-jcb"></i></a>
+                        <a href="#" class="footer-item__link footer-item__link-pay"> <i class="fa-brands fa-cc-amazon-pay"></i></a>
+                        <a href="#" class="footer-item__link footer-item__link-pay"> <i class="fa-solid fa-credit-card"></i></a>
+                        <a href="#" class="footer-item__link footer-item__link-pay"> <i class="fa-brands fa-cc-mastercard"></i></a>
                     </li>
                     <h3 class="footer__heading footer__heading-ship">Đơn vị vận chuyển</h3>
                     <li class="footer-item footer-item-ship">
@@ -2058,9 +2074,13 @@
                 <div class="grid__column-2-4">
                     <h3 class="footer__heading">Theo dõi chúng tôi</h3>
                     <li class="footer-item">
-                        <a href="#" class="footer-item__link"><i class="fa-brands fa-facebook"></i> Facebook</a>
-                        <a href="#" class="footer-item__link"><i class="fa-brands fa-instagram"></i> Instagram</a>
-                        <a href="#" class="footer-item__link"><i class="fa-brands fa-linkedin"></i> Linkedkin</a>
+                        <a href="https://www.facebook.com/" class="footer-item__link footer-item__link-icon footer-item__link-fb"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                        <a href="https://www.instagram.com/" class="footer-item__link footer-item__link-icon">
+                            <i class="fa-brands fa-instagram footer-item__link-ins"></i>
+
+                            <span class="footer-item__link-name">Instagram</span>
+                        </a>
+                        <a href="https://www.linkedin.com/" class="footer-item__link footer-item__link-icon footer-item__link-linked"><i class="fa-brands fa-linkedin"></i> Linkedkin</a>
                     </li>
                 </div>
 
@@ -2068,6 +2088,39 @@
                     <h3 class="footer__heading footer__heading-end ">Tải ứng dụng ShopBae</h3>
                     <img src="../image/qr-code.png" alt="" class="footer-item__img footer-item__img__download">
                 </div>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="grid__row grid__row-coppyright ">
+                <div class="grid__column-3">
+                    <span class="coppyright">© 2022 ShopBae. Tất cả các quyên được bảo lưu.</span>
+                </div>
+
+                <div class="grid__column-9 grid__column-9__address ">
+                    <span class="address">Quốc gia & khu vực Singapore | Indonesia | Đài Loan | Thái Lan | Malaysia | Việt Nam | Philipines | Bzazil | México | Colombia | Chile | Poland | Argentina</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid footer__policy-wrap">
+            <div class="grid__column-12 footer__policy">
+                <span class="footer__policy-title">Chính sách bảo mật</span>
+                <span class="footer__policy-title">Quy chế hoạt động</span>
+                <span class="footer__policy-title">Chính sách vận chuyển</span>
+                <span class="footer__policy-title">Chính sách trả hàng và hoàn tiền</span>
+            </div>
+            <div class="grid__column-12 footer__footer-logo">
+                <a class="footer__logo" href="homepage.jsp">
+                    <img src="../image/SB-L2-white-backgroud.svg" alt="" class="footer__logo-img">
+                    <span class="footer__logo-name">ShopBae</span>
+                </a>
+
+            </div>
+            <div class="grid__column-12 footer__address">
+                <span class="footer__address-name">Địa chỉ: Tầng 4-5-6, Tòa nhà HD City, số 1 đường Mỹ Đình, Phường Mỹ Đình, Quận Từ Liêm, Thành phố Hà Nội, Việt Nam. Tổng đài hỗ trợ: 1903412312 - Email: cskh@hotro.shopBae.vn</span>
+                <span class="footer__address-name">Chịu Trách Nhiệm Quản Lý Nội Dung: Nguyễn Văn A - Điện thoại liên hệ: 0987654321</span>
+                <span class="footer__address-name">© 2015 - Bản quyền thuộc về Công ty TNHH ShopBae</span>
             </div>
         </div>
     </div>
