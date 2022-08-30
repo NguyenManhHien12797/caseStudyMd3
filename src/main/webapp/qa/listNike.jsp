@@ -30,7 +30,7 @@
         <c:forEach var="shoes" items="${listShoesN}">
             <tr>
                 <td>${shoes.name}</td>
-                <td>${shoes.price}</td>
+                <td>${shoes.newPrice}</td>
                 <td><img src="${shoes.image }"alt="lỗi mẹ rồi"></td>
             </tr>
         </c:forEach>

@@ -3,18 +3,73 @@ package model;
 import org.jsoup.select.Elements;
 
 public class Shoes {
+    private int id;
+    private int categoryId;
+    private int brandId;
     private String name;
-    private String price;
+    private String oldPrice;
+    private String newPrice;
     private String image;
+
+    public Shoes(String name, String newPrice, String image) {
+        this.name = name;
+        this.newPrice = newPrice;
+        this.image = image;
+    }
+
+    public Shoes(int id, int categoryId, int brandId, String name, String oldPrice, String newPrice, String image) {
+        this.id = id;
+        this.categoryId = categoryId;
+        this.brandId = brandId;
+        this.name = name;
+        this.oldPrice = oldPrice;
+        this.newPrice = newPrice;
+        this.image = image;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getCategoryId() {
+        return categoryId;
+    }
+
+    public void setCategoryId(int categoryId) {
+        this.categoryId = categoryId;
+    }
+
+    public int getBrandId() {
+        return brandId;
+    }
+
+    public void setBrandId(int brandId) {
+        this.brandId = brandId;
+    }
+
+    public String getOldPrice() {
+        return oldPrice;
+    }
+
+    public void setOldPrice(String oldPrice) {
+        this.oldPrice = oldPrice;
+    }
+
+    public String getNewPrice() {
+        return newPrice;
+    }
+
+    public void setNewPrice(String newPrice) {
+        this.newPrice = newPrice;
+    }
+
     public Shoes() {
     }
 
-    public Shoes(String name, String price, String image) {
-        this.name = name;
-        this.price = price;
-
-        this.image = image;
-    }
 
     public String getImage() {
         return image;
@@ -32,11 +87,5 @@ public class Shoes {
         this.name = name;
     }
 
-    public String getPrice() {
-        return price;
-    }
 
-    public void setPrice(String price) {
-        this.price = price;
-    }
 }

@@ -90,7 +90,7 @@ public class Crawls {
             ArrayList<Element> elements = doc.getElementsByClass("ps-shoe__name");
             ArrayList<Element> elements1 = doc.getElementsByClass("ps-shoe__price");
             ArrayList<Element> elements3 = doc.getElementsByClass("lazy");
-            for (int i = 10; i <= 20; i++) {
+            for (int i = 0; i <= 10; i++) {
                 String name = elements.get(i).getElementsByTag("a").text();
                 String price = elements1.get(i).getElementsByTag("span").text();
                 String str = String.valueOf(elements3.get(i).getElementsByTag("img").html("data-src"));
