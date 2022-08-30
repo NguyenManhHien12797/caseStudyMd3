@@ -12,6 +12,9 @@ public class ConnectionDB {
     public static final String USER = "root";
     public static final String PASSWORD = "chetdicon";
 
+    public ConnectionDB() {
+    }
+
     protected Connection getConnect(){
         if (connect==null){
             try {
@@ -27,8 +30,4 @@ public class ConnectionDB {
     }
 
 
-    public static void main(String[] args) {
-        ConnectionDB connectionDB = new ConnectionDB();
-        connectionDB.getConnect();
-    }
 }
