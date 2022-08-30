@@ -1,5 +1,9 @@
 package com.example.caseStudyMd3.controller;
 
+import com.example.caseStudyMd3.model.qa.RS.Role;
+import com.example.caseStudyMd3.model.qa.RS.Status;
+import com.example.caseStudyMd3.model.qa.Users;
+
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
