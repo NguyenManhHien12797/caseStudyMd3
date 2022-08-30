@@ -10,7 +10,7 @@ public class ConnectionDB {
 
     public static final String URL = "jdbc:mysql://localhost:3306/case_study";
     public static final String USER = "root";
-    public static final String PASSWORD = "chetdicon";
+    public static final String PASSWORD = "88888888";
 
     protected Connection getConnect(){
         if (connect==null){

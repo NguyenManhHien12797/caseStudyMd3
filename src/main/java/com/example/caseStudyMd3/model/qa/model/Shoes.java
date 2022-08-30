@@ -1,4 +1,4 @@
-package model;
+package com.example.caseStudyMd3.model.qa.model;
 
 import org.jsoup.select.Elements;
 

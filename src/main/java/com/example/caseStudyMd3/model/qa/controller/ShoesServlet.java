@@ -1,6 +1,7 @@
 package com.example.caseStudyMd3.model.qa.controller;
 
 import com.example.caseStudyMd3.model.qa.model.Crawls;
+import com.example.caseStudyMd3.model.qa.model.Shoes;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -30,28 +31,28 @@ import java.util.List;
         }
         protected void listNike(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
             Crawls crawls=new Crawls();
-            List<model.Shoes> shoesList=crawls.getNike();
+            List<Shoes> shoesList=crawls.getNike();
             request.setAttribute("listShoesN",shoesList);
             RequestDispatcher dispatcher=request.getRequestDispatcher("qa/listNike.jsp");
             dispatcher.forward(request,response);
         }
         protected void listAdidas(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
             Crawls crawls=new Crawls();
-            List<model.Shoes> shoesList=crawls.getAdidas();
+            List<Shoes> shoesList=crawls.getAdidas();
             request.setAttribute("listShoesA",shoesList);
             RequestDispatcher dispatcher=request.getRequestDispatcher("qa/listAdidas.jsp");
             dispatcher.forward(request,response);
         }
         protected void listJordan(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
             Crawls crawls=new Crawls();
-            List<model.Shoes> shoesList=crawls.getJordan();
+            List<Shoes> shoesList=crawls.getJordan();
             request.setAttribute("listShoesJ",shoesList);
             RequestDispatcher dispatcher=request.getRequestDispatcher("qa/listJordan.jsp");
             dispatcher.forward(request,response);
         }
         protected void listYeezy(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
             Crawls crawls=new Crawls();
-            List<model.Shoes> shoesList=crawls.getYeezy();
+            List<Shoes> shoesList=crawls.getYeezy();
             request.setAttribute("listShoesY",shoesList);
             RequestDispatcher dispatcher=request.getRequestDispatcher("qa/listYeezy.jsp");
             dispatcher.forward(request,response);
