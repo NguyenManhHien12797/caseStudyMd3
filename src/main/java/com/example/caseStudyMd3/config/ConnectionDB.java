@@ -15,7 +15,7 @@ public class ConnectionDB {
     public ConnectionDB() {
     }
 
-    protected Connection getConnect(){
+    public static Connection getConnect(){
         if (connect==null){
             try {
                 Class.forName("com.mysql.jdbc.Driver");

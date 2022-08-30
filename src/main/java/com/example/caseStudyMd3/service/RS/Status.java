@@ -1,4 +1,4 @@
-package com.example.caseStudyMd3.model.qa.RS;
+package com.example.caseStudyMd3.service.RS;
 
 public enum Status {
     ACTIVE(1),

@@ -1,7 +1,8 @@
 package com.example.caseStudyMd3.controller;
 
-import com.example.caseStudyMd3.model.qa.RS.Role;
-import com.example.caseStudyMd3.model.qa.RS.Status;
+import com.example.caseStudyMd3.service.IUserService;
+import com.example.caseStudyMd3.service.RS.Role;
+import com.example.caseStudyMd3.service.RS.Status;
 import com.example.caseStudyMd3.model.qa.Users;
 
 import javax.servlet.*;
@@ -9,8 +10,9 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 
-@WebServlet(name = "LoginServlet", value = "/LoginServlet")
+@WebServlet(name = "LoginServlet", value = "/login")
 public class LoginServlet extends HttpServlet {
+//    private final IUserService iUsersService = new UsersService();
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

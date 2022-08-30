@@ -1,7 +1,7 @@
 package com.example.caseStudyMd3.model.qa;
 
-import com.example.caseStudyMd3.model.qa.RS.Role;
-import com.example.caseStudyMd3.model.qa.RS.Status;
+import com.example.caseStudyMd3.service.RS.Role;
+import com.example.caseStudyMd3.service.RS.Status;
 
 import java.util.Date;
 
@@ -44,6 +44,10 @@ public class Users {
         this.role = role;
         this.status = status;
     }
+
+    public Users(int id, String username, String password, String name, String gender, String age, Date birthday, String email, String phone, Role role, Status status) {
+    }
+
 
     public int getId() {
         return id;
