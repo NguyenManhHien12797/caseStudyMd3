@@ -1,3 +1,10 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: quang
+  Date: 8/29/2022
+  Time: 4:09 PM
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -8,7 +15,7 @@
 </head>
 <body>
 <center>
-    <h1>Shoes</h1>
+    <h1>Nike</h1>
 
 </center>
 <div align="center">
@@ -18,18 +25,17 @@
 
             <th>Name</th>
             <th>Price</th>
-            <%--            <th>Evaluate</th>--%>
             <th>Image</th>
         </tr>
-        <c:forEach var="shoes" items="${listShoes}">
+        <c:forEach var="shoes" items="${listShoesN}">
             <tr>
                 <td>${shoes.name}</td>
-                <td>${shoes.price}</td>
-                    <%--                <td>${shoes.evaluate}</td>--%>
-                <td><img src="{shoes.image} "alt="lỗi mẹ rồi"></td>
+                <td>${shoes.newPrice}</td>
+                <td><img src="${shoes.image }"alt="lỗi mẹ rồi"></td>
             </tr>
         </c:forEach>
     </table>
 </div>
 </body>
 </html>
+
