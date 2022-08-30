@@ -1,4 +1,4 @@
-package com.example.caseStudyMd3.model.qa;
+package com.example.caseStudyMd3.model;
 
 import com.example.caseStudyMd3.service.RS.Role;
 import com.example.caseStudyMd3.service.RS.Status;

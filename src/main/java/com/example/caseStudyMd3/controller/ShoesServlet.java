@@ -1,4 +1,4 @@
-package com.example.caseStudyMd3.model.qa.controller;
+package com.example.caseStudyMd3.controller;
 
 import com.example.caseStudyMd3.model.qa.model.Crawls;
 import com.example.caseStudyMd3.model.qa.model.Shoes;
