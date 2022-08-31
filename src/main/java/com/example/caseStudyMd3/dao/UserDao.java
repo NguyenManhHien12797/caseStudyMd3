@@ -1,6 +1,6 @@
 package com.example.caseStudyMd3.dao;
 
-import com.example.caseStudyMd3.config.ConnectionDB;
+import   com.example.caseStudyMd3.config.ConnectionDB;
 import com.example.caseStudyMd3.model.Users;
 import com.example.caseStudyMd3.service.RS.Role;
 import com.example.caseStudyMd3.service.RS.Status;
@@ -13,6 +13,7 @@ import java.util.Date;
 import java.util.List;
 
 public class UserDao implements IUserDAO{
+
     Connection connection = ConnectionDB.getConnect();
 
     private static final String QUERY_ALL_USERS = "SELECT * FROM USERS";
