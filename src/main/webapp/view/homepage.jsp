@@ -1,9 +1,12 @@
 
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set var="req" value="${pageContext.request}" />
+<c:set var="uri" value="${req.requestURI}" />
+<c:set var="url">${req.requestURL}</c:set>
 <!doctype html>
 <html lang="en">
 <head>
-    <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-    <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
     <link rel="icon" href="../image/SB-L2-xxl.svg" type="image/x-icon">
     <title>ShopBae</title>
     <meta charset="utf-8">
@@ -19,8 +22,8 @@
             integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
             crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="base.css">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="../view/base.css">
+    <link rel="stylesheet" href="../view/main.css">
 
     <style>
 
