@@ -194,7 +194,7 @@
                             <a href="#">Đơn mua</a>
                         </li>
                         <li class="header__navbar-user-item">
-                            <a href="homepage.jsp" name="logout">Đăng xuất</a>
+                            <a href="/ShopBae" name="logout">Đăng xuất</a>
                         </li>
                     </ul>
 
@@ -203,17 +203,17 @@
 
         <div class="header-with-search">
             <div class="header__logo">
-                <a href="homepage.jsp">
+                <a href="/ShopBae">
                     <img src="../image/SB-L2-white-backgroud.svg" alt="">
                 </a>
 
             </div>
-            <a href="homepage.jsp" class="header__logo-name">
+            <a href="/ShopBae" class="header__logo-name">
                 ShopBae
             </a>
 
             <div class="header__search">
-                <form class="header__search-form" method="post">
+                <form class="header__search-form" method="post" action="/ShopBae?action=search">
                     <input type="text" class="header__search-input" name="search"
                            placeholder="Nhập để tìm kiếm sản phẩm">
                     <button class="header__search-btn" type="submit">
@@ -575,7 +575,7 @@
     <span class="footer__policy-title">Chính sách trả hàng và hoàn tiền</span>
     </div>
     <div class="grid__column-12 footer__footer-logo">
-    <a class="footer__logo" href="homepage.jsp">
+    <a class="footer__logo" href="/ShopBae">
     <img src="../image/SB-L2-white-backgroud.svg" alt="" class="footer__logo-img">
     <span class="footer__logo-name">ShopBae</span>
     </a>

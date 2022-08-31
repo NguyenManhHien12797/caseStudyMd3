@@ -37,7 +37,9 @@ public class ShoesServlet extends HttpServlet {
                 case "delete":
                     break;
                 case "search":
+//                    showSearchForm(req, resp);
                     break;
+
                 default:
                     listProduct(req,resp);
             }
@@ -58,6 +60,20 @@ public class ShoesServlet extends HttpServlet {
         }
     }
 
+//    private void showSearchForm(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+//        RequestDispatcher dispatcher = req.getRequestDispatcher("view/homepage.jsp");
+//        dispatcher.forward(req,resp);
+//    }
+
+    private void searchShoes(HttpServletRequest req, HttpServletResponse resp) throws SQLException, ServletException, IOException {
+        String search = req.getParameter("search");
+        List<Shoes> listShoes = iManagerDAO.search(search);
+        req.setAttribute("listShoes", listShoes);
+        RequestDispatcher dispatcher = req.getRequestDispatcher("view/homepage.jsp");
+        dispatcher.forward(req,resp);
+
+    }
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String action = req.getParameter("action");
@@ -73,6 +89,7 @@ public class ShoesServlet extends HttpServlet {
                 case "delete":
                     break;
                 case "search":
+                    searchShoes(req, resp);
                     break;
                 default:
                     listProduct(req,resp);
