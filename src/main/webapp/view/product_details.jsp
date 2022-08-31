@@ -103,11 +103,11 @@
                         </a>
                     </li>
                     <li class="header__navbar-item">
-                        <a href="#" class="header__navbar-item-link header__navbar-item-link__strong separate">Đăng
+                        <a href="register.jsp" class="header__navbar-item-link header__navbar-item-link__strong separate">Đăng
                             ký</a>
                     </li>
                     <li class="header__navbar-item">
-                        <a href="#" class="header__navbar-item-link header__navbar-item-link__strong">Đăng nhập</a>
+                        <a href="login.jsp" class="header__navbar-item-link header__navbar-item-link__strong">Đăng nhập</a>
                     </li>
                 </ul>
             </nav>
