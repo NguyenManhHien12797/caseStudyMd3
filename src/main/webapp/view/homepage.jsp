@@ -1,7 +1,9 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <!doctype html>
 <html lang="en">
 <head>
+    <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+    <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
     <link rel="icon" href="../image/SB-L2-xxl.svg" type="image/x-icon">
     <title>ShopBae</title>
     <meta charset="utf-8">
@@ -84,7 +86,6 @@
         }
 
         /*user list*/
-
 
     </style>
 
@@ -363,82 +364,46 @@
                                     <%--                    List product--%>
                                     <div class="home-product">
                                         <div class="grid__row">
-                                            <div class="grid__column-2-4">
+                                            <c:forEach items="${listShoes}" var="listShoes">
+                                                <div class="grid__column-2-4">
 
-                                                <a href="product_details.jsp" class="home-product-item">
-                                                    <div class="home-product-item__img"
-                                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
-                                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
-                                                        Samsung Galaxy Watch III 45mm LTE</h4>
-                                                    <div class="home-product-item__price">
-                                                        <span class="home-product-item__price-old">1.200.000đ</span>
-                                                        <span class="home-product-item__price-current">900.000đ</span>
-                                                    </div>
-                                                    <div class="home-product-item__action">
+                                                    <a href="product_details.jsp" class="home-product-item">
+                                                        <div class="home-product-item__img"
+                                                             style="background-image:url(${listShoes.image})"></div>
+                                                        <h4 class="home-product-item__name">${listShoes.name}</h4>
+                                                        <div class="home-product-item__price">
+                                                            <span class="home-product-item__price-old">${listShoes.oldPrice}đ</span>
+                                                            <span class="home-product-item__price-current">${listShoes.newPrice}</span>
+                                                        </div>
+                                                        <div class="home-product-item__action">
                                         <span class="home-product-item__like home-product-item__like--liked" rel="#">
                                             <i class="home-product-item__like-icon far fa-heart"></i>
                                             <i class="home-product-item__like-icon-fill fas fa-heart"></i>
                                         </span>
-                                                        <div class="home-product-item__rating">
-                                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                                            <i class=" fas fa-star"></i>
+                                                            <div class="home-product-item__rating">
+                                                                <i class="home-product-item__star-gold fas fa-star"></i>
+                                                                <i class="home-product-item__star-gold fas fa-star"></i>
+                                                                <i class="home-product-item__star-gold fas fa-star"></i>
+                                                                <i class="home-product-item__star-gold fas fa-star"></i>
+                                                                <i class=" fas fa-star"></i>
+                                                            </div>
+                                                            <span class="home-product-item__sold">88 đã bán</span>
                                                         </div>
-                                                        <span class="home-product-item__sold">88 đã bán</span>
-                                                    </div>
-                                                    <div class="home-product-item__origin">
-                                                        <span class="home-product-item__brand">Whoo</span>
-                                                        <span class="home-product-item__origin-name">Nhật Bản</span>
-                                                    </div>
-                                                    <div class="home-product-item__favourite">
-                                                        <i class="fa-solid fa-check"></i> Yêu thích
-                                                    </div>
-                                                    <div class="home-product-item__sale-off">
-                                                        <span class="home-product-item__sale-off-percent">10%</span>
-                                                        <span class="home-product-item__sale-off-label">GIẢM</span>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div class="grid__column-2-4">
+                                                        <div class="home-product-item__origin">
+                                                            <span class="home-product-item__brand">Whoo</span>
+                                                            <span class="home-product-item__origin-name">Nhật Bản</span>
+                                                        </div>
+                                                        <div class="home-product-item__favourite">
+                                                            <i class="fa-solid fa-check"></i> Yêu thích
+                                                        </div>
+                                                        <div class="home-product-item__sale-off">
+                                                            <span class="home-product-item__sale-off-percent">10%</span>
+                                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </c:forEach>
 
-                                                <a href="product_details.jsp" class="home-product-item">
-                                                    <div class="home-product-item__img"
-                                                         style="background-image:url(https://cf.shopee.vn/file/683154c9dc3a73ace1eda35b0d6da767_tn)"></div>
-                                                    <h4 class="home-product-item__name">Samsung Watch 3 R845 - Đồng hồ thông minh
-                                                        Samsung Galaxy Watch III 45mm LTE</h4>
-                                                    <div class="home-product-item__price">
-                                                        <span class="home-product-item__price-old">1.200.000đ</span>
-                                                        <span class="home-product-item__price-current">900.000đ</span>
-                                                    </div>
-                                                    <div class="home-product-item__action">
-                                        <span class="home-product-item__like home-product-item__like--liked" rel="#">
-                                            <i class="home-product-item__like-icon far fa-heart"></i>
-                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
-                                        </span>
-                                                        <div class="home-product-item__rating">
-                                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                                            <i class="home-product-item__star-gold fas fa-star"></i>
-                                                            <i class=" fas fa-star"></i>
-                                                        </div>
-                                                        <span class="home-product-item__sold">88 đã bán</span>
-                                                    </div>
-                                                    <div class="home-product-item__origin">
-                                                        <span class="home-product-item__brand">Whoo</span>
-                                                        <span class="home-product-item__origin-name">Nhật Bản</span>
-                                                    </div>
-                                                    <div class="home-product-item__favourite">
-                                                        <i class="fa-solid fa-check"></i> Yêu thích
-                                                    </div>
-                                                    <div class="home-product-item__sale-off">
-                                                        <span class="home-product-item__sale-off-percent">10%</span>
-                                                        <span class="home-product-item__sale-off-label">GIẢM</span>
-                                                    </div>
-                                                </a>
-                                            </div>
                                         </div>
                                     </div>
 
