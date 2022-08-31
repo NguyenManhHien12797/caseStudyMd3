@@ -15,19 +15,6 @@ public class ConnectionDB {
     public ConnectionDB() {
     }
 
-//    public static Connection getConnect(){
-//        if (connect==null){
-//            try {
-//                Class.forName("com.mysql.jdbc.Driver");
-//                connect = DriverManager.getConnection(URL, USER, PASSWORD);
-//                System.out.println("ket noi thanh cong");
-//            } catch (ClassNotFoundException | SQLException e) {
-//                System.out.println("ket noi khong thanh cong");
-//                e.printStackTrace();
-//            }
-//        }
-//        return connect;
-//    }
 
     public static Connection getConnect() {
         Connection connection = null;

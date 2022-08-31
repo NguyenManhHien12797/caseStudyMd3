@@ -1,6 +1,7 @@
 package com.example.caseStudyMd3.dao;
 
 import   com.example.caseStudyMd3.config.ConnectionDB;
+import com.example.caseStudyMd3.model.Product;
 import com.example.caseStudyMd3.model.Users;
 import com.example.caseStudyMd3.service.RS.Role;
 import com.example.caseStudyMd3.service.RS.Status;
@@ -73,6 +74,11 @@ public class UserDao implements IUserDAO{
         }
 
         return user ;
+    }
+
+    @Override
+    public List<Product> selectAllUsers() {
+        return null;
     }
 
     @Override

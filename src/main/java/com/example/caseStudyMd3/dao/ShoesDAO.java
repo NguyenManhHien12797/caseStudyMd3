@@ -1,7 +1,7 @@
 package com.example.caseStudyMd3.dao;
 
 import com.example.caseStudyMd3.config.ConnectionDB;
-import com.example.caseStudyMd3.model.Shoes;
+import com.example.caseStudyMd3.model.productShoes.Shoes;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

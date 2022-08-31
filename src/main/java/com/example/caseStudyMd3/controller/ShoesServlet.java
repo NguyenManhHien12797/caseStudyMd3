@@ -1,10 +1,8 @@
 package com.example.caseStudyMd3.controller;
 
-
-
-import com.example.caseStudyMd3.dao.IDAO;
-import com.example.caseStudyMd3.model.Crawls;
-import com.example.caseStudyMd3.model.Shoes;
+import com.example.caseStudyMd3.dao.IManagerDAO;
+import com.example.caseStudyMd3.dao.ShoesDAO;
+import com.example.caseStudyMd3.model.productShoes.Shoes;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -16,63 +14,74 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
-@WebServlet(name = "ShoesServlet",value = "/shoes")
+@WebServlet(name = "ProductServlet", urlPatterns = "/ShopBae")
 public class ShoesServlet extends HttpServlet {
-    private IDAO.ShoesDAO shoesDAO=new IDAO.ShoesDAO();
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//            listNike(request,response);
-//            listAdidas(request,response);
-//            listJordan(request,response);
-        listYeezy(request,response);
+    private IManagerDAO iManagerDAO;
+
+    public void init() {
+        iManagerDAO = new ShoesDAO();
     }
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String action = req.getParameter("action");
+        if(action == null){
+            action = "";
+        }
+        try{
+            switch (action){
+                case "create":
+                    break;
+                case "edit":
+                    break;
+                case "delete":
+                    break;
+                case "search":
+                    break;
+                default:
+                    listProduct(req,resp);
+            }
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+    }
+
+    protected void listProduct(HttpServletRequest req, HttpServletResponse resp) throws SQLException, ServletException, IOException {
+        try {
+            List<Shoes> listShoes = null;
+            listShoes = iManagerDAO.selectAll();
+            req.setAttribute("listShoes", listShoes);
+            RequestDispatcher dispatcher = req.getRequestDispatcher("view/homepage.jsp");
+            dispatcher.forward(req,resp);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String action = req.getParameter("action");
+        if(action == null){
+            action = "";
+        }
+        try{
+            switch (action){
+                case "create":
+                    break;
+                case "edit":
+                    break;
+                case "delete":
+                    break;
+                case "search":
+                    break;
+                default:
+                    listProduct(req,resp);
+            }
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
 
     }
-    protected void listNike(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Crawls crawls=new Crawls();
-        List<Shoes> shoesList=crawls.getNike();
-        request.setAttribute("listShoesN",shoesList);
-        RequestDispatcher dispatcher=request.getRequestDispatcher("qa/listNike.jsp");
-        dispatcher.forward(request,response);
-    }
-    protected void listAdidas(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Crawls crawls=new Crawls();
-        List<Shoes> shoesList=crawls.getAdidas();
-        request.setAttribute("listShoesA",shoesList);
-        RequestDispatcher dispatcher=request.getRequestDispatcher("qa/listAdidas.jsp");
-        dispatcher.forward(request,response);
-    }
-    protected void listJordan(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Crawls crawls=new Crawls();
-        List<Shoes> shoesList=crawls.getJordan();
-        request.setAttribute("listShoesJ",shoesList);
-        RequestDispatcher dispatcher=request.getRequestDispatcher("qa/listJordan.jsp");
-        dispatcher.forward(request,response);
-    }
-    protected void listYeezy(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Crawls crawls=new Crawls();
-        List<Shoes> shoesList=crawls.getYeezy();
-        request.setAttribute("listShoesY",shoesList);
-        RequestDispatcher dispatcher=request.getRequestDispatcher("qa/listYeezy.jsp");
-        dispatcher.forward(request,response);
-    }
-    private void insertShoes(HttpServletRequest request, HttpServletResponse response) throws SQLException, IOException, ServletException {
-        int id = Integer.parseInt(request.getParameter("id"));
-        int categoryId = Integer.parseInt(request.getParameter("categoryId"));
-        int brandId = Integer.parseInt(request.getParameter("brandId"));
-        String name = request.getParameter("name");
-        String oldPrice = request.getParameter("oldPrice");
-        String newPrice = request.getParameter("newPrice");
-        String image = request.getParameter("image");
 
-        Shoes shoes = new Shoes(id,categoryId, brandId, name,oldPrice,newPrice,image);
-        shoesDAO.insertShoes(shoes);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("view/create.jsp");
-        dispatcher.forward(request, response);
-    }
+
 }
-
-
