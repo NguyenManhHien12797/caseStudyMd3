@@ -1,11 +1,7 @@
-<<<<<<<< HEAD:src/main/java/com/example/caseStudyMd3qa/model/ShoesDAO.java
-package com.example.caseStudyMd3qa.model;
-========
 package com.example.caseStudyMd3.dao;
 
-import com.example.demogit.model.qa.model.IShoes;
-import model.Shoes;
->>>>>>>> 1d381e23571fffd7fa0b29cdb1155ad3ff4e87a2:src/main/java/com/example/caseStudyMd3/dao/ShoesDAO.java
+import com.example.caseStudyMd3qa.model.IShoes;
+import com.example.caseStudyMd3qa.model.Shoes;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

@@ -210,7 +210,7 @@
                 </a>
 
                 <div class="header__search">
-                    <form action="#" class="header__search-form" method="post">
+                    <form   class="header__search-form" method="post">
                         <input type="text" class="header__search-input" name="search"
                                placeholder="Nhập để tìm kiếm sản phẩm">
                         <button class="header__search-btn" type="submit">

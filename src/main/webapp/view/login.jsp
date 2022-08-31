@@ -21,10 +21,21 @@
     <link rel="stylesheet" href="main.css">
 
     <style>
-
+        .app__container{
+            border-bottom: none;
+        }
         .header__login{
             background-color: var(--white-color);
             background-image: none;
+            height: 85px;
+        }
+
+        .header-with-login{
+            height: 85px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            margin: 0 20px;
         }
         .background__login{
             display: flex;
@@ -32,10 +43,16 @@
             background-color: #ef4c29;
         }
 
+        .background__login-img{
+            width: 100%;
+            height: 680px;
+            background-repeat:no-repeat ;
+        }
+
         .header__logo_login{
             border-radius: 5px;
             display:flex;
-            margin-top: 17px;
+            margin-top: 25px;
             justify-items: center;
            height: 43px;
             background-color: var(--primary-color);
@@ -43,13 +60,135 @@
 
         .header__logo-name_login{
             color: var(--primary-color);
+            margin-right: 10px;
         }
 
         .header__logo_login:hover{
             background-color:#f48c81 ;
         }
-        .header__logo-name_login:hover{
+        .header__logo-name_login:hover,
+        .header__title_login:hover{
             color: #f48c81;
+        }
+
+        .header__title_login{
+            color: var(--text-color);
+            margin-left:0;
+        }
+
+        .header__login-title{
+            position: absolute;
+            font-size: 1.6rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            right: 0;
+            top:45px;
+        }
+
+        /*Form login*/
+
+        .app__container-login{
+            position: absolute;
+            right: 22.3%;
+            top: 145px;
+            width: 400px;
+            height: 490px;
+            border-radius:5px ;
+            box-shadow: 0 3px 10px 0 rgb(0 0 0 / 14%);
+            background-color: var(--white-color);
+        }
+
+        .form__login-username,
+        .form__login-password{
+            display: block;
+            width: 340px;
+            height: 38px;
+            font-size: 1.8rem;
+            margin:22px 30px ;
+        }
+
+        .form__login-username:focus,
+        .form__login-password:focus{
+            outline: none;
+           border-color: var(--primary-color);
+            box-shadow: 0 0.1rem 0.2rem #bdbdbd;
+        }
+        .app__container-login__title{
+            display: block;
+            font-weight: 500;
+            font-size: 2rem;
+            color: var(--text-color);
+            margin: 45px 30px;
+        }
+
+        .login-btn{
+            width: 340px;
+            margin:0 0 35px 30px;
+            color: var(--white-color);
+        }
+
+        .login__with-item{
+            display: inline-flex;
+            margin-left: 30px;
+            border-top: 1px solid #bdbdbd;
+        }
+        .login__with-item::after{
+            position: absolute;
+            display: flex;
+            right: 168px;
+            top: 300px;
+            width: 66px;
+            height: 18px;
+            font-size: 1.6rem;
+            text-align: center;
+            justify-items: center;
+            justify-content: center;
+            content: "HOẶC";
+            background: var(--white-color);
+            color:#bdbdbd ;
+        }
+
+
+        .footer-item__link-fb-login,
+        .footer-item__link-gg-login,
+        .footer-item__link-linked-login{
+            margin: 35px 0;
+            padding: 5px 10px;
+            color: #367af1;
+            font-size: 1.5rem;
+            display: block;
+            border-radius: 3px;
+            border: 1px solid #bdbdbd;
+            text-decoration: none;
+        }
+
+        .footer-item__link-fb-login:hover,
+        .footer-item__link-gg-login:hover,
+        .footer-item__link-linked-login:hover{
+            text-decoration: none;
+            color: #6896e9;
+        }
+
+        .footer-item__link-gg{
+            margin: 35px 20px 35px 20px;
+        }
+        /*Form login*/
+
+        .register{
+            text-align: center;
+        }
+        .register__title{
+            font-size: 1.4rem;
+            font-weight: 150;
+        }
+        .register__link{
+            font-size: 1.6rem;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        .register__link:hover{
+            text-decoration: none;
+            color: #df8071;
         }
 
     </style>
@@ -59,10 +198,7 @@
 <div class="app">
     <header class="header header__login">
         <div class="grid">
-            <nav class="header__navbar">
-            </nav>
-
-            <div class="header-with-search">
+            <div class="header-with-login">
                 <div class="header__logo header__logo_login">
                     <a href="homepage.jsp">
                         <img src="../image/SB-L2-white-backgroud.svg" alt="">
@@ -73,6 +209,8 @@
                     ShopBae
                 </a>
 
+                <span class="header__logo-name header__title_login">Đăng nhập</span>
+                <a href="#" class="header__login-title">Bạn cần giúp đỡ?</a>
             </div>
         </div>
 
@@ -81,12 +219,43 @@
 
     <div class="app__container">
         <div class="background__login">
-            <img class="background__login-img" src="../image/background_login.png" alt="">
-        </div>
-        <div class="app__container-banner">
+            <div class="grid">
+                <div class="grid__row">
+                    <div class="grid__column-12 background__login-img " style="background-image: url(../image/background_login.png)">
+                        <div class="app__container-login">
+                            <span class="app__container-login__title"> Đăng nhập</span>
+
+<%--                            Form Login--%>
+
+                            <form action="#" class="form__login" method="post">
+                                <input type="text" class="form__login-username" name="username">
+                                <input type="password" class="form__login-password" name="password">
+                                <button class="btn btn-primary login-btn">ĐĂNG NHẬP</button>
+                            </form>
+
+<%--                            Form Login--%>
+
+                            <div class="login__with">
+                                <li class="login__with-item">
+                                    <a href="https://www.facebook.com/" class="footer-item__link-icon footer-item__link-fb footer-item__link-fb-login"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                                    <a href="https://www.instagram.com/" class="footer-item__link-icon footer-item__link-gg footer-item__link-gg-login"><i class="fa-brands fa-google-plus-g"></i>Google</a>
+                                    <a href="https://www.linkedin.com/" class="footer-item__link-icon footer-item__link-linked footer-item__link-linked-login"><i class="fa-brands fa-linkedin"></i> Linkedkin</a>
+                                </li>
+                            </div>
+
+                            <div class="register">
+                                <span class="register__title">Bạn mới biết đến ShopBae?</span>
+                                <a href="#" class="register__link">Đăng ký</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
         </div>
+
 
     </div>
     <div class="footer">
