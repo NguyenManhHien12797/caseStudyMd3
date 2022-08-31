@@ -1,7 +1,7 @@
 package com.example.caseStudyMd3.dao;
 
 import   com.example.caseStudyMd3.config.ConnectionDB;
-import model.Users;
+import com.example.caseStudyMd3.model.Users;
 import com.example.caseStudyMd3.service.RS.Role;
 import com.example.caseStudyMd3.service.RS.Status;
 

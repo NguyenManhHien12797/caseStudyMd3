@@ -1,6 +1,6 @@
 package com.example.caseStudyMd3.service;
 
-import model.Users;
+import com.example.caseStudyMd3.model.Users;
 
 public interface IUserService extends IService<Users> {
     String findPassByAccount(String account, String email);

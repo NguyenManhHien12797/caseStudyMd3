@@ -1,4 +1,4 @@
-package model;
+package com.example.caseStudyMd3.model;
 
 public class Product {
     private int id;

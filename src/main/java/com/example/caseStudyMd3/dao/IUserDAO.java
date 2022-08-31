@@ -1,6 +1,6 @@
 package com.example.caseStudyMd3.dao;
 
-import model.Users;
+import com.example.caseStudyMd3.model.Users;
 
 public interface IUserDAO extends dao.IDAO<Users> {
     String findPassByAccount(String account, String email);
