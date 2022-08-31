@@ -3,9 +3,9 @@
     background-color: #ffeee8;
 }
 @media only screen and (min-width: 1920px){
-.slider{
-    margin-top: 170px;
-}
+    .slider{
+        margin-top: 170px;
+    }
 }
 
 .item__details{
