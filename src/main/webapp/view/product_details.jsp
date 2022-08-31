@@ -319,11 +319,311 @@
 
                         </div>
 
+<<<<<<< HEAD
+=======
+                        <div class="item__details__size">
+                            <span class="item__details__size-title">Kích thước</span>
+                            <select name="select__item" id="" class="item__details__size-num">
+                                <option class="select__item-num" value="39">39</option>
+                                <option class="select__item-num" value="40">40</option>
+                                <option class="select__item-num" value="41">41</option>
+                                <option class="select__item-num" value="42">42</option>
+                            </select>
+                        </div>
+
+                        <div class="item__details__amoun">
+                            <span class="item__details__title">Số lượng</span>
+                            <button class="item__details__btn">
+                                <span class="item__details__btn-icon">-</span>
+                            </button>
+                            <input type="text" name="amoun_num" class="item__details__input" value="1">
+                            <button class="item__details__btn">
+                                <span class="item__details__btn-icon">+</span>
+                            </button>
+                            <span class="amount_in_stock">92042 Sản phẩm có sẵn</span>
+                        </div>
+
+                        <div class="item__details__cart">
+                            <button class="btn btn__add-to-cart"><i class="fa-solid fa-cart-plus"></i>  Thêm Vào Giỏ Hàng</button>
+                            <button class="btn btn-primary btn__buy-now">Mua Ngay</button>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <div class="grid ">
+                <div class="grid__row grid__row__shop">
+                    <div class="grid__column-3 shop__container">
+                        <div class="shop__avatar">
+                            <img src="../image/avatar.jpg" alt="" class="shop__img">
+                            <div class="shop__details">
+                                <span class="shop__details-name">Bình tổng Miền Bắc</span>
+                                <span class="shop__details-online">Online 1 phút trước</span>
+                                <div class="shop__details-btn">
+                                    <button class="btn btn__chat"><i class="fa-solid fa-message-check"></i> Chat ngay</button>
+                                    <button class="btn btn__see-shop"><i class="fa-solid fa-store"></i> Xem shop </button>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="shop__rate">
+                            <div class="rate__details">
+                                <div class="rate__details-rate">
+                                    <span class="rate__details-rate-title">Đánh giá</span>
+                                    <span class="rate__details-rate-num">39.4k</span>
+                                </div>
+                                <div class="rate__details-rate">
+                                    <span class="rate__details-rate-title rate__details-rate-title_rsp">Tỷ lệ phản hồi</span>
+                                    <span class="rate__details-rate-num">95%</span>
+                                </div>
+                                <div class="rate__details-rate">
+                                    <span class="rate__details-rate-title  rate__details-rate-title__join">Tham gia</span>
+                                    <span class="rate__details-rate-num rate__details-rate-num_month">18 tháng trước</span>
+                                </div>
+                            </div>
+                            <div class="rate__product">
+                                <div class="rate__details-rate">
+                                    <span class="rate__details-rate-title rate__details-rate-title__product">Sản phẩm</span>
+                                    <span class="rate__details-rate-num rate__details-rate-num_pr">189</span>
+                                </div>
+                                <div class="rate__details-rate">
+                                    <span class="rate__details-rate-title rate__details-rate-title_timersp">Thời gian phản hồi</span>
+                                    <span class="rate__details-rate-num rate__details-rate-num_time">trong vài giờ</span>
+                                </div>
+                                <div class="rate__details-rate">
+                                    <span class="rate__details-rate-title rate__details-rate-title_pers">Người theo dõi</span>
+                                    <span class="rate__details-rate-num">34.2k</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid__column-9">
+>>>>>>> hien
+                    </div>
+                </div>
+            </div>
+
             <div class="grid">
-                <div class="grid__row">
+                <div class="grid__row grid__row_details">
+                    <span class="detail__title">Chi tiết sản phẩm</span>
+                    <span class="detail__title detail__title__describe">Mô tả sản phẩm</span>
+                    <span class="detail__title__describe-text">
+                        ------  SHOP CAM KẾT ------
+✅	PHƯƠNG CHÂM “MỘT CHỮ TÍN - VẠN NIỀM TIN”
+✅Chúng tôi cam kết mang đển cho khách hàng những sản phẩm tốt nhất trong tâm giá so với thị trường, mang lại sự hài lòng tuyệt đối cho khách hàng đã tin tưởng mua sản phẩm.
+✅	Quyền lợi khách hàng  là mục tiêu phát triển của chúng tôi.
+✅	 Shop cam kết hoàn tiền hoặc gửi lại sản mới thay thế cho quý khách sớm nhất có thể, nếu khách hàng không hài lòng về chất lượng của sản phẩm
+
+
+------  SHOP ĐẢM BẢO ------
+✅	Hình ảnh sản phẩm giống hình 100%
+✅	Chất lượng sản phẩm đúng như mô tả
+✅	Sản phẩm được kiểm tra kĩ càng, nghiêm ngặt trước khi giao hàng
+✅	Đóng gói và giao hàng ngay khi nhận được đơn đặt hàng
+✅	Hoàn tiền ngay nếu sản phẩm không đúng như mô tả
+✅	Giao hàng toàn quốc, chấp nhận nhiều phương thức thanh toán
+✅	Hỗ trợ đổi trả 1:1 nếu sản phẩm có bất kì sai xót nào từ nhà cung cấp
+✅	Gửi hàng siêu tốc
+
+
+BAO TAY CHƠI GAME  CAO CẤP
+
+- Sản xuất : Theo công nghệ sợi may của Hoa Kỳ
+
+- Chất liệu: Sợi bạc 24 kim siêu dẫn điện
+
+- Độ mỏng : 0,3 mm
+
+- Màu sắc: Có nhiều màu
+
+- Trọng lượng: 10g
+
+Ưu điểm nổi bật sản phẩm
+
+- Được làm bằng chất liệu sợi bạc 24 kim siêu dẫn điện được phát triển bởi Hoa Kỳ  , siêu mỏng chỉ 0,3mm
+
+- Có tác dụng chống trơn trượt, chống mồ hôi tay giúp cải thiện kỹ năng chơi game và tránh các lỗi khi chơi.
+
+- Găng tay cảm ứng  với  120 điểm may cảm ứng  /1 mét vuông ,  giúp bề mặt tiếp xúc giữa ngón tay và không khí được tăng lên 30%, diện tích thoát hơi nước tăng lên bạn sẽ cảm thấy rất thoải mái kể cả chơi một thời gian dài.
+
+- Nhẹ nhàng, nhỏ gọn có thể mang đi bất kỳ đâu
+
+- Tương thích hoàn hảo với tất cả game mobile
+
+• Thiết kế và gia công từ Sợi Carbon cao cấp siêu bền, cảm ứng nhạy
+
+• Thiết kể mỏng hơn 30% so với các loại găng tay trên thị trường
+
+• Khả năng co dãn đàn hồi cực cao, đường chỉ may tỉ mỉ chỉn chu.
+
+• Vẫn có khả năng cảm ứng nhạy trong trường hợp bị ướt
+
+• Hấp thụ mồ hôi tay hiệu quả, giúp thoáng khí
+
+• Găng tay có thể giặt lại được nhiều lần và không bị mất cảm ứng.
+
+- Đơn Vị Sản Xuất:
+Công Ty TNHH Sản Xuất Thương Mại Công Nghệ Guangdong
+-Địa Chỉ: Số Nhà 38, Đường LongXiNan, Ngõ HaiLong, Quận LiWan, Thành Phố GuangZhou, Tỉnh GuangDong
+- Xuất xứ: Trung Quốc.
+- Thương Nhân Nhập Khẩu, Phân Phối, Chịu Trách Nhiệm Sản Phẩm : Công Ty TNHH Sản Xuất Thương Mại Dịch Vụ Quỳnh Hương
+- Địa chỉ: Liền Kề 22, Khu Đô Thị  C37 Bắc Hà, 15 Tố Hữu, Phường Trung Văn, Quận Nam Từ Liêm, Thành Phố Hà Nội.
+
+
+☀LƯU Ý:
+
+▶️ Chúng tôi đặt lợi ích của khách hàng lên hàng đầu với các chính sách 100% có lợi chính đáng cho khách hàng:
+                    </span>
+                </div>
+            </div>
+
+            <div class="grid">
+                <div class="grid__row grid__row_describe">
+                    <span class="describe__title">Đánh giá sản phẩm</span>
+                    <div class="describe__rate">
+
+                    </div>
+                    <div class="describe__cmt">
+                        <div class="describe__cmt-avatar">
+                            <img src="../image/avatar_1.jpg" alt="" class="describe__cmt-avatar-img">
+                            <div class="describe__cmt-username">Nguyễn Hoàng Nam</div>
+                        </div>
+                        <div class="describe__cmt-rate">
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                        </div>
+                        <span class="describe__cmt-time">2022-09-02 00:00</span>
+                        <span class="describe__cmt-cmt">Sản phẩm rất tốt, không mua lại lần sau</span>
+                        <div class="describe__cmt-img-product">
+                            <img src="../image/details-slider_1.jpg" alt="">
+                            <img src="../image/details-slider_1.jpg" alt="">
+                            <img src="../image/details-slider_1.jpg" alt="">
+                            <img src="../image/details-slider_1.jpg" alt="">
+                        </div>
+
+                        <div class="describe__cmt-rep">
+
+                        </div>
+                    </div>
+                    <div class="describe__cmt">
+                        <div class="describe__cmt-avatar">
+                            <img src="../image/avatar_2.jpg" alt="" class="describe__cmt-avatar-img">
+                            <div class="describe__cmt-username">Nguyễn Hải Yến</div>
+                        </div>
+                        <div class="describe__cmt-rate">
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                        </div>
+
+                        <span class="describe__cmt-time">2022-09-02 00:00</span>
+                        <span class="describe__cmt-cmt">Sản phẩm rất tốt, không mua lại lần sau</span>
+                        <div class="describe__cmt-img-product">
+                            <img src="../image/details-slider_1.jpg" alt="">
+                            <img src="../image/details-slider_1.jpg" alt="">
+                            <img src="../image/details-slider_1.jpg" alt="">
+                            <img src="../image/details-slider_1.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="describe__cmt">
+                        <div class="describe__cmt-avatar">
+                            <img src="../image/avatar_3.webp" alt="" class="describe__cmt-avatar-img">
+                            <div class="describe__cmt-username">Trần Xuân Ba</div>
+                        </div>
+                        <div class="describe__cmt-rate">
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                        </div>
+
+                        <span class="describe__cmt-time">2022-09-02 00:00</span>
+                        <span class="describe__cmt-cmt">Sản phẩm xịn quá Shop ơi, lần sau mua lại 100 lần</span>
+                        <div class="describe__cmt-img-product">
+                            <img src="../image/details-slider_1.jpg" alt="">
+                            <img src="../image/details-slider_1.jpg" alt="">
+                            <img src="../image/details-slider_1.jpg" alt="">
+                            <img src="../image/details-slider_1.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="describe__cmt">
+                        <div class="describe__cmt-avatar">
+                            <img src="../image/avatar_4.webp" alt="" class="describe__cmt-avatar-img">
+                            <div class="describe__cmt-username">Ngô Trọng Hiếu</div>
+                        </div>
+                        <div class="describe__cmt-rate">
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                        </div>
+
+                        <span class="describe__cmt-time">2022-09-02 00:00</span>
+                        <span class="describe__cmt-cmt">Sản phẩm rất tốt, không mua lại lần sau</span>
+                        <div class="describe__cmt-img-product">
+                            <img src="../image/details-slider_1.jpg" alt="">
+                            <img src="../image/details-slider_1.jpg" alt="">
+                            <img src="../image/details-slider_1.jpg" alt="">
+                            <img src="../image/details-slider_1.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="describe__cmt">
+                        <div class="describe__cmt-avatar">
+                            <img src="../image/avatar_5.jpg" alt="" class="describe__cmt-avatar-img">
+                            <div class="describe__cmt-username">Nguyễn Quang Anh</div>
+                        </div>
+                        <div class="describe__cmt-rate">
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                        </div>
+
+                        <span class="describe__cmt-time">2022-09-02 00:00</span>
+                        <span class="describe__cmt-cmt">Sản phẩm rất tốt, không mua lại lần sau</span>
+                        <div class="describe__cmt-img-product">
+                            <img src="../image/details-slider_1.jpg" alt="">
+                            <img src="../image/details-slider_1.jpg" alt="">
+                            <img src="../image/details-slider_1.jpg" alt="">
+                            <img src="../image/details-slider_1.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="describe__cmt">
+                        <div class="describe__cmt-avatar">
+                            <img src="../image/avatar_6.jpg" alt="" class="describe__cmt-avatar-img">
+                            <div class="describe__cmt-username">Đào Văn Trọng</div>
+                        </div>
+                        <div class="describe__cmt-rate">
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                        </div>
+
+                        <span class="describe__cmt-time">2022-09-02 00:00</span>
+                        <span class="describe__cmt-cmt">Sản phẩm rất tốt, không mua lại lần sau</span>
+                        <div class="describe__cmt-img-product">
+                            <img src="../image/details-slider_1.jpg" alt="">
+                            <img src="../image/details-slider_1.jpg" alt="">
+                            <img src="../image/details-slider_1.jpg" alt="">
+                            <img src="../image/details-slider_1.jpg" alt="">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="grid">
+                <div class="grid__row grid__row-product">
                     <%--                    List product--%>
                     <div class="home-product">
                         <div class="grid__row">
