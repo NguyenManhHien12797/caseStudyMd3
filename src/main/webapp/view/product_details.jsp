@@ -522,6 +522,9 @@ Công Ty TNHH Sản Xuất Thương Mại Công Nghệ Guangdong
                             <img src="../image/details-slider_1.jpg" alt="">
                             <img src="../image/details-slider_1.jpg" alt="">
                         </div>
+                        <div class="describe__cmt-rep">
+
+                        </div>
                     </div>
                     <div class="describe__cmt">
                         <div class="describe__cmt-avatar">
@@ -543,6 +546,9 @@ Công Ty TNHH Sản Xuất Thương Mại Công Nghệ Guangdong
                             <img src="../image/details-slider_1.jpg" alt="">
                             <img src="../image/details-slider_1.jpg" alt="">
                             <img src="../image/details-slider_1.jpg" alt="">
+                        </div>
+                        <div class="describe__cmt-rep">
+
                         </div>
                     </div>
                     <div class="describe__cmt">
@@ -566,6 +572,9 @@ Công Ty TNHH Sản Xuất Thương Mại Công Nghệ Guangdong
                             <img src="../image/details-slider_1.jpg" alt="">
                             <img src="../image/details-slider_1.jpg" alt="">
                         </div>
+                        <div class="describe__cmt-rep">
+
+                        </div>
                     </div>
                     <div class="describe__cmt">
                         <div class="describe__cmt-avatar">
@@ -588,6 +597,9 @@ Công Ty TNHH Sản Xuất Thương Mại Công Nghệ Guangdong
                             <img src="../image/details-slider_1.jpg" alt="">
                             <img src="../image/details-slider_1.jpg" alt="">
                         </div>
+                        <div class="describe__cmt-rep">
+
+                        </div>
                     </div>
                     <div class="describe__cmt">
                         <div class="describe__cmt-avatar">
@@ -609,6 +621,9 @@ Công Ty TNHH Sản Xuất Thương Mại Công Nghệ Guangdong
                             <img src="../image/details-slider_1.jpg" alt="">
                             <img src="../image/details-slider_1.jpg" alt="">
                             <img src="../image/details-slider_1.jpg" alt="">
+                        </div>
+                        <div class="describe__cmt-rep">
+
                         </div>
                     </div>
 
