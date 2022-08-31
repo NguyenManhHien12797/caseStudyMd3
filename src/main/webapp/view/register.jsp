@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <link rel="icon" href="../image/SB-L2-xxl.svg" type="image/x-icon">
-    <title>Login ShopBae</title>
+    <title>Register ShopBae</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
@@ -228,8 +228,8 @@
                             <%--                            Form Register--%>
 
                             <form action="login.jsp" class="form__login" method="post">
-                                <input type="text" class="form__login-username" name="username">
-                                <input type="password" class="form__login-password" name="password">
+                                <input type="text" class="form__login-username" name="username" placeholder="Nhập user name">
+                                <input type="password" class="form__login-password" name="password" placeholder="Nhập password">
                                 <button class="btn btn-primary login-btn">ĐĂNG KÝ</button>
                             </form>
 
@@ -238,7 +238,7 @@
                             <div class="login__with">
                                 <li class="login__with-item">
                                     <a href="https://www.facebook.com/" class="footer-item__link-icon footer-item__link-fb footer-item__link-fb-login"><i class="fa-brands fa-facebook"></i> Facebook</a>
-                                    <a href="https://www.instagram.com/" class="footer-item__link-icon footer-item__link-gg footer-item__link-gg-login"><i class="fa-brands fa-google-plus-g"></i>Google</a>
+                                    <a href="https://www.google.com/" class="footer-item__link-icon footer-item__link-gg footer-item__link-gg-login"><i class="fa-brands fa-google-plus-g"></i>Google</a>
                                     <a href="https://www.linkedin.com/" class="footer-item__link-icon footer-item__link-linked footer-item__link-linked-login"><i class="fa-brands fa-linkedin"></i> Linkedkin</a>
                                 </li>
                             </div>
