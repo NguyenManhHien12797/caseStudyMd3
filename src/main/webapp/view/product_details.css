@@ -1,7 +1,11 @@
-@media only screen and (min-width: 1920px){
-.slider{
-    margin-top: 170px;
+
+.item__details{
+    background-color: #ffeee8;
 }
+@media only screen and (min-width: 1920px){
+    .slider{
+        margin-top: 170px;
+    }
 }
 
 .item__details{
@@ -17,7 +21,7 @@
 .app__content-details{
     padding-top:0;
 }
-.app__container-wrap{
+.app__container-wrap__slider{
     padding: 15px 15px 0 15px;
 }
 .item__details__wrap{
@@ -43,62 +47,40 @@
 
 }
 
-.slider__controls-btn-wrap{
+.slider__controls-btn-icon-pre{
     position: absolute;
-    width: 100%;
-    height: 100%;
+    left: 0;
 }
-.slider__controls-btn{
-    display: block;
-    justify-content: center;
-
-}
-.slider__controls-btn-pre{
-}
-.slider__controls-btn-next{
-
+.slider__controls-btn-icon-next{
+    position: absolute;
+    right: 0;
 }
 
 .slider__controls img{
     display: block;
-    width: 25%;
+    width: 24%;
     height: 50px;
+}
+
+.slider__controls-img{
+    display: block;
+}
+.slider__controls-img:hover{
+    cursor: pointer;
+    border: 2.5px solid var(--primary-color);
 }
 .btn__control{
 
 }
-
+.carousel-item-img{
+    height: 375px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
 .btn__control img{
     width: 50px;
     height: 50px;
 }
-/*Lỗi*/
-/*.carousel-inner-slider{*/
-/*    height: 450px;*/
-/*}*/
-
-/*.carousel-indicators__control{*/
-/*    position: relative;*/
-/*}*/
-/*.control__img{*/
-/*    position: absolute;*/
-/*    display: block;*/
-/*    bottom: 0;*/
-/*    width: 40%;*/
-/*    height: 30px;*/
-/*    margin-right: 50px;*/
-/*}*/
-/*.carousel-item-img{*/
-/*    height: 450px;*/
-/*    display: block;*/
-
-/*    padding-top: 100%;*/
-/*    background-repeat: no-repeat;*/
-/*    background-size: contain;*/
-/*    background-position: center;*/
-/*}*/
-
-/*Lỗi*/
 
 .item__details__favourite{
     width: 62px;
@@ -224,7 +206,9 @@
 }
 .item__details__code-title,
 .item__details__deal-title,
-.item__details__ship-title{
+.item__details__ship-title,
+.item__details__size-title,
+.item__details__title{
     font-size: 1.6rem;
     margin-right: 30px;
     width: 90px;
@@ -250,7 +234,9 @@
 
 /*Ship*/
 
-.item__details__ship{
+.item__details__ship,
+.item__details__size,
+.item__details__amoun{
     display: flex;
     margin: 30px 0 0 20px;
 }
@@ -284,7 +270,10 @@
     border: none;
 }
 
+<<<<<<< HEAD
 /*Ship*/
+=======
+>>>>>>> hien
 .item__details__size{
 
 }
@@ -600,4 +589,7 @@
 
 /*List product*/
 
+<<<<<<< HEAD
+>>>>>>> hien
+=======
 >>>>>>> hien

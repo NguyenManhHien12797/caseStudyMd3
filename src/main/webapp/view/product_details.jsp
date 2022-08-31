@@ -113,15 +113,6 @@
             </nav>
 
             <div class="header-with-search">
-                <%--                <div class="header__logo">--%>
-                <%--                    <a href="homepage.jsp">--%>
-                <%--                        <img src="../image/SB-L2-white-backgroud.svg" alt="">--%>
-                <%--                    </a>--%>
-
-                <%--                </div>--%>
-                <%--                <a href="homepage.jsp" class="header__logo-name">--%>
-                <%--                    ShopBae--%>
-                <%--                </a>--%>
 
                 <div class="header__logo">
                     <a href="homepage.jsp">
@@ -165,9 +156,9 @@
     <div class="app__container">
 
         <div class="item__details">
-            <div class="grid">
+            <div class="grid ">
                 <div class="grid__row app__content app__content-details">
-                    <div class="grid__column-4 app__container-wrap ">
+                    <div class="grid__column-4 app__container-wrap app__container-wrap__slider ">
                         <div class="item__details-slider">
                             <div class="slider">
                                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -175,17 +166,13 @@
                                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
                                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
                                     </div>
                                     <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <img src="../image/details-slider_1.jpg" class="d-block w-100" alt="...">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="../image/details-slider_2.jpg" class="d-block w-100" alt="...">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="../image/details-slider_3.jpg" class="d-block w-100" alt="...">
-                                        </div>
+                                        <div class="carousel-item carousel-item-img active" style="background-image:url(../image/details-slider_1.jpg)"></div>
+                                        <div class="carousel-item carousel-item-img" style="background-image: url(../image/details-slider_2.jpg)"></div>
+                                        <div class="carousel-item carousel-item-img" style="background-image: url(../image/details-slider_3.jpg)"></div>
+                                        <div class="carousel-item carousel-item-img" style="background-image: url(../image/details-slider_3.jpg)"></div>
 
                                     </div>
 
@@ -194,16 +181,16 @@
                                     <img src="../image/details-slider_1.jpg" alt="" class="actives slider__controls-img" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1">
                                     <img src="../image/details-slider_2.jpg" alt="" class="slider__controls-img" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-current="true" aria-label="Slide 2">
                                     <img src="../image/details-slider_3.jpg" alt="" class="slider__controls-img" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-current="true" aria-label="Slide 3">
-                                   <div class="slider__controls-btn-wrap">
-                                       <button class="carousel-control-prev slider__controls-btn slider__controls-btn-pre" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                                           <span class="carousel-control-prev-icon slider__controls-btn-icon" aria-hidden="true"></span>
-                                           <span class="visually-hidden">Previous</span>
-                                       </button>
-                                       <button class="carousel-control-next slider__controls-btn slider__controls-btn-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                                           <span class="carousel-control-next-icon slider__controls-btn-icon" aria-hidden="true"></span>
-                                           <span class="visually-hidden">Next</span>
-                                       </button>
-                                   </div>
+                                    <img src="../image/details-slider_3.jpg" alt="" class="slider__controls-img" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-current="true" aria-label="Slide 4">
+
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon slider__controls-btn-icon-pre" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next " type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon slider__controls-btn-icon-next" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -320,7 +307,10 @@
                         </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> hien
                         <div class="item__details__size">
                             <span class="item__details__size-title">Kích thước</span>
                             <select name="select__item" id="" class="item__details__size-num">
@@ -398,6 +388,9 @@
                         </div>
                     </div>
                     <div class="grid__column-9">
+<<<<<<< HEAD
+>>>>>>> hien
+=======
 >>>>>>> hien
                     </div>
                 </div>
@@ -1105,7 +1098,7 @@ Công Ty TNHH Sản Xuất Thương Mại Công Nghệ Guangdong
 
     </div>
 
-<%--    Footer--%>
+    <%--    Footer--%>
     <div class="footer">
         <div class="grid">
             <div class="grid__row footer-wrap">
