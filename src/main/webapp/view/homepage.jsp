@@ -1,9 +1,12 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<<<<<<< HEAD
 <c:set var="req" value="${pageContext.request}" />
 <c:set var="uri" value="${req.requestURI}" />
 <c:set var="url">${req.requestURL}</c:set>
+=======
+>>>>>>> dev
 <!doctype html>
 <html lang="en">
 <head>
@@ -367,16 +370,28 @@
                                     <%--                    List product--%>
                                     <div class="home-product">
                                         <div class="grid__row">
+<<<<<<< HEAD
                                             <c:forEach items="${listShoes}" var="listShoes">
+=======
+                                            <c:forEach items="${listProduct}" var="listProduct">
+>>>>>>> dev
                                                 <div class="grid__column-2-4">
 
                                                     <a href="product_details.jsp" class="home-product-item">
                                                         <div class="home-product-item__img"
+<<<<<<< HEAD
                                                              style="background-image:url(${listShoes.image})"></div>
                                                         <h4 class="home-product-item__name">${listShoes.name}</h4>
                                                         <div class="home-product-item__price">
                                                             <span class="home-product-item__price-old">${listShoes.oldPrice}đ</span>
                                                             <span class="home-product-item__price-current">${listShoes.newPrice}</span>
+=======
+                                                             style="background-image:url(${listProduct.image})"></div>
+                                                        <h4 class="home-product-item__name">${listProduct.name}</h4>
+                                                        <div class="home-product-item__price">
+                                                            <span class="home-product-item__price-old">${listProduct.oldPrice}đ</span>
+                                                            <span class="home-product-item__price-current">${listProduct.newPrice}đ</span>
+>>>>>>> dev
                                                         </div>
                                                         <div class="home-product-item__action">
                                         <span class="home-product-item__like home-product-item__like--liked" rel="#">
@@ -406,6 +421,13 @@
                                                     </a>
                                                 </div>
                                             </c:forEach>
+<<<<<<< HEAD
+=======
+
+
+
+                                            <div class="grid__column-2-4">
+>>>>>>> dev
 
                                         </div>
                                     </div>
