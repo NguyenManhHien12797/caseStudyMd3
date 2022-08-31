@@ -306,6 +306,11 @@
 
                         </div>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> hien
                         <div class="item__details__size">
                             <span class="item__details__size-title">Kích thước</span>
                             <select name="select__item" id="" class="item__details__size-num">
@@ -383,6 +388,10 @@
                         </div>
                     </div>
                     <div class="grid__column-9">
+<<<<<<< HEAD
+>>>>>>> hien
+=======
+>>>>>>> hien
                     </div>
                 </div>
             </div>
