@@ -1,29 +1,14 @@
-<<<<<<<< HEAD:src/main/java/com/example/caseStudyMd3qa/model/Crawls.java
-package com.example.caseStudyMd3qa.model;
-========
-package model;
->>>>>>>> 1d381e23571fffd7fa0b29cdb1155ad3ff4e87a2:src/main/java/model/Crawls.java
+package com.example.caseStudyMd3.model;
 
-import com.example.demogit.model.qa.model.IShoes;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-<<<<<<<< HEAD:src/main/java/com/example/caseStudyMd3qa/model/Crawls.java
 public class Crawls {
-========
-import static java.sql.DriverManager.getConnection;
-
-public class Crawls  {
->>>>>>>> 1d381e23571fffd7fa0b29cdb1155ad3ff4e87a2:src/main/java/model/Crawls.java
     public List<Shoes> getNike() {
         List<Shoes> shoes1 = new ArrayList<>();
         try {
@@ -121,5 +106,4 @@ public class Crawls  {
         }
         return shoes1;
     }
-    }
-
+}

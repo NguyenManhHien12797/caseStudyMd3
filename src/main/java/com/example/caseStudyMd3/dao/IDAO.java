@@ -1,4 +1,7 @@
-package dao;
+package com.example.caseStudyMd3.dao;
+
+import com.example.caseStudyMd3.model.IShoes;
+import com.example.caseStudyMd3.model.Shoes;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

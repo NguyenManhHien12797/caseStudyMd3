@@ -1,6 +1,4 @@
-package com.example.caseStudyMd3qa.model;
-
-import org.jsoup.select.Elements;
+package com.example.caseStudyMd3.model;
 
 public class Shoes {
     private int id;
