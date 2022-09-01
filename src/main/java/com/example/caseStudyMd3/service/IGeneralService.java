@@ -1,4 +1,4 @@
-package com.example.caseStudyMd3.service.interfaceService;
+package com.example.caseStudyMd3.service;
 
 import java.util.List;
 
