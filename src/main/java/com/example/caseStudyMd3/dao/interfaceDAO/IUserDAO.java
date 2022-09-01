@@ -1,4 +1,4 @@
-package com.example.caseStudyMd3.dao;
+package com.example.caseStudyMd3.dao.interfaceDAO;
 
 import com.example.caseStudyMd3.model.Product;
 import com.example.caseStudyMd3.model.Users;
