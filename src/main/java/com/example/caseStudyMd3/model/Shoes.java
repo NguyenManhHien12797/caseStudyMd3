@@ -1,6 +1,8 @@
 package com.example.caseStudyMd3.model;
 
-public class Shoes {
+import java.util.List;
+
+public class Shoes  extends Crawls {
     private int id;
     private int categoryId;
     private int brandId;
@@ -8,6 +10,26 @@ public class Shoes {
     private String oldPrice;
     private String newPrice;
     private String image;
+
+    @Override
+    public List<Shoes> getNike() {
+        return super.getNike();
+    }
+
+    @Override
+    public List<Shoes> getAdidas() {
+        return super.getAdidas();
+    }
+
+    @Override
+    public List<Shoes> getJordan() {
+        return super.getJordan();
+    }
+
+    @Override
+    public List<Shoes> getYeezy() {
+        return super.getYeezy();
+    }
 
     public Shoes(String name, String newPrice, String image) {
         this.name = name;
