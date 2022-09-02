@@ -1,9 +1,5 @@
 package com.example.caseStudyMd3.model;
 
-import com.example.caseStudyMd3.service.RS.Status;
-
-import java.sql.Timestamp;
-
 public class Product {
     private int id;
     private String category;

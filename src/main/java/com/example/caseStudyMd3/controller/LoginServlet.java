@@ -33,7 +33,7 @@ public class LoginServlet extends HttpServlet {
 //            Role role = users1.getRole();
 //            Status status = users1.getStatus();
 //            HttpSession session = request.getSession();
-//            session.setAttribute("userID", userID);
+//            sessiogn.setAttribute("userID", userID);
 //            session.setAttribute("account", account);
 //            session.setAttribute("password", password);
 //            session.setAttribute("role", role);

@@ -1,6 +1,4 @@
-package com.example.caseStudyMd3.dao.interfaceDAO;
-
-import com.example.caseStudyMd3.dao.IGeneralDAO;
-
-public interface IBrandDAO extends IGeneralDAO {
-}
+//package com.example.caseStudyMd3.dao.interfaceDAO;
+//
+//public interface IBrandDAO extends IGeneralDAO {
+//}

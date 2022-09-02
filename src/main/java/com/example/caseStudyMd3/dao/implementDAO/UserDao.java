@@ -4,8 +4,8 @@ import   com.example.caseStudyMd3.config.ConnectionDB;
 import com.example.caseStudyMd3.dao.interfaceDAO.IUserDAO;
 import com.example.caseStudyMd3.model.Product;
 import com.example.caseStudyMd3.model.Users;
-import com.example.caseStudyMd3.service.RS.Role;
-import com.example.caseStudyMd3.service.RS.Status;
+import com.example.caseStudyMd3.dao.RS.Role;
+import com.example.caseStudyMd3.dao.RS.Status;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

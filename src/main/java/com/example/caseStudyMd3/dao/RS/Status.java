@@ -1,4 +1,4 @@
-package com.example.caseStudyMd3.service.RS;
+package com.example.caseStudyMd3.dao.RS;
 
 public enum Status {
     ACTIVE(1),
