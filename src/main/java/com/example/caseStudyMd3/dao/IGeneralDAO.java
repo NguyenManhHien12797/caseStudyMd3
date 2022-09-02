@@ -1,8 +1,8 @@
-package com.example.caseStudyMd3.service;
+package com.example.caseStudyMd3.dao;
 
 import java.util.List;
 
-public interface IService<T> {
+public interface IGeneralDAO<T> {
     List<T> getAll();
 
     boolean add(T t);

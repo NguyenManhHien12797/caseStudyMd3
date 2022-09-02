@@ -1,6 +1,7 @@
-package com.example.caseStudyMd3.dao;
+package com.example.caseStudyMd3.dao.implementDAO;
 
 import   com.example.caseStudyMd3.config.ConnectionDB;
+import com.example.caseStudyMd3.dao.interfaceDAO.IUserDAO;
 import com.example.caseStudyMd3.model.Product;
 import com.example.caseStudyMd3.model.Users;
 import com.example.caseStudyMd3.service.RS.Role;
@@ -13,7 +14,7 @@ import java.sql.SQLException;
 import java.util.Date;
 import java.util.List;
 
-public class UserDao implements IUserDAO{
+public class UserDao implements IUserDAO {
 
     Connection connection = ConnectionDB.getConnect();
 
