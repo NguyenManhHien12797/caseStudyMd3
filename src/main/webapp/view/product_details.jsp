@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!doctype html>
 <html lang="en">
 <head>
@@ -17,9 +18,9 @@
             integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
             crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="base.css">
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="product_details.css">
+    <link rel="stylesheet" href="../view/base.css">
+    <link rel="stylesheet" href="../view/main.css">
+    <link rel="stylesheet" href="../view/product_details.css">
 
 
 </head>
@@ -103,33 +104,24 @@
                         </a>
                     </li>
                     <li class="header__navbar-item">
-                        <a href="#" class="header__navbar-item-link header__navbar-item-link__strong separate">Đăng
+                        <a href="register.jsp" class="header__navbar-item-link header__navbar-item-link__strong separate">Đăng
                             ký</a>
                     </li>
                     <li class="header__navbar-item">
-                        <a href="#" class="header__navbar-item-link header__navbar-item-link__strong">Đăng nhập</a>
+                        <a href="/ShopBae?action=login" class="header__navbar-item-link header__navbar-item-link__strong">Đăng nhập</a>
                     </li>
                 </ul>
             </nav>
 
             <div class="header-with-search">
-                <%--                <div class="header__logo">--%>
-                <%--                    <a href="homepage.jsp">--%>
-                <%--                        <img src="../image/SB-L2-white-backgroud.svg" alt="">--%>
-                <%--                    </a>--%>
-
-                <%--                </div>--%>
-                <%--                <a href="homepage.jsp" class="header__logo-name">--%>
-                <%--                    ShopBae--%>
-                <%--                </a>--%>
 
                 <div class="header__logo">
-                    <a href="homepage.jsp">
+                    <a href="/ShopBae">
                         <img src="../image/SB-L2-white-backgroud.svg" alt="">
                     </a>
 
                 </div>
-                <a href="homepage.jsp" class="header__logo-name">
+                <a href="/ShopBae" class="header__logo-name">
                     ShopBae
                 </a>
 
@@ -165,9 +157,9 @@
     <div class="app__container">
 
         <div class="item__details">
-            <div class="grid">
+            <div class="grid ">
                 <div class="grid__row app__content app__content-details">
-                    <div class="grid__column-4 app__container-wrap ">
+                    <div class="grid__column-4 app__container-wrap app__container-wrap__slider ">
                         <div class="item__details-slider">
                             <div class="slider">
                                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -175,42 +167,38 @@
                                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
                                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
                                     </div>
                                     <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <img src="../image/details-slider_1.jpg" class="d-block w-100" alt="...">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="../image/details-slider_2.jpg" class="d-block w-100" alt="...">
-                                        </div>
-                                        <div class="carousel-item">
-                                            <img src="../image/details-slider_3.jpg" class="d-block w-100" alt="...">
-                                        </div>
+                                        <div class="carousel-item carousel-item-img active" style="background-image:url(${requestScope["shoes"].getImage()})"></div>
+                                        <div class="carousel-item carousel-item-img" style="background-image: url(${requestScope["shoes"].getImage()})"></div>
+                                        <div class="carousel-item carousel-item-img" style="background-image: url(${requestScope["shoes"].getImage()})"></div>
+                                        <div class="carousel-item carousel-item-img" style="background-image: url(${requestScope["shoes"].getImage()})"></div>
 
                                     </div>
 
                                 </div>
                                 <div class="slider__controls">
-                                    <img src="../image/details-slider_1.jpg" alt="" class="actives slider__controls-img" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1">
-                                    <img src="../image/details-slider_2.jpg" alt="" class="slider__controls-img" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-current="true" aria-label="Slide 2">
-                                    <img src="../image/details-slider_3.jpg" alt="" class="slider__controls-img" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-current="true" aria-label="Slide 3">
-                                   <div class="slider__controls-btn-wrap">
-                                       <button class="carousel-control-prev slider__controls-btn slider__controls-btn-pre" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                                           <span class="carousel-control-prev-icon slider__controls-btn-icon" aria-hidden="true"></span>
-                                           <span class="visually-hidden">Previous</span>
-                                       </button>
-                                       <button class="carousel-control-next slider__controls-btn slider__controls-btn-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                                           <span class="carousel-control-next-icon slider__controls-btn-icon" aria-hidden="true"></span>
-                                           <span class="visually-hidden">Next</span>
-                                       </button>
-                                   </div>
+                                    <img src="${requestScope["shoes"].getImage()}" alt="" class="actives slider__controls-img" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1">
+                                    <img src="${requestScope["shoes"].getImage()}" alt="" class="slider__controls-img" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-current="true" aria-label="Slide 2">
+                                    <img src="${requestScope["shoes"].getImage()}" alt="" class="slider__controls-img" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-current="true" aria-label="Slide 3">
+                                    <img src="${requestScope["shoes"].getImage()}" alt="" class="slider__controls-img" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-current="true" aria-label="Slide 4">
+
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon slider__controls-btn-icon-pre" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next " type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon slider__controls-btn-icon-next" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="grid__column-8 item__details__wrap">
                         <span class="item__details__favourite">Yêu thích</span>
-                        <span class="item__details__title">[Mã ELHACE giảm 4% đơn 300K] Loa SoundBar 100 Âm Thanh Vòm Sống Động Phong Cách Rạp Phim, Fullbox, Chính Hãng GENIUS</span>
+                        <span class="item__details__title">${requestScope["shoes"].getName()}</span>
                         <div class="item__details__rating">
                             <span class="item__details__rate-num">4.9</span>
                             <div class="item__details__icon__rating">
@@ -234,9 +222,9 @@
                         </div>
                         <div class="item__details__discount">
                             <div class="item__details__discount-price">
-                                <span class="item__details__discount-price__old">385.000đ</span>
-                                <span class="item__details__discount-price__current">211.000đ</span>
-                                <span class="item__details__discount-price__percent item__details__favourite">45% Giảm</span>
+                                <span class="item__details__discount-price__old">${requestScope["shoes"].getOldPrice()}</span>
+                                <span class="item__details__discount-price__current">${requestScope["shoes"].getNewPrice()}</span>
+                                <span class="item__details__discount-price__percent item__details__favourite">10% Giảm</span>
                             </div>
                             <div class="item__details__discount-title">
                                 <div class="item__details__discount-title__img">
@@ -319,11 +307,324 @@
 
                         </div>
 
+                        <div class="item__details__size">
+                            <span class="item__details__size-title">Kích thước</span>
+                            <select name="select__item" id="" class="item__details__size-num">
+                                <option class="select__item-num" value="39">39</option>
+                                <option class="select__item-num" value="40">40</option>
+                                <option class="select__item-num" value="41">41</option>
+                                <option class="select__item-num" value="42">42</option>
+                            </select>
+                        </div>
+
+                        <div class="item__details__amoun">
+                            <span class="item__details__title">Số lượng</span>
+                            <button class="item__details__btn">
+                                <span class="item__details__btn-icon">-</span>
+                            </button>
+                            <input type="text" name="amoun_num" class="item__details__input" value="1">
+                            <button class="item__details__btn">
+                                <span class="item__details__btn-icon">+</span>
+                            </button>
+                            <span class="amount_in_stock">92042 Sản phẩm có sẵn</span>
+                        </div>
+
+                        <div class="item__details__cart">
+                            <button class="btn btn__add-to-cart" ><i class="fa-solid fa-cart-plus"></i>  Thêm Vào Giỏ Hàng</button>
+                            <button class="btn btn-primary btn__buy-now">Mua Ngay</button>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <div class="grid ">
+                <div class="grid__row grid__row__shop">
+                    <div class="grid__column-3 shop__container">
+                        <div class="shop__avatar">
+                            <img src="../image/avatar.jpg" alt="" class="shop__img">
+                            <div class="shop__details">
+                                <span class="shop__details-name">Bình tổng Miền Bắc</span>
+                                <span class="shop__details-online">Online 1 phút trước</span>
+                                <div class="shop__details-btn">
+                                    <button class="btn btn__chat"><i class="fa-solid fa-message-check"></i> Chat ngay</button>
+                                    <button class="btn btn__see-shop"><i class="fa-solid fa-store"></i> Xem shop </button>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="shop__rate">
+                            <div class="rate__details">
+                                <div class="rate__details-rate">
+                                    <span class="rate__details-rate-title">Đánh giá</span>
+                                    <span class="rate__details-rate-num">39.4k</span>
+                                </div>
+                                <div class="rate__details-rate">
+                                    <span class="rate__details-rate-title rate__details-rate-title_rsp">Tỷ lệ phản hồi</span>
+                                    <span class="rate__details-rate-num">95%</span>
+                                </div>
+                                <div class="rate__details-rate">
+                                    <span class="rate__details-rate-title  rate__details-rate-title__join">Tham gia</span>
+                                    <span class="rate__details-rate-num rate__details-rate-num_month">18 tháng trước</span>
+                                </div>
+                            </div>
+                            <div class="rate__product">
+                                <div class="rate__details-rate">
+                                    <span class="rate__details-rate-title rate__details-rate-title__product">Sản phẩm</span>
+                                    <span class="rate__details-rate-num rate__details-rate-num_pr">189</span>
+                                </div>
+                                <div class="rate__details-rate">
+                                    <span class="rate__details-rate-title rate__details-rate-title_timersp">Thời gian phản hồi</span>
+                                    <span class="rate__details-rate-num rate__details-rate-num_time">trong vài giờ</span>
+                                </div>
+                                <div class="rate__details-rate">
+                                    <span class="rate__details-rate-title rate__details-rate-title_pers">Người theo dõi</span>
+                                    <span class="rate__details-rate-num">34.2k</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid__column-9">
+
+                    </div>
+                </div>
+            </div>
+
             <div class="grid">
-                <div class="grid__row">
+                <div class="grid__row grid__row_details">
+                    <span class="detail__title">Chi tiết sản phẩm</span>
+                    <span class="detail__title detail__title__describe">Mô tả sản phẩm</span>
+                    <span class="detail__title__describe-text">
+                        ------  SHOP CAM KẾT ------
+✅	PHƯƠNG CHÂM “MỘT CHỮ TÍN - VẠN NIỀM TIN”
+✅Chúng tôi cam kết mang đển cho khách hàng những sản phẩm tốt nhất trong tâm giá so với thị trường, mang lại sự hài lòng tuyệt đối cho khách hàng đã tin tưởng mua sản phẩm.
+✅	Quyền lợi khách hàng  là mục tiêu phát triển của chúng tôi.
+✅	 Shop cam kết hoàn tiền hoặc gửi lại sản mới thay thế cho quý khách sớm nhất có thể, nếu khách hàng không hài lòng về chất lượng của sản phẩm
+
+
+------  SHOP ĐẢM BẢO ------
+✅	Hình ảnh sản phẩm giống hình 100%
+✅	Chất lượng sản phẩm đúng như mô tả
+✅	Sản phẩm được kiểm tra kĩ càng, nghiêm ngặt trước khi giao hàng
+✅	Đóng gói và giao hàng ngay khi nhận được đơn đặt hàng
+✅	Hoàn tiền ngay nếu sản phẩm không đúng như mô tả
+✅	Giao hàng toàn quốc, chấp nhận nhiều phương thức thanh toán
+✅	Hỗ trợ đổi trả 1:1 nếu sản phẩm có bất kì sai xót nào từ nhà cung cấp
+✅	Gửi hàng siêu tốc
+
+
+BAO TAY CHƠI GAME  CAO CẤP
+
+- Sản xuất : Theo công nghệ sợi may của Hoa Kỳ
+
+- Chất liệu: Sợi bạc 24 kim siêu dẫn điện
+
+- Độ mỏng : 0,3 mm
+
+- Màu sắc: Có nhiều màu
+
+- Trọng lượng: 10g
+
+Ưu điểm nổi bật sản phẩm
+
+- Được làm bằng chất liệu sợi bạc 24 kim siêu dẫn điện được phát triển bởi Hoa Kỳ  , siêu mỏng chỉ 0,3mm
+
+- Có tác dụng chống trơn trượt, chống mồ hôi tay giúp cải thiện kỹ năng chơi game và tránh các lỗi khi chơi.
+
+- Găng tay cảm ứng  với  120 điểm may cảm ứng  /1 mét vuông ,  giúp bề mặt tiếp xúc giữa ngón tay và không khí được tăng lên 30%, diện tích thoát hơi nước tăng lên bạn sẽ cảm thấy rất thoải mái kể cả chơi một thời gian dài.
+
+- Nhẹ nhàng, nhỏ gọn có thể mang đi bất kỳ đâu
+
+- Tương thích hoàn hảo với tất cả game mobile
+
+• Thiết kế và gia công từ Sợi Carbon cao cấp siêu bền, cảm ứng nhạy
+
+• Thiết kể mỏng hơn 30% so với các loại găng tay trên thị trường
+
+• Khả năng co dãn đàn hồi cực cao, đường chỉ may tỉ mỉ chỉn chu.
+
+• Vẫn có khả năng cảm ứng nhạy trong trường hợp bị ướt
+
+• Hấp thụ mồ hôi tay hiệu quả, giúp thoáng khí
+
+• Găng tay có thể giặt lại được nhiều lần và không bị mất cảm ứng.
+
+- Đơn Vị Sản Xuất:
+Công Ty TNHH Sản Xuất Thương Mại Công Nghệ Guangdong
+-Địa Chỉ: Số Nhà 38, Đường LongXiNan, Ngõ HaiLong, Quận LiWan, Thành Phố GuangZhou, Tỉnh GuangDong
+- Xuất xứ: Trung Quốc.
+- Thương Nhân Nhập Khẩu, Phân Phối, Chịu Trách Nhiệm Sản Phẩm : Công Ty TNHH Sản Xuất Thương Mại Dịch Vụ Quỳnh Hương
+- Địa chỉ: Liền Kề 22, Khu Đô Thị  C37 Bắc Hà, 15 Tố Hữu, Phường Trung Văn, Quận Nam Từ Liêm, Thành Phố Hà Nội.
+
+
+☀LƯU Ý:
+
+▶️ Chúng tôi đặt lợi ích của khách hàng lên hàng đầu với các chính sách 100% có lợi chính đáng cho khách hàng:
+                    </span>
+                </div>
+            </div>
+
+            <div class="grid">
+                <div class="grid__row grid__row_describe">
+                    <span class="describe__title">Đánh giá sản phẩm</span>
+                    <div class="describe__rate">
+
+                    </div>
+                    <div class="describe__cmt">
+                        <div class="describe__cmt-avatar">
+                            <img src="../image/avatar_1.jpg" alt="" class="describe__cmt-avatar-img">
+                            <div class="describe__cmt-username">Nguyễn Hoàng Nam</div>
+                        </div>
+                        <div class="describe__cmt-rate">
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                        </div>
+                        <span class="describe__cmt-time">2022-09-02 00:00</span>
+                        <span class="describe__cmt-cmt">Sản phẩm rất tốt, không mua lại lần sau</span>
+                        <div class="describe__cmt-img-product">
+                            <img src="../image/details-slider_1.jpg" alt="">
+                            <img src="../image/details-slider_1.jpg" alt="">
+                            <img src="../image/details-slider_1.jpg" alt="">
+                            <img src="../image/details-slider_1.jpg" alt="">
+                        </div>
+
+                        <div class="describe__cmt-rep">
+
+                        </div>
+                    </div>
+                    <div class="describe__cmt">
+                        <div class="describe__cmt-avatar">
+                            <img src="../image/avatar_2.jpg" alt="" class="describe__cmt-avatar-img">
+                            <div class="describe__cmt-username">Nguyễn Hải Yến</div>
+                        </div>
+                        <div class="describe__cmt-rate">
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                        </div>
+
+                        <span class="describe__cmt-time">2022-09-02 00:00</span>
+                        <span class="describe__cmt-cmt">Sản phẩm rất tốt, không mua lại lần sau</span>
+                        <div class="describe__cmt-img-product">
+                            <img src="../image/details-slider_1.jpg" alt="">
+                            <img src="../image/details-slider_1.jpg" alt="">
+                            <img src="../image/details-slider_1.jpg" alt="">
+                            <img src="../image/details-slider_1.jpg" alt="">
+                        </div>
+                        <div class="describe__cmt-rep">
+
+                        </div>
+                    </div>
+                    <div class="describe__cmt">
+                        <div class="describe__cmt-avatar">
+                            <img src="../image/avatar_3.webp" alt="" class="describe__cmt-avatar-img">
+                            <div class="describe__cmt-username">Trần Xuân Ba</div>
+                        </div>
+                        <div class="describe__cmt-rate">
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                        </div>
+
+                        <span class="describe__cmt-time">2022-09-02 00:00</span>
+                        <span class="describe__cmt-cmt">Sản phẩm xịn quá Shop ơi, lần sau mua lại 100 lần</span>
+                        <div class="describe__cmt-img-product">
+                            <img src="../image/details-slider_1.jpg" alt="">
+                            <img src="../image/details-slider_1.jpg" alt="">
+                            <img src="../image/details-slider_1.jpg" alt="">
+                            <img src="../image/details-slider_1.jpg" alt="">
+                        </div>
+                        <div class="describe__cmt-rep">
+
+                        </div>
+                    </div>
+                    <div class="describe__cmt">
+                        <div class="describe__cmt-avatar">
+                            <img src="../image/avatar_4.webp" alt="" class="describe__cmt-avatar-img">
+                            <div class="describe__cmt-username">Ngô Trọng Hiếu</div>
+                        </div>
+                        <div class="describe__cmt-rate">
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                        </div>
+
+                        <span class="describe__cmt-time">2022-09-02 00:00</span>
+                        <span class="describe__cmt-cmt">Sản phẩm rất tốt, không mua lại lần sau</span>
+                        <div class="describe__cmt-img-product">
+                            <img src="../image/details-slider_1.jpg" alt="">
+                            <img src="../image/details-slider_1.jpg" alt="">
+                            <img src="../image/details-slider_1.jpg" alt="">
+                            <img src="../image/details-slider_1.jpg" alt="">
+                        </div>
+                        <div class="describe__cmt-rep">
+
+                        </div>
+                    </div>
+                    <div class="describe__cmt">
+                        <div class="describe__cmt-avatar">
+                            <img src="../image/avatar_5.jpg" alt="" class="describe__cmt-avatar-img">
+                            <div class="describe__cmt-username">Nguyễn Quang Anh</div>
+                        </div>
+                        <div class="describe__cmt-rate">
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                        </div>
+
+                        <span class="describe__cmt-time">2022-09-02 00:00</span>
+                        <span class="describe__cmt-cmt">Sản phẩm rất tốt, không mua lại lần sau</span>
+                        <div class="describe__cmt-img-product">
+                            <img src="../image/details-slider_1.jpg" alt="">
+                            <img src="../image/details-slider_1.jpg" alt="">
+                            <img src="../image/details-slider_1.jpg" alt="">
+                            <img src="../image/details-slider_1.jpg" alt="">
+                        </div>
+                        <div class="describe__cmt-rep">
+
+                        </div>
+                    </div>
+                    <div class="describe__cmt">
+                        <div class="describe__cmt-avatar">
+                            <img src="../image/avatar_6.jpg" alt="" class="describe__cmt-avatar-img">
+                            <div class="describe__cmt-username">Đào Văn Trọng</div>
+                        </div>
+                        <div class="describe__cmt-rate">
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                            <i class="home-product-item__star-primary fas fa-star"></i>
+                        </div>
+
+                        <span class="describe__cmt-time">2022-09-02 00:00</span>
+                        <span class="describe__cmt-cmt">Sản phẩm rất tốt, không mua lại lần sau</span>
+                        <div class="describe__cmt-img-product">
+                            <img src="../image/details-slider_1.jpg" alt="">
+                            <img src="../image/details-slider_1.jpg" alt="">
+                            <img src="../image/details-slider_1.jpg" alt="">
+                            <img src="../image/details-slider_1.jpg" alt="">
+                        </div>
+                        <div class="describe__cmt-rep">
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="grid">
+                <div class="grid__row grid__row-product">
                     <%--                    List product--%>
                     <div class="home-product">
                         <div class="grid__row">
@@ -805,7 +1106,7 @@
 
     </div>
 
-<%--    Footer--%>
+    <%--    Footer--%>
     <div class="footer">
         <div class="grid">
             <div class="grid__row footer-wrap">
@@ -899,7 +1200,7 @@
                 <span class="footer__policy-title">Chính sách trả hàng và hoàn tiền</span>
             </div>
             <div class="grid__column-12 footer__footer-logo">
-                <a class="footer__logo" href="homepage.jsp">
+                <a class="footer__logo" href="/ShopBae">
                     <img src="../image/SB-L2-white-backgroud.svg" alt="" class="footer__logo-img">
                     <span class="footer__logo-name">ShopBae</span>
                 </a>

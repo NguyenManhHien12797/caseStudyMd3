@@ -1,0 +1,101 @@
+id,categoryId,brandId,image,name,oldPrice,newPrice
+1,1,1,https://kingshoes.vn/data/upload/media/fy5469-giày-adidas-continental-80-chính-hãng-dến-king-shoes-1-1657895988.jpg,"CONTINENTAL 80",2600000,2400000
+2,1,1,https://kingshoes.vn/data/upload/media/sneaker-c77124-super-star-adidas-kingshoes.vn-tphcm-tanbinh-27-1628053703.jpeg,SUPERSTAR,2200000,2000000
+3,1,1,https://kingshoes.vn/data/upload/media/fx5605-giày-adidas-rod-laver-chính-hãng-dến-king-shoes-1-1658148090.jpg,"ROD LAVER",2200000,2000000
+4,1,1,https://kingshoes.vn/data/upload/media/fw5171-giày-adidas-supergrip-chính-hãng-dến-king-shoes-1-1657894911.jpg,SUPERGRIP,2600000,2400000
+5,1,1,https://kingshoes.vn/data/upload/media/giày-chạy-bộ-adidas-eq21-gz4082-chính-hãng-dến-king-shoes-1-1652189949.jpg,EQ21,2600000,2400000
+6,1,1,https://kingshoes.vn/data/upload/media/gw2763-giày-adidas-sn1997-x-marimekko-chính-hãng-dến-king-shoes-1-1656581808.jpg,"SN1997 X MARIMEKKO",2800000,2600000
+7,1,1,https://kingshoes.vn/data/upload/media/fy5928-giày-adidas-4d-fusio-chính-hãng-dến-king-shoes-1.jpg,"4D FUSIO",4200000,4000000
+8,1,1,https://kingshoes.vn/data/upload/media/gz1539-giày-ultraboost-5-dna-chính-hãng-dến-king-shoes-1.jpg,"ULTRABOOST 5.0 DNA",4200000,4000000
+9,1,1,https://kingshoes.vn/data/upload/media/gw3955-giày-adidas-human-nmd-chính-hãng-dến-king-shoes-7-1659881420.jpg,"HUMAN NMD",5800000,5600000
+10,1,1,https://kingshoes.vn/data/upload/media/ef1183-giày-adidas-alphaboost-chính-hãng-dến-king-shoes-1-1653289514.jpg,ALPHABOOST,2900000,2700000
+11,1,1,https://kingshoes.vn/data/upload/media/giày-adidas-xplr-by9880-chính-hãng-dến-king-shoes-1-1652412781.jpg,XPLR,2300000,2100000
+12,1,1,https://kingshoes.vn/data/upload/media/gz3679-giày-adidas-ultraboost-trắng-chính-hãng-dến-king-shoes-1-1656583667.jpg,"ULTRABOOST WEB DNA",4200000,4000000
+13,1,1,https://kingshoes.vn/data/upload/media/fx7753-giày-ultra-4d-chính-hãng-dến-king-shoes-1-1660028772.jpg,"ULTRA 4D",5800000,5600000
+14,1,1,https://kingshoes.vn/data/upload/media/giày-adidas-day-jogger-dash-green-linen-fw4829-king-shoes-sneaker-real-hcm-1-1634566222.jpg,"DAY JOGGER DASH GREEN LINEN",2500000,2300000
+15,1,1,https://kingshoes.vn/data/upload/media/gy8553-giày-adidas-ozelia-white-chính-hãng-dến-king-shoes-1-1656579072.jpg,OZELIA,2600000,2400000
+16,1,1,https://kingshoes.vn/data/upload/media/adidas-ultraboost-20-metallic-gold-fv83511-king-shoes-sneaker-real-hcm-1624253902.jpeg,"ULTRABOOST 20 METALLIC GOLD",3800000,3600000
+17,1,1,https://kingshoes.vn/data/upload/media/g58159-giày-ultra-4d-chính-hãng-dến-king-shoes-1-1660029126.jpg,"ULTRA 4D",5800000,5600000
+18,1,1,https://kingshoes.vn/data/upload/media/adidas-nmd-r1-metallic-gold-eg56651-king-shoes-sneaker-real-hcm-1624253101.jpeg,"NMD R1 METALLIC GOLD",2800000,2600000
+19,1,1,https://kingshoes.vn/data/upload/media/bb8044-giày-adidas-solar-hu-glide-white-chính-hãng-dến-king-shoes-1-1655961098.jpg,"SOLAR HU GLIDE WHITE",4900000,4700000
+20,1,1,https://kingshoes.vn/data/upload/media/adidas-ultraboost-20-cloud-white-fv83361-king-shoes-sneaker-real-hcm-1624253332.jpeg,"ULTRABOOST 20 CLOUD WHITE",3200000,3000000
+21,1,1,https://kingshoes.vn/data/upload/media/eg0768-giày-adidas-primeblue-ultraboost-20-trang-chính-hãng-dến-king-shoes-1-1655969291.jpg,"ULTRABOOST 20 PRIMEBLUE",3800000,3600000
+22,1,1,https://kingshoes.vn/data/upload/media/giày-ozelia-boba-fett-gx6802-chính-hãng-dến-king-shoes-1-1652943322.jpg,"OZELIA BOBA FETT",2600000,2400000
+23,1,1,https://kingshoes.vn/data/upload/media/adidas-ultraboost-20-tech-purple-eg07181-king-shoes-sneaker-real-hcm-1624253442.jpeg,"ULTRABOOST 20 TECH PURPLE",4200000,4000000
+24,1,1,https://kingshoes.vn/data/upload/media/giày-adidas-forum-low-green-gy8556-chính-hãng-dến-king-shoes-1-1648013432.jpg,"FORUM LOW GREEN",2900000,2700000
+25,1,1,https://kingshoes.vn/data/upload/media/adidas-falcon-pink-purple-bd78251-king-shoes-sneaker-real-hcm-1624253267.jpeg,"FALCON PINK PURPLE",2600000,2400000
+26,1,1,https://kingshoes.vn/data/upload/media/giày-adidas-forum-fy7756-chính-hãng-dến-king-shoes-1-1648009425.jpg,"FORUM LOW BLUE",2900000,2700000
+27,1,1,https://kingshoes.vn/data/upload/media/giày-adidas-ultraboost-21-hong-fy3953-king-shoes-sneaker-real-hcm-1-1640158480.jpeg,"ULTRABOOST 21",3800000,3600000
+28,1,1,https://kingshoes.vn/data/upload/media/giay-adidas-nmd-r1-nu-chinh-hang-tphcm-D96688-king-shoes-sneaker-authentic-sai-gon.jpg,"NMD R1 GREY",1900000,1700000
+29,1,1,https://kingshoes.vn/data/upload/media/giày-adidas-swift-run-x-fy2138-king-shoes-sneaker-real-hcm-19-1628151591.jpeg,"SWIFT RUN X",1950000,1750000
+30,1,1,https://kingshoes.vn/data/upload/media/adidas-egde-lux-4-fw92621-king-shoes-sneaker-real-hcm-1624253571.jpeg,"EGDE LUX 4",1950000,1750000
+31,1,1,https://kingshoes.vn/data/upload/media/130690-005-giày-nike-air-jordan-12-retro-dark-grey-release-chính-hãng-dến-king-shoes-12-1660197144.jpeg,"JORDAN 12 RETRO",9800000,8800000
+32,1,1,https://kingshoes.vn/data/upload/media/giày-nike-jordan-3-retro-cardinal-red-ct8532-126-chính-hãng-dến-king-shoes-7-1648178236.jpeg,"JORDAN 3 RETRO CARDINAL RED",8000000,7000000
+33,1,1,https://kingshoes.vn/data/upload/media/ct8532-030-giày-nike-jordan-3-retro-green-chính-hãng-dến-king-shoes-8-1659433603.jpeg,"JORDAN 3 RETRO GREEN",8000000,7000000
+34,1,1,https://kingshoes.vn/data/upload/media/dh6927-111-giày-nike-air-jordan-4-white-and-black-chính-hãng-dến-king-shoes-8-1655975603.jpeg,"AIR JORDAN 4 WHITE AND BLACK",9500000,8500000
+35,1,1,https://kingshoes.vn/data/upload/media/cv8122-003-giày-nike-jordan-ma2-chính-hãng-dến-king-shoes-9-1653899664.jpeg,"JORDAN MA2",4200000,4000000
+36,1,1,https://kingshoes.vn/data/upload/media/giày-nike-jordan-series-es-dn1857-610-chính-hãng-dến-king-shoes-7-1648035958.jpeg,"JORDAN SERIES ES",3200000,3000000
+37,1,1,https://kingshoes.vn/data/upload/media/dd1391-600-giày-nike-dunk-low-retro-chính-hãng-dến-king-shoes-4-1660122102.jpg,"DUNK LOW RETRO",6800000,5800000
+38,1,1,https://kingshoes.vn/data/upload/media/giày-nike-dunk-low-disrupt-2-phantom-and-university-blue-dh4402-001-chính-hãng-dến-king-shoes-9-1646736769.jpeg,"DUNK LOW DISRUPT 2",5800000,4800000
+39,1,1,https://kingshoes.vn/data/upload/media/giày-nike-dunk-low-disrupt-2-pale-ivory-and-sail-dh4402-100-chính-hãng-dến-king-shoes-8-1646735991.jpeg,"DUNK LOW DISRUPT 2",5200000,4200000
+40,1,1,https://kingshoes.vn/data/upload/media/cu1727-700-giày-nike-dunk-low-sp-chính-hãng-dến-king-shoes-9-1660190493.jpeg,"DUNK LOW SP",12000000,11500000
+41,1,1,https://kingshoes.vn/data/upload/media/dj6188-001-giày-nike-dunk-low-wolf-grey-chính-hãng-dến-king-shoes-28-1654930718.jpeg,"DUNK LOW PAISLEY",7200000,6200000
+42,1,1,https://kingshoes.vn/data/upload/media/dunk-low-retro-black-wh-dd1391-100-king-shoes-sneaker-real-hcm-1624272823.jpeg,"DUNK LOW RETRO BLACK/WH",7200000,7000000
+43,1,1,https://kingshoes.vn/data/upload/media/nike-dunk-unlv-dd1391-002-king-shoes-sneaker-real-hcm-1624273134.jpeg,"DUNK LOW MEDIUM GREY/ RED",6800000,6600000
+44,1,1,https://kingshoes.vn/data/upload/media/nike-dunk-low-disrupt-game-royal-ck6654-100-king-shoes-sneaker-real-hcm-1624270549.jpeg,"DUNK LOW DISRUPT GAME ROYAL",5800000,4800000
+45,1,1,https://kingshoes.vn/data/upload/media/giày-nike-dunk-high-rebel-pastels-dh3718-700-king-shoes-sneaker-real-hcm-8-1638333023.jpeg,"DUNK HIGH UP PASTELS",4800000,4600000
+46,1,1,https://kingshoes.vn/data/upload/media/dd1401-200-giày-nike-dunk-hi-retro-prm-chính-hãng-dến-king-shoes-9-1660193189.jpeg,"DUNK HI RETRO PRM",6800000,5600000
+47,1,1,https://kingshoes.vn/data/upload/media/giày-nike-dunk-high-sail-football-grey-dd1869-102-chính-hãng-dến-king-shoes-16-1644564019.jpeg,"DUNK HIGH SAIL FOOTBALL GREY",6800000,5600000
+48,1,1,https://kingshoes.vn/data/upload/media/nike-dunk-hi-cu7544-400-king-shoes-sneaker-real-hcm35-1623475900.jpg,"DUNK HIGH AMBUSH",16000000,14000000
+49,1,1,https://kingshoes.vn/data/upload/media/dv1762-001-giày-nike-air-jordan-1-low-beaded-swoosh-chính-hãng-dến-king-shoes-8-1656837548.jpeg,"JORDAN 1 LOW BEADED SWOOSH",6800000,5800000
+50,1,1,https://kingshoes.vn/data/upload/media/dm8947-100-giày-nike-air-jordan-1-low-chính-hãng-dến-king-shoes-9-1655116066.jpeg,"JORDAN 1 LOW DENIM",4800000,4600000
+51,1,1,https://kingshoes.vn/data/upload/media/553558-053-giày-nike-air-jordan-1-low-vintage-grey-chính-hãng-dến-king-shoes-16.jpeg,"JORDAN 1 LOW GREY",6200000,5200000
+52,1,1,https://kingshoes.vn/data/upload/media/giày-nike-air-jordan-1-elevate-low-dq1823-006-chính-hãng-dến-king-shoes-3-1648017137.jpg,"AIR JORDAN 1 ELEVATE LOW",5800000,4800000
+53,1,1,https://kingshoes.vn/data/upload/media/giày-nike-air-jordan-1-low-black-and-white-dh6931-001-chính-hãng-dến-king-shoes-8-1651910376.jpeg,"JORDAN 1 LOW DIAMOND",6200000,5200000
+54,1,1,https://kingshoes.vn/data/upload/media/dc0774-042-nike-air-jordan-1-low-french-blue-chính-hãng-dến-king-shoes-12.jpeg,"JORDAN 1 LOW GREY NAVY",5800000,4800000
+55,1,1,https://kingshoes.vn/data/upload/media/dc0774-005-giày-nike-air-jordan-1-low-chính-hãng-dến-king-shoes-9-1653729133.jpeg,"JORDAN 1 LOW",5200000,4200000
+56,1,1,https://kingshoes.vn/data/upload/media/553558-052-giày-nike-air-jordan-1-low-light-smoke-grey-chính-hãng-dến-king-shoes-12-1655282381.jpeg,"AIR JORDAN 1 LOW LIGHT SMOKE GREY",6800000,5800000
+57,1,1,https://kingshoes.vn/data/upload/media/nike-jordan-1-low-white-metallic-gold-cz4776-100-king-shoes-sneaker-real-hcm-1624270724.jpeg,"JORDAN 1 LOW WHITE METALLIC GOLD",6200000,5200000
+58,1,1,https://kingshoes.vn/data/upload/media/giày-nike-air-jordan-1-low-dark-teal-553558-411-king-shoes-sneaker-real-hcm-12-1639476787.jpeg,"AIR JORDAN 1 LOW DARK TEAL",6800000,5800000
+59,1,1,https://kingshoes.vn/data/upload/media/giày-nike-air-jordan-1-low-bred-toe-553560-612-king-shoes-sneaker-real-hcm-7-1637494342.jpg,"AIR JORDAN 1 LOW BRED TOE",5200000,4200000
+60,1,1,https://kingshoes.vn/data/upload/media/giày-nike-air-jordan-1-low-white-pinksicle-553560-162-king-shoes-sneaker-real-hcm-3-1637212950.jpeg,"AIR JORDAN 1 LOW WHITE PINKSICLE",5800000,4800000
+61,1,1,https://kingshoes.vn/data/upload/media/giày-adidas-yeezy-boost-350-v2-beluga-reflective-gw1229-king-shoes-sneaker-real-hcm-11-1639905369.jpeg,"YEEZY BOOST 350 V2 BELUGA REFLECTIVE",12000000,10500000
+62,1,1,https://kingshoes.vn/data/upload/media/giay-adidas-yeezy-boost-700-b75571-chinh-hang-hcm-king-shoes-sneaker-real-7.jpg,"YEEZY BOOST 700 OG",13000000,11500000
+63,1,1,https://kingshoes.vn/data/upload/media/adidas-yeezy-boost-700-v2-static-chinh-hang-tphcm-king-shoes-sneaker-authentic-9.png,"YEEZY BOOST 700 V2 STATIC",12000000,10500000
+64,1,1,https://kingshoes.vn/data/upload/media/giày-adidas-yeezy-boost-350-v2-dazzling-blue-gy7164-chính-hãng-dến-king-shoes-4-1646911295.jpg,"YEEZY BOOST 350 V2 DAZZLING BLUE",10000000,9000000
+65,1,1,https://kingshoes.vn/data/upload/media/giay-adidas-Yeezy-Boost-700-Inertia-EG7597-chinh-hang-hcm-king-shoes-sneaker-real-tan-binh-4.jpg,"YEEZY BOOST 700 INERTIA",13000000,11500000
+66,1,1,https://kingshoes.vn/data/upload/media/by9612-giày-adidas-yeezy-boost-350-chính-hãng-dến-king-shoes-2.jpg,"YEEZY BOOST 350",12000000,10500000
+67,1,1,https://kingshoes.vn/data/upload/media/adidas-yeezy-boost-700-h67799-chinh-hang-tp-hcm-king-shoes-sneaker-authentic-tan-binh-8.jpg,"YEEZY BOOST 700 V3 ALVAH",11000000,9500000
+68,1,1,https://kingshoes.vn/data/upload/media/giay-Adidas-Yeezy-Boost-350-V2-Static-nam-nu-chinh-hang-tai-tphcm-EF2905-king-shoes-tan-binh-212.jpg,"YEEZY BOOST 350 V2 STATIC NON-REF",14000000,12500000
+69,1,1,https://kingshoes.vn/data/upload/media/yeezy-boost-350-v2-yecheil-yecheil-yecheil-fw5190-king-shoes-sneaker-real-hcm-1.png,"YEEZY BOOST 350 V2",11000000,9500000
+70,1,1,https://kingshoes.vn/data/upload/media/adidas-yeezy-boost-380-pepper-fz12691-king-shoes-sneaker-real-hcm-1624266015.jpeg,"YEEZY BOOST 380 PEPPER",6800000,5800000
+71,1,1,https://kingshoes.vn/data/upload/media/dq4990-104-giày-nike-air-huarache-chính-hãng-dến-king-shoes-12.jpeg,"AIR HUARACHE",3200000,3000000
+72,1,1,https://kingshoes.vn/data/upload/media/dm0118-100-giày-nike-air-force-1-have-a-day-chính-hãng-dến-king-shoes-1.jpg,"AIR FORCE 1 SUNFLOWER",3900000,3700000
+73,1,1,https://kingshoes.vn/data/upload/media/511417-163-air-max-correlate-giay-nike-chinh-hang-king-shoes-1.jpg,"AIR MAX CORRELATE",2900000,2700000
+74,1,1,https://kingshoes.vn/data/upload/media/zoom-pegasus-38-prm-dh6507-111-giay-nike-chinh-hang-king-shoes-1.jpg,"ZOOM PEGASUS 38 PRM",3200000,3000000
+75,1,1,https://kingshoes.vn/data/upload/media/cu4826-007-giày-nike-air-max-ap-chính-hãng-dến-king-shoes-12.jpeg,"AIR MAX AP",3200000,3000000
+76,1,1,https://kingshoes.vn/data/upload/media/da8697-600-giày-nike-pegasus-trail-3-trail-running-chính-hãng-dến-king-shoes-12.jpeg,"PEGASUS TRAIL 3",3600000,3400000
+77,1,1,https://kingshoes.vn/data/upload/media/cz0294-800-court-legacy-cnvs-giay-nike-chinh-hang-king-shoes-1.jpg,"COURT LEGACY CNVS",2200000,2000000
+78,1,1,https://kingshoes.vn/data/upload/media/dh4071-003-giày-nike-air-zoom-pegasus-39-chính-hãng-dến-king-shoes-13.jpeg,"AIR ZOOM PEGASUS 39",3900000,3700000
+79,1,1,https://kingshoes.vn/data/upload/media/da8570-103-giày-nike-air-zoom-structure-24-chính-hãng-dến-king-shoes-2.jpg,"ZOOM STRUCTURE 24",2700000,2500000
+80,1,1,https://kingshoes.vn/data/upload/media/ct2423-002-giày-nike-react-infinity-run-flyknit-2-black-chính-hãng-dến-king-shoes-12.jpeg,"REACT INFINITY RUN FK 2",3600000,3400000
+81,1,1,https://kingshoes.vn/data/upload/media/ck4309-401-giay-nike-zoom-pegasus-trail-2-chinh-hang-king-shoes-1.jpg,"PEGASUS TRAIL 2",3600000,3400000
+82,1,1,https://kingshoes.vn/data/upload/media/aa2168-100-air-max-axis-giay-nike-chinh-hang-king-shoes-1.jpg,"AIR MAX AXIS",3200000,3000000
+83,1,1,https://kingshoes.vn/data/upload/media/dh4071-004-giày-nike-zoom-pegasus-39-chính-hãng-dến-king-shoes-30.jpeg,"ZOOM PEGASUS 39",3900000,3700000
+84,1,1,https://kingshoes.vn/data/upload/media/do2408-739-giày-nike-zoomx-vaporfly-next-2-chính-hãng-dến-king-shoes-12-1661238881.jpeg,"ZOOMX VAPORFLY NEXT% 2",5800000,4800000
+85,1,1,https://kingshoes.vn/data/upload/media/dj6209-100-giày-nike-air-max-dawn-se-chính-hãng-dến-king-shoes-12.jpeg,"AIR MAX DAWN SE",3600000,3400000
+86,1,1,https://kingshoes.vn/data/upload/media/397690-021-giay-nike-air-max-command-chinh-hang-king-shoes-1.jpg,"AIR MAX COMMAND",2900000,2700000
+87,1,1,https://kingshoes.vn/data/upload/media/dh4071-005-giày-nike-air-zoom-pegasus-39-chính-hãng-dến-king-shoes-12.jpeg,"ZOOM PEGASUS 39",3900000,3700000
+88,1,1,https://kingshoes.vn/data/upload/media/dh7505-400-sb-force-58-giay-chinh-hang-king-shoes-1.png,"SB FORCE 58",3200000,3000000
+89,1,1,https://kingshoes.vn/data/upload/media/dj4019-104-zoom-pegasus-37-vt-giay-nike-chinh-hang-king-shoes-1.jpg,"PEGASUS 37 VT",3200000,3000000
+90,1,1,https://kingshoes.vn/data/upload/media/dh5724-100-nike-air-max-97-sapphire-pistachio-frost-obsidian-chính-hãng-dến-king-shoes-1.jpg,"AIR MAX 97",4200000,4000000
+91,1,1,https://kingshoes.vn/data/upload/media/do6676-200-air-force-1-craft-les-giay-nike-chinh-hang-1.jpeg,"AIR FORCE 1 CRAFT LES",4200000,4000000
+92,1,1,https://kingshoes.vn/data/upload/media/dc9115-004-air-zoom-superrep-3-giay-nike-chinh-hang-king-shoes-13.jpeg,"AIR ZOOM SUPERREP 3",3600000,3400000
+93,1,1,https://kingshoes.vn/data/upload/media/da3199-004-giày-nike-air-max-2021-black-green-tricke-chính-hãng-dến-king-shoes-12.jpeg,"AIR MAX 2021 BLACK GREEN TRICKE",3900000,3700000
+94,1,1,https://kingshoes.vn/data/upload/media/dc4073-003-pegasus-38-shield-giay-nike-chinh-hang-king-shoes-1.jpg,"PEGASUS 38 SHIELD",3600000,3400000
+95,1,1,https://kingshoes.vn/data/upload/media/da7698-102-giày-nike-air-zoom-vomero-16-road-running-chính-hãng-dến-king-shoes-12.jpeg,"AIR ZOOM VOMERO 16",3600000,3400000
+96,1,1,https://kingshoes.vn/data/upload/media/dc3727-200-zoom-winflo-8-shield-giay-nike-chinh-hang-king-shoes-1.jpg,"ZOOM WINFLO 8 SHIELD",3600000,3400000
+97,1,1,https://kingshoes.vn/data/upload/media/do6691-100-air-max-270-giay-nike-chinh-hang-king--shoes-0.jpg,"AIR MAX 270",3900000,3700000
+98,1,1,NULL,NULL,NULL,NULL
+99,1,1,NULL,NULL,NULL,NULL
+100,1,1,NULL,NULL,NULL,NULL
