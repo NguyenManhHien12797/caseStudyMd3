@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 //package com.example.caseStudyMd3.dao.interfaceDAO;
+=======
+package com.example.caseStudyMd3.dao.interfaceDAO;//package com.example.caseStudyMd3.dao.interfaceDAO;
+>>>>>>> hien
 //
 //import com.example.caseStudyMd3.model.Product;
 //
