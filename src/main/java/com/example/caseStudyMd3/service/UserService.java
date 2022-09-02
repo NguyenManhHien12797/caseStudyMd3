@@ -1,13 +1,12 @@
 package com.example.caseStudyMd3.service;
 
-import com.example.caseStudyMd3.dao.IUserDAO;
 import com.example.caseStudyMd3.dao.UserDao;
 import com.example.caseStudyMd3.model.qa.Users;
 
 import java.util.List;
 
 public class UserService implements IUserService{
-    private final IUserDAO usersDao = new UserDao();
+    private final UserDao usersDao = new UserDao();
 
 
     @Override

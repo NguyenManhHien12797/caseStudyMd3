@@ -12,27 +12,26 @@ import java.sql.SQLException;
 import java.util.Date;
 import java.util.List;
 
-public class UserDao implements IUserDAO{
+public class UserDao{
     Connection connection = ConnectionDB.getConnect();
 
-    private static final String QUERY_ALL_USERS = "SELECT * FROM USERS";
-    private static final String QUERY_INSERT_ACCOUNT_BY_ADMIN = "INSERT INTO USERS" +
-            "(ACCOUNT,PASSWORD,NAME,GENDER,AGE,BIRTHDATE,MAIL,PHONE,ROLE,STATUS) " +
+    private static final String QUERY_ALL_USER = "SELECT * FROM USER";
+    private static final String QUERY_INSERT_ACCOUNT_BY_ADMIN = "INSERT INTO USER" +
+            "(ACCOUNT,PASSWORD,ROLE,NAME,GENDER,AGE,BIRTHDATE,MAIL,PHONE,ROLE) " +
             "VALUES(?,?,?,?,?,?,?,?,?,?)";
     private static final String QUERY_DEL_USERS_BY_ADMIN = "DELETE FROM USERS WHERE ID = ?";
     private static final String QUERY_UPDATE_BY_USER = "UPDATE USERS SET PASSWORD = ?,NAME = ?,GENDER = ?,AGE = ?,BIRTHDATE= ?,MAIL =?,PHONE= ? " +
             "WHERE ACCOUNT = ?";
     private static final String QUERY_UPDATE_BY_ADMIN = "UPDATE USERS SET STATUS = ? WHERE ID = ?";
-    private static final String QUERY_FIND_BY_ID = "SELECT * FROM ACCOUNT_ADMIN WHERE ID = ?";
+    private static final String QUERY_FIND_BY_ID = "SELECT * FROM USER WHERE ID = ?";
     private static final String QUERY_FIND_PASS_BY_ACCOUNT = "SELECT PASSWORD FROM USERS WHERE ACCOUNT = ? AND MAIL = ?";
     private static final String QUERY_FIND_BY_USER = "SELECT ID FROM USERS WHERE ACCOUNT = ? AND PASSWORD = ?";
 
-    @Override
+
     public List<Users> getAll() {
         return null;
     }
 
-    @Override
     public boolean add(Users users) {
         boolean rowAdded = false;
         try {
@@ -46,7 +45,6 @@ public class UserDao implements IUserDAO{
             statement.setString(7, users.getMail());
             statement.setString(8, users.getPhone());
             statement.setString(9, String.valueOf(users.getRole()));
-            statement.setString(10, String.valueOf(users.getStatus()));
             rowAdded = statement.executeUpdate() > 0;
         } catch (SQLException e) {
             e.printStackTrace();
@@ -54,17 +52,17 @@ public class UserDao implements IUserDAO{
         return rowAdded;
     }
 
-    @Override
+
     public boolean update(int id, Users users) {
         return false;
     }
 
-    @Override
+
     public boolean delete(int id) {
         return false;
     }
 
-    @Override
+
     public Users findById(int id) {
         Users user = null;
         try {
@@ -81,8 +79,7 @@ public class UserDao implements IUserDAO{
                 String email = rs.getString(8);
                 String phone = rs.getString(9);
                 Role role = Role.valueOf(rs.getString(10));
-                Status status = Status.valueOf(rs.getString(11));
-                user = new Users(id,username,password,name,gender,age,birthday,email,phone,role,status);
+                user = new Users(id,username,password,name,gender,age,birthday,email,phone,role);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -91,17 +88,16 @@ public class UserDao implements IUserDAO{
         return user ;
     }
 
-    @Override
     public String findPassByAccount(String account, String email) {
         return null;
     }
 
-    @Override
+
     public boolean updateByUser(String account, Users users) {
         return false;
     }
 
-    @Override
+
     public int findByUser(Users users) {
         return 0;
     }

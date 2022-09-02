@@ -20,9 +20,9 @@ public class Users {
     private String mail;
     private String phone;
     private Role role;
-    private Status status;
 
-    public Users(String account, String password, String name, String gender, String age, Date birthDate, String mail, String phone, Role role, Status status) {
+
+    public Users(String account, String password, String name, String gender, String age, Date birthDate, String mail, String phone, Role role) {
         this.account = account;
         this.password = password;
         this.name = name;
@@ -32,10 +32,9 @@ public class Users {
         this.mail = mail;
         this.phone = phone;
         this.role = role;
-        this.status = status;
     }
 
-    public Users(int id, String account, String password, String name, String gender, String age, Date birthDate, String mail, String phone, Role role, Status status) {
+    public Users(int id, String account, String password, String name, String gender, String age, Date birthDate, String mail, String phone, Role role) {
         this.id = id;
         this.account = account;
         this.password = password;
@@ -46,15 +45,13 @@ public class Users {
         this.mail = mail;
         this.phone = phone;
         this.role = role;
-        this.status = status;
     }
 
-    public Users(int id, String account, String password, Role role, Status status) {
+    public Users(int id, String account, String password, Role role) {
         this.id = id;
         this.account = account;
         this.password = password;
         this.role = role;
-        this.status = status;
     }
 
     public int getId() {
@@ -137,22 +134,10 @@ public class Users {
         this.role = role;
     }
 
-    public Status getStatus() {
-        return status;
-    }
-
-    public void setStatus(Status status) {
-        this.status = status;
-    }
 
     public Users(String account, String password) {
         this.account = account;
         this.password = password;
     }
 
-    public static void main(String[] args) {
-        Users users = new Users(3, "admin", "admin", ADMIN, ACTIVE);
-        UserService service = new UserService();
-        service.add(users);
-    }
 }

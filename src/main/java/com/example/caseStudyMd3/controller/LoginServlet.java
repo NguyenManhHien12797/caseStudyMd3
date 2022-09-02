@@ -16,7 +16,12 @@ public class LoginServlet extends HttpServlet {
     private final IUserService iUserService = new UserService();
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        showLoginForm(request, response);
+    }
 
+    private void showLoginForm(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        RequestDispatcher dispatcher = request.getRequestDispatcher("user/index.jsp");
+        dispatcher.forward(request, response);
     }
 
     @Override
@@ -45,15 +50,14 @@ public class LoginServlet extends HttpServlet {
         } else {
             Users users1 = iUserService.findById(userID);
             Role role = users1.getRole();
-            Status status = users1.getStatus();
             HttpSession session = request.getSession();
             session.setAttribute("userID", userID);
             session.setAttribute("account", account);
             session.setAttribute("password", password);
             session.setAttribute("role", role);
-            if (role == Role.ADMIN && status == Status.ACTIVE){
+            if (role == Role.ADMIN){
                 response.sendRedirect("/admin");
-            } else if (role == Role.USER && status == Status.ACTIVE) {
+            } else if (role == Role.USER) {
                 response.sendRedirect("/home");
             }
         }
