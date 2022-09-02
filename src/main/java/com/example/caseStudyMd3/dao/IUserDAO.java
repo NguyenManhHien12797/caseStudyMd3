@@ -8,7 +8,7 @@ import java.util.List;
 public interface IUserDAO {
     List<Users> getAll();
 
-    boolean add(Users users);
+    void add(Users users);
 
     boolean update(int id, Users users);
 

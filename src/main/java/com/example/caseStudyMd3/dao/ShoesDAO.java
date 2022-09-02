@@ -12,6 +12,7 @@ import java.util.List;
 
 public class ShoesDAO implements IManagerDAO {
     public static final String SEARCH_BY_NAME = "SELECT * FROM product WHERE name LIKE ?;";
+    public static final String SELECT_BY_ID = "SELECT * FROM product WHERE id=?;";
     Connection connection = ConnectionDB.getConnect();
     public static final String SELECT_ALL_SHOES = "SELECT * FROM product;";
     @Override
@@ -43,8 +44,25 @@ public class ShoesDAO implements IManagerDAO {
     }
 
     @Override
-    public Object select(int id) {
-        return null;
+    public Shoes select(int id_num) {
+        Shoes shoes = null;
+        try (PreparedStatement statement = connection.prepareStatement(SELECT_BY_ID);){
+            statement.setInt(1,id_num);
+            ResultSet resultSet = statement.executeQuery();
+            while (resultSet.next()){
+                int id = resultSet.getInt("id");
+                int categoryId = resultSet.getInt("categoryId");
+                int branhdId = resultSet.getInt("brandId");
+                String name = resultSet.getString("name");
+                String oldPrice = resultSet.getString("oldPrice");
+                String newPrice = resultSet.getString("newPrice");
+                String image = resultSet.getString("image");
+                shoes = new Shoes(id,categoryId,branhdId,name,oldPrice,newPrice,image);
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return shoes;
     }
 
     @Override

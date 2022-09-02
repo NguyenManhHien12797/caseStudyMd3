@@ -26,6 +26,7 @@ public class UserDao implements IUserDAO{
             "WHERE ACCOUNT = ?";
     private static final String QUERY_UPDATE_BY_ADMIN = "UPDATE USERS SET STATUS = ? WHERE ID = ?";
     private static final String QUERY_FIND_BY_ID = "SELECT * FROM USERS WHERE ID = ?";
+
     private static final String QUERY_FIND_PASS_BY_ACCOUNT = "SELECT PASSWORD FROM USERS WHERE ACCOUNT = ? AND MAIL = ?";
     private static final String QUERY_FIND_BY_USER = "SELECT ID FROM USERS WHERE ACCOUNT = ? AND PASSWORD = ?";
 
@@ -35,8 +36,17 @@ public class UserDao implements IUserDAO{
     }
 
     @Override
-    public boolean add(Users users) {
-        return false;
+    public void add(Users users) {
+        try (
+                PreparedStatement statement = connection.prepareStatement(
+                        "INSERT INTO register_user(name,password) VALUES ( ?, ?);");
+        ) {
+            statement.setString(1, users.getName());
+            statement.setString(2, users.getPassword());
+            statement.executeUpdate();
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
     }
 
     @Override

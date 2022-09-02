@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!doctype html>
 <html lang="en">
 <head>
@@ -17,9 +18,9 @@
             integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
             crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="base.css">
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="product_details.css">
+    <link rel="stylesheet" href="../view/base.css">
+    <link rel="stylesheet" href="../view/main.css">
+    <link rel="stylesheet" href="../view/product_details.css">
 
 
 </head>
@@ -107,7 +108,7 @@
                             ký</a>
                     </li>
                     <li class="header__navbar-item">
-                        <a href="login.jsp" class="header__navbar-item-link header__navbar-item-link__strong">Đăng nhập</a>
+                        <a href="/ShopBae?action=login" class="header__navbar-item-link header__navbar-item-link__strong">Đăng nhập</a>
                     </li>
                 </ul>
             </nav>
@@ -115,12 +116,12 @@
             <div class="header-with-search">
 
                 <div class="header__logo">
-                    <a href="homepage.jsp">
+                    <a href="/ShopBae">
                         <img src="../image/SB-L2-white-backgroud.svg" alt="">
                     </a>
 
                 </div>
-                <a href="homepage.jsp" class="header__logo-name">
+                <a href="/ShopBae" class="header__logo-name">
                     ShopBae
                 </a>
 
@@ -169,19 +170,19 @@
                                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
                                     </div>
                                     <div class="carousel-inner">
-                                        <div class="carousel-item carousel-item-img active" style="background-image:url(../image/details-slider_1.jpg)"></div>
-                                        <div class="carousel-item carousel-item-img" style="background-image: url(../image/details-slider_2.jpg)"></div>
-                                        <div class="carousel-item carousel-item-img" style="background-image: url(../image/details-slider_3.jpg)"></div>
-                                        <div class="carousel-item carousel-item-img" style="background-image: url(../image/details-slider_3.jpg)"></div>
+                                        <div class="carousel-item carousel-item-img active" style="background-image:url(${requestScope["shoes"].getImage()})"></div>
+                                        <div class="carousel-item carousel-item-img" style="background-image: url(${requestScope["shoes"].getImage()})"></div>
+                                        <div class="carousel-item carousel-item-img" style="background-image: url(${requestScope["shoes"].getImage()})"></div>
+                                        <div class="carousel-item carousel-item-img" style="background-image: url(${requestScope["shoes"].getImage()})"></div>
 
                                     </div>
 
                                 </div>
                                 <div class="slider__controls">
-                                    <img src="../image/details-slider_1.jpg" alt="" class="actives slider__controls-img" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1">
-                                    <img src="../image/details-slider_2.jpg" alt="" class="slider__controls-img" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-current="true" aria-label="Slide 2">
-                                    <img src="../image/details-slider_3.jpg" alt="" class="slider__controls-img" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-current="true" aria-label="Slide 3">
-                                    <img src="../image/details-slider_3.jpg" alt="" class="slider__controls-img" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-current="true" aria-label="Slide 4">
+                                    <img src="${requestScope["shoes"].getImage()}" alt="" class="actives slider__controls-img" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1">
+                                    <img src="${requestScope["shoes"].getImage()}" alt="" class="slider__controls-img" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-current="true" aria-label="Slide 2">
+                                    <img src="${requestScope["shoes"].getImage()}" alt="" class="slider__controls-img" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-current="true" aria-label="Slide 3">
+                                    <img src="${requestScope["shoes"].getImage()}" alt="" class="slider__controls-img" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-current="true" aria-label="Slide 4">
 
                                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                                         <span class="carousel-control-prev-icon slider__controls-btn-icon-pre" aria-hidden="true"></span>
@@ -197,7 +198,7 @@
                     </div>
                     <div class="grid__column-8 item__details__wrap">
                         <span class="item__details__favourite">Yêu thích</span>
-                        <span class="item__details__title">[Mã ELHACE giảm 4% đơn 300K] Loa SoundBar 100 Âm Thanh Vòm Sống Động Phong Cách Rạp Phim, Fullbox, Chính Hãng GENIUS</span>
+                        <span class="item__details__title">${requestScope["shoes"].getName()}</span>
                         <div class="item__details__rating">
                             <span class="item__details__rate-num">4.9</span>
                             <div class="item__details__icon__rating">
@@ -221,9 +222,9 @@
                         </div>
                         <div class="item__details__discount">
                             <div class="item__details__discount-price">
-                                <span class="item__details__discount-price__old">385.000đ</span>
-                                <span class="item__details__discount-price__current">211.000đ</span>
-                                <span class="item__details__discount-price__percent item__details__favourite">45% Giảm</span>
+                                <span class="item__details__discount-price__old">${requestScope["shoes"].getOldPrice()}</span>
+                                <span class="item__details__discount-price__current">${requestScope["shoes"].getNewPrice()}</span>
+                                <span class="item__details__discount-price__percent item__details__favourite">10% Giảm</span>
                             </div>
                             <div class="item__details__discount-title">
                                 <div class="item__details__discount-title__img">
@@ -306,11 +307,6 @@
 
                         </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> hien
                         <div class="item__details__size">
                             <span class="item__details__size-title">Kích thước</span>
                             <select name="select__item" id="" class="item__details__size-num">
@@ -334,7 +330,7 @@
                         </div>
 
                         <div class="item__details__cart">
-                            <button class="btn btn__add-to-cart"><i class="fa-solid fa-cart-plus"></i>  Thêm Vào Giỏ Hàng</button>
+                            <button class="btn btn__add-to-cart" ><i class="fa-solid fa-cart-plus"></i>  Thêm Vào Giỏ Hàng</button>
                             <button class="btn btn-primary btn__buy-now">Mua Ngay</button>
                         </div>
                     </div>
@@ -388,10 +384,7 @@
                         </div>
                     </div>
                     <div class="grid__column-9">
-<<<<<<< HEAD
->>>>>>> hien
-=======
->>>>>>> hien
+
                     </div>
                 </div>
             </div>
@@ -1207,7 +1200,7 @@ Công Ty TNHH Sản Xuất Thương Mại Công Nghệ Guangdong
                 <span class="footer__policy-title">Chính sách trả hàng và hoàn tiền</span>
             </div>
             <div class="grid__column-12 footer__footer-logo">
-                <a class="footer__logo" href="homepage.jsp">
+                <a class="footer__logo" href="/ShopBae">
                     <img src="../image/SB-L2-white-backgroud.svg" alt="" class="footer__logo-img">
                     <span class="footer__logo-name">ShopBae</span>
                 </a>
