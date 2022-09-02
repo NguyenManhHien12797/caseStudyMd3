@@ -71,8 +71,9 @@ public class ShoesDAO implements IManagerDAO {
     }
 
     @Override
-    public void delete(int id) throws SQLException {
+    public boolean delete(int id) {
 
+        return false;
     }
 
     @Override

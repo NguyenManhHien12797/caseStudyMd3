@@ -10,9 +10,13 @@ public interface IManagerDAO<E> {
 
     E select(int idg_num);
 
-    void update(int id, E e);
+   void update(int id, E e);
 
-    void delete(int id) throws SQLException;
 
     List<E> search(String search);
+
+
+
+    boolean delete(int id);
+
 }
