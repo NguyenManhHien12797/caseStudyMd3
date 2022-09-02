@@ -1,7 +1,7 @@
 package com.example.caseStudyMd3.controller;
 
-import com.example.caseStudyMd3.dao.interfaceDAO.IManagerDAO;
-import com.example.caseStudyMd3.dao.implementDAO.ShoesDAO;
+import com.example.caseStudyMd3.dao.IManagerDAO;
+import com.example.caseStudyMd3.dao.ShoesDAO;
 import com.example.caseStudyMd3.model.productShoes.Shoes;
 
 import javax.servlet.RequestDispatcher;

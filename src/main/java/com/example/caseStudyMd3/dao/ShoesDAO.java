@@ -1,7 +1,6 @@
-package com.example.caseStudyMd3.dao.implementDAO;
+package com.example.caseStudyMd3.dao;
 
 import com.example.caseStudyMd3.config.ConnectionDB;
-import com.example.caseStudyMd3.dao.interfaceDAO.IManagerDAO;
 import com.example.caseStudyMd3.model.productShoes.Shoes;
 
 import java.sql.Connection;

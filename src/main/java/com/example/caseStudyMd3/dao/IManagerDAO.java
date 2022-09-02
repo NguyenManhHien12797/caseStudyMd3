@@ -1,4 +1,4 @@
-package com.example.caseStudyMd3.dao.interfaceDAO;
+package com.example.caseStudyMd3.dao;
 
 import java.sql.SQLException;
 import java.util.List;
