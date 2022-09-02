@@ -1,4 +1,6 @@
-package com.example.caseStudyMd3.model;
+package com.example.caseStudyMd3.model.productShoes;
+
+import com.example.caseStudyMd3.model.Crawls;
 
 import java.util.List;
 

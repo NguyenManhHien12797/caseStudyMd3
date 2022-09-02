@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <link rel="icon" href="../image/SB-L2-xxl.svg" type="image/x-icon">
-    <title>Login ShopBae</title>
+    <title>Register ShopBae</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
@@ -54,7 +54,7 @@
             display:flex;
             margin-top: 25px;
             justify-items: center;
-           height: 43px;
+            height: 43px;
             background-color: var(--primary-color);
         }
 
@@ -105,14 +105,12 @@
             height: 38px;
             font-size: 1.8rem;
             margin:22px 30px ;
-            padding-left: 20px;
         }
-
 
         .form__login-username:focus,
         .form__login-password:focus{
             outline: none;
-           border-color: var(--primary-color);
+            border-color: var(--primary-color);
             box-shadow: 0 0.1rem 0.2rem #bdbdbd;
         }
         .app__container-login__title{
@@ -211,7 +209,7 @@
                     ShopBae
                 </a>
 
-                <span class="header__logo-name header__title_login">Đăng nhập</span>
+                <span class="header__logo-name header__title_login">Đăng ký</span>
                 <a href="#" class="header__login-title">Bạn cần giúp đỡ?</a>
             </div>
         </div>
@@ -225,17 +223,17 @@
                 <div class="grid__row">
                     <div class="grid__column-12 background__login-img " style="background-image: url(../image/background_login.png)">
                         <div class="app__container-login">
-                            <span class="app__container-login__title"> Đăng nhập</span>
+                            <span class="app__container-login__title"> Đăng ký</span>
 
-<%--                            Form Login--%>
+                            <%--                            Form Register--%>
 
-                            <form action="#" class="form__login" method="post">
+                            <form action="login.jsp" class="form__login" method="post">
                                 <input type="text" class="form__login-username" name="username" placeholder="Nhập user name">
                                 <input type="password" class="form__login-password" name="password" placeholder="Nhập password">
-                                <button class="btn btn-primary login-btn">ĐĂNG NHẬP</button>
+                                <button class="btn btn-primary login-btn">ĐĂNG KÝ</button>
                             </form>
 
-<%--                            Form Login--%>
+                            <%--                            Form Register--%>
 
                             <div class="login__with">
                                 <li class="login__with-item">
@@ -246,8 +244,8 @@
                             </div>
 
                             <div class="register">
-                                <span class="register__title">Bạn mới biết đến ShopBae?</span>
-                                <a href="register.jsp" class="register__link">Đăng ký</a>
+                                <span class="register__title">Quay lại với ShopBae</span>
+                                <a href="login.jsp" class="register__link">Đăng Nhập</a>
                             </div>
 
                         </div>

@@ -1,5 +1,6 @@
 package com.example.caseStudyMd3.model;
 
+import com.example.caseStudyMd3.model.productShoes.Shoes;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;

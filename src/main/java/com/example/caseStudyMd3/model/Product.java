@@ -2,12 +2,14 @@ package com.example.caseStudyMd3.model;
 
 public class Product {
     private int id;
+    private String category;
+    private String brand;
     private String image;
     private String name;
     private double oldPrice;
     private double newPrice;
 
-    public Product() {
+    public Product(String serial, String name, double price, int quantity, String description, String imageURL) {
     }
 
     public Product(int id, String image, String name, double oldPrice, double newPrice) {
@@ -17,6 +19,34 @@ public class Product {
         this.oldPrice = oldPrice;
         this.newPrice = newPrice;
     }
+
+    public Product(int id, String category, String brand, String image, String name, double oldPrice, double newPrice) {
+        this.id = id;
+        this.category = category;
+        this.brand = brand;
+        this.image = image;
+        this.name = name;
+        this.oldPrice = oldPrice;
+        this.newPrice = newPrice;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+
 
     public int getId() {
         return id;
