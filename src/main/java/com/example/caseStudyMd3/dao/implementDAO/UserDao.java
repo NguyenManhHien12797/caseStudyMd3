@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:src/main/java/com/example/caseStudyMd3/dao/implementDAO/UserDao.java
+
 package com.example.caseStudyMd3.dao.implementDAO;
 
 import   com.example.caseStudyMd3.config.ConnectionDB;
@@ -109,9 +108,7 @@ public class UserDao implements IUserDAO {
         return 0;
     }
 }
-=======
-=======
->>>>>>> hien
+
 //package com.example.caseStudyMd3.dao;
 //
 //import   com.example.caseStudyMd3.config.ConnectionDB;
@@ -220,7 +217,3 @@ public class UserDao implements IUserDAO {
 //        return 0;
 //    }
 //}
-<<<<<<< HEAD
->>>>>>> hien:src/main/java/com/example/caseStudyMd3/dao/UserDao.java
-=======
->>>>>>> hien
