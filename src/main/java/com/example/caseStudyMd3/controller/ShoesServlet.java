@@ -1,7 +1,7 @@
 package com.example.caseStudyMd3.controller;
 
-import com.example.caseStudyMd3.dao.interfaceDAO.IManagerDAO;
-import com.example.caseStudyMd3.dao.implementDAO.ShoesDAO;
+import com.example.caseStudyMd3.dao.IManagerDAO;
+import com.example.caseStudyMd3.dao.ShoesDAO;
 import com.example.caseStudyMd3.model.productShoes.Shoes;
 
 import javax.servlet.RequestDispatcher;
@@ -65,8 +65,6 @@ public class ShoesServlet extends HttpServlet {
             throw new RuntimeException(e);
         }
     }
-
-
 
     private void showLogin(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         RequestDispatcher dispatcher = req.getRequestDispatcher("view/login.jsp");
