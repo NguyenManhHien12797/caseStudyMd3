@@ -66,6 +66,8 @@ public class ShoesServlet extends HttpServlet {
         }
     }
 
+
+
     private void showLogin(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         RequestDispatcher dispatcher = req.getRequestDispatcher("view/login.jsp");
         dispatcher.forward(req,resp);
@@ -127,3 +129,4 @@ public class ShoesServlet extends HttpServlet {
 
 
 }
+
