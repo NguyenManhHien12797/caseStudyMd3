@@ -1,9 +1,8 @@
 package com.example.caseStudyMd3.dao;
 
 import com.example.caseStudyMd3.config.ConnectionDB;
+import com.example.caseStudyMd3.model.qa.Role;
 import com.example.caseStudyMd3.model.qa.Users;
-import com.example.caseStudyMd3.service.RS.Role;
-import com.example.caseStudyMd3.service.RS.Status;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -17,15 +16,15 @@ public class UserDao{
 
     private static final String QUERY_ALL_USER = "SELECT * FROM USER";
     private static final String QUERY_INSERT_ACCOUNT_BY_ADMIN = "INSERT INTO USER" +
-            "(ACCOUNT,PASSWORD,ROLE,NAME,GENDER,AGE,BIRTHDATE,MAIL,PHONE,ROLE) " +
-            "VALUES(?,?,?,?,?,?,?,?,?,?)";
-    private static final String QUERY_DEL_USERS_BY_ADMIN = "DELETE FROM USERS WHERE ID = ?";
-    private static final String QUERY_UPDATE_BY_USER = "UPDATE USERS SET PASSWORD = ?,NAME = ?,GENDER = ?,AGE = ?,BIRTHDATE= ?,MAIL =?,PHONE= ? " +
+            "(ACCOUNT,PASSWORD,ROLE,NAME,GENDER,BIRTHDATE,MAIL,PHONE) " +
+            "VALUES(?,?,?,?,?,?,?,?,?)";
+    private static final String QUERY_DEL_USERS_BY_ADMIN = "DELETE FROM USER WHERE ID = ?";
+    private static final String QUERY_UPDATE_BY_USER = "UPDATE USER SET PASSWORD = ?,NAME = ?,GENDER = ?,AGE = ?,BIRTHDATE= ?,MAIL =?,PHONE= ? " +
             "WHERE ACCOUNT = ?";
-    private static final String QUERY_UPDATE_BY_ADMIN = "UPDATE USERS SET STATUS = ? WHERE ID = ?";
+    private static final String QUERY_UPDATE_BY_ADMIN = "UPDATE USER SET WHERE ID = ?";
     private static final String QUERY_FIND_BY_ID = "SELECT * FROM USER WHERE ID = ?";
-    private static final String QUERY_FIND_PASS_BY_ACCOUNT = "SELECT PASSWORD FROM USERS WHERE ACCOUNT = ? AND MAIL = ?";
-    private static final String QUERY_FIND_BY_USER = "SELECT ID FROM USERS WHERE ACCOUNT = ? AND PASSWORD = ?";
+    private static final String QUERY_FIND_PASS_BY_ACCOUNT = "SELECT PASSWORD FROM USER WHERE ACCOUNT = ? AND MAIL = ?";
+    public static final String SELECT_CHECK_USER_LOGIN = "SELECT * FROM USER WHERE username = ? AND password = ? ";
 
 
     public List<Users> getAll() {
@@ -38,13 +37,12 @@ public class UserDao{
             PreparedStatement statement = connection.prepareStatement(QUERY_INSERT_ACCOUNT_BY_ADMIN);
             statement.setString(1, users.getAccount());
             statement.setString(2, users.getPassword());
-            statement.setString(3, users.getName());
-            statement.setString(4, users.getGender());
-            statement.setString(5, users.getAge());
+            statement.setString(3, String.valueOf(users.getRole()));
+            statement.setString(4, users.getName());
+            statement.setString(5, users.getGender());
             statement.setDate(6, (java.sql.Date) users.getBirthDate());
             statement.setString(7, users.getMail());
             statement.setString(8, users.getPhone());
-            statement.setString(9, String.valueOf(users.getRole()));
             rowAdded = statement.executeUpdate() > 0;
         } catch (SQLException e) {
             e.printStackTrace();
@@ -53,13 +51,18 @@ public class UserDao{
     }
 
 
-    public boolean update(int id, Users users) {
-        return false;
-    }
 
 
     public boolean delete(int id) {
-        return false;
+        boolean del = false;
+        try {
+            PreparedStatement statement = connection.prepareStatement(QUERY_DEL_USERS_BY_ADMIN);
+            statement.setInt(1,id);
+            del = statement.executeUpdate() > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return del;
     }
 
 
@@ -74,12 +77,10 @@ public class UserDao{
                 String password = rs.getString(3);
                 String name = rs.getString(4);
                 String gender = rs.getString(5);
-                String age = String.valueOf(rs.getInt(6));
-                Date birthday = rs.getDate(7);
-                String email = rs.getString(8);
-                String phone = rs.getString(9);
-                Role role = Role.valueOf(rs.getString(10));
-                user = new Users(id,username,password,name,gender,age,birthday,email,phone,role);
+                Date birthDate = rs.getDate(6);
+                String mail = rs.getString(7);
+                String phone = rs.getString(8);
+                user = new Users(id,username,password,name,gender,birthDate,mail,phone);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -88,17 +89,50 @@ public class UserDao{
         return user ;
     }
 
-    public String findPassByAccount(String account, String email) {
-        return null;
-    }
 
+    public Users checkUser(String username, String password){
+
+        Users user = null;
+
+        try {
+            PreparedStatement statement = connection.prepareStatement(SELECT_CHECK_USER_LOGIN);
+            statement.setString(1,username);
+            statement.setString(2,password);
+
+            ResultSet set = statement.executeQuery();
+
+            if (set.next()){
+
+                int id = set.getInt("id");
+                String name = set.getString("name");
+                String gender = set.getString("gender");
+                Date birthDate = set.getDate("birthDate");
+                String email = set.getString("mail");
+                String phone = set.getString("phone");
+                user = new Users(id,username,password,name,gender,birthDate,email,phone);
+
+            }
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+
+        return user;
+
+    }
 
     public boolean updateByUser(String account, Users users) {
         return false;
     }
 
+    public static void main(String[] args) {
+        UserDao userDao = new UserDao();
+        userDao.checkUser("abc", "abc");
+//        userDao.findById(1);
 
-    public int findByUser(Users users) {
-        return 0;
+        Users user = new Users("cac", "cac", "lin");
+
+        userDao.add(user);
     }
+
 }
