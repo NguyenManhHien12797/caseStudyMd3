@@ -1,7 +1,7 @@
 package com.example.caseStudyMd3.model;
 
-import com.example.caseStudyMd3.service.RS.Role;
-import com.example.caseStudyMd3.service.RS.Status;
+import com.example.caseStudyMd3.dao.RS.Role;
+import com.example.caseStudyMd3.dao.RS.Status;
 
 import java.util.Date;
 

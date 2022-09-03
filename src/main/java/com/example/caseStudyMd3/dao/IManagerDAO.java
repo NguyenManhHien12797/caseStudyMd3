@@ -1,4 +1,4 @@
-package com.example.caseStudyMd3.dao.interfaceDAO;
+package com.example.caseStudyMd3.dao;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -8,7 +8,7 @@ public interface IManagerDAO<E> {
 
     void create(E e);
 
-    E select(int id);
+    E select(int idg_num);
 
     void update(int id, E e);
 

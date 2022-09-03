@@ -17,8 +17,8 @@
             integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
             crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="base.css">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="../view/base.css">
+    <link rel="stylesheet" href="../view/main.css">
 
     <style>
         .app__container{
@@ -196,7 +196,12 @@
     </style>
 
 </head>
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v14.0&appId=594721352199837&autoLogAppEvents=1" nonce="Zwb32Km7"></script>
 <body>
+
+
 <div class="app">
     <header class="header header__login">
         <div class="grid">
@@ -239,7 +244,8 @@
 
                             <div class="login__with">
                                 <li class="login__with-item">
-                                    <a href="https://www.facebook.com/" class="footer-item__link-icon footer-item__link-fb footer-item__link-fb-login"><i class="fa-brands fa-facebook"></i> Facebook</a>
+<%--                                    <a href="https://www.facebook.com/" class="footer-item__link-icon footer-item__link-fb footer-item__link-fb-login"><i class="fa-brands fa-facebook"></i> Facebook</a>--%>
+    <div class="fb-login-button footer-item__link-icon footer-item__link-fb footer-item__link-fb-login" data-width="" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false"></div>
                                     <a href="https://www.google.com/" class="footer-item__link-icon footer-item__link-gg footer-item__link-gg-login"><i class="fa-brands fa-google-plus-g"></i>Google</a>
                                     <a href="https://www.linkedin.com/" class="footer-item__link-icon footer-item__link-linked footer-item__link-linked-login"><i class="fa-brands fa-linkedin"></i> Linkedkin</a>
                                 </li>
@@ -369,4 +375,68 @@
 </div>
 
 </body>
+
+
+<script>
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId      : '594721352199837',
+            xfbml      : true,
+            version    : 'v14.0'
+        });
+        FB.AppEvents.logPageView();
+    };
+
+    (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+
+    function statusChangeCallback(response) {  // Called with the results from FB.getLoginStatus().
+        console.log('statusChangeCallback');
+        console.log(response);                   // The current login status of the person.
+        if (response.status === 'connected') {   // Logged into your webpage and Facebook.
+            testAPI();
+        } else {                                 // Not logged into your webpage or we are unable to tell.
+            document.getElementById('status').innerHTML = 'Please log ' +
+                'into this webpage.';
+        }
+    }
+
+
+    function checkLoginState() {               // Called when a person is finished with the Login Button.
+        FB.getLoginStatus(function(response) {   // See the onlogin handler
+            statusChangeCallback(response);
+        });
+    }
+
+
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId      : '{app-id}',
+            cookie     : true,                     // Enable cookies to allow the server to access the session.
+            xfbml      : true,                     // Parse social plugins on this webpage.
+            version    : '{api-version}'           // Use this Graph API version for this call.
+        });
+
+
+        FB.getLoginStatus(function(response) {   // Called after the JS SDK has been initialized.
+            statusChangeCallback(response);        // Returns the login status.
+        });
+    };
+
+    function testAPI() {                      // Testing Graph API after login.  See statusChangeCallback() for when this call is made.
+        console.log('Welcome!  Fetching your information.... ');
+        FB.api('/me', function(response) {
+            console.log('Successful login for: ' + response.name);
+            document.getElementById('status').innerHTML =
+                'Thanks for logging in, ' + response.name + '!';
+        });
+    }
+
+</script>
 </html>
