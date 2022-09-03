@@ -48,31 +48,12 @@ public class CartServlet extends HttpServlet {
             case "checkout":
                 checkoutCart(req,resp);
                 break;
-            case "payment":
-                payment(req,resp);
-                break;
+
             default:
                 displayCart(req,resp);
         }
     }
 
-    private void payment(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        HttpSession session = req.getSession();
-        int userID = (int) session.getAttribute("userID");
-        String address = req.getParameter("address");
-        String phone = req.getParameter("tel");
-        boolean checkOrder = iOrderService.add(new Order(userID,address,phone),userID);
-        MysqlxCrud.Order order = iOrderService.findById(userID);
-        List<Item> cart = (List<Item>) session.getAttribute("cart");
-        for (Item item:cart) {
-            OrderDetail orderDetail = new OrderDetail(order.getId(),item.getProduct().getId(),item.getQuantity(),(item.getQuantity() * item.getProduct().getPrice()));
-            detailDAOImplement.add(orderDetail);
-            iProductService.reduce(item.getQuantity(),item.getProduct().getId());
-        }
-        session.removeAttribute("cart");
-        req.setAttribute("checkOrder",checkOrder);
-        req.getRequestDispatcher("/client/view/checkout.jsp").forward(req,resp);
-    }
 
     private void checkoutCart(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession();
