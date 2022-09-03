@@ -101,6 +101,9 @@
                     <li class="header__navbar-item ">
                         <a href="view/sellerChannel.jsp" class="header__navbar-item-seller">Kênh người bán</a>
                     </li>
+                    <li class="header__navbar-item ">
+                        <a href="../view/admin.jsp" class="header__navbar-item-seller">Kênh Admin</a>
+                    </li>
                     <li class="header__navbar-item header__navbar-item--has-qr separate"> Vào cửa hàng trên ứng dụng
                         <div class="header__qr">
                             <img src="../image/qr-code.png" alt="QR code" class="header__qr-img">

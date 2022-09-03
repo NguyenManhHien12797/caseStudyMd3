@@ -7,7 +7,7 @@
 <html lang="en">
 <head>
     <link rel="icon" href="../image/SB-L2-xxl.svg" type="image/x-icon">
-    <title>Kênh người bán ShopBae</title>
+    <title>Giỏ hàng ShopBae</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
@@ -110,34 +110,12 @@
     </style>
 </head>
 <body>
-<%--<div class="navbar">--%>
-<%--    <div class="navbar__logo">--%>
-<%--        <a href="/ShopBae" class="navbar__logo-link">--%>
-<%--            <img src="../image/SB-L2-xxl.svg" alt="" class="navbar__logo-img">--%>
-<%--            <span class="navbar__logo-name">ShopBae</span>--%>
-<%--        </a>--%>
-<%--        <span class="navbar__logo-title">Kênh người bán</span>--%>
-
-<%--    </div>--%>
-<%--    <div class="navbar__info">--%>
-<%--        <div class="navbar__account">--%>
-<%--            <img src="../image/avatar_3.webp" alt="" class="navbar__account-avatar">--%>
-<%--            <span class="navbar__account-info">Bình tổng Miền Bắc</span>--%>
-<%--        </div>--%>
-<%--        <button class="navbar__action"><i class="fa-solid fa-list"></i>--%>
-<%--        </button>--%>
-
-<%--    </div>--%>
-
-<%--</div>--%>
-
-
 <header class="header">
     <div class="grid">
         <nav class="header__navbar">
             <ul class="header__navbar-list">
                 <li class="header__navbar-item ">
-                    <a href="view/sellerChannel.jsp" class="header__navbar-item-seller">Kênh người bán</a>
+                    <a href="sellerChannel.jsp" class="header__navbar-item-seller">Kênh người bán</a>
                 </li>
                 <li class="header__navbar-item header__navbar-item--has-qr separate"> Vào cửa hàng trên ứng dụng
                     <div class="header__qr">
@@ -251,15 +229,6 @@
             </a>
             <span class="header__logo-name header__logo-name-cart">Giỏ hàng</span>
 
-            <div class="header__search">
-                <form class="header__search-form" method="post" action="/ShopBae?action=search">
-                    <input type="text" class="header__search-input" name="search"
-                           placeholder="Nhập để tìm kiếm sản phẩm">
-                    <button class="header__search-btn" type="submit">
-                        <i class=" header__search-icon fa-solid fa-magnifying-glass"></i>
-                    </button>
-                </form>
-            </div>
 
         </div>
     </div>
@@ -277,7 +246,7 @@
 
             <div class="product-list">
                 <div class="grid ">
-                    <div class="grid__row product-list__title">
+                    <div class="grid__row product-list__title ">
                         <div class="grid__column-4 title__title title__title-name">
                             <input type="checkbox" class="checkbox">
                             <span class="title-name">Tên sản phẩm</span>

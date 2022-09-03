@@ -207,12 +207,12 @@
         <div class="grid">
             <div class="header-with-login">
                 <div class="header__logo header__logo_login">
-                    <a href="homepage.jsp">
+                    <a href="/ShopBae">
                         <img src="../image/SB-L2-white-backgroud.svg" alt="">
                     </a>
 
                 </div>
-                <a href="homepage.jsp" class="header__logo-name header__logo-name_login">
+                <a href="/ShopBae" class="header__logo-name header__logo-name_login">
                     ShopBae
                 </a>
 
@@ -244,8 +244,8 @@
 
                             <div class="login__with">
                                 <li class="login__with-item">
-<%--                                    <a href="https://www.facebook.com/" class="footer-item__link-icon footer-item__link-fb footer-item__link-fb-login"><i class="fa-brands fa-facebook"></i> Facebook</a>--%>
-    <div class="fb-login-button footer-item__link-icon footer-item__link-fb footer-item__link-fb-login" data-width="" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false"></div>
+                                    <a href="https://www.facebook.com/" class="footer-item__link-icon footer-item__link-fb footer-item__link-fb-login"><i class="fa-brands fa-facebook"></i> Facebook</a>
+<%--    <div class="fb-login-button footer-item__link-icon footer-item__link-fb footer-item__link-fb-login" data-width="" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false"></div>--%>
                                     <a href="https://www.google.com/" class="footer-item__link-icon footer-item__link-gg footer-item__link-gg-login"><i class="fa-brands fa-google-plus-g"></i>Google</a>
                                     <a href="https://www.linkedin.com/" class="footer-item__link-icon footer-item__link-linked footer-item__link-linked-login"><i class="fa-brands fa-linkedin"></i> Linkedkin</a>
                                 </li>
@@ -359,7 +359,7 @@
                 <span class="footer__policy-title">Chính sách trả hàng và hoàn tiền</span>
             </div>
             <div class="grid__column-12 footer__footer-logo">
-                <a class="footer__logo" href="homepage.jsp">
+                <a class="footer__logo" href="/ShopBae">
                     <img src="../image/SB-L2-white-backgroud.svg" alt="" class="footer__logo-img">
                     <span class="footer__logo-name">ShopBae</span>
                 </a>

@@ -85,9 +85,13 @@
     display: flex;
 }
 
-/*category*/
-.seller{
+.grid__product-list{
+    width: 100%;
+    margin: 0;
 }
+
+/*category*/
+
 .seller__category{
     display: block;
     /*position: relative;*/
@@ -97,27 +101,6 @@
     margin-top: 60px;
     box-shadow: 0.1rem 0 0.2rem #bdbdbd;
 }
-/*.category__ship{*/
-/*    margin-top: 20px;*/
-/*}*/
-/*.category__order{*/
-/*    margin-top: 20px;*/
-/*}*/
-/*.category__product{*/
-/*    margin-top: 20px;*/
-/*}*/
-/*.category__finance{*/
-/*    margin-top: 20px;*/
-/*}*/
-/*.category__data{*/
-/*    margin-top: 20px;*/
-/*}*/
-/*.category__shop{*/
-
-/*}*/
-/*.category__setting{*/
-
-/*}*/
 
 .category__title{
     display: block;
