@@ -60,7 +60,7 @@ public class CartServlet extends HttpServlet {
         List<Item> cart = (List<Item>) session.getAttribute("cart");
         session.setAttribute("cart",cart);
         req.setAttribute("brands",brands);
-        req.getRequestDispatcher("/client/view/checkout.jsp").forward(req,resp);
+        req.getRequestDispatcher("/view/checkout.jsp").forward(req,resp);
     }
 
     private void removeProduct(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -76,7 +76,7 @@ public class CartServlet extends HttpServlet {
         session.setAttribute("subtotal", subtotal);
         session.setAttribute("cart",cart);
         req.setAttribute("brands",brands);
-        req.getRequestDispatcher("/client/view/cart.jsp").forward(req,resp);
+        req.getRequestDispatcher("/view/cart.jsp").forward(req,resp);
     }
 
 
@@ -112,7 +112,7 @@ public class CartServlet extends HttpServlet {
         session.setAttribute("subtotal", subtotal);
         session.setAttribute("cart",cart);
         req.setAttribute("brands",brands);
-        req.getRequestDispatcher("/client/view/cart.jsp").forward(req,resp);
+        req.getRequestDispatcher("/view/cart.jsp").forward(req,resp);
     }
 
     private void displayCart(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -130,6 +130,6 @@ public class CartServlet extends HttpServlet {
         session.setAttribute("subtotal", subtotal);
         session.setAttribute("cart",cart);
         req.setAttribute("brands",brands);
-        req.getRequestDispatcher("/client/view/cart.jsp").forward(req,resp);
+        req.getRequestDispatcher("/view/cart.jsp").forward(req,resp);
     }
 }
