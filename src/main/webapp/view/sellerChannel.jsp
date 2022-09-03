@@ -129,7 +129,7 @@
 
                 </div>
 <%--List product--%>
-            <div class="grid ">
+            <di class="grid ">
                 <div class="grid__row product-list__element">
                     <div class="grid__column-2 element__element">
                         <input type="checkbox" class="checkbox">
@@ -146,8 +146,7 @@
                     </div>
 
                 </div>
-            </div>
-
+            </di>
             <di class="grid ">
                 <div class="grid__row product-list__element">
                     <div class="grid__column-2 element__element">
