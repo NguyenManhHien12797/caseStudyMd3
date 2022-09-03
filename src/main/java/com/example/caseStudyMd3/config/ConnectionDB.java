@@ -32,7 +32,14 @@ public class ConnectionDB {
     }
 
     public static void main(String[] args) {
-        getConnect();
+        Connection connection = getConnect();
+
+        if(connection != null) {
+            System.out.println("thanh cong");
+        }
+        else {
+            System.out.println("khong thanh cong");
+        }
 
     }
 
