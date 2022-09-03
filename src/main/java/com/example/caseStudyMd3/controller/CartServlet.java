@@ -66,7 +66,7 @@ public class CartServlet extends HttpServlet {
     private void removeProduct(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession();
         int id = Integer.parseInt(req.getParameter("id"));
-        Product product = iProductService.findById(id);
+        Product product = (Product) iProductService.findById(id);
         List<Item> cart = (List<Item>) session.getAttribute("cart");
         cart.removeIf(item -> item.getProduct().getId() == product.getId());
         int subtotal = 0;
@@ -84,7 +84,7 @@ public class CartServlet extends HttpServlet {
         HttpSession session = req.getSession();
         int id = Integer.parseInt(req.getParameter("id"));
         int quantity = 1;
-        Product product = iProductService.findById(id);
+        Product product = (Product) iProductService.findById(id);
         List<Item> cart;
         if(req.getParameter("quantity") != null){
             quantity = Integer.parseInt(req.getParameter("quantity"));

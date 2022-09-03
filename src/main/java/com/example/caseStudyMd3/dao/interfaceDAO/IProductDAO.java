@@ -7,7 +7,8 @@ import com.example.caseStudyMd3.model.Product;
 
 import java.util.List;
 
-public interface IProductDAO extends IManagerDAO<Product> {
+public interface IProductDAO<E> extends IManagerDAO {
 
-    Product findById(int id);
+    E findById(int id);
+    List<E> sortByPrice(String str);
 }

@@ -17,6 +17,7 @@ public interface IManagerDAO<E> {
 
 
 
+
     boolean delete(int id);
 
 }
