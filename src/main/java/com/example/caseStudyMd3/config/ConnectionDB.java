@@ -10,7 +10,7 @@ public class ConnectionDB {
 
     public static final String URL = "jdbc:mysql://localhost:3306/Case_Study";
     public static final String USER = "root";
-    public static final String PASSWORD = "88888888";
+    public static final String PASSWORD = "200525081997";
 
     public ConnectionDB() {
     }
