@@ -99,7 +99,7 @@
             <nav class="header__navbar">
                 <ul class="header__navbar-list">
                     <li class="header__navbar-item ">
-                        <a href="#" class="header__navbar-item-seller">Kênh người bán</a>
+                        <a href="view/sellerChannel.jsp" class="header__navbar-item-seller">Kênh người bán</a>
                     </li>
                     <li class="header__navbar-item header__navbar-item--has-qr separate"> Vào cửa hàng trên ứng dụng
                         <div class="header__qr">
@@ -249,8 +249,16 @@
                 <video controls autoplay muted loop class="banner__video">
                     <source src="../image/banner_video_1.mp4" type="video/mp4">
                 </video>
-                <%--                <video controls autoplay src="../image/banner_video_2.mp4" class="banner__video"></video>--%>
 
+                <video controls autoplay muted loop class="banner__video">
+                    <source src="../image/banner_video_3.mp4" type="video/mp4">
+                </video>
+                <video controls autoplay muted loop class="banner__video">
+                    <source src="../image/banner_video_3.mp4" type="video/mp4">
+                </video>
+                <video controls autoplay muted loop class="banner__video">
+                    <source src="../image/banner_video_3.mp4" type="video/mp4">
+                </video>
             </div>
             <%--    Banner--%>
 
