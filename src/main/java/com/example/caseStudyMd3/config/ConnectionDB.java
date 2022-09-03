@@ -31,4 +31,9 @@ public class ConnectionDB {
 
     }
 
+    public static void main(String[] args) {
+        getConnect();
+
+    }
+
 }

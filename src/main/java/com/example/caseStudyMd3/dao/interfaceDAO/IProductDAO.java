@@ -9,4 +9,5 @@ import java.util.List;
 
 public interface IProductDAO extends IManagerDAO<Product> {
 
+    Product findById(int id);
 }
