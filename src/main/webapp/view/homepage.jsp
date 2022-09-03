@@ -224,7 +224,7 @@
 
                 <div class="header__cart">
                     <div class="header__cart-wrap">
-                        <a href="#">
+                        <a href="../view/cart.jsp">
                             <i class="header__cart-icon  fa-solid fa-cart-shopping"></i>
                             <span class="header__cart-notice header__cart-icon ">234</span>
                         </a>

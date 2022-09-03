@@ -111,7 +111,7 @@
 
 
             <div class="product-list">
-                <di class="grid ">
+                <div class="grid ">
                     <div class="grid__row product-list__title">
 <%--                        <div class=" product-list__title">--%>
                             <div class="grid__column-2 title__title title__title-name">
