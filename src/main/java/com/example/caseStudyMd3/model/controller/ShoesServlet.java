@@ -1,7 +1,7 @@
-package com.example.caseStudyMd3.model.qa.controller;
+package com.example.caseStudyMd3.model.controller;
 
-import com.example.caseStudyMd3.model.qa.model.Crawls;
-import com.example.caseStudyMd3.model.qa.model.Shoes;
+import com.example.caseStudyMd3.model.model.Crawls;
+import com.example.caseStudyMd3.model.model.Shoes;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

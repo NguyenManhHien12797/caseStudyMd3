@@ -1,60 +1,57 @@
-package com.example.caseStudyMd3.model.qa;
-
-import com.example.caseStudyMd3.service.RS.Role;
-import com.example.caseStudyMd3.service.RS.Status;
-import com.example.caseStudyMd3.service.UserService;
-
+package com.example.caseStudyMd3.model;
 import java.util.Date;
 
-import static com.example.caseStudyMd3.service.RS.Role.ADMIN;
-import static com.example.caseStudyMd3.service.RS.Status.ACTIVE;
 
 public class Users {
     private int id;
     private String account;
     private String password;
+    private String role;
     private String name;
     private String gender;
-    private String age;
     private Date birthDate;
     private String mail;
     private String phone;
-    private Role role;
-    private Status status;
 
-    public Users(String account, String password, String name, String gender, String age, Date birthDate, String mail, String phone, Role role, Status status) {
+
+    public Users(String account, String password, String role, String name, String gender, Date birthDate, String mail, String phone) {
         this.account = account;
         this.password = password;
+        this.role = role;
         this.name = name;
         this.gender = gender;
-        this.age = age;
         this.birthDate = birthDate;
         this.mail = mail;
         this.phone = phone;
-        this.role = role;
-        this.status = status;
     }
 
-    public Users(int id, String account, String password, String name, String gender, String age, Date birthDate, String mail, String phone, Role role, Status status) {
-        this.id = id;
-        this.account = account;
-        this.password = password;
-        this.name = name;
-        this.gender = gender;
-        this.age = age;
-        this.birthDate = birthDate;
-        this.mail = mail;
-        this.phone = phone;
-        this.role = role;
-        this.status = status;
-    }
-
-    public Users(int id, String account, String password, Role role, Status status) {
+    public Users(int id, String account, String password, String role, String name, String gender, Date birthDate, String mail, String phone) {
         this.id = id;
         this.account = account;
         this.password = password;
         this.role = role;
-        this.status = status;
+        this.name = name;
+        this.gender = gender;
+        this.birthDate = birthDate;
+        this.mail = mail;
+        this.phone = phone;
+    }
+
+    public Users(String account, String password) {
+        this.account = account;
+        this.password = password;
+    }
+
+    public Users(String account, String password, String name) {
+        this.account = account;
+        this.password = password;
+        this.name = name;
+    }
+
+    public Users(int id, String account, String password, String role) {
+        this.id = id;
+        this.account = account;
+        this.password = password;
     }
 
     public int getId() {
@@ -97,14 +94,6 @@ public class Users {
         this.gender = gender;
     }
 
-    public String getAge() {
-        return age;
-    }
-
-    public void setAge(String age) {
-        this.age = age;
-    }
-
     public Date getBirthDate() {
         return birthDate;
     }
@@ -129,30 +118,15 @@ public class Users {
         this.phone = phone;
     }
 
-    public Role getRole() {
+    public String getRole() {
         return role;
     }
 
-    public void setRole(Role role) {
+    public void setRole(String role) {
         this.role = role;
     }
 
-    public Status getStatus() {
-        return status;
-    }
 
-    public void setStatus(Status status) {
-        this.status = status;
-    }
 
-    public Users(String account, String password) {
-        this.account = account;
-        this.password = password;
-    }
 
-    public static void main(String[] args) {
-        Users users = new Users(3, "admin", "admin", ADMIN, ACTIVE);
-        UserService service = new UserService();
-        service.add(users);
-    }
 }
