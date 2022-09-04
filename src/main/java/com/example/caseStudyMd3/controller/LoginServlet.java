@@ -10,7 +10,6 @@ import java.io.IOException;
 
 @WebServlet(name = "LoginServlet", value = "/login")
 public class LoginServlet extends HttpServlet {
-    private static Cookie cookie;
     private final UserDAO userDao = new UserDAO();
 
     @Override
@@ -23,7 +22,6 @@ public class LoginServlet extends HttpServlet {
                 showLoginForm(request, response);
                 break;
         }
-        cookie.setMaxAge(0);
     }
 
     private void showLoginForm(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -45,16 +43,14 @@ public class LoginServlet extends HttpServlet {
 
             switch (role) {
                 case "ADMIN":
-                    response.sendRedirect("/admin");
+                    RequestDispatcher dispatcher = request.getRequestDispatcher("view/admin.jsp");
+                    dispatcher.forward(request, response);
                     break;
                 case "USER":
-                    response.sendRedirect("/users");
+                    RequestDispatcher dispatcher1 = request.getRequestDispatcher("view/homepage.jsp");
+                    dispatcher1.forward(request, response);
                     break;
             }
-            cookie = new Cookie("user",users.getName());
-            cookie.setMaxAge(200);
-            response.addCookie(cookie);
-            request.setAttribute("user",users);
         } else {
             RequestDispatcher dispatcher = request.getRequestDispatcher("view/login.jsp");
             String message = "Account or password is invalid";

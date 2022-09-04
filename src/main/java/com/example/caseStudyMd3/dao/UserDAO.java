@@ -16,9 +16,9 @@ public class UserDAO {
     Connection connection = ConnectionDB.getConnect();
 
     private static final String QUERY_ALL_USER = "SELECT * FROM USER";
-    private static final String QUERY_INSERT_ACCOUNT_BY_ADMIN = "INSERT INTO USER" +
-            "(ACCOUNT,PASSWORD,ROLE,NAME,GENDER,BIRTHDATE,MAIL,PHONE) " +
-            "VALUES(?,?,?,?,?,?,?,?,?)";
+    private static final String QUERY_INSERT_NEW_ACCOUNT = "INSERT INTO USER" +
+            "(USERNAME,PASSWORD) " +
+            "VALUES(?,?)";
     private static final String QUERY_DEL_USERS_BY_ADMIN = "DELETE FROM USER WHERE ID = ?";
     private static final String QUERY_UPDATE_BY_USER = "UPDATE USER SET PASSWORD = ?,NAME = ?,GENDER = ?,AGE = ?,BIRTHDATE= ?,MAIL =?,PHONE= ? " +
             "WHERE ACCOUNT = ?";
@@ -35,15 +35,9 @@ public class UserDAO {
     public boolean insertUser(Users users) {
         boolean rowAdded = false;
         try {
-            PreparedStatement statement = connection.prepareStatement(QUERY_INSERT_ACCOUNT_BY_ADMIN);
+            PreparedStatement statement = connection.prepareStatement(QUERY_INSERT_NEW_ACCOUNT);
             statement.setString(1, users.getAccount());
             statement.setString(2, users.getPassword());
-            statement.setString(3, String.valueOf(users.getRole()));
-            statement.setString(4, users.getName());
-            statement.setString(5, users.getGender());
-            statement.setDate(6, (java.sql.Date) users.getBirthDate());
-            statement.setString(7, users.getMail());
-            statement.setString(8, users.getPhone());
             rowAdded = statement.executeUpdate() > 0;
         } catch (SQLException e) {
             e.printStackTrace();
@@ -129,7 +123,6 @@ public class UserDAO {
         try ( PreparedStatement preparedStatement = connection.prepareStatement(QUERY_ALL_USER);) {
             System.out.println(preparedStatement);
             ResultSet rs = preparedStatement.executeQuery();
-
             while (rs.next()) {
                 int id = rs.getInt(1);
                 String username = rs.getString(2);
@@ -148,7 +141,22 @@ public class UserDAO {
         return users;
     }
     public boolean updateByUser(String account, Users users) {
-        return false;
+        boolean rowAdded = false;
+        try {
+            PreparedStatement statement = connection.prepareStatement(QUERY_INSERT_NEW_ACCOUNT);
+            statement.setString(1, users.getAccount());
+            statement.setString(2, users.getPassword());
+            statement.setString(3, users.getRole());
+            statement.setString(4, users.getName());
+            statement.setString(5, users.getGender());
+            statement.setDate(6, (java.sql.Date) users.getBirthDate());
+            statement.setString(7, users.getMail());
+            statement.setString(8, users.getPhone());
+            rowAdded = statement.executeUpdate() > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return rowAdded;
     }
 
 
