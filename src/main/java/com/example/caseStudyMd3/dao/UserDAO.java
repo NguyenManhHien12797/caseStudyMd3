@@ -8,10 +8,11 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class UserDao{
+public class UserDAO {
     Connection connection = ConnectionDB.getConnect();
 
     private static final String QUERY_ALL_USER = "SELECT * FROM USER";
@@ -31,7 +32,7 @@ public class UserDao{
         return null;
     }
 
-    public boolean edit(Users users) {
+    public boolean insertUser(Users users) {
         boolean rowAdded = false;
         try {
             PreparedStatement statement = connection.prepareStatement(QUERY_INSERT_ACCOUNT_BY_ADMIN);
@@ -123,6 +124,29 @@ public class UserDao{
 
     }
 
+    public List<Users> selectAllUsers() {
+        List<Users> users = new ArrayList<>();
+        try ( PreparedStatement preparedStatement = connection.prepareStatement(QUERY_ALL_USER);) {
+            System.out.println(preparedStatement);
+            ResultSet rs = preparedStatement.executeQuery();
+
+            while (rs.next()) {
+                int id = rs.getInt(1);
+                String username = rs.getString(2);
+                String password = rs.getString(3);
+                String role = rs.getString(4);
+                String name = rs.getString(5);
+                String gender = rs.getString(6);
+                Date birthDate = rs.getDate(7);
+                String mail = rs.getString(8);
+                String phone = rs.getString(9);
+                users.add(new Users(id,username,password,role,name,gender,birthDate,mail,phone)) ;
+            }
+        } catch (SQLException e) {
+            System.err.println(e);
+        }
+        return users;
+    }
     public boolean updateByUser(String account, Users users) {
         return false;
     }

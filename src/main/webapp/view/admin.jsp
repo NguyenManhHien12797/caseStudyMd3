@@ -107,7 +107,7 @@
                         <div class="grid__column-3 element__element">
                             <input type="checkbox" class="checkbox">
                             <img src="../image/avatar_3.webp" alt="" class="element-img">
-                            <span class="title-name">Nguyễn Hiền</span>
+                            <span class="title-name"><c:out value="${user.name}"/></span>
                         </div>
                         <div class="grid__column-3 element-category">
                             <select name="role"  class=" element-category__select">
@@ -131,7 +131,6 @@
 
                     </div>
                 </div>
-
 
                 <%--List Account--%>
                 <%--                    Phân trang--%>

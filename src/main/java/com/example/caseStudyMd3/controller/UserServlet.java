@@ -16,7 +16,7 @@
 //import java.sql.SQLException;
 //import java.util.List;
 //
-//@WebServlet(name = "UserServlet", urlPatterns = "/ShopBae/users")
+//@WebServlet(name = "UserServlet", urlPatterns = "/users")
 //public class UserServlet  extends HttpServlet {
 //    private static final long serialVersionUID = 1L;
 //    private IUserDAO userDAO;

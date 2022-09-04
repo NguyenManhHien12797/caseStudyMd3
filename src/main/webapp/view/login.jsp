@@ -234,7 +234,7 @@
 
 <%--                            Form Login--%>
 
-                            <form action="#" class="form__login" method="post">
+                            <form action="/login" class="form__login" method="post">
                                 <input type="text" class="form__login-username" name="username" placeholder="Nhập user name">
                                 <input type="password" class="form__login-password" name="password" placeholder="Nhập password">
                                 <button class="btn btn-primary login-btn">ĐĂNG NHẬP</button>
