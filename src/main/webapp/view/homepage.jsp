@@ -176,30 +176,45 @@
                     </li>
 
                     <%--                    Login--%>
-                    <%--                    <li class="header__navbar-item">--%>
-                    <%--                        <a href="#" class="header__navbar-item-link header__navbar-item-link__strong separate">Đăng ký</a>--%>
-                    <%--                    </li>--%>
-                    <%--                    <li class="header__navbar-item">--%>
-                    <%--                        <a href="#" class="header__navbar-item-link header__navbar-item-link__strong">Đăng nhập</a>--%>
-                    <%--                    </li>--%>
+
                     <%--                    Login--%>
 
                     <%--                    User Login--%>
-                    <li class="header__navbar-item header__navbar-user">
-                        <img class="header__navbar-user-img" src="../image/avatar.jpg" alt="">
-                        <span class="header__navbar-user-name">Hiền Nguyễn</span>
 
-                        <ul class="header__navbar-user-menu">
-                            <li class="header__navbar-user-item">
-                                <a href="#">Tài khoản của tôi</a>
-                            </li>
-                            <li class="header__navbar-user-item">
-                                <a href="#">Đơn mua</a>
-                            </li>
-                            <li class="header__navbar-user-item">
-                                <a href="/ShopBae" name="logout">Đăng xuất</a>
-                            </li>
-                        </ul>
+<%--                    --%>
+                    <c:if test='${sessionScope["account"] == null}'>
+                        <li class="header__navbar-item">
+                            <a href="/ShopBae?action=register" class="header__navbar-item-link header__navbar-item-link__strong separate">Đăng ký</a>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="/login?action=login" class="header__navbar-item-link header__navbar-item-link__strong">Đăng nhập</a>
+                        </li>
+                    </c:if>
+
+
+<%--                    --%>
+
+                    <c:if test='${sessionScope["account"] != null}'>
+                        <li class="header__navbar-item header__navbar-user">
+                            <img class="header__navbar-user-img" src="${sessionScope["account"].getImage()}" alt="">
+                            <span class="header__navbar-user-name">${sessionScope["account"].getName()}</span>
+
+                            <ul class="header__navbar-user-menu">
+                                <li class="header__navbar-user-item">
+                                    <a href="#">Tài khoản của tôi</a>
+                                </li>
+                                <li class="header__navbar-user-item">
+                                    <a href="#">Đơn mua</a>
+                                </li>
+                                <li class="header__navbar-user-item">
+                                    <a href="/login?action=logout" name="logout">Đăng xuất</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </c:if>
+
+
+
 
                 </ul>
             </nav>

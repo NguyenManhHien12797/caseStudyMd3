@@ -37,9 +37,6 @@ public class ShoesServlet extends HttpServlet {
             switch (action){
                 case "create":
                     break;
-                case "login":
-                    showLogin(req, resp);
-                    break;
                 case "edit":
                     break;
                 case "detail":
@@ -73,10 +70,6 @@ public class ShoesServlet extends HttpServlet {
 
 
 
-    private void showLogin(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        RequestDispatcher dispatcher = req.getRequestDispatcher("view/login.jsp");
-        dispatcher.forward(req,resp);
-    }
 
     private void searchShoes(HttpServletRequest req, HttpServletResponse resp) throws SQLException, ServletException, IOException {
         String search = req.getParameter("search");

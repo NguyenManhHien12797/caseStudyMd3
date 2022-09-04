@@ -8,7 +8,7 @@ public interface IManagerDAO<E> {
 
     void create(E e);
 
-    E select(int idg_num);
+    E select(int id_num);
 
    void update(int id, E e);
 
