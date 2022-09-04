@@ -227,7 +227,7 @@
 
                             <%--                            Form Register--%>
 
-                            <form action="/login?action=login" class="form__login" method="post">
+                            <form class="form__login" method="post">
                                 <c:if test='${alo != null}'>
                                     <span style="color: #12faf5"> ${alo} </span>
                                 </c:if>
