@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!doctype html>
 <html lang="en">
 <head>
@@ -234,10 +235,14 @@
 
 <%--                            Form Login--%>
 
-                            <form action="#" class="form__login" method="post">
+                            <form action="/login?action=login" class="form__login" method="post">
+                                <c:if test='${requestScope["mess"] != null}'>
+                                    <p>${requestScope["mess"]}</p>
+                                </c:if>
+
                                 <input type="text" class="form__login-username" name="username" placeholder="Nhập user name">
                                 <input type="password" class="form__login-password" name="password" placeholder="Nhập password">
-                                <button class="btn btn-primary login-btn">ĐĂNG NHẬP</button>
+                                <button class="btn btn-primary login-btn" type="submit">ĐĂNG NHẬP</button>
                             </form>
 
 <%--                            Form Login--%>

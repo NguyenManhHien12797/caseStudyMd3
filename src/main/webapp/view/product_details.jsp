@@ -22,6 +22,70 @@
     <link rel="stylesheet" href="../view/main.css">
     <link rel="stylesheet" href="../view/product_details.css">
 
+    <style>
+        /*user list*/
+
+        .header__navbar-user {
+            position: relative;
+        }
+
+        .header__navbar-user-menu {
+            position: absolute;
+            padding-left: 0;
+            top: 100%;
+            right: 0;
+            width: 160px;
+            list-style: none;
+            border-radius: 2px;
+            background-color: var(--white-color);
+            z-index: 1;
+            border-radius: 2px;
+            box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+
+        .header__navbar-user:hover .header__navbar-user-menu {
+            display: block;
+        }
+
+        .header__navbar-user-item::after {
+            position: absolute;
+            content: "";
+            top: -23px;
+            right: 35px;
+            border-width: 15px 20px;
+            border-style: solid;
+            z-index: -1;
+            border-color: transparent transparent var(--white-color) transparent;
+        }
+
+
+        .header__navbar-user-item a {
+            display: block;
+            width: 100%;
+            text-decoration: none;
+            color: var(--text-color);
+            padding: 5px 0 5px 23px;
+            font-size: 1.6rem;
+            font-weight: 300;
+        }
+
+        .header__navbar-user-item a:hover {
+            color: var(--primary-color);
+            background-color: #eeeeee;
+        }
+
+
+        .header__navbar-user-img {
+            width: 20px;
+            height: 20px;
+            margin-top: -5px;
+            border-radius: 50%;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+        }
+
+        /*user list*/
+    </style>
 
 </head>
 <body>
@@ -103,13 +167,41 @@
                             <i class="header__navbar-icon fa-solid fa-circle-question"></i> Trợ giúp
                         </a>
                     </li>
-                    <li class="header__navbar-item">
-                        <a href="register.jsp" class="header__navbar-item-link header__navbar-item-link__strong separate">Đăng
-                            ký</a>
-                    </li>
-                    <li class="header__navbar-item">
-                        <a href="/ShopBae?action=login" class="header__navbar-item-link header__navbar-item-link__strong">Đăng nhập</a>
-                    </li>
+
+
+                    <c:if test='${sessionScope["account"] == null}'>
+                        <li class="header__navbar-item">
+                            <a href="/ShopBae?action=register" class="header__navbar-item-link header__navbar-item-link__strong separate">Đăng ký</a>
+                        </li>
+                        <li class="header__navbar-item">
+                            <a href="/login?action=login" class="header__navbar-item-link header__navbar-item-link__strong">Đăng nhập</a>
+                        </li>
+                    </c:if>
+
+
+                    <%--                    --%>
+
+                    <c:if test='${sessionScope["account"] != null}'>
+                        <li class="header__navbar-item header__navbar-user">
+                            <img class="header__navbar-user-img" src="${sessionScope["account"].getImage()}" alt="">
+                            <span class="header__navbar-user-name">${sessionScope["account"].getName()}</span>
+
+                            <ul class="header__navbar-user-menu">
+                                <li class="header__navbar-user-item">
+                                    <a href="#">Tài khoản của tôi</a>
+                                </li>
+                                <li class="header__navbar-user-item">
+                                    <a href="#">Đơn mua</a>
+                                </li>
+                                <li class="header__navbar-user-item">
+                                    <a href="/ShopBae" name="logout">Đăng xuất</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </c:if>
+
+
+
                 </ul>
             </nav>
 
