@@ -35,6 +35,9 @@ import java.util.List;
                     case "create":
                         createUser(request, response);
                         break;
+                    case "delete":
+                        deleteUser(request, response);
+                        break;
                     case "edit":
 //                        editUser(request, response);
                         break;
@@ -42,6 +45,16 @@ import java.util.List;
             } catch (SQLException e) {
                 throw new ServletException();
             }
+        }
+
+        private void deleteUser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException {
+            int id = Integer.parseInt(request.getParameter("id"));
+            userDAO.delete(id);
+
+            List<Users> userList = userDAO.selectAllUsers();
+            request.setAttribute("LIST", userList);
+            RequestDispatcher dispatcher = request.getRequestDispatcher("view/admin.jsp");
+            dispatcher.forward(request, response);
         }
 
         private void createUser(HttpServletRequest request, HttpServletResponse response)

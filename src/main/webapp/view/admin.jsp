@@ -36,16 +36,18 @@
         </a>
         <span class="navbar__logo-title">Kênh Admin Manager</span>
 
+    <c:if test='${sessionScope["users"] != null}'>
     </div>
     <div class="navbar__info">
         <div class="navbar__account">
             <img src="../image/avatar_3.webp" alt="" class="navbar__account-avatar">
-            <span class="navbar__account-info">Bình Boss</span>
+            <span class="navbar__account-info">${sessionScope["users"].getName()}</span>
         </div>
         <button class="navbar__action"><i class="fa-solid fa-list"></i>
         </button>
 
     </div>
+    </c:if>
 
 </div>
 <div class="admin">
@@ -102,35 +104,15 @@
                     </div>
                 </div>
                 <%--List Account--%>
-                <div align="center">
-                    <table border="1" cellpadding="5">
-                        <caption><h2>List of Users</h2></caption>
-                        <tr>
-                            <th>ID</th>
-                            <th>Account</th>
-                            <th>Password</th>
-                            <th>Role</th>
-                        </tr>
-                        <c:forEach var="user" items="${LIST}">
-                            <tr>
-                                <td>${user.id}</td>
-                                <td>${user.account}</td>
-                                <td>${user.password}</td>
-                                <td>${user.role}</td>
-                                <td>
-                                    <a href="/users?action=edit&id=${user.id}">Edit</a>
-                                    <a href="/users?action=delete&id=${user.id}">Delete</a>
-                                </td>
-                            </tr>
-                        </c:forEach>
-                    </table>
-                </div>
+
+                <c:forEach var="user" items="${LIST}">
                 <div class="grid grid__account-list">
                     <div class="grid__row product-list__element">
                         <div class="grid__column-3 element__element">
                             <input type="checkbox" class="checkbox">
                             <img src="../image/avatar_3.webp" alt="" class="element-img">
-                            <span class="title-name"></span>
+                            <span class="title-name">${user.id}</span>
+                            <span class="title-name">${user.account}</span>
                         </div>
                         <div class="grid__column-3 element-category">
                             <select name="role"  class=" element-category__select">
@@ -148,13 +130,13 @@
 
 
                         <div class="grid__column-3 element__action element-category">
-                            <button class="btn btn__update"><i class="fa-solid fa-pen"></i></button>
-                            <button class="btn btn__delete"><i class="fa-solid fa-trash"></i></button>
+                            <a class="btn btn__update" href="/admin?action=edit&id=${user.id}"><i class="fa-solid fa-pen"></i></a>
+                            <a class="btn btn__delete" href="/admin?action=delete&id=${user.id}"><i class="fa-solid fa-trash"></i></a>
                         </div>
 
                     </div>
                 </div>
-
+                </c:forEach>
                 <%--List Account--%>
                 <%--                    Phân trang--%>
 

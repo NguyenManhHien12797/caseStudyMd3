@@ -40,14 +40,14 @@ public class UserDAO {
 
 
 
-    public boolean delete(int id) {
+    public boolean delete(int id) throws SQLException {
         boolean del = false;
-        try {
-            PreparedStatement statement = connection.prepareStatement(QUERY_DEL_USERS_BY_ADMIN);
+        try (
+                PreparedStatement statement = connection.prepareStatement(QUERY_DEL_USERS_BY_ADMIN);
+                )
+        {
             statement.setInt(1,id);
             del = statement.executeUpdate() > 0;
-        } catch (SQLException e) {
-            e.printStackTrace();
         }
         return del;
     }

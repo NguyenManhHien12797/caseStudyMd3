@@ -17,8 +17,8 @@
             integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
             crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="base.css">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="../view/base.css">
+    <link rel="stylesheet" href="../view/main.css">
 
     <style>
         .app__container{
