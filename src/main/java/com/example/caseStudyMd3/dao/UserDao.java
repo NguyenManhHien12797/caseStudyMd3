@@ -31,7 +31,7 @@ public class UserDao{
         return null;
     }
 
-    public boolean add(Users users) {
+    public boolean edit(Users users) {
         boolean rowAdded = false;
         try {
             PreparedStatement statement = connection.prepareStatement(QUERY_INSERT_ACCOUNT_BY_ADMIN);
