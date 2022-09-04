@@ -5,6 +5,7 @@ import com.example.caseStudyMd3.dao.ShoesDAO;
 import com.example.caseStudyMd3.dao.interfaceDAO.IProductDAO;
 import com.example.caseStudyMd3.model.productShoes.Shoes;
 
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,6 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
+
 
 @WebServlet(name = "ProductServlet", urlPatterns = "/ShopBae")
 public class ShoesServlet extends HttpServlet {
