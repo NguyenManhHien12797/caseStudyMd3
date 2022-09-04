@@ -207,7 +207,7 @@
                                     <a href="#">Đơn mua</a>
                                 </li>
                                 <li class="header__navbar-user-item">
-                                    <a href="/ShopBae" name="logout">Đăng xuất</a>
+                                    <a href="/login?action=logout" name="logout">Đăng xuất</a>
                                 </li>
                             </ul>
                         </li>

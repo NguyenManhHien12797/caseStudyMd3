@@ -194,7 +194,7 @@
                                     <a href="#">Đơn mua</a>
                                 </li>
                                 <li class="header__navbar-user-item">
-                                    <a href="/ShopBae" name="logout">Đăng xuất</a>
+                                    <a href="/login?action=logout_in_detail&id=${requestScope["shoes"].getId()}" name="logout">Đăng xuất</a>
                                 </li>
                             </ul>
                         </li>

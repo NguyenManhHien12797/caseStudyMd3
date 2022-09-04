@@ -26,9 +26,21 @@ public class LoginServlet extends HttpServlet {
             case "login":
                showLogin(req, resp);
                 break;
-
+            case "logout":
+                logout(req, resp);
+                break;
+            case "logout_in_detail":
+                logoutInDetail(req, resp);
+                break;
             default:
         }
+    }
+
+    private void logoutInDetail(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        HttpSession session = req.getSession();
+        session.removeAttribute("account");
+        String id = req.getParameter("id");
+        resp.sendRedirect("/ShopBae?action=detail&id="+id);
     }
 
 
@@ -73,5 +85,12 @@ public class LoginServlet extends HttpServlet {
         }
 
     }
+
+    private void logout(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        HttpSession session = req.getSession();
+        session.removeAttribute("account");
+        resp.sendRedirect("/ShopBae");
+    }
+
 
 }
