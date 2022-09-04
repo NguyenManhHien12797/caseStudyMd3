@@ -1,6 +1,6 @@
 
 
-@media only screen and (max-width: 1920px){
+@media only screen and (min-width: 1224px){
 
     .app__container-banner{
         display: flex;
@@ -28,7 +28,7 @@
 
 }
 
-@media only screen and (max-width: 1919px){
+@media only screen and (max-width: 1024px){
     .app__container-wrap{
         margin-top: 25px;
     }
@@ -292,6 +292,8 @@
     line-height: 1.2rem;
     color: #756F6E;
 }
+
+
 
 
 /*Header with search*/
