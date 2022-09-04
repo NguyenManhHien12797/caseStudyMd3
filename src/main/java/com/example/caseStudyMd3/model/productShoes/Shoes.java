@@ -1,6 +1,6 @@
 package com.example.caseStudyMd3.model.productShoes;
 
-<<<<<<< HEAD
+//<<<<<<< HEAD
 import com.example.caseStudyMd3.model.Crawls;
 
 import java.util.List;
@@ -39,7 +39,6 @@ public class Shoes  extends Crawls {
         this.newPrice = newPrice;
         this.image = image;
     }
-=======
     public class Shoes {
         private int id;
         private int categoryId;
@@ -54,7 +53,6 @@ public class Shoes  extends Crawls {
             this.newPrice = newPrice;
             this.image = image;
         }
->>>>>>> 2b1cf3cdd79ca7bc6140bc39437607da56518aa9
 
         public Shoes(int id, int categoryId, int brandId, String name, String oldPrice, String newPrice, String image) {
             this.id = id;

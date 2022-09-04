@@ -1,8 +1,8 @@
-<<<<<<<< HEAD:src/main/java/com/example/caseStudyMd3/model/Crawls.java
-package com.example.caseStudyMd3.model;
-========
-package com.example.caseStudyMd3.model.model;
->>>>>>>> binh:src/main/java/com/example/caseStudyMd3/model/model/Crawls.java
+package com.example.caseStudyMd3.model;//<<<<<<<< HEAD:src/main/java/com/example/caseStudyMd3/model/Crawls.java
+//package com.example.caseStudyMd3.model;
+//========
+//package com.example.caseStudyMd3.model.model;
+//>>>>>>>> binh:src/main/java/com/example/caseStudyMd3/model/model/Crawls.java
 
 import com.example.caseStudyMd3.model.productShoes.Shoes;
 import org.jsoup.Jsoup;
