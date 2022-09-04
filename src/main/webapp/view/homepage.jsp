@@ -99,7 +99,10 @@
             <nav class="header__navbar">
                 <ul class="header__navbar-list">
                     <li class="header__navbar-item ">
-                        <a href="#" class="header__navbar-item-seller">Kênh người bán</a>
+                        <a href="view/sellerChannel.jsp" class="header__navbar-item-seller">Kênh người bán</a>
+                    </li>
+                    <li class="header__navbar-item ">
+                        <a href="../view/admin.jsp" class="header__navbar-item-seller">Kênh Admin</a>
                     </li>
                     <li class="header__navbar-item header__navbar-item--has-qr separate"> Vào cửa hàng trên ứng dụng
                         <div class="header__qr">
@@ -224,7 +227,7 @@
 
                 <div class="header__cart">
                     <div class="header__cart-wrap">
-                        <a href="#">
+                        <a href="../view/cart.jsp">
                             <i class="header__cart-icon  fa-solid fa-cart-shopping"></i>
                             <span class="header__cart-notice header__cart-icon ">234</span>
                         </a>
@@ -249,8 +252,16 @@
                 <video controls autoplay muted loop class="banner__video">
                     <source src="../image/banner_video_1.mp4" type="video/mp4">
                 </video>
-                <%--                <video controls autoplay src="../image/banner_video_2.mp4" class="banner__video"></video>--%>
 
+                <video controls autoplay muted loop class="banner__video">
+                    <source src="../image/banner_video_3.mp4" type="video/mp4">
+                </video>
+                <video controls autoplay muted loop class="banner__video">
+                    <source src="../image/banner_video_3.mp4" type="video/mp4">
+                </video>
+                <video controls autoplay muted loop class="banner__video">
+                    <source src="../image/banner_video_3.mp4" type="video/mp4">
+                </video>
             </div>
             <%--    Banner--%>
 
@@ -342,10 +353,10 @@
                                             <%--                            List options--%>
                                             <ul class="select-input__list">
                                                 <li class="select-input__item">
-                                                    <a href="#" class="select-input__link">Giá: Thấp đến cao</a>
+                                                    <a href="/ShopBae?action=sort&sort=ASC" class="select-input__link">Giá: Thấp đến cao</a>
                                                 </li>
                                                 <li class="select-input__item">
-                                                    <a href="#" class="select-input__link">Giá: Cao đến thấp</a>
+                                                    <a href="/ShopBae?action=sort&sort=DESC" class="select-input__link">Giá: Cao đến thấp</a>
                                                 </li>
 
                                             </ul>
