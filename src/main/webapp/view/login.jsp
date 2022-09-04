@@ -234,7 +234,7 @@
 
 <%--                            Form Login--%>
 
-                            <form action="/login" class="form__login" method="post">
+                            <form action="/login?action=login" class="form__login" method="post">
                                 <input type="text" class="form__login-username" name="username" placeholder="Nhập user name">
                                 <input type="password" class="form__login-password" name="password" placeholder="Nhập password">
                                 <button class="btn btn-primary login-btn">ĐĂNG NHẬP</button>
@@ -253,7 +253,7 @@
 
                             <div class="register">
                                 <span class="register__title">Bạn mới biết đến ShopBae?</span>
-                                <a href="register.jsp" class="register__link">Đăng ký</a>
+                                <a href="/admin?action=create" class="register__link">Đăng ký</a>
                             </div>
 
                         </div>

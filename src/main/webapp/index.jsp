@@ -1,32 +1,35 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>List Shoes</title>
+    <title>User Management Application</title>
 </head>
 <body>
 <center>
-    <h1>Shoes</h1>
-
+    <h1>User Management</h1>
+    <h2>
+        <a href="/users?action=create">Add New User</a>
+    </h2>
 </center>
 <div align="center">
     <table border="1" cellpadding="5">
-        <caption><h2>List of Shoes</h2></caption>
+        <caption><h2>List of Users</h2></caption>
         <tr>
-
-            <th>Name</th>
-            <th>Price</th>
-            <%--            <th>Evaluate</th>--%>
-            <th>Image</th>
+            <th>ID</th>
+            <th>Account</th>
+            <th>Password</th>
+            <th>Role</th>
         </tr>
-        <c:forEach var="shoes" items="${listShoes}">
+        <c:forEach var="user" items="${LIST}">
             <tr>
-                <td>${shoes.name}</td>
-                <td>${shoes.price}</td>
-                    <%--                <td>${shoes.evaluate}</td>--%>
-                <td><img src="{shoes.image} "alt="lỗi mẹ rồi"></td>
+                <td>${user.id}</td>
+                <td>${user.account}</td>
+                <td>${user.password}</td>
+                <td>${user.role}</td>
+                <td>
+                    <a href="/users?action=edit&id=${user.id}">Edit</a>
+                    <a href="/users?action=delete&id=${user.id}">Delete</a>
+                </td>
             </tr>
         </c:forEach>
     </table>

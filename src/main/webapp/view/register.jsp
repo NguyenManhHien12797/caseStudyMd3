@@ -227,10 +227,13 @@
 
                             <%--                            Form Register--%>
 
-                            <form action="login.jsp" class="form__login" method="post">
+                            <form action="/login?action=login" class="form__login" method="post">
+                                <c:if test='${alo != null}'>
+                                    <span style="color: #12faf5"> ${alo} </span>
+                                </c:if>
                                 <input type="text" class="form__login-username" name="username" placeholder="Nhập user name">
                                 <input type="password" class="form__login-password" name="password" placeholder="Nhập password">
-                                <button class="btn btn-primary login-btn">ĐĂNG KÝ</button>
+                                <button type="submit" class="btn btn-primary login-btn">ĐĂNG KÝ</button>
                             </form>
 
                             <%--                            Form Register--%>

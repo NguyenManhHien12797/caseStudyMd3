@@ -16,9 +16,7 @@ public class UserDAO {
     Connection connection = ConnectionDB.getConnect();
 
     private static final String QUERY_ALL_USER = "SELECT * FROM USER";
-    private static final String QUERY_INSERT_NEW_ACCOUNT = "INSERT INTO USER" +
-            "(USERNAME,PASSWORD) " +
-            "VALUES(?,?)";
+    private static final String QUERY_INSERT_NEW_ACCOUNT = "INSERT INTO USER (USERNAME,PASSWORD) VALUES (?,?)";
     private static final String QUERY_DEL_USERS_BY_ADMIN = "DELETE FROM USER WHERE ID = ?";
     private static final String QUERY_UPDATE_BY_USER = "UPDATE USER SET PASSWORD = ?,NAME = ?,GENDER = ?,AGE = ?,BIRTHDATE= ?,MAIL =?,PHONE= ? " +
             "WHERE ACCOUNT = ?";
@@ -28,21 +26,15 @@ public class UserDAO {
     public static final String SELECT_CHECK_USER_LOGIN = "SELECT * FROM USER WHERE username = ? AND password = ? ";
 
 
-    public List<Users> getAll() {
-        return null;
-    }
-
-    public boolean insertUser(Users users) {
-        boolean rowAdded = false;
-        try {
-            PreparedStatement statement = connection.prepareStatement(QUERY_INSERT_NEW_ACCOUNT);
+    public void insertUser(Users users) {
+        try (PreparedStatement statement = connection.prepareStatement(QUERY_INSERT_NEW_ACCOUNT);)
+        {
             statement.setString(1, users.getAccount());
             statement.setString(2, users.getPassword());
-            rowAdded = statement.executeUpdate() > 0;
+            statement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return rowAdded;
     }
 
 
@@ -72,11 +64,12 @@ public class UserDAO {
                 String password = rs.getString(3);
                 String role = rs.getString(4);
                 String name = rs.getString(5);
-                String gender = rs.getString(6);
-                Date birthDate = rs.getDate(7);
-                String mail = rs.getString(8);
-                String phone = rs.getString(9);
-                user = new Users(username,password,role,name,gender,birthDate,mail,phone);
+                String avatar = rs.getString(6);
+                String gender = rs.getString(7);
+                Date birthDate = rs.getDate(8);
+                String mail = rs.getString(9);
+                String phone = rs.getString(10);
+                user = new Users(username,password,role,name,avatar,gender,birthDate,mail,phone);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -98,15 +91,15 @@ public class UserDAO {
             ResultSet set = statement.executeQuery();
 
             if (set.next()){
-
                 int id = set.getInt("id");
                 String role = set.getString("userRole");
                 String name = set.getString("name");
+                String avatar = set.getString("avatar");
                 String gender = set.getString("gender");
                 Date birthDate = set.getDate("birthDate");
                 String email = set.getString("mail");
                 String phone = set.getString("phone");
-                user = new Users(id,username,password,role,name,gender,birthDate,email,phone);
+                user = new Users(id,username,password,role,name,avatar,gender,birthDate,email,phone);
 
             }
 
@@ -124,40 +117,42 @@ public class UserDAO {
             System.out.println(preparedStatement);
             ResultSet rs = preparedStatement.executeQuery();
             while (rs.next()) {
-                int id = rs.getInt(1);
-                String username = rs.getString(2);
-                String password = rs.getString(3);
-                String role = rs.getString(4);
-                String name = rs.getString(5);
-                String gender = rs.getString(6);
-                Date birthDate = rs.getDate(7);
-                String mail = rs.getString(8);
-                String phone = rs.getString(9);
-                users.add(new Users(id,username,password,role,name,gender,birthDate,mail,phone)) ;
+                int id = rs.getInt("id");
+                String username = rs.getString("username");
+                String password = rs.getString("password");
+                String role = rs.getString("userRole");
+                String name = rs.getString("name");
+                String avatar = rs.getString("avatar");
+                String gender = rs.getString("gender");
+                Date birthDate = rs.getDate("birthDate");
+                String mail = rs.getString("mail");
+                String phone = rs.getString("phone");
+                users.add(new Users(id,username,password,role,name,avatar,gender,birthDate,mail,phone)) ;
             }
         } catch (SQLException e) {
             System.err.println(e);
         }
         return users;
     }
-    public boolean updateByUser(String account, Users users) {
-        boolean rowAdded = false;
-        try {
-            PreparedStatement statement = connection.prepareStatement(QUERY_INSERT_NEW_ACCOUNT);
-            statement.setString(1, users.getAccount());
-            statement.setString(2, users.getPassword());
-            statement.setString(3, users.getRole());
-            statement.setString(4, users.getName());
-            statement.setString(5, users.getGender());
-            statement.setDate(6, (java.sql.Date) users.getBirthDate());
-            statement.setString(7, users.getMail());
-            statement.setString(8, users.getPhone());
-            rowAdded = statement.executeUpdate() > 0;
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return rowAdded;
-    }
+
+//    public boolean updateByUser(String account, Users users) {
+//        boolean rowAdded = false;
+//        try {
+//            PreparedStatement statement = connection.prepareStatement(QUERY_INSERT_NEW_ACCOUNT);
+//            statement.setString(1, users.getAccount());
+//            statement.setString(2, users.getPassword());
+//            statement.setString(3, users.getRole());
+//            statement.setString(4, users.getName());
+//            statement.setString(5, users.getGender());
+//            statement.setDate(6, (java.sql.Date) users.getBirthDate());
+//            statement.setString(7, users.getMail());
+//            statement.setString(8, users.getPhone());
+//            rowAdded = statement.executeUpdate() > 0;
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//        return rowAdded;
+//    }
 
 
 }

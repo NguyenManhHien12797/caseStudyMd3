@@ -8,29 +8,32 @@ public class Users {
     private String password;
     private String role;
     private String name;
+    private String avatar;
     private String gender;
     private Date birthDate;
     private String mail;
     private String phone;
 
 
-    public Users(String account, String password, String role, String name, String gender, Date birthDate, String mail, String phone) {
+    public Users(String account, String password, String role, String name, String avatar, String gender, Date birthDate, String mail, String phone) {
         this.account = account;
         this.password = password;
         this.role = role;
         this.name = name;
+        this.avatar = avatar;
         this.gender = gender;
         this.birthDate = birthDate;
         this.mail = mail;
         this.phone = phone;
     }
 
-    public Users(int id, String account, String password, String role, String name, String gender, Date birthDate, String mail, String phone) {
+    public Users(int id, String account, String password, String role, String name, String avatar, String gender, Date birthDate, String mail, String phone) {
         this.id = id;
         this.account = account;
         this.password = password;
         this.role = role;
         this.name = name;
+        this.avatar = avatar;
         this.gender = gender;
         this.birthDate = birthDate;
         this.mail = mail;
@@ -126,7 +129,11 @@ public class Users {
         this.role = role;
     }
 
+    public String getAvatar() {
+        return avatar;
+    }
 
-
-
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
+    }
 }

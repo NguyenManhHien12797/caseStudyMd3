@@ -102,6 +102,29 @@
                     </div>
                 </div>
                 <%--List Account--%>
+                <div align="center">
+                    <table border="1" cellpadding="5">
+                        <caption><h2>List of Users</h2></caption>
+                        <tr>
+                            <th>ID</th>
+                            <th>Account</th>
+                            <th>Password</th>
+                            <th>Role</th>
+                        </tr>
+                        <c:forEach var="user" items="${LIST}">
+                            <tr>
+                                <td>${user.id}</td>
+                                <td>${user.account}</td>
+                                <td>${user.password}</td>
+                                <td>${user.role}</td>
+                                <td>
+                                    <a href="/users?action=edit&id=${user.id}">Edit</a>
+                                    <a href="/users?action=delete&id=${user.id}">Delete</a>
+                                </td>
+                            </tr>
+                        </c:forEach>
+                    </table>
+                </div>
                 <div class="grid grid__account-list">
                     <div class="grid__row product-list__element">
                         <div class="grid__column-3 element__element">

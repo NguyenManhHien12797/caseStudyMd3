@@ -21,9 +21,38 @@ import java.util.List;
     @WebServlet(name = "AdminServlet", urlPatterns = "/admin")
     public class AdminServlet extends HttpServlet {
         UserDAO userDAO;
+        public void init() {
+            userDAO = new UserDAO();
+        }
 
         protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+            String action = request.getParameter("action");
+            if (action == null) {
+                action = "";
+            }
+            try {
+                switch (action) {
+                    case "create":
+                        createUser(request, response);
+                        break;
+                    case "edit":
+//                        editUser(request, response);
+                        break;
+                }
+            } catch (SQLException e) {
+                throw new ServletException();
+            }
+        }
 
+        private void createUser(HttpServletRequest request, HttpServletResponse response)
+                throws SQLException, IOException, ServletException {
+            String account = request.getParameter("username");
+            String password = request.getParameter("password");
+            Users newUser = new Users(account, password);
+            userDAO.insertUser(newUser);
+            RequestDispatcher dispatcher = request.getRequestDispatcher("view/register.jsp");
+            request.setAttribute("alo", "New user was created!");
+            dispatcher.forward(request, response);
         }
 
         protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -32,25 +61,26 @@ import java.util.List;
                 action = "";
 
             switch (action) {
+                case "create":
+                    showCreateForm(request, response);
+                    break;
                 default:
                     listUsers(request, response);
+                    break;
             }
 
         }
 
-        private void insertUser(HttpServletRequest request, HttpServletResponse response)
-                throws SQLException, IOException, ServletException {
-            String account = request.getParameter("username");
-            String password = request.getParameter("password");
-            Users newUser = new Users(account, password);
-            userDAO.insertUser(newUser);
+        private void showCreateForm(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
             RequestDispatcher dispatcher = request.getRequestDispatcher("view/register.jsp");
             dispatcher.forward(request, response);
         }
 
+
         private void listUsers(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-            List<Users> listUsers = userDAO.selectAllUsers();
-            request.setAttribute("listUsers", listUsers);
-            request.getRequestDispatcher("view/admin.jsp").forward(request, response);
+            List<Users> userList = userDAO.selectAllUsers();
+            request.setAttribute("LIST", userList);
+            RequestDispatcher dispatcher = request.getRequestDispatcher("view/admin.jsp");
+            dispatcher.forward(request, response);
         }
     }

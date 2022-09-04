@@ -10,7 +10,10 @@ import java.io.IOException;
 
 @WebServlet(name = "LoginServlet", value = "/login")
 public class LoginServlet extends HttpServlet {
-    private final UserDAO userDao = new UserDAO();
+    UserDAO userDAO;
+    public void init() {
+        userDAO = new UserDAO();
+    }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -18,9 +21,43 @@ public class LoginServlet extends HttpServlet {
         if (action == null)
             action = "";
         switch (action) {
-            default:
+            case "login":
                 showLoginForm(request, response);
                 break;
+            case "logout":
+                logout(request, response);
+                break;
+            case "logout_in_detail":
+                logoutInDetail(request, response);
+                break;
+            default:
+        }
+    }
+
+    private void logoutInDetail(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        HttpSession session = req.getSession();
+        session.removeAttribute("users");
+        String id = req.getParameter("id");
+        resp.sendRedirect("/ShopBae?action=detail&id="+id);
+    }
+
+    private void logout(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        HttpSession session = req.getSession();
+        session.removeAttribute("users");
+        resp.sendRedirect("/ShopBae");
+    }
+
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+        String action = req.getParameter("action");
+        if(action == null){
+            action = "";
+        }
+        switch (action){
+            case "login":
+                login(req, resp);
+                break;
+            default:
         }
     }
 
@@ -29,26 +66,21 @@ public class LoginServlet extends HttpServlet {
         dispatcher.forward(request, response);
     }
 
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        login(request, response);
-    }
-
     public void login(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String account = request.getParameter("username");
         String password = request.getParameter("password");
-        Users users = userDao.checkUser(account, password);
+        Users users = userDAO.checkUser(account, password);
         if (users != null) {
             String role = users.getRole();
-
+            HttpSession session = request.getSession();
             switch (role) {
                 case "ADMIN":
-                    RequestDispatcher dispatcher = request.getRequestDispatcher("view/admin.jsp");
-                    dispatcher.forward(request, response);
+                    session.setAttribute("users",users);
+                    response.sendRedirect("/admin");
                     break;
                 case "USER":
-                    RequestDispatcher dispatcher1 = request.getRequestDispatcher("view/homepage.jsp");
-                    dispatcher1.forward(request, response);
+                    session.setAttribute("users",users);
+                    response.sendRedirect("/ShopBae");
                     break;
             }
         } else {
