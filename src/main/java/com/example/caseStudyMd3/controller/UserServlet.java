@@ -3,6 +3,9 @@
 //package com.example.users_managerment.controller;
 //
 //
+//import com.example.caseStudyMd3.dao.IUserDAO;
+//import com.example.caseStudyMd3.dao.UserDao;
+//
 //import javax.servlet.RequestDispatcher;
 //import javax.servlet.ServletException;
 //import javax.servlet.annotation.WebServlet;
@@ -11,6 +14,7 @@
 //import javax.servlet.http.HttpServletResponse;
 //import java.io.IOException;
 //import java.sql.SQLException;
+//import java.util.List;
 //
 //@WebServlet(name = "UserServlet", urlPatterns = "/ShopBae/users")
 //public class UserServlet  extends HttpServlet {
