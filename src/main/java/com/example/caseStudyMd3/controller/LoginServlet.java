@@ -1,13 +1,12 @@
 package com.example.caseStudyMd3.controller;
 import com.example.caseStudyMd3.dao.UserDao;
-import com.example.caseStudyMd3.model.qa.Role;
 import com.example.caseStudyMd3.model.qa.Users;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
-import java.sql.SQLException;
+
 
 @WebServlet(name = "LoginServlet", value = "/login")
 public class LoginServlet extends HttpServlet {
@@ -42,9 +41,18 @@ public class LoginServlet extends HttpServlet {
         String password = request.getParameter("password");
         Users users = userDao.checkUser(account, password);
         if (users != null) {
-            RequestDispatcher dispatcher = request.getRequestDispatcher("qa/listAdidas.jsp");
-            dispatcher.forward(request, response);
+            String role = users.getRole();
 
+            switch (role) {
+                case "ADMIN":
+                    RequestDispatcher dispatcher = request.getRequestDispatcher("qa/listAdidas.jsp");
+                    dispatcher.forward(request, response);
+                    break;
+                case "USER":
+                    RequestDispatcher dispatcher1 = request.getRequestDispatcher("view/login.jsp");
+                    dispatcher1.forward(request, response);
+                    break;
+            }
             cookie = new Cookie("user",users.getName());
             cookie.setMaxAge(200);
             response.addCookie(cookie);

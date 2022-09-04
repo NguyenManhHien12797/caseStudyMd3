@@ -6,17 +6,18 @@ public class Users {
     private int id;
     private String account;
     private String password;
+    private String role;
     private String name;
     private String gender;
     private Date birthDate;
     private String mail;
     private String phone;
-    private String role;
 
 
-    public Users(String account, String password, String name, String gender, Date birthDate, String mail, String phone) {
+    public Users(String account, String password, String role, String name, String gender, Date birthDate, String mail, String phone) {
         this.account = account;
         this.password = password;
+        this.role = role;
         this.name = name;
         this.gender = gender;
         this.birthDate = birthDate;
@@ -24,10 +25,11 @@ public class Users {
         this.phone = phone;
     }
 
-    public Users(int id, String account, String password, String name, String gender,Date birthDate, String mail, String phone) {
+    public Users(int id, String account, String password, String role, String name, String gender, Date birthDate, String mail, String phone) {
         this.id = id;
         this.account = account;
         this.password = password;
+        this.role = role;
         this.name = name;
         this.gender = gender;
         this.birthDate = birthDate;
