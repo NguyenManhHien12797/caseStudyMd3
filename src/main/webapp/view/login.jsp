@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!doctype html>
 <html lang="en">
 <head>
@@ -207,12 +208,12 @@
         <div class="grid">
             <div class="header-with-login">
                 <div class="header__logo header__logo_login">
-                    <a href="homepage.jsp">
+                    <a href="/ShopBae">
                         <img src="../image/SB-L2-white-backgroud.svg" alt="">
                     </a>
 
                 </div>
-                <a href="homepage.jsp" class="header__logo-name header__logo-name_login">
+                <a href="/ShopBae" class="header__logo-name header__logo-name_login">
                     ShopBae
                 </a>
 
@@ -234,18 +235,22 @@
 
 <%--                            Form Login--%>
 
-                            <form action="#" class="form__login" method="post">
+                            <form action="/login?action=login" class="form__login" method="post">
+                                <c:if test='${requestScope["mess"] != null}'>
+                                    <p>${requestScope["mess"]}</p>
+                                </c:if>
+
                                 <input type="text" class="form__login-username" name="username" placeholder="Nhập user name">
                                 <input type="password" class="form__login-password" name="password" placeholder="Nhập password">
-                                <button class="btn btn-primary login-btn">ĐĂNG NHẬP</button>
+                                <button class="btn btn-primary login-btn" type="submit">ĐĂNG NHẬP</button>
                             </form>
 
 <%--                            Form Login--%>
 
                             <div class="login__with">
                                 <li class="login__with-item">
-<%--                                    <a href="https://www.facebook.com/" class="footer-item__link-icon footer-item__link-fb footer-item__link-fb-login"><i class="fa-brands fa-facebook"></i> Facebook</a>--%>
-    <div class="fb-login-button footer-item__link-icon footer-item__link-fb footer-item__link-fb-login" data-width="" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false"></div>
+                                    <a href="https://www.facebook.com/" class="footer-item__link-icon footer-item__link-fb footer-item__link-fb-login"><i class="fa-brands fa-facebook"></i> Facebook</a>
+<%--    <div class="fb-login-button footer-item__link-icon footer-item__link-fb footer-item__link-fb-login" data-width="" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false"></div>--%>
                                     <a href="https://www.google.com/" class="footer-item__link-icon footer-item__link-gg footer-item__link-gg-login"><i class="fa-brands fa-google-plus-g"></i>Google</a>
                                     <a href="https://www.linkedin.com/" class="footer-item__link-icon footer-item__link-linked footer-item__link-linked-login"><i class="fa-brands fa-linkedin"></i> Linkedkin</a>
                                 </li>
@@ -359,7 +364,7 @@
                 <span class="footer__policy-title">Chính sách trả hàng và hoàn tiền</span>
             </div>
             <div class="grid__column-12 footer__footer-logo">
-                <a class="footer__logo" href="homepage.jsp">
+                <a class="footer__logo" href="/ShopBae">
                     <img src="../image/SB-L2-white-backgroud.svg" alt="" class="footer__logo-img">
                     <span class="footer__logo-name">ShopBae</span>
                 </a>

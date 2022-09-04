@@ -1,0 +1,37 @@
+.admin{
+    display: flex;
+}
+.admin__category{
+    display: block;
+    width: 220px;
+    height: 100vh;
+    margin-top: 60px;
+    box-shadow: 0.1rem 0 0.2rem #bdbdbd;
+}
+.category__acc,
+.category__info{
+    font-size: 1.5rem;
+}
+.category__admin{
+
+}
+.grid__account{
+    width: 88%;
+    margin-top: 60px;
+    padding-top: 30px;
+    background-color: #f6f6f6;
+}
+
+.grid__account-list{
+    width: 100%;
+    margin: 0;
+}
+
+.element-category__select{
+    margin-left: 5px;
+    padding-left: 15px;
+    width: 70%;
+    height: 70%;
+    border: 1px solid #cecaca;
+    border-radius: 3px;
+}

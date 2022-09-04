@@ -2,7 +2,9 @@ package com.example.caseStudyMd3.controller;
 
 import com.example.caseStudyMd3.dao.IManagerDAO;
 import com.example.caseStudyMd3.dao.ShoesDAO;
+import com.example.caseStudyMd3.dao.interfaceDAO.IProductDAO;
 import com.example.caseStudyMd3.model.productShoes.Shoes;
+
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -14,12 +16,15 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
+
 @WebServlet(name = "ProductServlet", urlPatterns = "/ShopBae")
 public class ShoesServlet extends HttpServlet {
     private IManagerDAO iManagerDAO;
+    private IProductDAO iProductDAO;
 
     public void init() {
         iManagerDAO = new ShoesDAO();
+        iProductDAO = new ShoesDAO();
     }
 
     @Override
@@ -32,9 +37,6 @@ public class ShoesServlet extends HttpServlet {
             switch (action){
                 case "create":
                     break;
-                case "login":
-                    showLogin(req, resp);
-                    break;
                 case "edit":
                     break;
                 case "detail":
@@ -42,8 +44,8 @@ public class ShoesServlet extends HttpServlet {
                     break;
                 case "delete":
                     break;
-                case "search":
-//                    showSearchForm(req, resp);
+                case "sort":
+                    sortByPrice(req, resp);
                     break;
 
                 default:
@@ -68,14 +70,21 @@ public class ShoesServlet extends HttpServlet {
 
 
 
-    private void showLogin(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        RequestDispatcher dispatcher = req.getRequestDispatcher("view/login.jsp");
-        dispatcher.forward(req,resp);
-    }
 
     private void searchShoes(HttpServletRequest req, HttpServletResponse resp) throws SQLException, ServletException, IOException {
         String search = req.getParameter("search");
         List<Shoes> listShoes = iManagerDAO.search(search);
+        req.setAttribute("listShoes", listShoes);
+        RequestDispatcher dispatcher = req.getRequestDispatcher("view/homepage.jsp");
+        dispatcher.forward(req,resp);
+
+    }
+
+    private void sortByPrice(HttpServletRequest req, HttpServletResponse resp) throws SQLException, ServletException, IOException {
+        String str = req.getParameter("sort");
+        System.out.println(str);
+        List<Shoes> listShoes = iProductDAO.sortByPrice(str);
+        System.out.println(listShoes);
         req.setAttribute("listShoes", listShoes);
         RequestDispatcher dispatcher = req.getRequestDispatcher("view/homepage.jsp");
         dispatcher.forward(req,resp);

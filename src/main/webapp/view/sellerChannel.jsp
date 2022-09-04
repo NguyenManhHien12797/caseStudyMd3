@@ -111,7 +111,7 @@
 
 
             <div class="product-list">
-                <div class="grid ">
+                <div class="grid grid__product-list">
                     <div class="grid__row product-list__title">
 <%--                        <div class=" product-list__title">--%>
                             <div class="grid__column-2 title__title title__title-name">
@@ -129,7 +129,7 @@
 
                 </div>
 <%--List product--%>
-            <di class="grid ">
+            <div class="grid grid__product-list">
                 <div class="grid__row product-list__element">
                     <div class="grid__column-2 element__element">
                         <input type="checkbox" class="checkbox">
@@ -146,8 +146,8 @@
                     </div>
 
                 </div>
-            </di>
-            <di class="grid ">
+            </div>
+            <div class="grid grid__product-list">
                 <div class="grid__row product-list__element">
                     <div class="grid__column-2 element__element">
                         <input type="checkbox" class="checkbox">
@@ -164,9 +164,9 @@
                     </div>
 
                 </div>
-            </di>
+            </div>
 
-            <di class="grid ">
+            <div class="grid grid__product-list">
                 <div class="grid__row product-list__element">
                     <div class="grid__column-2 element__element">
                         <input type="checkbox" class="checkbox">
@@ -183,9 +183,9 @@
                     </div>
 
                 </div>
-            </di>
+            </div>
 
-            <di class="grid ">
+            <div class="grid grid__product-list">
                 <div class="grid__row product-list__element">
                     <div class="grid__column-2 element__element">
                         <input type="checkbox" class="checkbox">
@@ -202,9 +202,9 @@
                     </div>
 
                 </div>
-            </di>
+            </div>
 
-            <di class="grid ">
+            <div class="grid grid__product-list">
                 <div class="grid__row product-list__element">
                     <div class="grid__column-2 element__element">
                         <input type="checkbox" class="checkbox">
@@ -221,7 +221,7 @@
                     </div>
 
                 </div>
-            </di>
+            </div>
 
 
 
