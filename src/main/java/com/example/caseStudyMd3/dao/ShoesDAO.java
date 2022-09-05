@@ -11,11 +11,11 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ShoesDAO implements IManagerDAO, IProductDAO {
-    public static final String SEARCH_BY_NAME = "SELECT * FROM product WHERE name LIKE ?;";
-    public static final String SELECT_BY_ID = "SELECT * FROM product WHERE id=?;";
+public class ShoesDAO implements IProductDAO<Shoes> {
+    public static final String SEARCH_BY_NAME = "SELECT * FROM product2 WHERE name LIKE ?;";
+    public static final String SELECT_BY_ID = "SELECT * FROM product2 WHERE id=?;";
     Connection connection = ConnectionDB.getConnect();
-    public static final String SELECT_ALL_SHOES = "SELECT * FROM product;";
+    public static final String SELECT_ALL_SHOES = "SELECT * FROM product2;";
 
     @Override
     public List<Shoes> selectAll() {
@@ -40,9 +40,22 @@ public class ShoesDAO implements IManagerDAO, IProductDAO {
 
     }
 
-    @Override
-    public void create(Object o) {
 
+    @Override
+    public void create(Shoes o) {
+        try ( PreparedStatement statement = connection.prepareStatement(
+                        "  INSERT INTO product2 (categoryId,brandId,image,name,oldPrice,newPrice) VALUES (?,?,?,?,?,?);");
+        ) {
+            statement.setInt(1, o.getCategoryId());
+            statement.setInt(2, o.getBrandId());
+            statement.setString(3, o.getImage());
+            statement.setString(4, o.getName());
+            statement.setString(5, o.getOldPrice());
+            statement.setString(6, o.getNewPrice());
+            statement.executeUpdate();
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -68,14 +81,30 @@ public class ShoesDAO implements IManagerDAO, IProductDAO {
     }
 
     @Override
-    public void update(int id, Object o) {
+    public void update(Shoes o) {
+        try(PreparedStatement statement =connection.prepareStatement("UPDATE product2 SET categoryId = ?,brandId=?,image=?,name= ?, oldPrice=?, newPrice= ? WHERE id=?;")){
+           statement.setInt(1,o.getCategoryId());
+           statement.setInt(2,o.getBrandId());
+            statement.setString(3,o.getImage());
+           statement.setString(4,o.getName());
+           statement.setString(5,o.getOldPrice());
+           statement.setString(6,o.getNewPrice());
+            statement.setInt(7,o.getId());
+           statement.executeUpdate();
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
 
     }
 
     @Override
-    public boolean delete(int id) {
-
-        return false;
+    public void delete(int id) {
+        try( PreparedStatement statement = connection.prepareStatement("DELETE FROM product2 WHERE id =?;")){
+            statement.setInt(1,id);
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
@@ -104,7 +133,7 @@ public class ShoesDAO implements IManagerDAO, IProductDAO {
     }
 
     @Override
-    public Object findById(int id) {
+    public Shoes findById(int id) {
         return null;
     }
 

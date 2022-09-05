@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
     <link rel="icon" href="../image/SB-L2-xxl.svg" type="image/x-icon">
-    <title>ShopBae</title>
+    <title>Chi tiết sản phẩm ShopBae</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
@@ -85,6 +85,12 @@
         }
 
         /*user list*/
+
+        @media only screen and (min-width: 1224px) {
+            .slider {
+                margin-top: 170px;
+            }
+        }
     </style>
 
 </head>
@@ -171,10 +177,12 @@
 
                     <c:if test='${sessionScope["account"] == null}'>
                         <li class="header__navbar-item">
-                            <a href="/ShopBae?action=register" class="header__navbar-item-link header__navbar-item-link__strong separate">Đăng ký</a>
+                            <a href="/ShopBae?action=register"
+                               class="header__navbar-item-link header__navbar-item-link__strong separate">Đăng ký</a>
                         </li>
                         <li class="header__navbar-item">
-                            <a href="/login?action=login" class="header__navbar-item-link header__navbar-item-link__strong">Đăng nhập</a>
+                            <a href="/login?action=login"
+                               class="header__navbar-item-link header__navbar-item-link__strong">Đăng nhập</a>
                         </li>
                     </c:if>
 
@@ -194,12 +202,12 @@
                                     <a href="#">Đơn mua</a>
                                 </li>
                                 <li class="header__navbar-user-item">
-                                    <a href="/login?action=logout_in_detail&id=${requestScope["shoes"].getId()}" name="logout">Đăng xuất</a>
+                                    <a href="/login?action=logout_in_detail&id=${requestScope["shoes"].getId()}"
+                                       name="logout">Đăng xuất</a>
                                 </li>
                             </ul>
                         </li>
                     </c:if>
-
 
 
                 </ul>
@@ -219,18 +227,20 @@
 
 
                 <div class="header__search">
-                    <form action="#" class="header__search-form" method="post">
+
+                    <form class="header__search-form" method="post" action="/ShopBae?action=search">
                         <input type="text" class="header__search-input" name="search"
                                placeholder="Nhập để tìm kiếm sản phẩm">
                         <button class="header__search-btn" type="submit">
                             <i class=" header__search-icon fa-solid fa-magnifying-glass"></i>
                         </button>
                     </form>
+
                 </div>
 
                 <div class="header__cart">
                     <div class="header__cart-wrap">
-                        <a href="#">
+                        <a href="view/cart.jsp">
                             <i class="header__cart-icon  fa-solid fa-cart-shopping"></i>
                             <span class="header__cart-notice header__cart-icon ">234</span>
                         </a>
@@ -256,39 +266,62 @@
                             <div class="slider">
                                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                                     <div class="carousel-indicators">
-                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                        <button type="button" data-bs-target="#carouselExampleIndicators"
+                                                data-bs-slide-to="0" class="active" aria-current="true"
+                                                aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#carouselExampleIndicators"
+                                                data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#carouselExampleIndicators"
+                                                data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                        <button type="button" data-bs-target="#carouselExampleIndicators"
+                                                data-bs-slide-to="3" aria-label="Slide 4"></button>
                                     </div>
                                     <div class="carousel-inner">
-                                        <div class="carousel-item carousel-item-img active" style="background-image:url(${requestScope["shoes"].getImage()})"></div>
-                                        <div class="carousel-item carousel-item-img" style="background-image: url(${requestScope["shoes"].getImage()})"></div>
-                                        <div class="carousel-item carousel-item-img" style="background-image: url(${requestScope["shoes"].getImage()})"></div>
-                                        <div class="carousel-item carousel-item-img" style="background-image: url(${requestScope["shoes"].getImage()})"></div>
+                                        <div class="carousel-item carousel-item-img active"
+                                             style="background-image:url(${requestScope["shoes"].getImage()})"></div>
+                                        <div class="carousel-item carousel-item-img"
+                                             style="background-image: url(${requestScope["shoes"].getImage()})"></div>
+                                        <div class="carousel-item carousel-item-img"
+                                             style="background-image: url(${requestScope["shoes"].getImage()})"></div>
+                                        <div class="carousel-item carousel-item-img"
+                                             style="background-image: url(${requestScope["shoes"].getImage()})"></div>
 
                                     </div>
 
                                 </div>
                                 <div class="slider__controls">
-                                    <img src="${requestScope["shoes"].getImage()}" alt="" class="actives slider__controls-img" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1">
-                                    <img src="${requestScope["shoes"].getImage()}" alt="" class="slider__controls-img" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-current="true" aria-label="Slide 2">
-                                    <img src="${requestScope["shoes"].getImage()}" alt="" class="slider__controls-img" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-current="true" aria-label="Slide 3">
-                                    <img src="${requestScope["shoes"].getImage()}" alt="" class="slider__controls-img" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-current="true" aria-label="Slide 4">
+                                    <img src="${requestScope["shoes"].getImage()}" alt=""
+                                         class="actives slider__controls-img"
+                                         data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                         aria-current="true" aria-label="Slide 1">
+                                    <img src="${requestScope["shoes"].getImage()}" alt="" class="slider__controls-img"
+                                         data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                         aria-current="true" aria-label="Slide 2">
+                                    <img src="${requestScope["shoes"].getImage()}" alt="" class="slider__controls-img"
+                                         data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                         aria-current="true" aria-label="Slide 3">
+                                    <img src="${requestScope["shoes"].getImage()}" alt="" class="slider__controls-img"
+                                         data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                                         aria-current="true" aria-label="Slide 4">
 
-                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                                        <span class="carousel-control-prev-icon slider__controls-btn-icon-pre" aria-hidden="true"></span>
+                                    <button class="carousel-control-prev" type="button"
+                                            data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon slider__controls-btn-icon-pre"
+                                              aria-hidden="true"></span>
                                         <span class="visually-hidden">Previous</span>
                                     </button>
-                                    <button class="carousel-control-next " type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                                        <span class="carousel-control-next-icon slider__controls-btn-icon-next" aria-hidden="true"></span>
+                                    <button class="carousel-control-next " type="button"
+                                            data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon slider__controls-btn-icon-next"
+                                              aria-hidden="true"></span>
                                         <span class="visually-hidden">Next</span>
                                     </button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="grid__column-8 item__details__wrap">
+                    <form method="get" action="/details?action=addToCart&id=${requestScope["shoes"].getId()}"
+                          class="grid__column-8 item__details__wrap">
                         <span class="item__details__favourite">Yêu thích</span>
                         <span class="item__details__title">${requestScope["shoes"].getName()}</span>
                         <div class="item__details__rating">
@@ -422,10 +455,17 @@
                         </div>
 
                         <div class="item__details__cart">
-                            <button class="btn btn__add-to-cart" ><i class="fa-solid fa-cart-plus"></i>  Thêm Vào Giỏ Hàng</button>
-                            <button class="btn btn-primary btn__buy-now">Mua Ngay</button>
+                            <button class="btn btn__add-to-cart" type="submit" name="addToCart" value="add"><i
+                                    class="fa-solid fa-cart-plus"></i> Thêm Vào Giỏ Hàng
+                            </button>
+                            <button class="btn btn-primary btn__buy-now" type="submit" name="buyNow" value="buy">Mua
+                                Ngay
+                            </button>
                         </div>
-                    </div>
+                    </form>
+
+
+                    <%--                    end--%>
                 </div>
             </div>
 
@@ -438,8 +478,10 @@
                                 <span class="shop__details-name">Bình tổng Miền Bắc</span>
                                 <span class="shop__details-online">Online 1 phút trước</span>
                                 <div class="shop__details-btn">
-                                    <button class="btn btn__chat"><i class="fa-solid fa-message-check"></i> Chat ngay</button>
-                                    <button class="btn btn__see-shop"><i class="fa-solid fa-store"></i> Xem shop </button>
+                                    <button class="btn btn__chat"><i class="fa-solid fa-message-check"></i> Chat ngay
+                                    </button>
+                                    <button class="btn btn__see-shop"><i class="fa-solid fa-store"></i> Xem shop
+                                    </button>
                                 </div>
 
                             </div>
@@ -1237,12 +1279,17 @@ Công Ty TNHH Sản Xuất Thương Mại Công Nghệ Guangdong
                 <div class="grid__column-2-4 ">
                     <h3 class="footer__heading">Thanh toán</h3>
                     <li class="footer-item footer-item-pay">
-                        <a href="#" class="footer-item__link footer-item__link-pay"> <i class="fa-brands fa-cc-visa"></i></a>
-                        <a href="#" class="footer-item__link footer-item__link-pay"> <i class="fa-brands fa-cc-paypal"></i></a>
+                        <a href="#" class="footer-item__link footer-item__link-pay"> <i
+                                class="fa-brands fa-cc-visa"></i></a>
+                        <a href="#" class="footer-item__link footer-item__link-pay"> <i
+                                class="fa-brands fa-cc-paypal"></i></a>
                         <a href="#" class="footer-item__link footer-item__link-pay"> <i class="fa-brands fa-cc-jcb"></i></a>
-                        <a href="#" class="footer-item__link footer-item__link-pay"> <i class="fa-brands fa-cc-amazon-pay"></i></a>
-                        <a href="#" class="footer-item__link footer-item__link-pay"> <i class="fa-solid fa-credit-card"></i></a>
-                        <a href="#" class="footer-item__link footer-item__link-pay"> <i class="fa-brands fa-cc-mastercard"></i></a>
+                        <a href="#" class="footer-item__link footer-item__link-pay"> <i
+                                class="fa-brands fa-cc-amazon-pay"></i></a>
+                        <a href="#" class="footer-item__link footer-item__link-pay"> <i
+                                class="fa-solid fa-credit-card"></i></a>
+                        <a href="#" class="footer-item__link footer-item__link-pay"> <i
+                                class="fa-brands fa-cc-mastercard"></i></a>
                     </li>
                     <h3 class="footer__heading footer__heading-ship">Đơn vị vận chuyển</h3>
                     <li class="footer-item footer-item-ship">
@@ -1255,13 +1302,17 @@ Công Ty TNHH Sản Xuất Thương Mại Công Nghệ Guangdong
                 <div class="grid__column-2-4">
                     <h3 class="footer__heading">Theo dõi chúng tôi</h3>
                     <li class="footer-item">
-                        <a href="https://www.facebook.com/" class="footer-item__link footer-item__link-icon footer-item__link-fb"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                        <a href="https://www.facebook.com/"
+                           class="footer-item__link footer-item__link-icon footer-item__link-fb"><i
+                                class="fa-brands fa-facebook"></i> Facebook</a>
                         <a href="https://www.instagram.com/" class="footer-item__link footer-item__link-icon">
                             <i class="fa-brands fa-instagram footer-item__link-ins"></i>
 
                             <span class="footer-item__link-name">Instagram</span>
                         </a>
-                        <a href="https://www.linkedin.com/" class="footer-item__link footer-item__link-icon footer-item__link-linked"><i class="fa-brands fa-linkedin"></i> Linkedkin</a>
+                        <a href="https://www.linkedin.com/"
+                           class="footer-item__link footer-item__link-icon footer-item__link-linked"><i
+                                class="fa-brands fa-linkedin"></i> Linkedkin</a>
                     </li>
                 </div>
 

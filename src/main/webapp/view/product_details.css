@@ -2,7 +2,7 @@
 .item__details{
     background-color: #ffeee8;
 }
-@media only screen and (min-width: 1920px){
+@media only screen and (min-width: 1224px){
     .slider{
         margin-top: 170px;
     }
@@ -35,6 +35,7 @@
 .slider{
     width: 100%;
     height: 540px;
+    margin-top: 170px;
 }
 .slider__controls{
     position: relative;

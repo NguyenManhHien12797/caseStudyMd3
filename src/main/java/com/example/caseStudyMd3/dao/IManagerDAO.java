@@ -1,5 +1,7 @@
 package com.example.caseStudyMd3.dao;
 
+import com.example.caseStudyMd3.model.productShoes.Shoes;
+
 import java.sql.SQLException;
 import java.util.List;
 
@@ -10,7 +12,7 @@ public interface IManagerDAO<E> {
 
     E select(int id_num);
 
-   void update(int id, E e);
+   void update(E e);
 
 
     List<E> search(String search);
@@ -18,6 +20,6 @@ public interface IManagerDAO<E> {
 
 
 
-    boolean delete(int id);
+    void delete(int id);
 
 }

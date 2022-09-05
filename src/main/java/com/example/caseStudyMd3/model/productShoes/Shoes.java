@@ -9,6 +9,15 @@ package com.example.caseStudyMd3.model.productShoes;
         private String newPrice;
         private String image;
 
+        public Shoes(int categoryId, int brandId, String name, String oldPrice, String newPrice, String image) {
+            this.categoryId = categoryId;
+            this.brandId = brandId;
+            this.name = name;
+            this.oldPrice = oldPrice;
+            this.newPrice = newPrice;
+            this.image = image;
+        }
+
         public Shoes(String name, String newPrice, String image) {
             this.name = name;
             this.newPrice = newPrice;

@@ -46,7 +46,7 @@ public class BrandDAO implements IBrandDAO{
     }
 
     @Override
-    public void update(int id, Object o) {
+    public void update( Object o) {
 
     }
 
@@ -79,7 +79,7 @@ public class BrandDAO implements IBrandDAO{
 
 
     @Override
-    public boolean delete(int id) {
+    public void delete(int id) {
         boolean rowDeleted = false;
         try {
             PreparedStatement statement = connection.prepareStatement(QUERY_DELETE_BRAND);
@@ -88,7 +88,6 @@ public class BrandDAO implements IBrandDAO{
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return rowDeleted;
     }
 
     @Override

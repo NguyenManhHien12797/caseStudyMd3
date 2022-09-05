@@ -25,6 +25,19 @@
     <link rel="stylesheet" href="../view/main.css">
     <link rel="stylesheet" href="../view/seller_channel.css">
 
+
+    <style>
+        .element__action{
+            display: flex;
+        }
+
+        .form__update,
+        .form__delete{
+            width: 90px;
+            margin-right: 10px;
+        }
+    </style>
+
 </head>
 <body>
 <div class="navbar">
@@ -105,7 +118,7 @@
                 <a href="#" class="navbar__product-title">Đang hoạt động</a>
                 <a href="#" class="navbar__product-title">Hết hàng</a>
             </div>
-            <form action="add_product.jsp" method="post" class="form__add">
+            <form action="view/add_product.jsp" method="post" class="form__add">
                 <button class="btn btn__add">+  Thêm sản phẩm</button>
             </form>
 
@@ -129,99 +142,33 @@
 
                 </div>
 <%--List product--%>
-            <div class="grid grid__product-list">
-                <div class="grid__row product-list__element">
-                    <div class="grid__column-2 element__element">
-                        <input type="checkbox" class="checkbox">
-                        <img src="../image/avatar_3.webp" alt="" class="element-img">
-                        <span class="title-name">CONTINENTAL 80</span>
-                    </div>
-                    <span class="grid__column-2 element-category">Shoes</span>
-                    <span class="grid__column-2 element-brand">Nike</span>
-                    <span class="grid__column-2 element-price">2.400.000đ</span>
-                    <span class="grid__column-2 element-warehouse">20</span>
-                    <div class="grid__column-2 element__action">
-                        <button class="btn btn__update"><i class="fa-solid fa-pen"></i></button>
-                        <button class="btn btn__delete"><i class="fa-solid fa-trash"></i></button>
-                    </div>
 
-                </div>
-            </div>
-            <div class="grid grid__product-list">
-                <div class="grid__row product-list__element">
-                    <div class="grid__column-2 element__element">
-                        <input type="checkbox" class="checkbox">
-                        <img src="../image/avatar_3.webp" alt="" class="element-img">
-                        <span class="title-name">CONTINENTAL 80</span>
-                    </div>
-                    <span class="grid__column-2 element-category">Shoes</span>
-                    <span class="grid__column-2 element-brand">Nike</span>
-                    <span class="grid__column-2 element-price">2.400.000đ</span>
-                    <span class="grid__column-2 element-warehouse">20</span>
-                    <div class="grid__column-2 element__action">
-                        <button class="btn btn__update"><i class="fa-solid fa-pen"></i></button>
-                        <button class="btn btn__delete"><i class="fa-solid fa-trash"></i></button>
-                    </div>
+                <c:forEach items="${listShoes}" var="listShoes">
+                    <div class="grid grid__product-list">
+                        <div class="grid__row product-list__element">
+                            <div class="grid__column-2 element__element">
+                                <input type="checkbox" class="checkbox">
+                                <img src="${listShoes.image}" alt="" class="element-img">
+                                <span class="title-name">${listShoes.name}</span>
+                            </div>
+                            <span class="grid__column-2 element-category">Shoes</span>
+                            <span class="grid__column-2 element-brand">Nike</span>
+                            <span class="grid__column-2 element-price">${listShoes.newPrice}đ</span>
+                            <span class="grid__column-2 element-warehouse">20</span>
+                            <div class="grid__column-2 element__action">
 
-                </div>
-            </div>
+                                <a href="/ShopBae?action=update&id=${listShoes.id}" class="btn btn__update"><i class="fa-solid fa-pen"></i></a>
 
-            <div class="grid grid__product-list">
-                <div class="grid__row product-list__element">
-                    <div class="grid__column-2 element__element">
-                        <input type="checkbox" class="checkbox">
-                        <img src="../image/avatar_3.webp" alt="" class="element-img">
-                        <span class="title-name">CONTINENTAL 80</span>
-                    </div>
-                    <span class="grid__column-2 element-category">Shoes</span>
-                    <span class="grid__column-2 element-brand">Nike</span>
-                    <span class="grid__column-2 element-price">2.400.000đ</span>
-                    <span class="grid__column-2 element-warehouse">20</span>
-                    <div class="grid__column-2 element__action">
-                        <button class="btn btn__update"><i class="fa-solid fa-pen"></i></button>
-                        <button class="btn btn__delete"><i class="fa-solid fa-trash"></i></button>
-                    </div>
 
-                </div>
-            </div>
+                                  <a href="/ShopBae?action=delete&id=${listShoes.id}" class="btn btn__delete"><i class="fa-solid fa-trash"></i></a>
 
-            <div class="grid grid__product-list">
-                <div class="grid__row product-list__element">
-                    <div class="grid__column-2 element__element">
-                        <input type="checkbox" class="checkbox">
-                        <img src="../image/avatar_3.webp" alt="" class="element-img">
-                        <span class="title-name">CONTINENTAL 80</span>
-                    </div>
-                    <span class="grid__column-2 element-category">Shoes</span>
-                    <span class="grid__column-2 element-brand">Nike</span>
-                    <span class="grid__column-2 element-price">2.400.000đ</span>
-                    <span class="grid__column-2 element-warehouse">20</span>
-                    <div class="grid__column-2 element__action">
-                        <button class="btn btn__update"><i class="fa-solid fa-pen"></i></button>
-                        <button class="btn btn__delete"><i class="fa-solid fa-trash"></i></button>
-                    </div>
 
-                </div>
-            </div>
-
-            <div class="grid grid__product-list">
-                <div class="grid__row product-list__element">
-                    <div class="grid__column-2 element__element">
-                        <input type="checkbox" class="checkbox">
-                        <img src="../image/avatar_3.webp" alt="" class="element-img">
-                        <span class="title-name">CONTINENTAL 80</span>
+                            </div>
+                        </div>
                     </div>
-                    <span class="grid__column-2 element-category">Shoes</span>
-                    <span class="grid__column-2 element-brand">Nike</span>
-                    <span class="grid__column-2 element-price">2.400.000đ</span>
-                    <span class="grid__column-2 element-warehouse">20</span>
-                    <div class="grid__column-2 element__action">
-                        <button class="btn btn__update"><i class="fa-solid fa-pen"></i></button>
-                        <button class="btn btn__delete"><i class="fa-solid fa-trash"></i></button>
-                    </div>
+                </c:forEach>
 
-                </div>
-            </div>
+
 
 
 

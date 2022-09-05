@@ -17,8 +17,8 @@
             integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
             crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link rel="stylesheet" href="base.css">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="../view/base.css">
+    <link rel="stylesheet" href="../view/main.css">
 
     <style>
         .app__container{
@@ -200,12 +200,12 @@
         <div class="grid">
             <div class="header-with-login">
                 <div class="header__logo header__logo_login">
-                    <a href="homepage.jsp">
+                    <a href="../view/homepage.jsp">
                         <img src="../image/SB-L2-white-backgroud.svg" alt="">
                     </a>
 
                 </div>
-                <a href="homepage.jsp" class="header__logo-name header__logo-name_login">
+                <a href="../view/homepage.jsp" class="header__logo-name header__logo-name_login">
                     ShopBae
                 </a>
 
@@ -225,7 +225,12 @@
                         <div class="app__container-login">
                             <span class="app__container-login__title"> Đăng ký</span>
 
-                            <%--                            Form Register--%>
+
+
+
+
+
+                        <%--                            Form Register--%>
 
                             <form action="login.jsp" class="form__login" method="post">
                                 <input type="text" class="form__login-username" name="username" placeholder="Nhập user name">
@@ -245,7 +250,7 @@
 
                             <div class="register">
                                 <span class="register__title">Quay lại với ShopBae</span>
-                                <a href="login.jsp" class="register__link">Đăng Nhập</a>
+                                <a href="../view/login.jsp" class="register__link">Đăng Nhập</a>
                             </div>
 
                         </div>
@@ -351,7 +356,7 @@
                 <span class="footer__policy-title">Chính sách trả hàng và hoàn tiền</span>
             </div>
             <div class="grid__column-12 footer__footer-logo">
-                <a class="footer__logo" href="homepage.jsp">
+                <a class="footer__logo" href="../view/homepage.jsp">
                     <img src="../image/SB-L2-white-backgroud.svg" alt="" class="footer__logo-img">
                     <span class="footer__logo-name">ShopBae</span>
                 </a>

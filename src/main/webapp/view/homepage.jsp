@@ -7,7 +7,7 @@
 <html lang="en">
 <head>
     <link rel="icon" href="../image/SB-L2-xxl.svg" type="image/x-icon">
-    <title>ShopBae</title>
+    <title>ShopBae Mỹ Đình</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
@@ -99,7 +99,7 @@
             <nav class="header__navbar">
                 <ul class="header__navbar-list">
                     <li class="header__navbar-item ">
-                        <a href="view/sellerChannel.jsp" class="header__navbar-item-seller">Kênh người bán</a>
+                        <a href="/ShopBae?action=seller" class="header__navbar-item-seller">Kênh người bán</a>
                     </li>
                     <li class="header__navbar-item ">
                         <a href="../view/admin.jsp" class="header__navbar-item-seller">Kênh Admin</a>
@@ -339,18 +339,16 @@
                                         </h3>
                                         <ul class="category-list">
                                             <li class="category-item">
-                                                <a href="#" class="category-item__link category-item__link--active ">Thiết
-                                                    Bị Điện
-                                                    Tử</a>
+                                                <a href="#" class="category-item__link category-item__link--active ">Giày dép</a>
                                             </li>
                                             <li class="category-item">
-                                                <a href="#" class="category-item__link">Thiết bị đeo thông minh</a>
+                                                <a href="#" class="category-item__link">Quần áo</a>
                                             </li>
                                             <li class="category-item">
-                                                <a href="#" class="category-item__link">Phụ kiện ti vi</a>
+                                                <a href="#" class="category-item__link">Túi ví</a>
                                             </li>
                                             <li class="category-item">
-                                                <a href="#" class="category-item__link">Thiết bị nhà thông minh</a>
+                                                <a href="#" class="category-item__link">Mũ</a>
                                             </li>
                                         </ul>
                                     </nav>

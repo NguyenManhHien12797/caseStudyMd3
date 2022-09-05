@@ -33,7 +33,7 @@
     <img src="../image/SB-L2-xxl.svg" alt="" class="navbar__logo-img">
     <span class="navbar__logo-name">ShopBae</span>
     </a>
-    <a href="sellerChannel.jsp" class="navbar__logo-link navbar__logo-title">Kênh người bán</a>
+    <a href="/ShopBae?action=seller" class="navbar__logo-link navbar__logo-title">Kênh người bán</a>
   </div>
   <div class="navbar__info">
     <div class="navbar__account">
@@ -55,10 +55,10 @@
         <span class="add__title">Thêm 1 sản phẩm mới</span>
         <span class="add__dicrip">Vui lòng chọn ngành hàng phù hợp cho sản phẩm của bạn</span>
 
-        <form action="" method="post" class="form__add">
+        <form action="/ShopBae?action=create" method="post" class="form__add">
           <div class="input">
             <span class="input__title">Tên sản phẩm</span>
-            <input type="text" class="input__input" placeholder="Nhập tên sản phẩm">
+            <input type="text" class="input__input" name="name" placeholder="Nhập tên sản phẩm" value="${requestScope["shoes"].name}">
           </div>
           <div class="input__category">
             <div class="input__category-search">
@@ -78,14 +78,14 @@
                 <option value="5">Supreme</option>
               </select>
               <span class="price">Old price</span>
-              <input type="text" class="input__price" placeholder="Nhập old price">
-              <span class="price">Old price</span>
-              <input type="text" class="input__price" placeholder="Nhập new price">
+              <input type="text" class="input__price" name="oldPrice" placeholder="Nhập old price" value="${requestScope["shoes"].oldPrice}">
+              <span class="price">New price</span>
+              <input type="text" class="input__price" name="newPrice" placeholder="Nhập new price" value="${requestScope["shoes"].newPrice}">
             </div>
           </div>
           <div class="mb-3 upload">
             <label for="formFileMultiple" class="form-label upload__title">Upload image</label>
-            <input class="form-control upload__control" type="file" id="formFileMultiple" multiple>
+            <input class="form-control upload__control" name="img" type="file" id="formFileMultiple" multiple value="${requestScope["shoes"].image}">
           </div>
           <button class="btn add-product">+ Thêm sản phẩm</button>
         </form>

@@ -99,6 +99,11 @@
             background-color: var(--white-color);
         }
 
+        .form__login span{
+            font-size: 1.6rem;
+            color: var(--primary-color);
+            margin-left: 30px;
+        }
         .form__login-username,
         .form__login-password{
             display: block;
@@ -121,7 +126,7 @@
             font-weight: 500;
             font-size: 2rem;
             color: var(--text-color);
-            margin: 45px 30px;
+            margin: 45px 30px 20px 30px;
         }
 
         .login-btn{
@@ -237,8 +242,10 @@
 
                             <form action="/login?action=login" class="form__login" method="post">
                                 <c:if test='${requestScope["mess"] != null}'>
-                                    <p>${requestScope["mess"]}</p>
+<%--                                    <p>${requestScope["mess"]}</p>--%>
+                                    <span>Something wrong!!!</span>
                                 </c:if>
+
 
                                 <input type="text" class="form__login-username" name="username" placeholder="Nhập user name">
                                 <input type="password" class="form__login-password" name="password" placeholder="Nhập password">
@@ -258,7 +265,7 @@
 
                             <div class="register">
                                 <span class="register__title">Bạn mới biết đến ShopBae?</span>
-                                <a href="register.jsp" class="register__link">Đăng ký</a>
+                                <a href="/login?action=register" class="register__link">Đăng ký</a>
                             </div>
 
                         </div>
