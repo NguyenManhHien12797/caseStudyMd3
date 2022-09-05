@@ -184,7 +184,7 @@
                     <%--                    --%>
                     <c:if test='${sessionScope["users"] == null}'>
                         <li class="header__navbar-item">
-                            <a href="/ShopBae?action=register" class="header__navbar-item-link header__navbar-item-link__strong separate">Đăng ký</a>
+                            <a href="/admin?action=create" class="header__navbar-item-link header__navbar-item-link__strong separate">Đăng ký</a>
                         </li>
                         <li class="header__navbar-item">
                             <a href="/login?action=login" class="header__navbar-item-link header__navbar-item-link__strong">Đăng nhập</a>

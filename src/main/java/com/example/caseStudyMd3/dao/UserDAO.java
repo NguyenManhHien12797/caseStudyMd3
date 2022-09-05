@@ -18,8 +18,7 @@ public class UserDAO {
     private static final String QUERY_ALL_USER = "SELECT * FROM USER";
     private static final String QUERY_INSERT_NEW_ACCOUNT = "INSERT INTO USER (USERNAME,PASSWORD) VALUES (?,?)";
     private static final String QUERY_DEL_USERS_BY_ADMIN = "DELETE FROM USER WHERE ID = ?";
-    private static final String QUERY_UPDATE_BY_USER = "UPDATE USER SET PASSWORD = ?,NAME = ?,GENDER = ?,AGE = ?,BIRTHDATE= ?,MAIL =?,PHONE= ? " +
-            "WHERE ACCOUNT = ?";
+    private static final String QUERY_UPDATE_BY_USER = "UPDATE USER SET PASSWORD = ?,USERROLE = ?, NAME = ?,AVATAR = ?, GENDER = ?,BIRTHDATE= ?,MAIL =?,PHONE= ? WHERE ID = ?";
     private static final String QUERY_UPDATE_BY_ADMIN = "UPDATE USER SET WHERE ID = ?";
     private static final String FIND_BY_ID = "SELECT * FROM USER WHERE ID = ?";
     private static final String QUERY_FIND_PASS_BY_ACCOUNT = "SELECT PASSWORD FROM USER WHERE ACCOUNT = ? AND MAIL = ?";
@@ -135,24 +134,24 @@ public class UserDAO {
         return users;
     }
 
-//    public boolean updateByUser(String account, Users users) {
-//        boolean rowAdded = false;
-//        try {
-//            PreparedStatement statement = connection.prepareStatement(QUERY_INSERT_NEW_ACCOUNT);
-//            statement.setString(1, users.getAccount());
-//            statement.setString(2, users.getPassword());
-//            statement.setString(3, users.getRole());
-//            statement.setString(4, users.getName());
-//            statement.setString(5, users.getGender());
-//            statement.setDate(6, (java.sql.Date) users.getBirthDate());
-//            statement.setString(7, users.getMail());
-//            statement.setString(8, users.getPhone());
-//            rowAdded = statement.executeUpdate() > 0;
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//        return rowAdded;
-//    }
+    public boolean updateUser(Users users) throws SQLException {
+        boolean rowUpdated;
+        try (
+                PreparedStatement statement = connection.prepareStatement(QUERY_UPDATE_BY_USER);
+                )
+        {
+            statement.setString(1, users.getPassword());
+            statement.setString(2, users.getRole());
+            statement.setString(3, users.getName());
+            statement.setString(4, users.getAvatar());
+            statement.setString(5, users.getGender());
+            statement.setDate(6, (java.sql.Date) users.getBirthDate());
+            statement.setString(7, users.getMail());
+            statement.setString(8, users.getPhone());
+            rowUpdated = statement.executeUpdate() > 0;
+        }
+        return rowUpdated;
+    }
 
 
 }
