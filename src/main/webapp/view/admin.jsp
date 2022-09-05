@@ -114,17 +114,13 @@
                             <span class="title-name">${user.id}</span>
                             <span class="title-name">${user.account}</span>
                         </div>
+
                         <div class="grid__column-3 element-category">
-                            <select name="role"  class=" element-category__select">
-                                <option value="1">Admin</option>
-                                <option value="2">User</option>
-                            </select>
+                            <span class="title-name">${user.role}</span>
                         </div>
 
                         <div class="grid__column-3 element-category">
-                            <select name="status"  class=" element-category__select">
-                                <option value="1">Đang hoạt động</option>
-                                <option value="2">Block</option>
+                            <span class="title-name">${user.status}</span>
                             </select>
                         </div>
 

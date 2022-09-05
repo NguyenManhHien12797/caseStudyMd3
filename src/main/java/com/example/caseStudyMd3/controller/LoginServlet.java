@@ -70,25 +70,29 @@ public class LoginServlet extends HttpServlet {
         String account = request.getParameter("username");
         String password = request.getParameter("password");
         Users users = userDAO.checkUser(account, password);
-        if (users != null) {
+        String status = users.getStatus();
+        if (users != null && status.equals("ACTIVE")) {
             String role = users.getRole();
+
             HttpSession session = request.getSession();
             switch (role) {
                 case "ADMIN":
                     session.setAttribute("users",users);
-                    response.sendRedirect("/admin");
+                    response.sendRedirect("view/homepage_admin.jsp");
                     break;
                 case "USER":
                     session.setAttribute("users",users);
-                    response.sendRedirect("/ShopBae");
+                    response.sendRedirect("view/homepage.jsp");
                     break;
             }
-        } else {
+        } else{
             RequestDispatcher dispatcher = request.getRequestDispatcher("view/login.jsp");
             String message = "Account or password is invalid";
             request.setAttribute("message", message);
             dispatcher.forward(request, response);
         }
+
+
 
     }
 }

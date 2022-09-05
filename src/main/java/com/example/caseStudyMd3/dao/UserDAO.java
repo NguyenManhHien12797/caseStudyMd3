@@ -18,7 +18,7 @@ public class UserDAO {
     private static final String QUERY_ALL_USER = "SELECT * FROM USER";
     private static final String QUERY_INSERT_NEW_ACCOUNT = "INSERT INTO USER (USERNAME,PASSWORD) VALUES (?,?)";
     private static final String QUERY_DEL_USERS_BY_ADMIN = "DELETE FROM USER WHERE ID = ?";
-    private static final String QUERY_UPDATE_BY_USER = "UPDATE USER SET PASSWORD = ?,USERROLE = ?, NAME = ?,AVATAR = ?, GENDER = ?,BIRTHDATE= ?,MAIL =?,PHONE= ? WHERE ID = ?";
+    private static final String QUERY_UPDATE_BY_USER = "UPDATE USER SET PASSWORD = ?,USERROLE = ?, NAME = ?,AVATAR = ?, GENDER = ?,BIRTHDATE= ?,MAIL =?,PHONE= ?,STATUS=? WHERE ID = ?";
     private static final String QUERY_UPDATE_BY_ADMIN = "UPDATE USER SET WHERE ID = ?";
     private static final String FIND_BY_ID = "SELECT * FROM USER WHERE ID = ?";
     private static final String QUERY_FIND_PASS_BY_ACCOUNT = "SELECT PASSWORD FROM USER WHERE ACCOUNT = ? AND MAIL = ?";
@@ -68,7 +68,8 @@ public class UserDAO {
                 Date birthDate = rs.getDate(8);
                 String mail = rs.getString(9);
                 String phone = rs.getString(10);
-                user = new Users(username,password,role,name,avatar,gender,birthDate,mail,phone);
+                String status = rs.getString(11);
+                user = new Users(username,password,role,name,avatar,gender,birthDate,mail,phone,status);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -98,7 +99,8 @@ public class UserDAO {
                 Date birthDate = set.getDate("birthDate");
                 String email = set.getString("mail");
                 String phone = set.getString("phone");
-                user = new Users(id,username,password,role,name,avatar,gender,birthDate,email,phone);
+                String status = set.getString("status");
+                user = new Users(id,username,password,role,name,avatar,gender,birthDate,email,phone,status);
 
             }
 
@@ -126,7 +128,8 @@ public class UserDAO {
                 Date birthDate = rs.getDate("birthDate");
                 String mail = rs.getString("mail");
                 String phone = rs.getString("phone");
-                users.add(new Users(id,username,password,role,name,avatar,gender,birthDate,mail,phone)) ;
+                String status = rs.getString("status");
+                users.add(new Users(id,username,password,role,name,avatar,gender,birthDate,mail,phone,status)) ;
             }
         } catch (SQLException e) {
             System.err.println(e);
@@ -148,6 +151,7 @@ public class UserDAO {
             statement.setDate(6, (java.sql.Date) users.getBirthDate());
             statement.setString(7, users.getMail());
             statement.setString(8, users.getPhone());
+            statement.setString(9, users.getStatus());
             rowUpdated = statement.executeUpdate() > 0;
         }
         return rowUpdated;

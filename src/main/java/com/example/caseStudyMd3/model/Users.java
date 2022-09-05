@@ -13,9 +13,10 @@ public class Users {
     private Date birthDate;
     private String mail;
     private String phone;
+    private String status;
 
 
-    public Users(String account, String password, String role, String name, String avatar, String gender, Date birthDate, String mail, String phone) {
+    public Users(String account, String password, String role, String name, String avatar, String gender, Date birthDate, String mail, String phone, String status) {
         this.account = account;
         this.password = password;
         this.role = role;
@@ -25,9 +26,10 @@ public class Users {
         this.birthDate = birthDate;
         this.mail = mail;
         this.phone = phone;
+        this.status = status;
     }
 
-    public Users(int id, String account, String password, String role, String name, String avatar, String gender, Date birthDate, String mail, String phone) {
+    public Users(int id, String account, String password, String role, String name, String avatar, String gender, Date birthDate, String mail, String phone, String status) {
         this.id = id;
         this.account = account;
         this.password = password;
@@ -38,6 +40,7 @@ public class Users {
         this.birthDate = birthDate;
         this.mail = mail;
         this.phone = phone;
+        this.status = status;
     }
 
     public Users(String account, String password) {
@@ -135,5 +138,13 @@ public class Users {
 
     public void setAvatar(String avatar) {
         this.avatar = avatar;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

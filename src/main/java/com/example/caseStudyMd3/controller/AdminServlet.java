@@ -77,11 +77,22 @@ import java.util.List;
                 case "create":
                     showCreateForm(request, response);
                     break;
+                case "edit":
+                    showEditForm(request, response);
+                    break;
                 default:
                     listUsers(request, response);
                     break;
             }
 
+        }
+
+        private void showEditForm(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+            int id = Integer.parseInt(request.getParameter("id"));
+            Users users = userDAO.findById(id);
+            RequestDispatcher dispatcher = request.getRequestDispatcher("view/admin_edit.jsp");
+            request.setAttribute("user", users);
+            dispatcher.forward(request, response);
         }
 
         private void showCreateForm(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

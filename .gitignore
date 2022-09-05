@@ -3,7 +3,7 @@ build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
-!**src\main\java\com\example\caseStudyMd3\config\ConnectionDB.java
+!**src/main/java/com/example/caseStudyMd3/config/ConnectionDB.java
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
