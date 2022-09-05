@@ -341,7 +341,7 @@
 
                 </di>
                 <di class="grid">
-                    <div class="grid__row product-list__element">
+                    <form action="/cart?action=addcart" class="grid__row product-list__element">
                         <div class="grid__column-4 element__element">
                             <input type="checkbox" class="checkbox">
                             <img src="../image/avatar_3.webp" alt="" class="element-img">
@@ -350,11 +350,11 @@
                         <span class="grid__column-2 element-price">2.400.000đ</span>
                         <div class="grid__column-2 element-amount">
                             <div class="item__cart__amount">
-                                <button class="item__cart__btn">
+                                <button class="item__cart__btn" name="">
                                     <span class="item__cart__btn-icon">-</span>
                                 </button>
                                 <input type="text" name="amount_num" class="item__cart__input" value="1">
-                                <button class="item__cart__btn">
+                                <button class="item__cart__btn" name="add" value="1">
                                     <span class="item__cart__btn-icon">+</span>
                                 </button>
                             </div>
@@ -363,7 +363,7 @@
                         <button class="btn btn__delete grid__column-2 element__action element__action-cart"><i
                                 class="fa-solid fa-trash"></i></button>
 
-                    </div>
+                    </form>
 
                 </di>
                 <di class="grid">

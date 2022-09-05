@@ -39,8 +39,8 @@ public class CartServlet extends HttpServlet {
             action = "";
 
         switch (action) {
-            case "add":
-                addToCart(req,resp);
+            case "addcart":
+        transfer(req, resp);
                 break;
             case "remove":
                 removeProduct(req,resp);
@@ -51,6 +51,18 @@ public class CartServlet extends HttpServlet {
 
             default:
                 displayCart(req,resp);
+        }
+    }
+    private  void transfer (HttpServletRequest req, HttpServletResponse resp) {
+        String add = req.getParameter("add");
+        if(add!= null) {
+            try {
+                addToCart(req,resp);
+            } catch (ServletException e) {
+                throw new RuntimeException(e);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 
@@ -112,7 +124,7 @@ public class CartServlet extends HttpServlet {
         session.setAttribute("subtotal", subtotal);
         session.setAttribute("cart",cart);
         req.setAttribute("brands",brands);
-        req.getRequestDispatcher("/view/cart.jsp").forward(req,resp);
+        req.getRequestDispatcher("view/cart.jsp").forward(req,resp);
     }
 
     private void displayCart(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

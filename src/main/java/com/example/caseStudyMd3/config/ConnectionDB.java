@@ -24,9 +24,9 @@ public class ConnectionDB {
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         }
-<<<<<<< HEAD
-        return connection;
 
+
+        return connect;
     }
 
     public static void main(String[] args) {
@@ -38,9 +38,7 @@ public class ConnectionDB {
         else {
             System.out.println("khong thanh cong");
         }
-=======
-        return connect;
->>>>>>> dev
+
 
     }
 
