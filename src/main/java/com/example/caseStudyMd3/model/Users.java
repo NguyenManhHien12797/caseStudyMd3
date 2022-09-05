@@ -43,6 +43,31 @@ public class Users {
         this.status = status;
     }
 
+    public Users(int id, String password, String role, String name, String avatar, String gender, Date birthDate, String mail, String phone, String status) {
+        this.id = id;
+        this.password = password;
+        this.role = role;
+        this.name = name;
+        this.avatar = avatar;
+        this.gender = gender;
+        this.birthDate = birthDate;
+        this.mail = mail;
+        this.phone = phone;
+        this.status = status;
+    }
+
+    public Users(int id, String password, String role, String name, String avatar, String gender, String mail, String phone, String status) {
+        this.id = id;
+        this.password = password;
+        this.role = role;
+        this.name = name;
+        this.avatar = avatar;
+        this.gender = gender;
+        this.mail = mail;
+        this.phone = phone;
+        this.status = status;
+    }
+
     public Users(String account, String password) {
         this.account = account;
         this.password = password;
@@ -60,6 +85,7 @@ public class Users {
         this.name = name;
         this.status = status;
     }
+
 
     public int getId() {
         return id;

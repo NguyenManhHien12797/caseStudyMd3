@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 
@@ -51,10 +52,14 @@ import java.util.List;
             int id = Integer.parseInt(request.getParameter("id"));
             String name = request.getParameter("name");
             String password = request.getParameter("password");
+            String gender = request.getParameter("gender");
+            String avatar = request.getParameter("avatar");
+            String mail = request.getParameter("mail");
+            String phone = request.getParameter("phone");
             String role = request.getParameter("role");
             String status = request.getParameter("status");
 
-            Users editUser = new Users(name, password, role, status);
+            Users editUser = new Users(id,name,password,gender,avatar,mail,phone,role,status);
             userDAO.updateUser(editUser);
             RequestDispatcher dispatcher = request.getRequestDispatcher("user/edit.jsp");
             request.setAttribute("alo", "User edited successful!");
