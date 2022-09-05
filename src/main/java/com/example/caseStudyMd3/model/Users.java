@@ -54,10 +54,11 @@ public class Users {
         this.name = name;
     }
 
-    public Users(int id, String account, String password, String role) {
-        this.id = id;
-        this.account = account;
+    public Users(String password, String role, String name, String status) {
         this.password = password;
+        this.role = role;
+        this.name = name;
+        this.status = status;
     }
 
     public int getId() {

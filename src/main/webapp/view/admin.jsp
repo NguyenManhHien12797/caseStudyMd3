@@ -85,7 +85,7 @@
                 <a href="#" class="navbar__product-title">Đang hoạt động</a>
                 <a href="#" class="navbar__product-title">Block</a>
             </div>
-            <form action="add_product.jsp" method="post" class="form__add">
+            <form action="/admin?action=create" method="post" class="form__add">
                 <button class="btn btn__add">+  Thêm Account</button>
             </form>
 

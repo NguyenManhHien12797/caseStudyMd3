@@ -39,12 +39,26 @@ import java.util.List;
                         deleteUser(request, response);
                         break;
                     case "edit":
-//                        editUser(request, response);
+                        editUser(request, response);
                         break;
                 }
             } catch (SQLException e) {
                 throw new ServletException();
             }
+        }
+
+        private void editUser(HttpServletRequest request, HttpServletResponse response) throws SQLException, ServletException, IOException {
+            int id = Integer.parseInt(request.getParameter("id"));
+            String name = request.getParameter("name");
+            String password = request.getParameter("password");
+            String role = request.getParameter("role");
+            String status = request.getParameter("status");
+
+            Users editUser = new Users(name, password, role, status);
+            userDAO.updateUser(editUser);
+            RequestDispatcher dispatcher = request.getRequestDispatcher("user/edit.jsp");
+            request.setAttribute("alo", "User edited successful!");
+            dispatcher.forward(request, response);
         }
 
         private void deleteUser(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException {

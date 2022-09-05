@@ -248,7 +248,7 @@
 
                             <div class="register">
                                 <span class="register__title">Quay lại với ShopBae</span>
-                                <a href="login.jsp" class="register__link">Đăng Nhập</a>
+                                <a href="login?action=login" class="register__link">Đăng Nhập</a>
                             </div>
 
                         </div>
