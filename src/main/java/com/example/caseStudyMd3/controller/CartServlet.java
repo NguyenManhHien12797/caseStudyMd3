@@ -120,6 +120,7 @@ public class CartServlet extends HttpServlet {
         int subtotal = 0;
         for (Item item:cart) {
             subtotal += item.getProduct().getNewPrice() * item.getQuantity();
+//            subtotal += quantity;
         }
         session.setAttribute("subtotal", subtotal);
         session.setAttribute("cart",cart);
