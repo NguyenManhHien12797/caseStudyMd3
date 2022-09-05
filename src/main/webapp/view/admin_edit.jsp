@@ -142,8 +142,6 @@
                                 <input class="form-control" id="inputPhone" type="text" placeholder="Enter your phone number" name="phone" value="${user.phone}">
                             </div>
 
-
-                        <!-- Save changes button-->
                             <input type="submit" value="Save"/>
                     </form>
                 </div>
